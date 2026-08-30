@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <title>Job Search Dashboard</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #faf9f7;
@@ -12,6 +15,8 @@
     --muted: #6b7268;
     --line: #e6e3dd;
     --accent: #2f5233;
+    --cv-accent: #791e3f;
+    --cv-line: #2a2a2a;
   }
   * { box-sizing: border-box; }
   body {
@@ -57,15 +62,6 @@
     padding: 12px 14px;
     margin-top: 8px;
   }
-  .adapted-cv {
-    white-space: pre-wrap;
-    font-size: 0.88rem;
-    line-height: 1.5;
-    background: #f5f4f1;
-    border-radius: 8px;
-    padding: 12px 14px;
-    margin-top: 8px;
-  }
   .copy-btn {
     display: inline-block;
     margin-top: 8px;
@@ -78,6 +74,62 @@
     cursor: pointer;
   }
   .copy-btn:hover { border-color: var(--accent); }
+  .empty { color: var(--muted); font-size: 0.9rem; padding: 40px 0; text-align: center; }
+
+  /* --- CV preview: matches Maria's CV template --- */
+  .cv-preview {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 20px 22px;
+    margin-top: 8px;
+    color: #262626;
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+  .cv-name {
+    text-align: center;
+    color: var(--cv-accent);
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin: 0 0 4px;
+  }
+  .cv-contact {
+    text-align: center;
+    font-size: 0.72rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .cv-rule {
+    border: none;
+    border-top: 1.5px solid var(--cv-line);
+    margin: 0 0 12px;
+  }
+  .cv-summary { margin-bottom: 14px; }
+  .cv-heading {
+    color: var(--cv-accent);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    border-bottom: 1.5px solid var(--cv-line);
+    padding-bottom: 3px;
+    margin: 16px 0 8px;
+  }
+  .cv-entry { margin-bottom: 10px; }
+  .cv-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-weight: 700;
+  }
+  .cv-row .cv-sub { font-weight: 400; }
+  .cv-row .cv-dateline { white-space: nowrap; font-weight: 700; }
+  .cv-role { font-weight: 700; margin-top: 1px; }
+  .cv-entry ul { margin: 4px 0 0 18px; padding: 0; }
+  .cv-entry li { margin-bottom: 2px; }
+  .cv-skill-label { font-weight: 700; }
   .empty { color: var(--muted); font-size: 0.9rem; padding: 40px 0; text-align: center; }
 </style>
 </head>
@@ -111,7 +163,9 @@ async function load() {
 
 function jobCard(job) {
   const cardId = Math.random().toString(36).slice(2);
-  const hasAdaptedCv = !!(job.adapted_cv && job.adapted_cv.trim());
+  const cv = job.adapted_cv;
+  const hasCv = !!(cv && typeof cv === 'object' && (cv.summary || (cv.experience || []).length));
+  const hasLegacyCv = !!(cv && typeof cv === 'string' && cv.trim());
   return `
     <div class="job-card">
       <div class="job-title">${escapeHtml(job.title || '')}</div>
@@ -121,14 +175,99 @@ function jobCard(job) {
         <div class="cover-letter" id="cl-${cardId}">${escapeHtml(job.cover_letter || '')}</div>
         <button class="copy-btn" data-copy-target="cl-${cardId}">Copy cover letter</button>
       </details>
-      ${hasAdaptedCv ? `
+      ${hasCv ? `
       <details>
         <summary>CV adapted for this role</summary>
-        <div class="adapted-cv" id="cv-${cardId}">${escapeHtml(job.adapted_cv)}</div>
+        <div class="cv-preview" id="cv-${cardId}">${renderCv(cv)}</div>
+        <button class="copy-btn" data-copy-plain="cv-plain-${cardId}">Copy CV text</button>
+        <textarea id="cv-plain-${cardId}" hidden>${escapeHtml(plainCvText(cv))}</textarea>
+      </details>` : ''}
+      ${hasLegacyCv ? `
+      <details>
+        <summary>CV adapted for this role</summary>
+        <div class="cover-letter" id="cv-${cardId}">${escapeHtml(cv)}</div>
         <button class="copy-btn" data-copy-target="cv-${cardId}">Copy adapted CV</button>
       </details>` : ''}
     </div>
   `;
+}
+
+function renderCv(cv) {
+  const section = (heading, entries, kind) => {
+    if (!entries || !entries.length) return '';
+    return `
+      <div class="cv-heading">${escapeHtml(heading)}</div>
+      ${entries.map(e => entryHtml(e, kind)).join('')}
+    `;
+  };
+
+  const skillsHtml = (cv.skills || []).length ? `
+      <div class="cv-heading">SKILLS</div>
+      <ul>
+        ${cv.skills.map(s => `<li><span class="cv-skill-label">${escapeHtml(s.label || '')}:</span> ${escapeHtml(s.text || '')}</li>`).join('')}
+      </ul>
+  ` : '';
+
+  return `
+    <div class="cv-name">${escapeHtml(cv.name || '')}</div>
+    <div class="cv-contact">${escapeHtml(cv.contact || '')}</div>
+    <hr class="cv-rule">
+    ${cv.summary ? `<div class="cv-summary">${escapeHtml(cv.summary)}</div>` : ''}
+    ${section('EDUCATION', cv.education, 'education')}
+    ${section('EXPERIENCE', cv.experience, 'experience')}
+    ${skillsHtml}
+  `;
+}
+
+function entryHtml(e, kind) {
+  const bullets = (e.bullets || []).map(b => `<li>${escapeHtml(b)}</li>`).join('');
+  if (kind === 'education') {
+    return `
+      <div class="cv-entry">
+        <div class="cv-row"><span>${escapeHtml(e.title || '')}</span><span class="cv-dateline">${escapeHtml(e.dateline || '')}</span></div>
+        <div class="cv-sub">${escapeHtml(e.institution || '')}</div>
+        <ul>${bullets}</ul>
+      </div>
+    `;
+  }
+  return `
+    <div class="cv-entry">
+      <div class="cv-row"><span>${escapeHtml(e.employer || '')}${e.location ? ' · ' + escapeHtml(e.location) : ''}</span><span class="cv-dateline">${escapeHtml(e.dateline || '')}</span></div>
+      <div class="cv-role">${escapeHtml(e.role || '')}</div>
+      <ul>${bullets}</ul>
+    </div>
+  `;
+}
+
+function plainCvText(cv) {
+  const lines = [];
+  lines.push(cv.name || '');
+  lines.push(cv.contact || '');
+  lines.push('');
+  if (cv.summary) { lines.push(cv.summary); lines.push(''); }
+  if ((cv.education || []).length) {
+    lines.push('EDUCATION');
+    cv.education.forEach(e => {
+      lines.push(`${e.title || ''}`);
+      lines.push(`${e.institution || ''}${e.dateline ? '   ' + e.dateline : ''}`);
+      (e.bullets || []).forEach(b => lines.push(`- ${b}`));
+      lines.push('');
+    });
+  }
+  if ((cv.experience || []).length) {
+    lines.push('EXPERIENCE');
+    cv.experience.forEach(e => {
+      lines.push(`${e.employer || ''}${e.location ? ' · ' + e.location : ''}${e.dateline ? '   ' + e.dateline : ''}`);
+      lines.push(`${e.role || ''}`);
+      (e.bullets || []).forEach(b => lines.push(`- ${b}`));
+      lines.push('');
+    });
+  }
+  if ((cv.skills || []).length) {
+    lines.push('SKILLS');
+    cv.skills.forEach(s => lines.push(`${s.label || ''}: ${s.text || ''}`));
+  }
+  return lines.join('\n').trim();
 }
 
 function escapeHtml(str) {
@@ -140,9 +279,14 @@ function escapeHtml(str) {
 document.addEventListener('click', (e) => {
   const btn = e.target.closest('.copy-btn');
   if (!btn) return;
-  const target = document.getElementById(btn.dataset.copyTarget);
-  if (!target) return;
-  navigator.clipboard.writeText(target.textContent).then(() => {
+  let text;
+  if (btn.dataset.copyTarget) {
+    text = document.getElementById(btn.dataset.copyTarget).textContent;
+  } else if (btn.dataset.copyPlain) {
+    text = document.getElementById(btn.dataset.copyPlain).value;
+  }
+  if (!text) return;
+  navigator.clipboard.writeText(text).then(() => {
     const original = btn.textContent;
     btn.textContent = 'Copied!';
     setTimeout(() => { btn.textContent = original; }, 1500);
