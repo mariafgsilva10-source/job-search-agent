@@ -4,6 +4,251 @@
     "jobs": [
       {
         "source": "adzuna",
+        "id": "adzuna_5855343349",
+        "title": "Legal Secretary",
+        "employer": "Reed",
+        "location": "Reading, Berkshire",
+        "salary": "\u00a331283-31283",
+        "url": "https://www.adzuna.co.uk/jobs/details/5855343349?utm_medium=api&utm_source=d98dd21f",
+        "description": "A well-established private practice law firm in Reading is seeking a highly organised and proactive Legal Secretary to join its team. This opportunity is ideal for someone with strong administrative skills, excellent attention to detail, and experience supporting fee earners within a legal environment. Key Responsibilities \u2022 Providing comprehensive secretarial and administrative support to solicitors and fee earners \u2022 Preparing and formatting legal documents, correspondence, and case papers \u2022 M\u2026",
+        "cover_letter": "Dear Hiring Manager,\n\nI am writing to apply for the Legal Secretary position at your Reading firm, as advertised through Reed. With over a year of hands-on experience supporting fee earners in a busy private practice setting and a strong background in preparing legal documents, managing case files and coordinating across matters with competing deadlines, I am well placed to provide the comprehensive secretarial and administrative support your team needs.\n\nDuring my year-long placement at Bryan Cave Leighton Paisner, I worked directly alongside solicitors and partners across two disputes teams \u2014 International Arbitration and Real Estate Disputes. Day to day, I prepared and formatted procedural documents, drafted correspondence, organised electronic case files via iManage, assisted with court filings and managed deadlines across several live matters simultaneously. I also prepared electronic hearing bundles and supported skeleton arguments and court materials, giving me direct experience of the document-heavy workflows that legal secretarial work requires.\n\nIn my current role as a Legal Adviser at Citizens Advice East Berkshire, I manage matters from instruction through to submission \u2014 drafting correspondence, preparing application packs and document schedules, maintaining confidential records and meeting firm deadlines. Working with high caseloads across welfare, employment, housing and family matters has sharpened both my organisational discipline and my ability to prioritise competing demands without losing attention to detail.\n\nI am accurate, proactive and comfortable working at pace. I understand that legal secretarial support is not peripheral to a fee earner's work \u2014 it is what keeps matters running \u2014 and I take that responsibility seriously.\n\nI would welcome the opportunity to discuss how my experience could contribute to your team. Thank you for considering my application.\n\nYours sincerely,\nMaria Silva",
+        "adapted_cv": {
+          "summary": "LLB and LLM graduate with sustained practical experience supporting solicitors and fee earners across disputes, litigation and advisory work. Skilled in preparing and formatting legal documents and correspondence, organising and maintaining confidential case files, managing electronic bundles and court materials, and tracking deadlines across multiple live matters. Experienced across private practice (BCLP), in-house and clinic settings; consistently recognised for accuracy, reliability and the ability to work at pace under pressure.",
+          "education": [
+            {
+              "title": "Comparative and International Dispute Resolution LLM \u2014 Merit",
+              "institution": "Queen Mary University of London",
+              "dateline": "Sept 2024 \u2013 Oct 2025",
+              "bullets": [
+                "Modules: international arbitration, dispute resolution procedure, evidence analysis, legal research",
+                "Dissertation: data protection and the development of GDPR across jurisdictions \u2014 Distinction (75%)"
+              ]
+            },
+            {
+              "title": "Law LLB \u2014 2:1",
+              "institution": "University College London",
+              "dateline": "Sept 2020 \u2013 June 2024",
+              "bullets": [
+                "Modules: Alternative Dispute Resolution, Advanced Contract Law, Commercial Law, Company Law"
+              ]
+            },
+            {
+              "title": "International Foundation Programme \u2014 Law and International Relations",
+              "institution": "King's College London",
+              "dateline": "Sept 2019 \u2013 June 2020",
+              "bullets": [
+                "Awarded the Leaders of Tomorrow prize: top 20 of a 200-student cohort, carrying partial funding toward undergraduate degree"
+              ]
+            }
+          ],
+          "experience": [
+            {
+              "employer": "Bryan Cave Leighton Paisner LLP (BCLP)",
+              "location": "London",
+              "role": "Legal Placement Student \u2014 Real Estate Disputes",
+              "dateline": "Feb 2024 \u2013 Aug 2024",
+              "bullets": [
+                "Prepared and formatted electronic hearing bundles, skeleton arguments and court materials for fee earners ahead of hearings",
+                "Drafted and formatted correspondence and client notes; maintained structured matter records via iManage",
+                "Assisted with court filings, hearing logistics, matter opening and closure, and cost comparisons",
+                "Managed large volumes of confidential documents across several matters with competing deadlines, tracking each to resolution",
+                "Conducted legal and factual research on rights of light, easements, leasehold and landlord and tenant issues to support fee earner advice"
+              ]
+            },
+            {
+              "employer": "Bryan Cave Leighton Paisner LLP (BCLP)",
+              "location": "London",
+              "role": "Legal Placement Student \u2014 International Arbitration",
+              "dateline": "Aug 2023 \u2013 Feb 2024",
+              "bullets": [
+                "Prepared, formatted and organised procedural documents \u2014 including procedural orders, procedural histories and sections of a Claimant's memorial \u2014 for a complex investment arbitration",
+                "Reviewed and organised large evidence sets for procedural submissions; maintained structured electronic case files throughout",
+                "Tracked procedural deadlines and outstanding actions; coordinated document flow when sole junior on the team ahead of a significant submission deadline",
+                "Liaised with the client regarding required documents; coordinated with an external translator to manage Romanian-language materials",
+                "Received feedback from a partner and associate that performance was comparable to a newly qualified solicitor"
+              ]
+            },
+            {
+              "employer": "Citizens Advice East Berkshire",
+              "location": "Maidenhead",
+              "role": "Legal Adviser",
+              "dateline": "July 2026 \u2013 Present",
+              "bullets": [
+                "Manages a high-volume caseload from instruction to submission: drafts correspondence, prepares applications and document schedules, maintains confidential case records and meets firm deadlines",
+                "Interviews clients across welfare, employment, housing, family, debt and consumer matters; takes detailed factual statements and establishes accurate chronologies",
+                "Provides procedural guidance to clients, translating complex rules into clear, practical steps \u2014 particularly for vulnerable individuals",
+                "Researches complex points of law and eligibility across multiple regulatory frameworks; identifies evidential gaps and next steps"
+              ]
+            },
+            {
+              "employer": "Q-Legal",
+              "location": "Remote",
+              "role": "Legal Adviser",
+              "dateline": "Oct 2024 \u2013 Jan 2025",
+              "bullets": [
+                "Managed a data-privacy matter from client instruction through to a formal written advice letter, under a qualified solicitor's supervision",
+                "Drafted clear, commercially focused written advice translating complex statutory requirements into practical recommendations for the client",
+                "Coordinated with the client and supervising solicitor to ensure timely delivery against a fixed deadline"
+              ]
+            },
+            {
+              "employer": "Adobe",
+              "location": "London",
+              "role": "Legal Intern",
+              "dateline": "June 2022 \u2013 Aug 2022",
+              "bullets": [
+                "Reviewed and amended software licensing agreements; identified contractual risks and flagged provisions requiring legal input",
+                "Reviewed confidentiality and data-processing provisions; researched UK GDPR, EU GDPR and cross-border transfer requirements",
+                "Communicated amendments and queries to internal stakeholders across sales, legal and international business teams",
+                "Prepared and delivered an internal presentation on breach-of-contract risks and mitigation measures"
+              ]
+            }
+          ],
+          "skills": [
+            {
+              "label": "Languages",
+              "text": "Portuguese (native), English (fluent), Spanish (basic)"
+            },
+            {
+              "label": "Technical skills",
+              "text": "Document preparation and formatting; legal correspondence; iManage; Microsoft Word, Excel and PowerPoint; legal research databases; electronic court filing portals; electronic bundling; case management and time-recording systems; concise report and letter writing"
+            },
+            {
+              "label": "Case and evidence management",
+              "text": "Hearing bundle preparation, evidence review and organisation, procedural document drafting, case-file management, deadline tracking across multiple concurrent matters"
+            }
+          ],
+          "name": "Maria Silva",
+          "contact": "38, Marlborough Road, Maidenhead, Berkshire \u00b7 +447935308070 \u00b7 mariafgsilva10@gmail.com \u00b7 linkedin.com/in/mariafgsilva10"
+        }
+      },
+      {
+        "source": "adzuna",
+        "id": "adzuna_5561063601",
+        "title": "Conveyancing Assistant",
+        "employer": "Mallory Pryce",
+        "location": "Holyport, Maidenhead",
+        "salary": "\u00a328715-28715",
+        "url": "https://www.adzuna.co.uk/jobs/details/5561063601?utm_medium=api&utm_source=d98dd21f",
+        "description": "Our client is looking for an organised and proactive conveyancing assistant to join their team. This is an excellent opportunity for someone who is enthusiastic about developing their career in property law, values excellent client care, and thrives in a collaborative environment. This is a permanent, full-time position with opportunities for ongoing development. Key Responsibilities in Conveyancing Support and Client Service Assist conveyancers and solicitors with all aspects of residential pr\u2026",
+        "cover_letter": "I am applying for the Conveyancing Assistant role at Mallory Pryce's Holyport office. My background in property law, client-facing legal work and case management makes me well placed to support a busy residential conveyancing team.\n\nDuring my year-long placement at Bryan Cave Leighton Paisner, six months of which I spent in Real Estate Disputes, I supported solicitors and partners across a range of property matters \u2014 including leasehold disputes, landlord and tenant issues, rights of light and easements. Day-to-day, I prepared electronic bundles, assisted with court materials, maintained matter records on iManage, handled court filings and tracked deadlines across several concurrent files. That experience gave me a practical grounding in property law and in the file-management discipline that conveyancing demands.\n\nSince July 2026 I have been working as a Legal Adviser at Citizens Advice East Berkshire, where I manage a caseload spanning housing, debt, welfare benefits and consumer matters. I take detailed client instructions, draft correspondence and applications, maintain confidential case records and translate complex procedural requirements into clear guidance for clients \u2014 many of whom are in difficult circumstances. Client care and clear communication sit at the centre of that role, and I approach both seriously.\n\nI also have experience reviewing contractual documentation and identifying risk, from my internship at Adobe, and have handled data-privacy and compliance matters at Q-Legal. I am organised, comfortable with competing deadlines and used to working accurately under pressure.\n\nI am based in Maidenhead and am particularly attracted to a permanent role that offers ongoing development within a property law team. I would welcome the opportunity to discuss the position further.\n\nThank you for considering my application.\n\nMaria Silva",
+        "adapted_cv": {
+          "summary": "LLB and LLM graduate with practical property law, client care and case management experience gained at Bryan Cave Leighton Paisner (Real Estate Disputes), Citizens Advice East Berkshire and Adobe. Skilled in supporting solicitors and conveyancers across concurrent matters: maintaining organised files, preparing bundles and court materials, drafting correspondence, tracking deadlines and communicating clearly with clients. Attentive to detail and comfortable working accurately under pressure in a collaborative environment.",
+          "education": [
+            {
+              "title": "Comparative and International Dispute Resolution LLM \u2014 Merit",
+              "institution": "Queen Mary University of London",
+              "dateline": "Sept 2024 \u2013 Oct 2025",
+              "bullets": [
+                "Modules included dispute resolution procedure, evidence analysis and legal research",
+                "Dissertation: data protection and the development of GDPR across jurisdictions \u2014 Distinction, 75%"
+              ]
+            },
+            {
+              "title": "Law LLB \u2014 2:1",
+              "institution": "University College London",
+              "dateline": "Sept 2020 \u2013 June 2024",
+              "bullets": [
+                "Modules included Advanced Contract Law, Commercial Law, Company Law and Alternative Dispute Resolution"
+              ]
+            },
+            {
+              "title": "International Foundation Programme \u2014 Law and International Relations",
+              "institution": "King's College London",
+              "dateline": "Sept 2019 \u2013 June 2020",
+              "bullets": [
+                "Awarded the Leaders of Tomorrow prize (top 20 of a 200-student cohort; partial funding toward undergraduate degree)"
+              ]
+            }
+          ],
+          "experience": [
+            {
+              "employer": "Bryan Cave Leighton Paisner LLP (BCLP)",
+              "location": "London",
+              "role": "Legal Placement Student \u2014 Real Estate Disputes",
+              "dateline": "Feb 2024 \u2013 Aug 2024",
+              "bullets": [
+                "Supported solicitors and partners across residential and commercial property matters including leasehold disputes, landlord and tenant issues, easements and rights of light",
+                "Prepared electronic hearing bundles and assisted with skeleton arguments and other court materials",
+                "Handled court filings, hearing arrangements, matter opening and closure, and deadline tracking across several concurrent files",
+                "Maintained matter records and organised large volumes of confidential documents using iManage",
+                "Conducted legal and factual research and prepared client notes to keep matters progressing efficiently"
+              ]
+            },
+            {
+              "employer": "Bryan Cave Leighton Paisner LLP (BCLP)",
+              "location": "London",
+              "role": "Legal Placement Student \u2014 International Arbitration",
+              "dateline": "Aug 2023 \u2013 Feb 2024",
+              "bullets": [
+                "Supported a complex investment arbitration: reviewed and organised evidence for procedural submissions and the Claimant's memorial",
+                "Drafted procedural orders and procedural histories; amended sections of the Claimant's memorial under supervision",
+                "Became the only junior supporting the team shortly before a significant deadline \u2014 coordinated documents, tracked outstanding actions and helped ensure on-time submission",
+                "Maintained structured electronic case files and monitored procedural deadlines; liaised with the client on required documents",
+                "Received feedback from a partner and associate that performance was comparable to a newly qualified solicitor"
+              ]
+            },
+            {
+              "employer": "Citizens Advice East Berkshire",
+              "location": "Maidenhead",
+              "role": "Legal Adviser",
+              "dateline": "July 2026 \u2013 Present",
+              "bullets": [
+                "Manages a caseload spanning housing, debt, welfare benefits, employment, family and consumer matters \u2014 taking detailed client instructions, establishing chronologies and identifying key issues",
+                "Drafts correspondence, prepares applications and document schedules, and maintains accurate confidential case records to deadlines",
+                "Advises clients on procedural requirements and options, translating complex rules into clear, practical guidance \u2014 including for vulnerable individuals",
+                "Assesses eligibility against statutory criteria, identifies evidential gaps and researches complex points to progress matters"
+              ]
+            },
+            {
+              "employer": "Adobe",
+              "location": "London",
+              "role": "Legal Intern",
+              "dateline": "June 2022 \u2013 Aug 2022",
+              "bullets": [
+                "Reviewed and amended software licensing agreements; identified contractual risks and assessed alignment with internal legal and compliance requirements",
+                "Reviewed confidentiality and data-processing provisions; researched UK GDPR, EU GDPR and cross-border personal data transfer requirements",
+                "Liaised with sales, legal and international business teams to resolve contractual queries and reconcile commercial objectives with legal risk",
+                "Prepared and delivered an internal presentation on breach-of-contract risks and mitigation measures"
+              ]
+            },
+            {
+              "employer": "Q-Legal",
+              "location": "Remote",
+              "role": "Legal Adviser",
+              "dateline": "Oct 2024 \u2013 Jan 2025",
+              "bullets": [
+                "Managed a data-privacy matter from client instruction through to formal written advice letter, under a qualified solicitor's supervision",
+                "Researched UK GDPR and Data Protection Act 2018 obligations; identified compliance risks and recommended practical mitigations",
+                "Translated complex statutory requirements into clear, commercially focused advice; coordinated with client and supervising solicitor to meet deadline"
+              ]
+            }
+          ],
+          "skills": [
+            {
+              "label": "Languages",
+              "text": "Portuguese (native), English (fluent), Spanish (basic)"
+            },
+            {
+              "label": "Technical skills",
+              "text": "iManage; Microsoft Word, Excel and PowerPoint; legal research databases; electronic court filing portals; electronic bundling; document review; case management and time-recording systems; legal and commercial research; concise report and correspondence writing"
+            },
+            {
+              "label": "Case and evidence management",
+              "text": "Hearing bundle preparation, matter file organisation, procedural deadline tracking, evidence review, document scheduling, court filing"
+            }
+          ],
+          "name": "Maria Silva",
+          "contact": "38, Marlborough Road, Maidenhead, Berkshire \u00b7 +447935308070 \u00b7 mariafgsilva10@gmail.com \u00b7 linkedin.com/in/mariafgsilva10"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-08-30",
+    "jobs": [
+      {
+        "source": "adzuna",
         "id": "adzuna_5855342320",
         "title": "Legal Assistant",
         "employer": "Reed",
