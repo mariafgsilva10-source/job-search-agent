@@ -1,6 +1,6 @@
 """
 For each new job, call the Claude API to draft a tailored cover letter
-and CV bullet suggestions, using data/base_cv.md as background context.
+and a CV adapted to that specific role, using data/base_cv.md as background context.
 
 Requires: ANTHROPIC_API_KEY environment variable.
 """
@@ -25,18 +25,29 @@ a UK-based aspiring paralegal. Follow her stated writing preferences exactly:
 - Emphasise: disputes experience, commercial awareness, client-focused judgement, \
 attention to detail, drafting/research and litigation-adjacent capability
 - Cover letters should be under 400 words, no generic filler paragraphs
-- CV suggestions should be specific bullet rewrites, not vague advice
 
-You will be given her background and a job description. Produce:
-1. A tailored cover letter
-2. 2-4 specific CV bullet point suggestions/tweaks relevant to this specific role
+You will be given her full background/base CV and a job description. Produce two \
+documents, both ready to send as-is:
 
-Output valid JSON only, with keys "cover_letter" and "cv_suggestions" (array of strings). \
-No markdown fences, no preamble."""
+1. A tailored cover letter (under 400 words, no generic filler).
+2. Her CV adapted specifically for this role: reorder sections/bullets so the most \
+relevant experience leads, tighten and re-word bullets to mirror the job ad's own \
+language where it's accurate to do so, and trim or de-emphasise less relevant detail. \
+Never invent experience, qualifications, dates, employers, or achievements that aren't \
+in her background — only reorder, re-word, and re-emphasise what's true. Keep the same \
+overall structure (profile, education, experience, skills) and markdown formatting \
+style as the background CV, and roughly the same length.
+
+Always produce both documents using whatever information you're given, even if the job \
+description is partial, truncated, or thin. Never ask a question, request more detail, \
+or write anything other than the two documents — do your best with what's provided.
+
+Output valid JSON only, with keys "cover_letter" and "adapted_cv" (both strings, plain \
+text/markdown, no nested JSON). No markdown fences, no preamble."""
 
 
 def draft_for_job(job, base_cv_text):
-    user_prompt = f"""BACKGROUND:
+    user_prompt = f"""BACKGROUND (Maria's full base CV):
 {base_cv_text}
 
 JOB TITLE: {job['title']}
@@ -48,7 +59,7 @@ JOB DESCRIPTION:
 
     resp = client.messages.create(
         model="claude-sonnet-4-6",
-        max_tokens=2000,
+        max_tokens=4000,
         system=SYSTEM_PROMPT,
         messages=[{"role": "user", "content": user_prompt}],
     )
@@ -57,7 +68,7 @@ JOB DESCRIPTION:
     try:
         return json.loads(text)
     except json.JSONDecodeError:
-        return {"cover_letter": text, "cv_suggestions": []}
+        return {"cover_letter": text, "adapted_cv": ""}
 
 
 def main():
@@ -76,7 +87,7 @@ def main():
             draft = draft_for_job(job, base_cv_text)
         except Exception as e:
             print(f"  Failed: {e}")
-            draft = {"cover_letter": f"(drafting failed: {e})", "cv_suggestions": []}
+            draft = {"cover_letter": f"(drafting failed: {e})", "adapted_cv": ""}
         drafted.append({**job, **draft})
 
     # Load existing dashboard history, prepend today's batch

@@ -57,11 +57,27 @@
     padding: 12px 14px;
     margin-top: 8px;
   }
-  .cv-suggestions {
-    margin-top: 8px;
+  .adapted-cv {
+    white-space: pre-wrap;
     font-size: 0.88rem;
+    line-height: 1.5;
+    background: #f5f4f1;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 8px;
   }
-  .cv-suggestions ul { margin: 4px 0 0 18px; padding: 0; }
+  .copy-btn {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: var(--accent);
+    background: none;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 4px 10px;
+    cursor: pointer;
+  }
+  .copy-btn:hover { border-color: var(--accent); }
   .empty { color: var(--muted); font-size: 0.9rem; padding: 40px 0; text-align: center; }
 </style>
 </head>
@@ -94,16 +110,23 @@ async function load() {
 }
 
 function jobCard(job) {
-  const suggestions = (job.cv_suggestions || []).map(s => `<li>${escapeHtml(s)}</li>`).join('');
+  const cardId = Math.random().toString(36).slice(2);
+  const hasAdaptedCv = !!(job.adapted_cv && job.adapted_cv.trim());
   return `
     <div class="job-card">
       <div class="job-title">${escapeHtml(job.title || '')}</div>
       <div class="job-meta">${escapeHtml(job.employer || '')} · ${escapeHtml(job.location || '')}${job.salary ? ' · ' + escapeHtml(job.salary) : ''} · <a href="${job.url}" target="_blank">View listing</a></div>
       <details>
-        <summary>Cover letter draft</summary>
-        <div class="cover-letter">${escapeHtml(job.cover_letter || '')}</div>
+        <summary>Cover letter (ready to send)</summary>
+        <div class="cover-letter" id="cl-${cardId}">${escapeHtml(job.cover_letter || '')}</div>
+        <button class="copy-btn" data-copy-target="cl-${cardId}">Copy cover letter</button>
       </details>
-      ${suggestions ? `<details><summary>CV suggestions</summary><div class="cv-suggestions"><ul>${suggestions}</ul></div></details>` : ''}
+      ${hasAdaptedCv ? `
+      <details>
+        <summary>CV adapted for this role</summary>
+        <div class="adapted-cv" id="cv-${cardId}">${escapeHtml(job.adapted_cv)}</div>
+        <button class="copy-btn" data-copy-target="cv-${cardId}">Copy adapted CV</button>
+      </details>` : ''}
     </div>
   `;
 }
@@ -113,6 +136,18 @@ function escapeHtml(str) {
   div.textContent = str;
   return div.innerHTML;
 }
+
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('.copy-btn');
+  if (!btn) return;
+  const target = document.getElementById(btn.dataset.copyTarget);
+  if (!target) return;
+  navigator.clipboard.writeText(target.textContent).then(() => {
+    const original = btn.textContent;
+    btn.textContent = 'Copied!';
+    setTimeout(() => { btn.textContent = original; }, 1500);
+  });
+});
 
 load();
 </script>
