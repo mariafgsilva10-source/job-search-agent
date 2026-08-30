@@ -18,7 +18,17 @@ from pathlib import Path
 DATA_DIR = Path(__file__).parent.parent / "data"
 SEEN_FILE = DATA_DIR / "seen_jobs.json"
 
-SEARCH_TERMS = ["paralegal", "legal assistant", "junior legal", "trainee paralegal"]
+SEARCH_TERMS = [
+    "paralegal",
+    "legal assistant",
+    "junior legal",
+    "trainee paralegal",
+    "legal analyst",
+    "legal administrator",
+    "legal admin assistant",
+    "legal research assistant",
+    "legal research analyst",
+]
 LOCATIONS = ["Reading", "High Wycombe", "Loudwater", "Maidenhead"]
 RESULTS_PER_SEARCH = 20
 MAX_NEW_JOBS_PER_RUN = 10  # caps drafting cost/volume per run, incl. the first big run
@@ -88,7 +98,9 @@ def fetch_adzuna():
             params={
                 "app_id": app_id,
                 "app_key": app_key,
-                "what": term,
+                "what_phrase": term,  # exact-phrase match — "what" alone OR-matches
+                                      # individual words and was returning unrelated
+                                      # roles (e.g. warehouse jobs matching on "assistant")
                 "where": "Reading",
                 "distance": 25,
                 "results_per_page": RESULTS_PER_SEARCH,

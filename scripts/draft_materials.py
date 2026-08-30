@@ -70,11 +70,15 @@ re-emphasised, not cut) unless something is clearly irrelevant enough to drop. B
 should stay close to their original length — tightened and re-worded, not padded.
 
 Always produce both documents using whatever information you're given, even if the job \
-description is partial, truncated, or thin. Never ask a question, request more detail, \
-or write anything other than the two documents — do your best with what's provided.
+description is partial, truncated, or thin — including when the role is a poor or \
+unrelated match for a legal/paralegal background. Never ask a question, request more \
+detail, comment on the job's suitability, or write anything other than the two \
+documents — do your best with what's provided.
 
 Output valid JSON only, with top-level keys "cover_letter" (string) and "adapted_cv" \
-(the object shape above). No markdown fences, no preamble."""
+(the object shape above). Your entire response must be nothing but that JSON object: \
+no markdown fences, no preamble, no commentary or notes before or after it. The very \
+first character of your response must be "{" and the very last character must be "}"."""
 
 
 def draft_for_job(job, base_cv_text):
@@ -99,7 +103,18 @@ JOB DESCRIPTION:
     try:
         result = json.loads(text)
     except json.JSONDecodeError:
-        result = {"cover_letter": text, "adapted_cv": None}
+        # Defense in depth: if the model added any stray commentary before/after
+        # the JSON despite being told not to, try to recover just the JSON object
+        # rather than falling back to dumping raw text as the "cover letter".
+        start, end = text.find("{"), text.rfind("}")
+        result = None
+        if start != -1 and end != -1 and end > start:
+            try:
+                result = json.loads(text[start:end + 1])
+            except json.JSONDecodeError:
+                result = None
+        if result is None:
+            result = {"cover_letter": text, "adapted_cv": None}
 
     # Name/contact are fixed and never model-generated — attach them here so
     # data.json always carries a complete, renderable CV object.
