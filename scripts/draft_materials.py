@@ -84,6 +84,22 @@ it: not "I developed strong organisational skills at BCLP" but something like \
 arbitration matter, which required the organisation relevant to managing case \
 files in this role."
 
+PERSONALISE THROUGH A NARRATIVE, NOT A CREDENTIALS LIST: where genuinely relevant to \
+the role, build her motivation as a chronological progression rather than stating \
+interest abstractly: something specific sparked the interest -> she took an independent \
+step to develop it -> she sought practical exposure -> this role is the next logical \
+step. Never write "I am interested in X because it is dynamic/exciting/fast-paced" - \
+point to the specific experience in her background that shows why, using her \
+Firm Engagement, Courses & Events material where it fits the role's practice area or \
+firm. Only use what's genuinely relevant to this specific role; do not force in \
+unrelated events or courses just because they exist, and do not repeat a whole \
+progression chain if only one step of it is relevant. Most paralegal/legal-assistant \
+roles in this search are general commercial, disputes or conveyancing roles, so her \
+BCLP, Citizens Advice and LLM background remain the primary evidence for most \
+applications - bring in the private equity/finance narrative (A&O Shearman open day, \
+the Coursera course, the Clifford Chance programme) specifically when a role or \
+employer relates to private equity, corporate finance or banking.
+
 EVIDENCE BEFORE ADJECTIVES: never simply assert she is organised, analytical, \
 resilient, commercially aware, a strong communicator, detail-oriented or \
 proactive. Show something she did that demonstrates it. Preferred shape: \
