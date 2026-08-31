@@ -168,6 +168,12 @@ async function load() {
   }
 }
 
+
+function companySearchUrl(job) {
+  const q = [job.employer, job.title, 'careers'].filter(Boolean).join(' ');
+  return 'https://www.google.com/search?q=' + encodeURIComponent(q);
+}
+
 function jobCard(job) {
   const cardId = Math.random().toString(36).slice(2);
   const cv = job.adapted_cv;
@@ -176,7 +182,7 @@ function jobCard(job) {
   return `
     <div class="job-card">
       <div class="job-title">${escapeHtml(job.title || '')}</div>
-      <div class="job-meta">${escapeHtml(job.employer || '')} · ${escapeHtml(job.location || '')}${job.salary ? ' · ' + escapeHtml(job.salary) : ''} · <a href="${job.url}" target="_blank">View listing</a></div>
+      <div class="job-meta">${escapeHtml(job.employer || '')} · ${escapeHtml(job.location || '')}${job.salary ? ' · ' + escapeHtml(job.salary) : ''} · <a href="${job.url}" target="_blank">View listing</a> · <a href="${companySearchUrl(job)}" target="_blank">Find on company site</a></div>
       <details>
         <summary>Cover letter (ready to send)</summary>
         <div class="cover-letter" id="cl-${cardId}">${escapeHtml(job.cover_letter || '')}</div>
