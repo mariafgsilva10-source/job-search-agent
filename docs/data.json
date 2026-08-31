@@ -1,5 +1,126 @@
 [
   {
+    "date": "2026-08-31",
+    "jobs": [
+      {
+        "source": "adzuna",
+        "id": "adzuna_5859524776",
+        "title": "Shift Supervisor",
+        "employer": "EG on the move",
+        "location": "Lower Earley, Reading",
+        "salary": "\u00a327872-27872",
+        "url": "https://www.adzuna.co.uk/jobs/details/5859524776?utm_medium=api&utm_source=d98dd21f",
+        "description": "Role: Starbucks Shift Supervisor Location: Reading, RG6 5HJ Hours: Part-Time Hours Available / Permanent Hourly Rate: \u00a313.40 Bonus Scheme: Bonus Incentive! Company: EG On The Move NEW STORE OPENING! About the role: Join us as a Starbucks Supervisor and become a vital part of our team! In this key role, youll oversee the daily operations of the store, ensuring smooth opening and closing procedures, managing cash handling, and creating a safe, welcoming environment for both our partners and custo\u2026",
+        "cover_letter": "I am applying for the Shift Supervisor position at EG On The Move's new Starbucks site in Lower Earley, Reading.\n\nAlongside my legal work, I have developed strong practical skills in managing competing priorities under pressure, maintaining accurate records, and communicating clearly with a wide range of people \u2014 all of which translate directly into a supervisory role. At Citizens Advice, I manage a caseload of clients across multiple matter types simultaneously, meeting firm procedural deadlines while ensuring each person receives clear, reliable guidance. At BCLP, I was the sole junior coordinating a team's document management and deadline tracking in the lead-up to a significant arbitration submission \u2014 an experience that sharpened my ability to keep operations running smoothly when the pressure is highest.\n\nI am comfortable taking responsibility, directing the work of others, and making sound judgements quickly. I understand that a Shift Supervisor role requires someone who can hold the store's standards \u2014 cash handling accuracy, safe opening and closing procedures, a welcoming environment for staff and customers \u2014 without close oversight. I approach that kind of responsibility the same way I approach case management: methodically, with close attention to detail and a consistent focus on getting things right for the people I am there to serve.\n\nI am based locally in the Reading area and am available for part-time hours. I would welcome the opportunity to discuss the role further.\n\nYours sincerely,\nMaria Silva",
+        "adapted_cv": {
+          "summary": "Organised, reliable and detail-focused professional with experience managing complex workloads under pressure, maintaining accurate records, communicating clearly with clients and colleagues, and taking responsibility for outcomes in high-stakes environments. Background spans legal advisory work, placement at an international law firm, and client-facing roles requiring sound judgement, consistent standards, and the ability to coordinate others effectively. Based in the Reading area and available for part-time hours.",
+          "education": [
+            {
+              "title": "Comparative and International Dispute Resolution LLM \u2014 Merit",
+              "institution": "Queen Mary University of London",
+              "dateline": "Sept 2024 \u2013 Oct 2025",
+              "bullets": [
+                "Modules in dispute resolution, procedural issues, legal research and evidence analysis",
+                "Dissertation on data protection and GDPR across jurisdictions \u2014 Distinction, 75%"
+              ]
+            },
+            {
+              "title": "Law LLB \u2014 2:1",
+              "institution": "University College London",
+              "dateline": "Sept 2020 \u2013 June 2024",
+              "bullets": [
+                "Modules included Commercial Law, Company Law, Advanced Contract Law and Alternative Dispute Resolution"
+              ]
+            },
+            {
+              "title": "International Foundation Programme: Law and International Relations",
+              "institution": "King's College London",
+              "dateline": "Sept 2019 \u2013 June 2020",
+              "bullets": [
+                "Awarded the Leaders of Tomorrow prize \u2014 top 20 of a 200-student cohort; partial funding toward undergraduate degree"
+              ]
+            }
+          ],
+          "experience": [
+            {
+              "employer": "Citizens Advice East Berkshire",
+              "location": "Maidenhead",
+              "role": "Legal Adviser",
+              "dateline": "July 2026 \u2013 Present",
+              "bullets": [
+                "Manages a varied caseload simultaneously, meeting firm deadlines across welfare, housing, employment and debt matters",
+                "Interviews clients, takes detailed factual statements, identifies key issues and translates complex rules into clear, practical guidance for vulnerable individuals",
+                "Drafts correspondence and prepares documents; maintains accurate, confidential case records",
+                "Assesses eligibility against statutory criteria and researches complex points to ensure advice is reliable and up to date"
+              ]
+            },
+            {
+              "employer": "Bryan Cave Leighton Paisner LLP (BCLP)",
+              "location": "London",
+              "role": "Legal Placement Student \u2014 International Arbitration",
+              "dateline": "Feb 2024 \u2013 Aug 2024",
+              "bullets": [
+                "Became the sole junior coordinating document management and deadline tracking for the team ahead of a significant submission \u2014 kept operations running smoothly under pressure",
+                "Reviewed and organised large volumes of documents; maintained structured electronic case files; monitored and met procedural deadlines",
+                "Liaised with the client and an external translator to coordinate required materials; tracked outstanding actions to ensure on-time delivery",
+                "Received feedback from a partner and associate that performance was comparable to a newly qualified solicitor"
+              ]
+            },
+            {
+              "employer": "Bryan Cave Leighton Paisner LLP (BCLP)",
+              "location": "London",
+              "role": "Legal Placement Student \u2014 Real Estate Disputes",
+              "dateline": "Aug 2023 \u2013 Feb 2024",
+              "bullets": [
+                "Managed large volumes of confidential documents across several matters with competing deadlines",
+                "Assisted with hearing preparation, electronic bundling, court filings and deadline tracking across multiple live matters",
+                "Maintained matter records via iManage; assisted with matter opening, closure and cost comparisons",
+                "Prepared client notes and coordinated hearing arrangements, requiring reliable communication and attention to detail"
+              ]
+            },
+            {
+              "employer": "Q-Legal",
+              "location": "Remote",
+              "role": "Legal Adviser",
+              "dateline": "Oct 2024 \u2013 Jan 2025",
+              "bullets": [
+                "Managed a client matter from instruction through to formal written advice, coordinating with a supervising solicitor and meeting a firm deadline",
+                "Translated complex statutory requirements into clear, practical guidance; communicated directly with the client throughout"
+              ]
+            },
+            {
+              "employer": "Adobe",
+              "location": "London",
+              "role": "Legal Intern",
+              "dateline": "June 2022 \u2013 Aug 2022",
+              "bullets": [
+                "Liaised with sales, legal and international business teams to resolve queries and reconcile competing priorities",
+                "Reviewed and amended commercial contracts; flagged provisions needing further input and communicated amendments to stakeholders",
+                "Prepared and delivered an internal presentation on contractual risks and mitigation measures"
+              ]
+            }
+          ],
+          "skills": [
+            {
+              "label": "Languages",
+              "text": "Portuguese (native), English (fluent), Spanish (basic)"
+            },
+            {
+              "label": "Technical skills",
+              "text": "Microsoft Word, Excel, PowerPoint; iManage; legal research databases; electronic court filing portals; electronic bundling; case management and time-recording systems"
+            },
+            {
+              "label": "Case and evidence management",
+              "text": "Document review and organisation, hearing bundles, procedural deadline tracking, case-file maintenance, coordinating multiple concurrent matters"
+            }
+          ],
+          "name": "Maria Silva",
+          "contact": "38, Marlborough Road, Maidenhead, Berkshire \u00b7 +447935308070 \u00b7 mariafgsilva10@gmail.com \u00b7 linkedin.com/in/mariafgsilva10"
+        }
+      }
+    ]
+  },
+  {
     "date": "2026-08-30",
     "jobs": [
       {
