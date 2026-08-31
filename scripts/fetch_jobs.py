@@ -29,7 +29,12 @@ SEARCH_TERMS = [
     "legal research assistant",
     "legal research analyst",
 ]
-LOCATIONS = ["Reading", "High Wycombe", "Loudwater", "Maidenhead"]
+LOCATIONS = ["Reading", "High Wycombe", "Loudwater", "Maidenhead", "London"]
+# Adzuna searches by radius from a single anchor point per call rather than a
+# named location list like Reed, so we search from a couple of anchors that
+# between them cover the Reading/Maidenhead area and London, rather than
+# re-running every LOCATIONS entry (which would multiply the API calls).
+ADZUNA_LOCATIONS = ["Reading", "London"]
 RESULTS_PER_SEARCH = 20
 MAX_NEW_JOBS_PER_RUN = 10  # caps drafting cost/volume per run, incl. the first big run
 
@@ -93,35 +98,36 @@ def fetch_adzuna():
 
     results = []
     for term in SEARCH_TERMS:
-        resp = requests.get(
-            "https://api.adzuna.com/v1/api/jobs/gb/search/1",
-            params={
-                "app_id": app_id,
-                "app_key": app_key,
-                "what_phrase": term,  # exact-phrase match — "what" alone OR-matches
-                                      # individual words and was returning unrelated
-                                      # roles (e.g. warehouse jobs matching on "assistant")
-                "where": "Reading",
-                "distance": 25,
-                "results_per_page": RESULTS_PER_SEARCH,
-                "content-type": "application/json",
-            },
-            timeout=20,
-        )
-        if resp.status_code != 200:
-            print(f"Adzuna error {resp.status_code} for {term}: {resp.text[:200]}")
-            continue
-        for job in resp.json().get("results", []):
-            results.append({
-                "source": "adzuna",
-                "id": f"adzuna_{job['id']}",
-                "title": job.get("title"),
-                "employer": (job.get("company") or {}).get("display_name"),
-                "location": (job.get("location") or {}).get("display_name"),
-                "salary": job.get("salary_min") and f"£{job['salary_min']:.0f}-{job.get('salary_max', 0):.0f}",
-                "url": job.get("redirect_url"),
-                "description": job.get("description", ""),
-            })
+        for loc in ADZUNA_LOCATIONS:
+            resp = requests.get(
+                "https://api.adzuna.com/v1/api/jobs/gb/search/1",
+                params={
+                    "app_id": app_id,
+                    "app_key": app_key,
+                    "what_phrase": term,  # exact-phrase match — "what" alone OR-matches
+                                          # individual words and was returning unrelated
+                                          # roles (e.g. warehouse jobs matching on "assistant")
+                    "where": loc,
+                    "distance": 25,
+                    "results_per_page": RESULTS_PER_SEARCH,
+                    "content-type": "application/json",
+                },
+                timeout=20,
+            )
+            if resp.status_code != 200:
+                print(f"Adzuna error {resp.status_code} for {term}/{loc}: {resp.text[:200]}")
+                continue
+            for job in resp.json().get("results", []):
+                results.append({
+                    "source": "adzuna",
+                    "id": f"adzuna_{job['id']}",
+                    "title": job.get("title"),
+                    "employer": (job.get("company") or {}).get("display_name"),
+                    "location": (job.get("location") or {}).get("display_name"),
+                    "salary": job.get("salary_min") and f"£{job['salary_min']:.0f}-{job.get('salary_max', 0):.0f}",
+                    "url": job.get("redirect_url"),
+                    "description": job.get("description", ""),
+                })
     return results
 
 
