@@ -56,6 +56,33 @@ One-year placement: six months International Arbitration, six months Real Estate
 - Supported acceptance of standard contractual terms: reviewed documentation, flagged provisions needing legal input, communicated amendments to stakeholders
 - Prepared and delivered an internal presentation on breach-of-contract risks and mitigation measures
 
+## Firm Engagement, Courses & Events (personal narrative material)
+Use these to make applications personal by showing how an interest actually developed,
+not just as a list of things attended. Only bring in what's genuinely relevant to the
+specific role/practice area/firm — don't force all of it into one letter.
+
+- A&O Shearman Open Day, London, August 2026: attended a private equity session and a
+  finance workshop, covering how different practice areas contribute to a PE transaction
+  and looking at security taken by lenders, including examples involving aircraft and
+  ship financing. This is the specific moment that sparked a developing interest in
+  private equity and finance work, not a long-standing interest. Also spoke with A&O
+  lawyers and recruitment, including associate Teagan Carr, and was struck by how openly
+  the firm discussed neurodiversity, prompting interest in the firm's D&I employee
+  networks. Naming A&O Shearman as the origin of the PE/finance interest is fine in any
+  application; the more granular detail (specific people spoken to, the neurodiversity
+  conversation) belongs only in applications to A&O Shearman itself.
+- Coursera, Private Equity course (self-directed, taken after the A&O Shearman open day):
+  studied fund structures, investment selection, leverage, value creation and exit
+  strategies, to understand the commercial mechanics behind PE legal work — evidence the
+  interest was followed up on, not just stated.
+- Clifford Chance Real Estate Finance virtual experience programme: applied financing and
+  security concepts in a practical, transactional real estate finance context —
+  reinforcing, not creating, the developing interest in finance.
+- Legal events attended: London International Disputes Week at Three Crowns
+  ("Arbitration in a Turbulent Global Landscape"); a King's College London event on abuse
+  of process in international arbitration; other arbitration- and technology-and-law
+  seminars — evidence of actively exploring the profession outside formal work and study.
+
 ## Skills
 - Languages: Portuguese (native), English (fluent), Spanish (basic)
 - Technical: legal and commercial research; qualitative interviewing; documentary analysis; concise report writing; Microsoft Word/Excel/PowerPoint; iManage; legal research databases; electronic court filing portals; document review; electronic bundling; case management and time-recording systems
@@ -63,7 +90,7 @@ One-year placement: six months International Arbitration, six months Real Estate
 
 ## Target Role Positioning
 - Targeting paralegal / legal roles
-- Geography: Reading, Loudwater, High Wycombe, Maidenhead area
+- Geography: Reading, Loudwater, High Wycombe, Maidenhead area, and London
 - CV bullets should be commercially relevant, dispute-resolution/commercial-awareness framed, client-focused judgement
 - Particular interest in regulatory proceedings, professional standards and public protection
 - Writing style: purpose-led openings, prioritised issues, measured language ("may", "likely", "risk of"), clear options + recommendation, concise, no fluff, mirrors employer's own wording, avoids academic framing and absolutist language
