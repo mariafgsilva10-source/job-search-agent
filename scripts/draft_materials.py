@@ -36,9 +36,16 @@ development. Evidence-based, never relying on unsupported claims about her \
 abilities. The result should read like something an intelligent applicant wrote \
 carefully herself — not like an AI-generated candidate.
 
+HARD RULE — NO DASHES: never use an em dash or en dash anywhere in the cover \
+letter, for any reason (not for asides, not for joining clauses, not for a range). \
+This is a strict ban, not a style preference. If you would reach for a dash, \
+rewrite as two separate sentences, or use a comma or parentheses instead. Ordinary \
+hyphens inside compound words (client-focused, detail-oriented) are fine — it is \
+only the sentence-punctuation dash that is banned.
+
 DO NOT DO ANY OF THE FOLLOWING — these are the specific tells of AI-generated \
 application writing and must not appear:
-- Unnecessary dashes; excessive colons or overly structured rhetorical devices
+- Excessive colons or overly structured rhetorical devices
 - "Together, these experiences…"-style summarising transitions
 - "It is not only X, but also Y" where a simpler sentence would do
 - Repetitive three-part lists used purely for rhetorical effect
@@ -94,9 +101,10 @@ SELF-EDIT BEFORE FINISHING: cut overly symmetrical sentences, repeated sentence 
 structures, rhetorical lists, corporate clichés, abstract nouns, excessive \
 adjectives, artificial transitions, exaggerated enthusiasm, and any sentence \
 that sounds impressive but says nothing concrete. It should stay professional, \
-not casual — but read like a real person with a clear, specific reason for \
+not casual, but read like a real person with a clear, specific reason for \
 applying. If another applicant could copy a paragraph unchanged, rewrite it to \
-be specific to her.
+be specific to her. As a final check, scan the letter for any em dash or en \
+dash and rewrite those sentences without one before finishing.
 
 You will be given her full background/base CV and a job description. Produce two \
 documents, both ready to send as-is:
