@@ -229,14 +229,27 @@ def main():
             draft = {"cover_letter": f"(drafting failed: {e})", "adapted_cv": None}
         drafted.append({**job, **draft})
 
-    # Load existing dashboard history, prepend today's batch
+    # Load existing dashboard history, merge today's batch into any existing
+    # entry for today rather than always inserting a new one - running the
+    # workflow more than once on the same day (a scheduled run plus a manual
+    # trigger, say) must not split one day's jobs across two dashboard
+    # entries with duplicate dates.
     dashboard_file = DOCS_DIR / "data.json"
     history = []
     if dashboard_file.exists():
         history = json.loads(dashboard_file.read_text())
 
-    today_entry = {"date": str(date.today()), "jobs": drafted}
-    history.insert(0, today_entry)
+    today_str = str(date.today())
+    existing_today = next((d for d in history if d.get("date") == today_str), None)
+    if existing_today is not None:
+        seen_ids = {j.get("id") for j in existing_today.get("jobs", [])}
+        existing_today["jobs"] = existing_today.get("jobs", []) + [
+            j for j in drafted if j.get("id") not in seen_ids
+        ]
+        history.remove(existing_today)
+        history.insert(0, existing_today)
+    else:
+        history.insert(0, {"date": today_str, "jobs": drafted})
     history = history[:30]  # keep last 30 days
 
     DOCS_DIR.mkdir(exist_ok=True)
