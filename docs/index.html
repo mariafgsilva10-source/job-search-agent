@@ -83,6 +83,31 @@
   .pdf-btn { font-weight: 500; }
   .empty { color: var(--muted); font-size: 0.9rem; padding: 40px 0; text-align: center; }
 
+  .top-controls {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .top-controls input { accent-color: var(--accent); cursor: pointer; }
+  .top-controls label { cursor: pointer; }
+
+  .applied-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin: 10px 0 2px;
+    cursor: pointer;
+    width: fit-content;
+  }
+  .applied-row input { accent-color: var(--accent); cursor: pointer; }
+  .job-card.is-applied { opacity: 0.5; }
+  .job-card.is-applied .job-title { text-decoration: line-through; }
+
   /* --- CV preview: matches Maria's CV template --- */
   .cv-preview {
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -143,29 +168,75 @@
 <body>
   <h1>Daily Job Search</h1>
   <div class="sub">Paralegal / legal vacancies — auto-refreshed daily</div>
+  <div class="top-controls">
+    <input type="checkbox" id="hideAppliedToggle">
+    <label for="hideAppliedToggle">Hide jobs marked as applied</label>
+  </div>
   <div id="root"><div class="empty">Loading…</div></div>
 
 <script>
+// --- "Applied" tracking: kept in this browser's storage only (no server
+// involved), so it lets Maria hide jobs she's dealt with without affecting
+// what the daily automation fetches or drafts. ---
+function getAppliedSet() {
+  try {
+    return new Set(JSON.parse(localStorage.getItem('appliedJobIds') || '[]'));
+  } catch (e) {
+    return new Set();
+  }
+}
+
+function setAppliedState(jobId, applied) {
+  const s = getAppliedSet();
+  if (applied) s.add(jobId); else s.delete(jobId);
+  try { localStorage.setItem('appliedJobIds', JSON.stringify([...s])); } catch (e) {}
+}
+
+function getHideApplied() {
+  try { return localStorage.getItem('hideApplied') === '1'; } catch (e) { return false; }
+}
+
+function setHideApplied(v) {
+  try { localStorage.setItem('hideApplied', v ? '1' : '0'); } catch (e) {}
+}
+
+let lastHistory = null;
+
 async function load() {
   const root = document.getElementById('root');
+  const toggle = document.getElementById('hideAppliedToggle');
+  toggle.checked = getHideApplied();
   try {
     const res = await fetch('data.json?_=' + Date.now());
-    const history = await res.json();
-    if (!history.length) {
-      root.innerHTML = '<div class="empty">No runs yet.</div>';
-      return;
-    }
-    root.innerHTML = history.map(day => `
-      <div class="day-group">
-        <div class="day-label">${day.date} — ${day.jobs.length} new</div>
-        ${day.jobs.length === 0
-          ? '<div class="empty">No new matching vacancies today.</div>'
-          : day.jobs.map(jobCard).join('')}
-      </div>
-    `).join('');
+    lastHistory = await res.json();
+    render();
   } catch (e) {
     root.innerHTML = '<div class="empty">No data yet — the first automated run will populate this.</div>';
   }
+}
+
+function render() {
+  const root = document.getElementById('root');
+  const history = lastHistory;
+  if (!history || !history.length) {
+    root.innerHTML = '<div class="empty">No runs yet.</div>';
+    return;
+  }
+  const applied = getAppliedSet();
+  const hideApplied = getHideApplied();
+  root.innerHTML = history.map(day => {
+    const visibleJobs = hideApplied ? day.jobs.filter(j => !applied.has(j.id)) : day.jobs;
+    const appliedCount = day.jobs.filter(j => applied.has(j.id)).length;
+    const countLabel = `${day.jobs.length} new${appliedCount ? ` · ${appliedCount} applied` : ''}`;
+    return `
+      <div class="day-group">
+        <div class="day-label">${day.date} — ${countLabel}</div>
+        ${visibleJobs.length === 0
+          ? `<div class="empty">${day.jobs.length === 0 ? 'No new matching vacancies today.' : 'All jobs here are marked as applied.'}</div>`
+          : visibleJobs.map(j => jobCard(j, applied.has(j.id))).join('')}
+      </div>
+    `;
+  }).join('');
 }
 
 
@@ -174,15 +245,19 @@ function companySearchUrl(job) {
   return 'https://www.google.com/search?q=' + encodeURIComponent(q);
 }
 
-function jobCard(job) {
+function jobCard(job, isApplied) {
   const cardId = Math.random().toString(36).slice(2);
   const cv = job.adapted_cv;
   const hasCv = !!(cv && typeof cv === 'object' && (cv.summary || (cv.experience || []).length));
   const hasLegacyCv = !!(cv && typeof cv === 'string' && cv.trim());
   return `
-    <div class="job-card">
+    <div class="job-card${isApplied ? ' is-applied' : ''}" data-job-id="${escapeHtml(job.id || '')}">
       <div class="job-title">${escapeHtml(job.title || '')}</div>
       <div class="job-meta">${escapeHtml(job.employer || '')} · ${escapeHtml(job.location || '')}${job.salary ? ' · ' + escapeHtml(job.salary) : ''} · <a href="${job.url}" target="_blank">View listing</a> · <a href="${companySearchUrl(job)}" target="_blank">Find on company site</a></div>
+      <label class="applied-row">
+        <input type="checkbox" class="applied-checkbox" ${isApplied ? 'checked' : ''}>
+        Applied
+      </label>
       <details>
         <summary>Cover letter (ready to send)</summary>
         <div class="cover-letter" id="cl-${cardId}">${escapeHtml(job.cover_letter || '')}</div>
@@ -313,6 +388,25 @@ document.addEventListener('click', (e) => {
     btn.textContent = 'Copied!';
     setTimeout(() => { btn.textContent = original; }, 1500);
   });
+});
+
+document.addEventListener('change', (e) => {
+  if (e.target.id === 'hideAppliedToggle') {
+    setHideApplied(e.target.checked);
+    render();
+    return;
+  }
+  if (e.target.classList.contains('applied-checkbox')) {
+    const card = e.target.closest('.job-card');
+    const jobId = card && card.dataset.jobId;
+    if (!jobId) return;
+    setAppliedState(jobId, e.target.checked);
+    if (getHideApplied() && e.target.checked) {
+      render();
+    } else {
+      card.classList.toggle('is-applied', e.target.checked);
+    }
+  }
 });
 
 load();
