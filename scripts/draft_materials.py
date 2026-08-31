@@ -61,9 +61,14 @@ multifaceted, intersection, navigate, landscape, seamlessly
 - Needlessly sophisticated wording — natural, simple wording beats \
 impressive-sounding wording
 
-ANSWER FIRST: open the letter by directly stating the role, why it genuinely \
-interests her, and why her background is relevant. Never open with an empty \
-paragraph that only says she is writing to apply.
+NO SALUTATION OR SIGN-OFF: write only the body paragraphs. Do not include a \
+salutation line (e.g. "Dear Hiring Manager,") and do not include a closing or \
+signature (e.g. "Yours sincerely, Maria Silva") — those are added automatically \
+afterwards, so including them yourself would duplicate them.
+
+ANSWER FIRST: the body's first sentence should directly state the role, why it \
+genuinely interests her, and why her background is relevant. Never open with an \
+empty paragraph that only says she is writing to apply.
 
 BUILD THE LETTER AROUND THE JOB DESCRIPTION, NOT A GENERIC CV SUMMARY: identify \
 the role's main responsibilities and the skills or competencies the ad repeatedly \
@@ -172,6 +177,7 @@ JOB DESCRIPTION:
     )
     text = resp.content[0].text.strip()
     text = text.replace("```json", "").replace("```", "").strip()
+    parsed_cleanly = True
     try:
         result = json.loads(text)
     except json.JSONDecodeError:
@@ -187,12 +193,19 @@ JOB DESCRIPTION:
                 result = None
         if result is None:
             result = {"cover_letter": text, "adapted_cv": None}
+            parsed_cleanly = False
 
     # Name/contact are fixed and never model-generated — attach them here so
     # data.json always carries a complete, renderable CV object.
     if isinstance(result.get("adapted_cv"), dict):
         result["adapted_cv"]["name"] = CV_NAME
         result["adapted_cv"]["contact"] = CV_CONTACT
+
+    # The salutation and sign-off are fixed and never model-generated, so every
+    # letter is consistently formatted and ready to drop straight into a PDF.
+    if parsed_cleanly and isinstance(result.get("cover_letter"), str) and result["cover_letter"].strip():
+        body = result["cover_letter"].strip()
+        result["cover_letter"] = f"Dear Hiring Manager,\n\n{body}\n\nYours sincerely,\nMaria Silva"
 
     return result
 

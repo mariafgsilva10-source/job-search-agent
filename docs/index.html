@@ -62,9 +62,14 @@
     padding: 12px 14px;
     margin-top: 8px;
   }
+  .btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+  }
   .copy-btn {
     display: inline-block;
-    margin-top: 8px;
     font-size: 0.8rem;
     color: var(--accent);
     background: none;
@@ -72,8 +77,10 @@
     border-radius: 6px;
     padding: 4px 10px;
     cursor: pointer;
+    text-decoration: none;
   }
   .copy-btn:hover { border-color: var(--accent); }
+  .pdf-btn { font-weight: 500; }
   .empty { color: var(--muted); font-size: 0.9rem; padding: 40px 0; text-align: center; }
 
   /* --- CV preview: matches Maria's CV template --- */
@@ -173,20 +180,29 @@ function jobCard(job) {
       <details>
         <summary>Cover letter (ready to send)</summary>
         <div class="cover-letter" id="cl-${cardId}">${escapeHtml(job.cover_letter || '')}</div>
-        <button class="copy-btn" data-copy-target="cl-${cardId}">Copy cover letter</button>
+        <div class="btn-row">
+          <button class="copy-btn" data-copy-target="cl-${cardId}">Copy cover letter</button>
+          ${job.cover_letter_pdf ? `<a class="copy-btn pdf-btn" href="${job.cover_letter_pdf}" target="_blank">Download PDF</a>` : ''}
+        </div>
       </details>
       ${hasCv ? `
       <details>
         <summary>CV adapted for this role</summary>
         <div class="cv-preview" id="cv-${cardId}">${renderCv(cv)}</div>
-        <button class="copy-btn" data-copy-plain="cv-plain-${cardId}">Copy CV text</button>
+        <div class="btn-row">
+          <button class="copy-btn" data-copy-plain="cv-plain-${cardId}">Copy CV text</button>
+          ${job.cv_pdf ? `<a class="copy-btn pdf-btn" href="${job.cv_pdf}" target="_blank">Download PDF</a>` : ''}
+        </div>
         <textarea id="cv-plain-${cardId}" hidden>${escapeHtml(plainCvText(cv))}</textarea>
       </details>` : ''}
       ${hasLegacyCv ? `
       <details>
         <summary>CV adapted for this role</summary>
         <div class="cover-letter" id="cv-${cardId}">${escapeHtml(cv)}</div>
-        <button class="copy-btn" data-copy-target="cv-${cardId}">Copy adapted CV</button>
+        <div class="btn-row">
+          <button class="copy-btn" data-copy-target="cv-${cardId}">Copy adapted CV</button>
+          ${job.cv_pdf ? `<a class="copy-btn pdf-btn" href="${job.cv_pdf}" target="_blank">Download PDF</a>` : ''}
+        </div>
       </details>` : ''}
     </div>
   `;
