@@ -11,7 +11,8 @@ protection.
 ## Education
 - Comparative and International Dispute Resolution LLM — Merit, Queen Mary University of London, Sept 2024–Oct 2025
   - International arbitration, dispute resolution, procedural issues, legal research, evidence analysis
-  - Dissertation: data protection and the development of GDPR across jurisdictions — Distinction, 75%
+  - Dissertation: data protection and the development of GDPR across jurisdictions — mark 55
+  - Transnational Law and Governance Applied module (covering data privacy and democracy) — 75%. This is a separate taught module mark, not the dissertation mark; the two should never be conflated.
 - Law LLB (2:1), University College London, Sept 2020–June 2024
   - Alternative Dispute Resolution, Advanced Contract Law, Commercial Law, Company Law
 - International Foundation Programme of Law and International Relations, King's College London, Sept 2019–June 2020
