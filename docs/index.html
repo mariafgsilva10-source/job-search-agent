@@ -682,8 +682,14 @@ function formatDeadline(deadlineDate) {
   return { text, cls };
 }
 
+function eventSearchUrl(ev) {
+  const q = [ev.firm, ev.event_name, 'apply', 'register'].filter(Boolean).join(' ');
+  return 'https://www.google.com/search?q=' + encodeURIComponent(q);
+}
+
 function openDayCard(ev, isRegistered) {
   const deadline = formatDeadline(ev.deadline_date);
+  const search = eventSearchUrl(ev);
   return `
     <div class="oday-card${isRegistered ? ' is-registered' : ''}" data-oday-id="${escapeHtml(ev.id || '')}">
       <div class="oday-firm">${ev.firm_profile_link
@@ -697,8 +703,9 @@ function openDayCard(ev, isRegistered) {
         Registered / applied
       </label>
       <div class="btn-row">
-        ${ev.apply_link ? `<a class="copy-btn" href="${ev.apply_link}" target="_blank">Apply on firm site</a>` : ''}
-        ${ev.apply_link ? `<button class="copy-btn" data-apply-link="${escapeHtml(ev.apply_link)}" data-apply-label="${escapeHtml((ev.firm || '') + ' — ' + (ev.event_name || ''))}">Copy message for Claude</button>` : ''}
+        <a class="copy-btn" href="${search}" target="_blank">Find this event's page</a>
+        ${ev.apply_link ? `<a class="copy-btn" href="${ev.apply_link}" target="_blank">Firm's early careers site</a>` : ''}
+        <button class="copy-btn" data-apply-link="${escapeHtml(search)}" data-apply-label="${escapeHtml((ev.firm || '') + ' — ' + (ev.event_name || ''))}" data-is-event="1">Copy message for Claude</button>
       </div>
     </div>
   `;
@@ -846,7 +853,10 @@ function escapeHtml(str) {
   return div.innerHTML;
 }
 
-function buildClaudeApplyMessage(label, link) {
+function buildClaudeApplyMessage(label, link, isEvent) {
+  if (isEvent) {
+    return `Please find and open the registration/application page for this specific event: ${label}. The link below is just a search starting point — firms usually only publish one general early-careers site rather than a page per event, so please track down the actual event page first, then start filling in my details and show me the form before submitting anything: ${link}`;
+  }
   const what = label ? `this application (${label})` : 'this application';
   return `Please open ${what} in Chrome and start filling in my details, then show me the form before submitting anything: ${link}`;
 }
@@ -860,7 +870,7 @@ document.addEventListener('click', (e) => {
     if (!link) return;
     text = buildClaudeApplyMessage('', link);
   } else if (btn.dataset.applyLink) {
-    text = buildClaudeApplyMessage(btn.dataset.applyLabel, btn.dataset.applyLink);
+    text = buildClaudeApplyMessage(btn.dataset.applyLabel, btn.dataset.applyLink, btn.dataset.isEvent === '1');
   } else if (btn.dataset.copyTarget) {
     text = document.getElementById(btn.dataset.copyTarget).textContent;
   } else if (btn.dataset.copyPlain) {
