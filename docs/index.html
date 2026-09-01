@@ -94,6 +94,29 @@
   .top-controls input { accent-color: var(--accent); cursor: pointer; }
   .top-controls label { cursor: pointer; }
 
+  .ask-claude-box {
+    background: #f5f4f1;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 20px;
+  }
+  .ask-claude-box label {
+    display: block;
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .ask-claude-row { display: flex; flex-wrap: wrap; gap: 8px; }
+  .ask-claude-row input {
+    flex: 1 1 260px;
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    font-family: inherit;
+  }
+  .ask-claude-hint { font-size: 0.78rem; color: var(--muted); margin-top: 6px; }
+
   .applied-row {
     display: flex;
     align-items: center;
@@ -232,6 +255,15 @@
   <div class="tabs">
     <button class="tab-btn active" data-tab="jobs" id="tabJobsBtn">Job Search</button>
     <button class="tab-btn" data-tab="opendays" id="tabOpenDaysBtn">Open Days &amp; Insight Days</button>
+  </div>
+
+  <div class="ask-claude-box">
+    <label for="applyLinkInput">Have an application link Claude should fill in? Paste it here.</label>
+    <div class="ask-claude-row">
+      <input type="url" id="applyLinkInput" placeholder="https://firm.example.com/apply">
+      <button class="copy-btn" id="copyClaudeMsgBtn">Copy message for Claude</button>
+    </div>
+    <div class="ask-claude-hint">Paste the copied message into your chat with Claude — it'll open the link in Chrome and start filling in your details, then show you the form before submitting anything.</div>
   </div>
 
   <div class="tab-panel active" id="panel-jobs">
@@ -498,7 +530,7 @@ function safeDropboxFolderName(name) {
 // show up in scraped job titles) have to be \u-escaped rather than sent
 // as literal UTF-8, or the browser refuses to set the header at all.
 function dropboxApiArgHeader(obj) {
-  return JSON.stringify(obj).replace(/[\x80-\uffff]/g, c =>
+  return JSON.stringify(obj).replace(/[^\x00-\x7f]/g, c =>
     '\\u' + c.charCodeAt(0).toString(16).padStart(4, '0')
   );
 }
@@ -666,6 +698,7 @@ function openDayCard(ev, isRegistered) {
       </label>
       <div class="btn-row">
         ${ev.apply_link ? `<a class="copy-btn" href="${ev.apply_link}" target="_blank">Apply on firm site</a>` : ''}
+        ${ev.apply_link ? `<button class="copy-btn" data-apply-link="${escapeHtml(ev.apply_link)}" data-apply-label="${escapeHtml((ev.firm || '') + ' — ' + (ev.event_name || ''))}">Copy message for Claude</button>` : ''}
       </div>
     </div>
   `;
@@ -690,6 +723,10 @@ function jobCard(job, isApplied, isDropboxSaved) {
         <input type="checkbox" class="applied-checkbox" ${isApplied ? 'checked' : ''}>
         Applied
       </label>
+      ${job.url ? `
+      <div class="btn-row">
+        <button class="copy-btn" data-apply-link="${escapeHtml(job.url)}" data-apply-label="${escapeHtml((job.title || '') + ' at ' + (job.employer || ''))}">Copy message for Claude</button>
+      </div>` : ''}
       ${canSaveToDropbox ? `
       <div class="btn-row save-dropbox-row">
         <button class="copy-btn save-dropbox-btn${isDropboxSaved ? ' is-saved' : ''}" data-save-dropbox="1">${isDropboxSaved ? 'Saved to Dropbox ✓' : 'Save to Dropbox'}</button>
@@ -809,11 +846,22 @@ function escapeHtml(str) {
   return div.innerHTML;
 }
 
+function buildClaudeApplyMessage(label, link) {
+  const what = label ? `this application (${label})` : 'this application';
+  return `Please open ${what} in Chrome and start filling in my details, then show me the form before submitting anything: ${link}`;
+}
+
 document.addEventListener('click', (e) => {
   const btn = e.target.closest('.copy-btn');
   if (!btn) return;
   let text;
-  if (btn.dataset.copyTarget) {
+  if (btn.id === 'copyClaudeMsgBtn') {
+    const link = (document.getElementById('applyLinkInput').value || '').trim();
+    if (!link) return;
+    text = buildClaudeApplyMessage('', link);
+  } else if (btn.dataset.applyLink) {
+    text = buildClaudeApplyMessage(btn.dataset.applyLabel, btn.dataset.applyLink);
+  } else if (btn.dataset.copyTarget) {
     text = document.getElementById(btn.dataset.copyTarget).textContent;
   } else if (btn.dataset.copyPlain) {
     text = document.getElementById(btn.dataset.copyPlain).value;
