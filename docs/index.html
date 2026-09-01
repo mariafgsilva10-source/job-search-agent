@@ -324,7 +324,10 @@ async function handleDropboxRedirect() {
         code_verifier: verifier,
       }).toString(),
     });
-    if (!res.ok) throw new Error('token exchange failed: ' + res.status);
+    if (!res.ok) {
+      const errBody = await res.text().catch(() => '');
+      throw new Error('token exchange failed (' + res.status + '): ' + errBody);
+    }
     const data = await res.json();
     setDropboxTokens({
       access_token: data.access_token,
@@ -332,7 +335,8 @@ async function handleDropboxRedirect() {
       expires_at: Date.now() + (data.expires_in - 60) * 1000,
     });
   } catch (e) {
-    alert('Connecting to Dropbox failed. Please try "Connect Dropbox" again.');
+    console.error('Dropbox connect failed', e);
+    alert('Connecting to Dropbox failed:\n\n' + (e && e.message ? e.message : e) + '\n\nPlease try "Connect Dropbox" again, and double-check the Redirect URI registered in your Dropbox app matches exactly:\nhttps://mariafgsilva10-source.github.io/job-search-agent/');
   }
 }
 
@@ -353,7 +357,10 @@ async function getDropboxAccessToken() {
         client_id: appKey,
       }).toString(),
     });
-    if (!res.ok) throw new Error('refresh failed: ' + res.status);
+    if (!res.ok) {
+      const errBody = await res.text().catch(() => '');
+      throw new Error('refresh failed (' + res.status + '): ' + errBody);
+    }
     const data = await res.json();
     const updated = {
       access_token: data.access_token,
@@ -363,6 +370,7 @@ async function getDropboxAccessToken() {
     setDropboxTokens(updated);
     return updated.access_token;
   } catch (e) {
+    console.error('Dropbox token refresh failed', e);
     return null;
   }
 }
@@ -383,22 +391,32 @@ function safeDropboxFolderName(name) {
   return n || 'Untitled role';
 }
 
+// Dropbox's API requires the Dropbox-API-Arg header value to be ASCII;
+// non-ASCII characters (accents, curly quotes, en/em dashes that sometimes
+// show up in scraped job titles) have to be \u-escaped rather than sent
+// as literal UTF-8, or the browser refuses to set the header at all.
+function dropboxApiArgHeader(obj) {
+  return JSON.stringify(obj).replace(/[\x80-\uffff]/g, c =>
+    '\\u' + c.charCodeAt(0).toString(16).padStart(4, '0')
+  );
+}
+
 async function uploadFileToDropbox(accessToken, url, dropboxPath) {
   const fileRes = await fetch(url);
-  if (!fileRes.ok) throw new Error('could not load ' + url);
+  if (!fileRes.ok) throw new Error('could not load ' + url + ' (' + fileRes.status + ')');
   const blob = await fileRes.blob();
   const res = await fetch('https://content.dropboxapi.com/2/files/upload', {
     method: 'POST',
     headers: {
       'Authorization': 'Bearer ' + accessToken,
-      'Dropbox-API-Arg': JSON.stringify({ path: dropboxPath, mode: 'overwrite', autorename: false, mute: true }),
+      'Dropbox-API-Arg': dropboxApiArgHeader({ path: dropboxPath, mode: 'overwrite', autorename: false, mute: true }),
       'Content-Type': 'application/octet-stream',
     },
     body: blob,
   });
   if (!res.ok) {
     const errText = await res.text().catch(() => '');
-    throw new Error('upload failed: ' + res.status + ' ' + errText);
+    throw new Error('upload of ' + dropboxPath + ' failed (' + res.status + '): ' + errText);
   }
 }
 
@@ -424,8 +442,11 @@ async function saveJobToDropbox(job, btn) {
     btn.classList.add('is-saved');
     btn.disabled = false;
   } catch (e) {
+    console.error('Dropbox save failed', e);
     btn.textContent = 'Save failed, tap to retry';
+    btn.title = 'Error: ' + (e && e.message ? e.message : e);
     btn.disabled = false;
+    alert('Could not save to Dropbox:\n\n' + (e && e.message ? e.message : e));
   }
 }
 
