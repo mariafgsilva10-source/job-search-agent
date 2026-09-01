@@ -184,9 +184,57 @@
   .cv-entry li { margin-bottom: 2px; }
   .cv-skill-label { font-weight: 700; }
   .empty { color: var(--muted); font-size: 0.9rem; padding: 40px 0; text-align: center; }
+
+  .tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+  .tab-btn {
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--muted);
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 8px 4px 10px;
+    margin-right: 18px;
+    cursor: pointer;
+  }
+  .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  .oday-source-note { color: var(--muted); font-size: 0.8rem; margin: -8px 0 18px; }
+  .oday-source-note a { color: var(--accent); }
+  .oday-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 12px;
+  }
+  .oday-card.is-registered { opacity: 0.5; }
+  .oday-card.is-registered .oday-firm { text-decoration: line-through; }
+  .oday-firm { font-weight: 600; font-size: 1.02rem; }
+  .oday-firm a { color: var(--ink); text-decoration: none; }
+  .oday-firm a:hover { text-decoration: underline; }
+  .oday-event-name { color: var(--muted); font-size: 0.88rem; margin: 2px 0 8px; }
+  .oday-summary { font-size: 0.88rem; line-height: 1.45; margin-bottom: 10px; }
+  .oday-deadline { font-size: 0.85rem; font-weight: 600; margin-bottom: 10px; }
+  .oday-deadline.is-soon { color: #b3491f; }
+  .oday-deadline.is-normal { color: var(--muted); }
 </style>
 </head>
 <body>
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="jobs" id="tabJobsBtn">Job Search</button>
+    <button class="tab-btn" data-tab="opendays" id="tabOpenDaysBtn">Open Days &amp; Insight Days</button>
+  </div>
+
+  <div class="tab-panel active" id="panel-jobs">
   <h1>Daily Job Search</h1>
   <div class="sub">Paralegal / legal vacancies — auto-refreshed daily</div>
   <div class="top-controls">
@@ -195,6 +243,18 @@
     <span class="dropbox-status" id="dropboxStatus"></span>
   </div>
   <div id="root"><div class="empty">Loading…</div></div>
+  </div>
+
+  <div class="tab-panel" id="panel-opendays">
+  <h1>Open Days &amp; Insight Days</h1>
+  <div class="sub">Law firm open days, insight days &amp; insight schemes — auto-refreshed daily</div>
+  <div class="oday-source-note">Sourced from <a href="https://www.legalcheek.com/key-deadlines-calendar/" target="_blank">Legal Cheek's deadlines calendar</a>, which links through to each firm's own application page.</div>
+  <div class="top-controls">
+    <input type="checkbox" id="hideRegisteredToggle">
+    <label for="hideRegisteredToggle">Hide events marked as registered</label>
+  </div>
+  <div id="root-opendays"><div class="empty">Loading…</div></div>
+  </div>
 
 <script>
 // --- "Applied" tracking: kept in this browser's storage only (no server
@@ -220,6 +280,48 @@ function getHideApplied() {
 
 function setHideApplied(v) {
   try { localStorage.setItem('hideApplied', v ? '1' : '0'); } catch (e) {}
+}
+
+// --- "Registered" tracking for the Open Days & Insight Days tab. Same
+// pattern as "Applied" above, kept under its own storage keys so the two
+// tabs never interfere with each other. ---
+function getOpenDayRegisteredSet() {
+  try {
+    return new Set(JSON.parse(localStorage.getItem('openDayRegisteredIds') || '[]'));
+  } catch (e) {
+    return new Set();
+  }
+}
+
+function setOpenDayRegisteredState(eventId, registered) {
+  const s = getOpenDayRegisteredSet();
+  if (registered) s.add(eventId); else s.delete(eventId);
+  try { localStorage.setItem('openDayRegisteredIds', JSON.stringify([...s])); } catch (e) {}
+}
+
+function getHideOpenDayRegistered() {
+  try { return localStorage.getItem('hideOpenDayRegistered') === '1'; } catch (e) { return false; }
+}
+
+function setHideOpenDayRegistered(v) {
+  try { localStorage.setItem('hideOpenDayRegistered', v ? '1' : '0'); } catch (e) {}
+}
+
+// --- Tabs: which of Job Search / Open Days is showing, remembered per
+// browser so Maria comes back to whichever she was last looking at. ---
+function getActiveTab() {
+  try { return localStorage.getItem('activeTab') || 'jobs'; } catch (e) { return 'jobs'; }
+}
+
+function setActiveTab(tab) {
+  try { localStorage.setItem('activeTab', tab); } catch (e) {}
+}
+
+function showTab(tab) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+  document.getElementById('panel-jobs').classList.toggle('active', tab === 'jobs');
+  document.getElementById('panel-opendays').classList.toggle('active', tab === 'opendays');
+  setActiveTab(tab);
 }
 
 // --- Dropbox saving: entirely client-side (no server involved), triggered
@@ -499,6 +601,75 @@ function render() {
   }).join('');
 }
 
+let lastOpenDays = null;
+
+async function loadOpenDays() {
+  const root = document.getElementById('root-opendays');
+  const toggle = document.getElementById('hideRegisteredToggle');
+  toggle.checked = getHideOpenDayRegistered();
+  try {
+    const res = await fetch('open_days.json?_=' + Date.now());
+    const payload = await res.json();
+    lastOpenDays = (payload && payload.events) || [];
+    renderOpenDays();
+  } catch (e) {
+    root.innerHTML = '<div class="empty">No data yet — the first automated run will populate this.</div>';
+  }
+}
+
+function renderOpenDays() {
+  const root = document.getElementById('root-opendays');
+  const events = lastOpenDays;
+  if (!events || !events.length) {
+    root.innerHTML = '<div class="empty">No upcoming open days or insight days found.</div>';
+    return;
+  }
+  const registered = getOpenDayRegisteredSet();
+  const hideRegistered = getHideOpenDayRegistered();
+  const visible = hideRegistered ? events.filter(ev => !registered.has(ev.id)) : events;
+  if (visible.length === 0) {
+    root.innerHTML = '<div class="empty">All events are marked as registered.</div>';
+    return;
+  }
+  root.innerHTML = visible.map(ev => openDayCard(ev, registered.has(ev.id))).join('');
+}
+
+function formatDeadline(deadlineDate) {
+  if (!deadlineDate) return { text: 'Deadline: check firm site for exact date', cls: 'is-normal' };
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const d = new Date(deadlineDate + 'T00:00:00');
+  const diffDays = Math.round((d - today) / 86400000);
+  const niceDate = d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  let text;
+  if (diffDays < 0) text = `Deadline passed (${niceDate})`;
+  else if (diffDays === 0) text = `Deadline: today (${niceDate})`;
+  else if (diffDays === 1) text = `Deadline: tomorrow (${niceDate})`;
+  else text = `Deadline: ${niceDate} (in ${diffDays} days)`;
+  const cls = diffDays <= 7 ? 'is-soon' : 'is-normal';
+  return { text, cls };
+}
+
+function openDayCard(ev, isRegistered) {
+  const deadline = formatDeadline(ev.deadline_date);
+  return `
+    <div class="oday-card${isRegistered ? ' is-registered' : ''}" data-oday-id="${escapeHtml(ev.id || '')}">
+      <div class="oday-firm">${ev.firm_profile_link
+        ? `<a href="${ev.firm_profile_link}" target="_blank">${escapeHtml(ev.firm || '')}</a>`
+        : escapeHtml(ev.firm || '')}</div>
+      <div class="oday-event-name">${escapeHtml(ev.event_name || '')}</div>
+      <div class="oday-summary">${escapeHtml(ev.summary || '')}</div>
+      <div class="oday-deadline ${deadline.cls}">${escapeHtml(deadline.text)}</div>
+      <label class="applied-row">
+        <input type="checkbox" class="oday-registered-checkbox" ${isRegistered ? 'checked' : ''}>
+        Registered / applied
+      </label>
+      <div class="btn-row">
+        ${ev.apply_link ? `<a class="copy-btn" href="${ev.apply_link}" target="_blank">Apply on firm site</a>` : ''}
+      </div>
+    </div>
+  `;
+}
 
 function companySearchUrl(job) {
   const q = [job.employer, job.title, 'careers'].filter(Boolean).join(' ');
@@ -672,6 +843,22 @@ document.addEventListener('change', (e) => {
       card.classList.toggle('is-applied', e.target.checked);
     }
   }
+  if (e.target.id === 'hideRegisteredToggle') {
+    setHideOpenDayRegistered(e.target.checked);
+    renderOpenDays();
+    return;
+  }
+  if (e.target.classList.contains('oday-registered-checkbox')) {
+    const card = e.target.closest('.oday-card');
+    const eventId = card && card.dataset.odayId;
+    if (!eventId) return;
+    setOpenDayRegisteredState(eventId, e.target.checked);
+    if (getHideOpenDayRegistered() && e.target.checked) {
+      renderOpenDays();
+    } else {
+      card.classList.toggle('is-registered', e.target.checked);
+    }
+  }
 });
 
 document.addEventListener('click', (e) => {
@@ -689,13 +876,20 @@ document.addEventListener('click', (e) => {
     const jobId = card && card.dataset.jobId;
     const job = jobId && findJobById(jobId);
     if (job) saveJobToDropbox(job, saveBtn);
+    return;
+  }
+  const tabBtn = e.target.closest('.tab-btn');
+  if (tabBtn) {
+    showTab(tabBtn.dataset.tab);
   }
 });
 
 (async function init() {
+  showTab(getActiveTab());
   await handleDropboxRedirect();
   renderDropboxStatus();
   await load();
+  await loadOpenDays();
 })();
 </script>
 </body>
