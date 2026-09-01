@@ -108,6 +108,27 @@
   .job-card.is-applied { opacity: 0.5; }
   .job-card.is-applied .job-title { text-decoration: line-through; }
 
+  .dropbox-status {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .dropbox-btn {
+    font-size: 0.8rem;
+    color: var(--accent);
+    background: none;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 4px 10px;
+    cursor: pointer;
+  }
+  .dropbox-btn:hover { border-color: var(--accent); }
+  .dropbox-connected-label { font-size: 0.8rem; color: var(--muted); }
+  .save-dropbox-row { margin: 8px 0 2px; }
+  .save-dropbox-btn { font-weight: 500; }
+  .save-dropbox-btn.is-saved { color: var(--accent); border-color: var(--accent); }
+
   /* --- CV preview: matches Maria's CV template --- */
   .cv-preview {
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -171,6 +192,7 @@
   <div class="top-controls">
     <input type="checkbox" id="hideAppliedToggle">
     <label for="hideAppliedToggle">Hide jobs marked as applied</label>
+    <span class="dropbox-status" id="dropboxStatus"></span>
   </div>
   <div id="root"><div class="empty">Loading…</div></div>
 
@@ -200,6 +222,222 @@ function setHideApplied(v) {
   try { localStorage.setItem('hideApplied', v ? '1' : '0'); } catch (e) {}
 }
 
+// --- Dropbox saving: entirely client-side (no server involved), triggered
+// only when Maria clicks "Save to Dropbox" on a job. Uses Dropbox's OAuth
+// PKCE flow, which needs only the app's public "App key" - no secret ever
+// has to live in this page. Each job gets its own Dropbox folder named for
+// that job's title and employer, holding "CV.pdf" and "Cover Letter.pdf". ---
+const DROPBOX_REDIRECT_URI = 'https://mariafgsilva10-source.github.io/job-search-agent/';
+
+function base64UrlEncode(bytes) {
+  let str = '';
+  bytes.forEach(b => { str += String.fromCharCode(b); });
+  return btoa(str).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}
+
+async function sha256Bytes(text) {
+  const data = new TextEncoder().encode(text);
+  const digest = await crypto.subtle.digest('SHA-256', data);
+  return new Uint8Array(digest);
+}
+
+function randomPkceVerifier() {
+  const bytes = new Uint8Array(64);
+  crypto.getRandomValues(bytes);
+  return base64UrlEncode(bytes);
+}
+
+function getDropboxAppKey() {
+  try { return localStorage.getItem('dropboxAppKey') || ''; } catch (e) { return ''; }
+}
+function setDropboxAppKey(k) {
+  try { localStorage.setItem('dropboxAppKey', k); } catch (e) {}
+}
+function getDropboxTokens() {
+  try { return JSON.parse(localStorage.getItem('dropboxTokens') || 'null'); } catch (e) { return null; }
+}
+function setDropboxTokens(t) {
+  try { localStorage.setItem('dropboxTokens', JSON.stringify(t)); } catch (e) {}
+}
+function clearDropboxTokens() {
+  try { localStorage.removeItem('dropboxTokens'); } catch (e) {}
+}
+function getDropboxSavedSet() {
+  try { return new Set(JSON.parse(localStorage.getItem('dropboxSavedJobIds') || '[]')); } catch (e) { return new Set(); }
+}
+function markDropboxSaved(jobId) {
+  const s = getDropboxSavedSet();
+  s.add(jobId);
+  try { localStorage.setItem('dropboxSavedJobIds', JSON.stringify([...s])); } catch (e) {}
+}
+
+function isDropboxConnected() {
+  const tokens = getDropboxTokens();
+  return !!(getDropboxAppKey() && tokens && tokens.refresh_token);
+}
+
+async function startDropboxConnect() {
+  let appKey = getDropboxAppKey();
+  if (!appKey) {
+    appKey = (prompt("Paste your Dropbox App key (Dropbox App Console → your app → Settings tab):") || '').trim();
+    if (!appKey) return false;
+    setDropboxAppKey(appKey);
+  }
+  const verifier = randomPkceVerifier();
+  try { localStorage.setItem('dropboxPkceVerifier', verifier); } catch (e) {}
+  const challenge = base64UrlEncode(await sha256Bytes(verifier));
+  const authUrl = 'https://www.dropbox.com/oauth2/authorize?' + new URLSearchParams({
+    client_id: appKey,
+    response_type: 'code',
+    code_challenge: challenge,
+    code_challenge_method: 'S256',
+    redirect_uri: DROPBOX_REDIRECT_URI,
+    token_access_type: 'offline',
+  }).toString();
+  location.href = authUrl;
+  return true;
+}
+
+function disconnectDropbox() {
+  clearDropboxTokens();
+  renderDropboxStatus();
+}
+
+async function handleDropboxRedirect() {
+  const params = new URLSearchParams(location.search);
+  const code = params.get('code');
+  if (!code) return;
+  const appKey = getDropboxAppKey();
+  let verifier = null;
+  try { verifier = localStorage.getItem('dropboxPkceVerifier'); } catch (e) {}
+  history.replaceState(null, '', location.pathname);
+  if (!appKey || !verifier) return;
+  try {
+    const res = await fetch('https://api.dropboxapi.com/oauth2/token', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
+        code,
+        grant_type: 'authorization_code',
+        client_id: appKey,
+        redirect_uri: DROPBOX_REDIRECT_URI,
+        code_verifier: verifier,
+      }).toString(),
+    });
+    if (!res.ok) throw new Error('token exchange failed: ' + res.status);
+    const data = await res.json();
+    setDropboxTokens({
+      access_token: data.access_token,
+      refresh_token: data.refresh_token,
+      expires_at: Date.now() + (data.expires_in - 60) * 1000,
+    });
+  } catch (e) {
+    alert('Connecting to Dropbox failed. Please try "Connect Dropbox" again.');
+  }
+}
+
+async function getDropboxAccessToken() {
+  const appKey = getDropboxAppKey();
+  const tokens = getDropboxTokens();
+  if (!appKey || !tokens || !tokens.refresh_token) return null;
+  if (tokens.access_token && tokens.expires_at && Date.now() < tokens.expires_at) {
+    return tokens.access_token;
+  }
+  try {
+    const res = await fetch('https://api.dropboxapi.com/oauth2/token', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
+        grant_type: 'refresh_token',
+        refresh_token: tokens.refresh_token,
+        client_id: appKey,
+      }).toString(),
+    });
+    if (!res.ok) throw new Error('refresh failed: ' + res.status);
+    const data = await res.json();
+    const updated = {
+      access_token: data.access_token,
+      refresh_token: tokens.refresh_token,
+      expires_at: Date.now() + (data.expires_in - 60) * 1000,
+    };
+    setDropboxTokens(updated);
+    return updated.access_token;
+  } catch (e) {
+    return null;
+  }
+}
+
+function renderDropboxStatus() {
+  const el = document.getElementById('dropboxStatus');
+  if (!el) return;
+  el.innerHTML = isDropboxConnected()
+    ? `<span class="dropbox-connected-label">Dropbox connected</span><button class="dropbox-btn" id="dropboxDisconnectBtn">Disconnect</button>`
+    : `<button class="dropbox-btn" id="dropboxConnectBtn">Connect Dropbox</button>`;
+}
+
+function safeDropboxFolderName(name) {
+  let n = (name || '').replace(/[\/\\<>:"|?*]/g, '-').trim();
+  n = n.replace(/\s+/g, ' ');
+  n = n.replace(/^[\s.]+|[\s.]+$/g, '');
+  n = n.slice(0, 150);
+  return n || 'Untitled role';
+}
+
+async function uploadFileToDropbox(accessToken, url, dropboxPath) {
+  const fileRes = await fetch(url);
+  if (!fileRes.ok) throw new Error('could not load ' + url);
+  const blob = await fileRes.blob();
+  const res = await fetch('https://content.dropboxapi.com/2/files/upload', {
+    method: 'POST',
+    headers: {
+      'Authorization': 'Bearer ' + accessToken,
+      'Dropbox-API-Arg': JSON.stringify({ path: dropboxPath, mode: 'overwrite', autorename: false, mute: true }),
+      'Content-Type': 'application/octet-stream',
+    },
+    body: blob,
+  });
+  if (!res.ok) {
+    const errText = await res.text().catch(() => '');
+    throw new Error('upload failed: ' + res.status + ' ' + errText);
+  }
+}
+
+async function saveJobToDropbox(job, btn) {
+  const originalText = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = 'Connecting…';
+  let accessToken = await getDropboxAccessToken();
+  if (!accessToken) {
+    const navigating = await startDropboxConnect();
+    if (navigating) return; // page is redirecting to Dropbox now
+    btn.disabled = false;
+    btn.textContent = originalText;
+    return;
+  }
+  btn.textContent = 'Saving…';
+  const folder = safeDropboxFolderName(`${job.title || ''}, ${job.employer || ''}`);
+  try {
+    await uploadFileToDropbox(accessToken, job.cv_pdf, `/${folder}/CV.pdf`);
+    await uploadFileToDropbox(accessToken, job.cover_letter_pdf, `/${folder}/Cover Letter.pdf`);
+    markDropboxSaved(job.id);
+    btn.textContent = 'Saved to Dropbox ✓';
+    btn.classList.add('is-saved');
+    btn.disabled = false;
+  } catch (e) {
+    btn.textContent = 'Save failed, tap to retry';
+    btn.disabled = false;
+  }
+}
+
+function findJobById(id) {
+  if (!lastHistory) return null;
+  for (const day of lastHistory) {
+    const found = (day.jobs || []).find(j => j.id === id);
+    if (found) return found;
+  }
+  return null;
+}
+
 let lastHistory = null;
 
 async function load() {
@@ -224,6 +462,7 @@ function render() {
   }
   const applied = getAppliedSet();
   const hideApplied = getHideApplied();
+  const dropboxSaved = getDropboxSavedSet();
   root.innerHTML = history.map(day => {
     const visibleJobs = hideApplied ? day.jobs.filter(j => !applied.has(j.id)) : day.jobs;
     const appliedCount = day.jobs.filter(j => applied.has(j.id)).length;
@@ -233,7 +472,7 @@ function render() {
         <div class="day-label">${day.date} — ${countLabel}</div>
         ${visibleJobs.length === 0
           ? `<div class="empty">${day.jobs.length === 0 ? 'No new matching vacancies today.' : 'All jobs here are marked as applied.'}</div>`
-          : visibleJobs.map(j => jobCard(j, applied.has(j.id))).join('')}
+          : visibleJobs.map(j => jobCard(j, applied.has(j.id), dropboxSaved.has(j.id))).join('')}
       </div>
     `;
   }).join('');
@@ -245,11 +484,12 @@ function companySearchUrl(job) {
   return 'https://www.google.com/search?q=' + encodeURIComponent(q);
 }
 
-function jobCard(job, isApplied) {
+function jobCard(job, isApplied, isDropboxSaved) {
   const cardId = Math.random().toString(36).slice(2);
   const cv = job.adapted_cv;
   const hasCv = !!(cv && typeof cv === 'object' && (cv.summary || (cv.experience || []).length));
   const hasLegacyCv = !!(cv && typeof cv === 'string' && cv.trim());
+  const canSaveToDropbox = !!(job.cv_pdf && job.cover_letter_pdf);
   return `
     <div class="job-card${isApplied ? ' is-applied' : ''}" data-job-id="${escapeHtml(job.id || '')}">
       <div class="job-title">${escapeHtml(job.title || '')}</div>
@@ -258,6 +498,10 @@ function jobCard(job, isApplied) {
         <input type="checkbox" class="applied-checkbox" ${isApplied ? 'checked' : ''}>
         Applied
       </label>
+      ${canSaveToDropbox ? `
+      <div class="btn-row save-dropbox-row">
+        <button class="copy-btn save-dropbox-btn${isDropboxSaved ? ' is-saved' : ''}" data-save-dropbox="1">${isDropboxSaved ? 'Saved to Dropbox ✓' : 'Save to Dropbox'}</button>
+      </div>` : ''}
       <details>
         <summary>Cover letter (ready to send)</summary>
         <div class="cover-letter" id="cl-${cardId}">${escapeHtml(job.cover_letter || '')}</div>
@@ -409,7 +653,29 @@ document.addEventListener('change', (e) => {
   }
 });
 
-load();
+document.addEventListener('click', (e) => {
+  if (e.target.closest('#dropboxConnectBtn')) {
+    startDropboxConnect();
+    return;
+  }
+  if (e.target.closest('#dropboxDisconnectBtn')) {
+    disconnectDropbox();
+    return;
+  }
+  const saveBtn = e.target.closest('.save-dropbox-btn');
+  if (saveBtn) {
+    const card = saveBtn.closest('.job-card');
+    const jobId = card && card.dataset.jobId;
+    const job = jobId && findJobById(jobId);
+    if (job) saveJobToDropbox(job, saveBtn);
+  }
+});
+
+(async function init() {
+  await handleDropboxRedirect();
+  renderDropboxStatus();
+  await load();
+})();
 </script>
 </body>
 </html>
