@@ -20,7 +20,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests anthropic reportlab
+        run: pip install requests anthropic reportlab beautifulsoup4
 
       - name: Fetch new jobs
         env:
@@ -37,10 +37,14 @@ jobs:
       - name: Generate PDF cover letters + CVs
         run: python scripts/generate_pdfs.py
 
+      - name: Fetch law firm open days + insight days
+        continue-on-error: true
+        run: python scripts/fetch_open_days.py
+
       - name: Commit dashboard update
         run: |
           git config user.name "job-search-bot"
           git config user.email "actions@github.com"
-          git add data/seen_jobs.json docs/data.json docs/pdfs
+          git add data/seen_jobs.json docs/data.json docs/pdfs docs/open_days.json
           git diff --staged --quiet || git commit -m "Daily job search update $(date -u +%Y-%m-%d)"
           git push
