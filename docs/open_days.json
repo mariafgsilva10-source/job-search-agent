@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-01T12:23:40Z",
+  "generated_at": "2026-09-02T07:12:35Z",
   "events": [
     {
       "id": "a88093d00dfea717",
@@ -183,24 +183,24 @@
       "apply_link": "https://bristows.grad.allhires.com/app/"
     },
     {
-      "id": "4e203f6d4cf65c76",
+      "id": "ff0d9e81039a9014",
       "firm": "Herbert Smith Freehills Kramer",
       "firm_profile_link": "https://www.legalcheek.com/firm/herbert-smith-freehills-kramer/",
-      "event_name": "IP open day",
+      "event_name": "IP Open Day",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
       "deadline_label": "01/10/2026",
       "deadline_date": "2026-10-01",
-      "apply_link": "https://ad.doubleclick.net/ddm/clk/648911054;455200287;g;gdpr=$%7BGDPR%7D;gdpr_consent=$%7BGDPR_CONSENT_755%7D"
+      "apply_link": "https://ad.doubleclick.net/ddm/clk/648911054;455200287;g;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755}"
     },
     {
-      "id": "75fb6424c217a48c",
+      "id": "0bde567d29295b38",
       "firm": "Herbert Smith Freehills Kramer",
       "firm_profile_link": "https://www.legalcheek.com/firm/herbert-smith-freehills-kramer/",
-      "event_name": "Social Mobility open day",
+      "event_name": "Social Mobility Open Day",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, focused on supporting candidates from underrepresented or minority groups into the legal profession.",
       "deadline_label": "01/10/2026",
       "deadline_date": "2026-10-01",
-      "apply_link": "https://ad.doubleclick.net/ddm/clk/648911054;455200287;g;gdpr=$%7BGDPR%7D;gdpr_consent=$%7BGDPR_CONSENT_755%7D"
+      "apply_link": "https://ad.doubleclick.net/ddm/clk/648911054;455200287;g;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755}"
     },
     {
       "id": "aa432fee79d44420",
@@ -253,33 +253,13 @@
       "apply_link": "https://www.goodwinlaw.com/en/careers-pages/early-careers-in-the-united-kingdom"
     },
     {
-      "id": "fcbcbe194bb299b9",
-      "firm": "Mills & Reeve",
-      "firm_profile_link": "https://www.legalcheek.com/firm/mills-reeve/",
-      "event_name": "In person Insight Event (Birmingham)",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "deadline_label": "02/10/2026",
-      "deadline_date": "2026-10-02",
-      "apply_link": "https://www.mills-reeve.com/careers/emerging-talent-be-part-of-it/placement-schemes-and-training-contracts/"
-    },
-    {
-      "id": "78a21c90ffec395a",
-      "firm": "Mills & Reeve",
-      "firm_profile_link": "https://www.legalcheek.com/firm/mills-reeve/",
-      "event_name": "In person Insight Event (Leeds)",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "deadline_label": "02/10/2026",
-      "deadline_date": "2026-10-02",
-      "apply_link": "https://www.mills-reeve.com/careers/emerging-talent-be-part-of-it/placement-schemes-and-training-contracts/"
-    },
-    {
-      "id": "0c8b92b2751ab722",
+      "id": "f06e2f4574906cb7",
       "firm": "Mills & Reeve",
       "firm_profile_link": "https://www.legalcheek.com/firm/mills-reeve/",
       "event_name": "In person Insight Event (Manchester)",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "deadline_label": "02/10/2026",
-      "deadline_date": "2026-10-02",
+      "deadline_label": "05/10/2026",
+      "deadline_date": "2026-10-05",
       "apply_link": "https://www.mills-reeve.com/careers/emerging-talent-be-part-of-it/placement-schemes-and-training-contracts/"
     },
     {
@@ -353,14 +333,14 @@
       "apply_link": "https://lathamwatkins.grad.allhires.com/app/"
     },
     {
-      "id": "3a035357b73aa2eb",
+      "id": "b0c5a37af13d2857",
       "firm": "Herbert Smith Freehills Kramer",
       "firm_profile_link": "https://www.legalcheek.com/firm/herbert-smith-freehills-kramer/",
-      "event_name": "Black talent open day",
+      "event_name": "Black Talent Open Day",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, focused on supporting candidates from underrepresented or minority groups into the legal profession.",
       "deadline_label": "12/10/2026",
       "deadline_date": "2026-10-12",
-      "apply_link": "https://ad.doubleclick.net/ddm/clk/648911054;455200287;g;gdpr=$%7BGDPR%7D;gdpr_consent=$%7BGDPR_CONSENT_755%7D"
+      "apply_link": "https://ad.doubleclick.net/ddm/clk/648911054;455200287;g;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755}"
     },
     {
       "id": "f809d5ec106e512c",
@@ -370,7 +350,7 @@
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
       "deadline_label": "12/10/2026",
       "deadline_date": "2026-10-12",
-      "apply_link": "https://ad.doubleclick.net/ddm/clk/648911054;455200287;g;gdpr=$%7BGDPR%7D;gdpr_consent=$%7BGDPR_CONSENT_755%7D"
+      "apply_link": "https://ad.doubleclick.net/ddm/clk/648911054;455200287;g;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755}"
     },
     {
       "id": "0be5a84cb5ad11d6",
@@ -380,17 +360,17 @@
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
       "deadline_label": "12/10/2026",
       "deadline_date": "2026-10-12",
-      "apply_link": "https://ad.doubleclick.net/ddm/clk/648911054;455200287;g;gdpr=$%7BGDPR%7D;gdpr_consent=$%7BGDPR_CONSENT_755%7D"
+      "apply_link": "https://ad.doubleclick.net/ddm/clk/648911054;455200287;g;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755}"
     },
     {
-      "id": "98038b2a2e45788f",
+      "id": "9b333d39fe0e1bf4",
       "firm": "Herbert Smith Freehills Kramer",
       "firm_profile_link": "https://www.legalcheek.com/firm/herbert-smith-freehills-kramer/",
-      "event_name": "MyPlus open day",
+      "event_name": "MyPlus Open Day",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, focused on supporting candidates from underrepresented or minority groups into the legal profession.",
       "deadline_label": "12/10/2026",
       "deadline_date": "2026-10-12",
-      "apply_link": "https://ad.doubleclick.net/ddm/clk/648911054;455200287;g;gdpr=$%7BGDPR%7D;gdpr_consent=$%7BGDPR_CONSENT_755%7D"
+      "apply_link": "https://ad.doubleclick.net/ddm/clk/648911054;455200287;g;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755}"
     },
     {
       "id": "dd2ea1e764d41d2a",
@@ -481,6 +461,26 @@
       "deadline_label": "14/10/2026",
       "deadline_date": "2026-10-14",
       "apply_link": "https://twobirds.app.candidats.io/roles"
+    },
+    {
+      "id": "f99e20bec29f0bf2",
+      "firm": "Mills & Reeve",
+      "firm_profile_link": "https://www.legalcheek.com/firm/mills-reeve/",
+      "event_name": "In person Insight Event (Birmingham)",
+      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "deadline_label": "15/10/2026",
+      "deadline_date": "2026-10-15",
+      "apply_link": "https://www.mills-reeve.com/careers/emerging-talent-be-part-of-it/placement-schemes-and-training-contracts/"
+    },
+    {
+      "id": "5910dc39d9964dd3",
+      "firm": "Mills & Reeve",
+      "firm_profile_link": "https://www.legalcheek.com/firm/mills-reeve/",
+      "event_name": "In person Insight Event (Leeds)",
+      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "deadline_label": "15/10/2026",
+      "deadline_date": "2026-10-15",
+      "apply_link": "https://www.mills-reeve.com/careers/emerging-talent-be-part-of-it/placement-schemes-and-training-contracts/"
     },
     {
       "id": "1dd6369ffed02555",
@@ -623,16 +623,6 @@
       "apply_link": "https://eversheds-sutherland.grad.allhires.com/app/"
     },
     {
-      "id": "36bc1cc2fad49641",
-      "firm": "Mills & Reeve",
-      "firm_profile_link": "https://www.legalcheek.com/firm/mills-reeve/",
-      "event_name": "Virtual Insight Event",
-      "summary": "A virtual/online session featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "deadline_label": "30/10/2026",
-      "deadline_date": "2026-10-30",
-      "apply_link": "https://www.mills-reeve.com/careers/emerging-talent-be-part-of-it/placement-schemes-and-training-contracts/"
-    },
-    {
       "id": "772b11afc5a5d670",
       "firm": "TLT",
       "firm_profile_link": "https://www.legalcheek.com/firm/tlt/",
@@ -660,7 +650,7 @@
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
       "deadline_label": "01/11/2026",
       "deadline_date": "2026-11-01",
-      "apply_link": "https://ukgraduate.kirkland.com/"
+      "apply_link": "https://ukgraduate.kirkland.com"
     },
     {
       "id": "fb0763076322a08e",
@@ -811,6 +801,16 @@
       "deadline_label": "12/11/2026",
       "deadline_date": "2026-11-12",
       "apply_link": "https://charlesrussellspeechlys.app.candidats.io/roles"
+    },
+    {
+      "id": "69eb21e1c7dc74ad",
+      "firm": "Mills & Reeve",
+      "firm_profile_link": "https://www.legalcheek.com/firm/mills-reeve/",
+      "event_name": "Virtual Insight Event",
+      "summary": "A virtual/online session featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "deadline_label": "12/11/2026",
+      "deadline_date": "2026-11-12",
+      "apply_link": "https://www.mills-reeve.com/careers/emerging-talent-be-part-of-it/placement-schemes-and-training-contracts/"
     },
     {
       "id": "2e4f12901e7a70c8",
