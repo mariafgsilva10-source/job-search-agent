@@ -262,12 +262,13 @@
     <div class="ask-claude-row">
       <input type="url" id="applyLinkInput" placeholder="https://firm.example.com/apply">
       <button class="copy-btn" id="copyClaudeMsgBtn">Copy message for Claude</button>
+      <button class="copy-btn" id="openClaudeMsgBtn">Open in Claude</button>
     </div>
     <label class="applied-row" for="applyLinkNeedsLogin">
       <input type="checkbox" id="applyLinkNeedsLogin">
       This page is behind a login
     </label>
-    <div class="ask-claude-hint">Paste the copied message into your chat with Claude — it'll open the link in Chrome and start filling in your details, then show you the form before submitting anything. If you tick "behind a login", Claude will pause at the sign-in screen for you to log in yourself — it never enters your password.</div>
+    <div class="ask-claude-hint">"Copy message" copies text to paste into a chat with Claude. "Open in Claude" opens the Claude desktop app directly with the message ready — you just click Send (needs the Claude desktop app installed on this device). Either way, Claude opens the link in Chrome and starts filling in your details, then shows you the form before submitting anything. If you tick "behind a login", Claude will pause at the sign-in screen for you to log in yourself — it never enters your password.</div>
   </div>
 
   <div class="tab-panel active" id="panel-jobs">
@@ -710,6 +711,7 @@ function openDayCard(ev, isRegistered) {
         <a class="copy-btn" href="${search}" target="_blank">Find this event's page</a>
         ${ev.apply_link ? `<a class="copy-btn" href="${ev.apply_link}" target="_blank">Firm's early careers site</a>` : ''}
         <button class="copy-btn" data-apply-link="${escapeHtml(search)}" data-apply-label="${escapeHtml((ev.firm || '') + ' — ' + (ev.event_name || ''))}" data-is-event="1">Copy message for Claude</button>
+        <button class="copy-btn" data-apply-link="${escapeHtml(search)}" data-apply-label="${escapeHtml((ev.firm || '') + ' — ' + (ev.event_name || ''))}" data-is-event="1" data-open-claude="1">Open in Claude</button>
       </div>
     </div>
   `;
@@ -737,6 +739,7 @@ function jobCard(job, isApplied, isDropboxSaved) {
       ${job.url ? `
       <div class="btn-row">
         <button class="copy-btn" data-apply-link="${escapeHtml(job.url)}" data-apply-label="${escapeHtml((job.title || '') + ' at ' + (job.employer || ''))}">Copy message for Claude</button>
+        <button class="copy-btn" data-apply-link="${escapeHtml(job.url)}" data-apply-label="${escapeHtml((job.title || '') + ' at ' + (job.employer || ''))}" data-open-claude="1">Open in Claude</button>
       </div>` : ''}
       ${canSaveToDropbox ? `
       <div class="btn-row save-dropbox-row">
@@ -868,18 +871,35 @@ function buildClaudeApplyMessage(label, link, isEvent, needsLogin) {
   return `Please open ${what} in Chrome and start filling in my details, then show me the form before submitting anything: ${link}`;
 }
 
+// Deep link into the Claude desktop app with a prefilled prompt in a new
+// Cowork session. This opens the app with the message ready to send - it
+// does not send it automatically, so there's always a manual confirmation
+// before Claude starts acting. Requires the Claude desktop app installed
+// and registered as the claude:// URL handler on this device.
+function buildClaudeDeepLink(message) {
+  return 'claude://cowork/new?q=' + encodeURIComponent(message);
+}
+
 document.addEventListener('click', (e) => {
   const btn = e.target.closest('.copy-btn');
   if (!btn) return;
   let text;
-  if (btn.id === 'copyClaudeMsgBtn') {
+  if (btn.id === 'copyClaudeMsgBtn' || btn.id === 'openClaudeMsgBtn') {
     const link = (document.getElementById('applyLinkInput').value || '').trim();
     if (!link) return;
     const needsLoginEl = document.getElementById('applyLinkNeedsLogin');
     const needsLogin = !!(needsLoginEl && needsLoginEl.checked);
     text = buildClaudeApplyMessage('', link, false, needsLogin);
+    if (btn.id === 'openClaudeMsgBtn') {
+      window.open(buildClaudeDeepLink(text), '_blank');
+      return;
+    }
   } else if (btn.dataset.applyLink) {
     text = buildClaudeApplyMessage(btn.dataset.applyLabel, btn.dataset.applyLink, btn.dataset.isEvent === '1');
+    if (btn.dataset.openClaude === '1') {
+      window.open(buildClaudeDeepLink(text), '_blank');
+      return;
+    }
   } else if (btn.dataset.copyTarget) {
     text = document.getElementById(btn.dataset.copyTarget).textContent;
   } else if (btn.dataset.copyPlain) {
