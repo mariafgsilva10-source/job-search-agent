@@ -1,0 +1,206 @@
+{
+  "source": "https://www.legalcheek.com/key-deadlines-calendar/",
+  "generated_at": "2026-09-03T00:00:00Z",
+  "note": "Only includes Training Contract listings manually verified as open to graduates applying directly, without needing to have done that firm's own vacation scheme first. New listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
+  "events": [
+    {
+      "id": "a&o-shearman|direct-training-contract",
+      "firm": "A&O Shearman",
+      "event_name": "Direct Training Contract",
+      "opens_date": "2026-09-01",
+      "opens_confirmed": true,
+      "closes_date": "2026-10-05",
+      "closes_label": "05/10/2026",
+      "apply_link": "https://careers.aoshearman.com/en/job/london/march-2028-training-contract/3392/43859038208",
+      "eligibility_note": "Open to graduates of any degree applying directly - no vacation scheme required."
+    },
+    {
+      "id": "foot-anstey|northern-ireland-training-contract",
+      "firm": "Foot Anstey",
+      "event_name": "Northern Ireland Training Contract",
+      "opens_date": "2026-09-15",
+      "opens_confirmed": false,
+      "closes_date": "2026-10-23",
+      "closes_label": "23/10/2026",
+      "apply_link": "https://www.footanstey.com/careers/early-careers/training-contracts/",
+      "eligibility_note": "Open to final-year students or those who've already graduated - no vacation scheme required."
+    },
+    {
+      "id": "clifford-chance|london-training-contract",
+      "firm": "Clifford Chance",
+      "event_name": "London Training Contract",
+      "opens_date": "2026-09-15",
+      "opens_confirmed": false,
+      "closes_date": "2026-11-18",
+      "closes_label": "18/11/2026",
+      "apply_link": "https://jobs.cliffordchance.com/training-contract-london",
+      "eligibility_note": "Open to penultimate/final-year students and graduates applying directly - no vacation scheme required."
+    },
+    {
+      "id": "gowling-wlg|birmingham-direct-training-contract",
+      "firm": "Gowling WLG",
+      "event_name": "Birmingham Direct Training Contract",
+      "opens_date": "2026-10-01",
+      "opens_confirmed": false,
+      "closes_date": "2026-11-18",
+      "closes_label": "18/11/2026",
+      "apply_link": "https://ehjc.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_17/requisitions",
+      "eligibility_note": "Open to graduates of any degree applying directly - no vacation scheme required."
+    },
+    {
+      "id": "gowling-wlg|birmingham-real-estate-training-contract",
+      "firm": "Gowling WLG",
+      "event_name": "Birmingham Real Estate Training Contract",
+      "opens_date": "2026-10-01",
+      "opens_confirmed": false,
+      "closes_date": "2026-11-18",
+      "closes_label": "18/11/2026",
+      "apply_link": "https://ehjc.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_17/requisitions",
+      "eligibility_note": "Open to graduates of any degree applying directly - no vacation scheme required."
+    },
+    {
+      "id": "gowling-wlg|london-direct-training-contract",
+      "firm": "Gowling WLG",
+      "event_name": "London Direct Training Contract",
+      "opens_date": "2026-10-01",
+      "opens_confirmed": false,
+      "closes_date": "2026-11-18",
+      "closes_label": "18/11/2026",
+      "apply_link": "https://ehjc.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_17/requisitions",
+      "eligibility_note": "Open to graduates of any degree applying directly - no vacation scheme required."
+    },
+    {
+      "id": "gowling-wlg|london-real-estate-training-contract",
+      "firm": "Gowling WLG",
+      "event_name": "London Real Estate Training Contract",
+      "opens_date": "2026-10-01",
+      "opens_confirmed": false,
+      "closes_date": "2026-11-18",
+      "closes_label": "18/11/2026",
+      "apply_link": "https://ehjc.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_17/requisitions",
+      "eligibility_note": "Open to graduates of any degree applying directly - no vacation scheme required."
+    },
+    {
+      "id": "greenberg-traurig|2029-training-contract",
+      "firm": "Greenberg Traurig",
+      "event_name": "2029 Training Contract",
+      "opens_date": "2026-09-01",
+      "opens_confirmed": true,
+      "closes_date": "2026-11-30",
+      "closes_label": "30/11/2026",
+      "apply_link": "https://gtlaw.wd1.myworkdayjobs.com/GTLAW/job/London/XMLNAME-2029-Training-Contract_JR202601534",
+      "eligibility_note": "Greenberg Traurig runs no vacation scheme at all - every training contract application is direct, including from graduates."
+    },
+    {
+      "id": "kirkland-&-ellis|training-contract",
+      "firm": "Kirkland & Ellis",
+      "event_name": "Training Contract",
+      "opens_date": "2026-10-01",
+      "opens_confirmed": false,
+      "closes_date": "2026-12-13",
+      "closes_label": "13/12/2026",
+      "apply_link": "https://ukgraduate.kirkland.com/your-application/",
+      "eligibility_note": "Open to law students from penultimate year onwards, non-law students from final year onwards, and graduates - no vacation scheme required."
+    },
+    {
+      "id": "lewis-silkin|belfast-training-contract",
+      "firm": "Lewis Silkin",
+      "event_name": "Belfast Training Contract",
+      "opens_date": "2026-10-21",
+      "opens_confirmed": true,
+      "closes_date": "2026-12-21",
+      "closes_label": "21/12/2026",
+      "apply_link": "https://www.lewissilkin.com/en/life-at-ls/careers/trainees",
+      "eligibility_note": "Open to all graduates, all final-year non-law students and all penultimate-year law students - no vacation scheme required."
+    },
+    {
+      "id": "lewis-silkin|cardiff-training-contract",
+      "firm": "Lewis Silkin",
+      "event_name": "Cardiff Training Contract",
+      "opens_date": "2026-10-21",
+      "opens_confirmed": true,
+      "closes_date": "2026-12-21",
+      "closes_label": "21/12/2026",
+      "apply_link": "https://www.lewissilkin.com/en/life-at-ls/careers/trainees",
+      "eligibility_note": "Open to all graduates, all final-year non-law students and all penultimate-year law students - no vacation scheme required."
+    },
+    {
+      "id": "lewis-silkin|london-training-contract",
+      "firm": "Lewis Silkin",
+      "event_name": "London Training Contract",
+      "opens_date": "2026-10-21",
+      "opens_confirmed": true,
+      "closes_date": "2026-12-21",
+      "closes_label": "21/12/2026",
+      "apply_link": "https://apply.candidats.io/ac73d7b3-9468-457a-8279-6910d8e13fd0",
+      "eligibility_note": "Open to all graduates, all final-year non-law students and all penultimate-year law students - no vacation scheme required."
+    },
+    {
+      "id": "lewis-silkin|manchester-training-contract",
+      "firm": "Lewis Silkin",
+      "event_name": "Manchester Training Contract",
+      "opens_date": "2026-10-21",
+      "opens_confirmed": true,
+      "closes_date": "2026-12-21",
+      "closes_label": "21/12/2026",
+      "apply_link": "https://www.lewissilkin.com/en/life-at-ls/careers/trainees",
+      "eligibility_note": "Open to all graduates, all final-year non-law students and all penultimate-year law students - no vacation scheme required."
+    },
+    {
+      "id": "bristows|training-contract",
+      "firm": "Bristows",
+      "event_name": "Training Contract",
+      "opens_date": "2026-09-05",
+      "opens_confirmed": false,
+      "closes_date": "2027-01-03",
+      "closes_label": "03/01/2027",
+      "apply_link": "https://www.apply4law.com/bristows/",
+      "eligibility_note": "Open to penultimate-year law students, all final-year students and graduates applying directly - no vacation scheme required."
+    },
+    {
+      "id": "forsters|direct-training-contract-2029",
+      "firm": "Forsters",
+      "event_name": "Direct Training Contract 2029",
+      "opens_date": "2026-09-03",
+      "opens_confirmed": true,
+      "closes_date": "2027-01-04",
+      "closes_label": "04/01/2027",
+      "apply_link": "https://forsters.grad.allhires.com/app/",
+      "eligibility_note": "Direct route for anyone unable to attend the vacation scheme, incl. graduates - a vacation scheme is not required first."
+    },
+    {
+      "id": "trowers-&-hamlins|direct-training-contract",
+      "firm": "Trowers & Hamlins",
+      "event_name": "Direct Training Contract",
+      "opens_date": "2026-10-01",
+      "opens_confirmed": true,
+      "closes_date": "2027-01-04",
+      "closes_label": "04/01/2027",
+      "apply_link": "https://trowers.grad.allhires.com/?mt=T2UYWEVT56",
+      "eligibility_note": "Open to penultimate/final-year students, graduates and career changers applying directly - no vacation scheme required."
+    },
+    {
+      "id": "gibson-dunn|london-direct-training-contract",
+      "firm": "Gibson Dunn",
+      "event_name": "London Direct Training Contract",
+      "opens_date": "2026-09-01",
+      "opens_confirmed": false,
+      "closes_date": "2027-01-08",
+      "closes_label": "08/01/2027",
+      "apply_link": "https://www.apply4law.com/GibsonDunn/",
+      "eligibility_note": "Vacation scheme is encouraged first but not required - the direct training contract route is open to graduates too."
+    },
+    {
+      "id": "gibson-dunn|uae-training-contract",
+      "firm": "Gibson Dunn",
+      "event_name": "UAE Training Contract",
+      "opens_date": "2026-09-01",
+      "opens_confirmed": false,
+      "closes_date": "2027-01-08",
+      "closes_label": "08/01/2027",
+      "apply_link": "https://gibsondunn.grad.allhires.com/app/",
+      "eligibility_note": "Open to final-year students, career changers and recent graduates applying directly - no vacation scheme required."
+    }
+  ],
+  "needs_review": []
+}
