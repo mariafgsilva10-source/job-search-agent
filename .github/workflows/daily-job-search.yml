@@ -41,10 +41,14 @@ jobs:
         continue-on-error: true
         run: python scripts/fetch_open_days.py
 
+      - name: Fetch graduate training contract deadlines
+        continue-on-error: true
+        run: python scripts/fetch_tc_deadlines.py
+
       - name: Commit dashboard update
         run: |
           git config user.name "job-search-bot"
           git config user.email "actions@github.com"
-          git add data/seen_jobs.json docs/data.json docs/pdfs docs/open_days.json
+          git add data/seen_jobs.json docs/data.json docs/pdfs docs/open_days.json docs/tc_deadlines.json
           git diff --staged --quiet || git commit -m "Daily job search update $(date -u +%Y-%m-%d)"
           git push
