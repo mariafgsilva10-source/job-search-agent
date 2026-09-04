@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-03T07:12:42Z",
+  "generated_at": "2026-09-04T07:11:56Z",
   "events": [
     {
       "id": "a88093d00dfea717",
@@ -60,7 +60,7 @@
       "summary": "A virtual/online session featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
       "deadline_label": "25/09/2026",
       "deadline_date": "2026-09-25",
-      "apply_link": "https://www.winstontaylor.com/careers"
+      "apply_link": "https://earlytalenteme.winstontaylor.com/eme/"
     },
     {
       "id": "a13423af878532bb",
@@ -70,7 +70,7 @@
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
       "deadline_label": "25/09/2026",
       "deadline_date": "2026-09-25",
-      "apply_link": "https://www.winstontaylor.com/careers"
+      "apply_link": "https://earlytalenteme.winstontaylor.com/eme/"
     },
     {
       "id": "acab391061e28165",
@@ -80,7 +80,7 @@
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
       "deadline_label": "25/09/2026",
       "deadline_date": "2026-09-25",
-      "apply_link": "https://www.winstontaylor.com/careers"
+      "apply_link": "https://earlytalenteme.winstontaylor.com/eme/"
     },
     {
       "id": "408a79ba66b55d94",
@@ -90,7 +90,7 @@
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, focused on supporting candidates from underrepresented or minority groups into the legal profession.",
       "deadline_label": "25/09/2026",
       "deadline_date": "2026-09-25",
-      "apply_link": "https://www.winstontaylor.com/careers"
+      "apply_link": "https://earlytalenteme.winstontaylor.com/eme/"
     },
     {
       "id": "4f3fb8b6fef8af87",
@@ -100,7 +100,7 @@
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, aimed at STEM students exploring a career in law.",
       "deadline_label": "25/09/2026",
       "deadline_date": "2026-09-25",
-      "apply_link": "https://www.winstontaylor.com/careers"
+      "apply_link": "https://earlytalenteme.winstontaylor.com/eme/"
     },
     {
       "id": "dcdc138d00e265ac",
@@ -110,7 +110,7 @@
       "summary": "A virtual/online session featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
       "deadline_label": "25/09/2026",
       "deadline_date": "2026-09-25",
-      "apply_link": "https://www.winstontaylor.com/careers"
+      "apply_link": "https://earlytalenteme.winstontaylor.com/eme/"
     },
     {
       "id": "d05040629fed15d8",
@@ -120,7 +120,7 @@
       "summary": "A virtual/online session featuring a virtual tour and talks introducing the firm and its application process.",
       "deadline_label": "25/09/2026",
       "deadline_date": "2026-09-25",
-      "apply_link": "https://www.winstontaylor.com/careers"
+      "apply_link": "https://earlytalenteme.winstontaylor.com/eme/"
     },
     {
       "id": "43de19bb605d1289",
@@ -1140,7 +1140,7 @@
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, for prospective solicitor apprenticeship candidates.",
       "deadline_label": "22/01/2027",
       "deadline_date": "2027-01-22",
-      "apply_link": "https://www.winstontaylor.com/careers/"
+      "apply_link": "https://earlytalenteme.winstontaylor.com/eme/"
     },
     {
       "id": "a7e0fa7d71d1c267",
@@ -1211,6 +1211,26 @@
       "deadline_label": "31/01/2027",
       "deadline_date": "2027-01-31",
       "apply_link": "https://www.simmons-simmons.com/en/graduates"
+    },
+    {
+      "id": "56de46cd90114891",
+      "firm": "Dentons",
+      "firm_profile_link": "https://www.legalcheek.com/firm/dentons/",
+      "event_name": "Open Day (London)",
+      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "deadline_label": "05/02/2027",
+      "deadline_date": "2027-02-05",
+      "apply_link": "https://challengers.dentons.com"
+    },
+    {
+      "id": "47bc749d1894ba54",
+      "firm": "Dentons",
+      "firm_profile_link": "https://www.legalcheek.com/firm/dentons/",
+      "event_name": "Open Day (Scotland)",
+      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "deadline_label": "05/02/2027",
+      "deadline_date": "2027-02-05",
+      "apply_link": "https://challengers.dentons.com"
     },
     {
       "id": "41cb84a5aa9bf252",
@@ -1313,6 +1333,16 @@
       "apply_link": "https://ashfords.app.candidats.io/roles"
     },
     {
+      "id": "25b9d844babde287",
+      "firm": "Dentons",
+      "firm_profile_link": "https://www.legalcheek.com/firm/dentons/",
+      "event_name": "Middle East Summer Insight Scheme",
+      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "deadline_label": "26/02/2027",
+      "deadline_date": "2027-02-26",
+      "apply_link": "https://challengers.dentons.com"
+    },
+    {
       "id": "f1778f093b51e961",
       "firm": "Hogan Lovells Cadwalader",
       "firm_profile_link": "https://www.legalcheek.com/firm/hogan-lovells-cadwalader/",
@@ -1340,7 +1370,7 @@
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm, aimed at first-year students.",
       "deadline_label": "01/03/2027",
       "deadline_date": "2027-03-01",
-      "apply_link": "https://www.winstontaylor.com/careers"
+      "apply_link": "https://earlytalenteme.winstontaylor.com/eme/"
     },
     {
       "id": "676fb0bf4991aeff",

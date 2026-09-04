@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-03T00:00:00Z",
+  "generated_at": "2026-09-04T07:11:58Z",
   "note": "Only includes Training Contract listings manually verified as open to graduates applying directly, without needing to have done that firm's own vacation scheme first. New listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "events": [
     {
@@ -202,5 +202,271 @@
       "eligibility_note": "Open to final-year students, career changers and recent graduates applying directly - no vacation scheme required."
     }
   ],
-  "needs_review": []
+  "needs_review": [
+    {
+      "firm": "Winston Taylor",
+      "event_name": "Dublin Training Contract",
+      "deadline_label": "02/10/2026"
+    },
+    {
+      "firm": "Travers Smith",
+      "event_name": "Direct Training Contract 1",
+      "deadline_label": "16/10/2026"
+    },
+    {
+      "firm": "TLT",
+      "event_name": "Belfast Training Contract",
+      "deadline_label": "23/10/2026"
+    },
+    {
+      "firm": "Slaughter and May",
+      "event_name": "Training Contract 2029/2030",
+      "deadline_label": "13/11/2026"
+    },
+    {
+      "firm": "CMS",
+      "event_name": "England Training Contract",
+      "deadline_label": "22/11/2026"
+    },
+    {
+      "firm": "Lawrence Stephens",
+      "event_name": "Training Contract",
+      "deadline_label": "30/11/2026"
+    },
+    {
+      "firm": "Irwin Mitchell",
+      "event_name": "Training Contract (business services group)",
+      "deadline_label": "01/12/2026"
+    },
+    {
+      "firm": "Irwin Mitchell",
+      "event_name": "Training Contract (legal services for individuals)",
+      "deadline_label": "01/12/2026"
+    },
+    {
+      "firm": "Linklaters",
+      "event_name": "Training Contract",
+      "deadline_label": "03/12/2026"
+    },
+    {
+      "firm": "Akin",
+      "event_name": "Middle East Training Programme",
+      "deadline_label": "13/12/2026"
+    },
+    {
+      "firm": "DWF",
+      "event_name": "Direct Training Contract",
+      "deadline_label": "13/12/2026"
+    },
+    {
+      "firm": "Brabners",
+      "event_name": "Training Contract",
+      "deadline_label": "19/12/2026"
+    },
+    {
+      "firm": "Withers",
+      "event_name": "Training Contract 2029",
+      "deadline_label": "08/01/2027"
+    },
+    {
+      "firm": "CMS",
+      "event_name": "Scotland Training Contract",
+      "deadline_label": "10/01/2027"
+    },
+    {
+      "firm": "Weightmans",
+      "event_name": "Training Contract",
+      "deadline_label": "14/01/2027"
+    },
+    {
+      "firm": "Charles Russell Speechlys",
+      "event_name": "Cheltenham Direct Training Contract",
+      "deadline_label": "15/01/2027"
+    },
+    {
+      "firm": "Charles Russell Speechlys",
+      "event_name": "Guilford Direct Training Contract",
+      "deadline_label": "15/01/2027"
+    },
+    {
+      "firm": "Charles Russell Speechlys",
+      "event_name": "London Direct Training Contract",
+      "deadline_label": "15/01/2027"
+    },
+    {
+      "firm": "Osborne Clarke",
+      "event_name": "Training Contract 2029",
+      "deadline_label": "15/01/2027"
+    },
+    {
+      "firm": "Travers Smith",
+      "event_name": "Direct Training Contract 2",
+      "deadline_label": "15/01/2027"
+    },
+    {
+      "firm": "Cripps",
+      "event_name": "Training Contract",
+      "deadline_label": "17/01/2027"
+    },
+    {
+      "firm": "DAC Beachcroft",
+      "event_name": "Training Contract",
+      "deadline_label": "31/01/2027"
+    },
+    {
+      "firm": "Mayer Brown",
+      "event_name": "Training Contract",
+      "deadline_label": "31/01/2027"
+    },
+    {
+      "firm": "Thomson Snell & Passmore",
+      "event_name": "Training Contract",
+      "deadline_label": "31/01/2027"
+    },
+    {
+      "firm": "Kingsley Napley",
+      "event_name": "Training Contract",
+      "deadline_label": "01/02/2027"
+    },
+    {
+      "firm": "Russell-Cooke",
+      "event_name": "Training Contract",
+      "deadline_label": "03/02/2027"
+    },
+    {
+      "firm": "Broadfield",
+      "event_name": "Training Contract",
+      "deadline_label": "14/02/2027"
+    },
+    {
+      "firm": "Kennedys",
+      "event_name": "Training Contract",
+      "deadline_label": "26/02/2027"
+    },
+    {
+      "firm": "King & Spalding",
+      "event_name": "Training Contract",
+      "deadline_label": "26/02/2027"
+    },
+    {
+      "firm": "Winckworth Sherwood",
+      "event_name": "Training Contract",
+      "deadline_label": "28/02/2027"
+    },
+    {
+      "firm": "Foot Anstey",
+      "event_name": "Training Contract",
+      "deadline_label": "01/03/2027"
+    },
+    {
+      "firm": "Stephenson Harwood",
+      "event_name": "London Training Contract",
+      "deadline_label": "06/03/2027"
+    },
+    {
+      "firm": "Bevan Brittan",
+      "event_name": "Training Contract",
+      "deadline_label": "08/03/2027"
+    },
+    {
+      "firm": "Farrer & Co",
+      "event_name": "Training Contract",
+      "deadline_label": "12/03/2027"
+    },
+    {
+      "firm": "RPC",
+      "event_name": "Bristol Training Contract",
+      "deadline_label": "15/03/2027"
+    },
+    {
+      "firm": "Payne Hicks Beach",
+      "event_name": "Training Contract",
+      "deadline_label": "26/03/2027"
+    },
+    {
+      "firm": "Ashfords",
+      "event_name": "Bristol Training Contract",
+      "deadline_label": "31/03/2027"
+    },
+    {
+      "firm": "Ashfords",
+      "event_name": "Exeter Training Contract",
+      "deadline_label": "31/03/2027"
+    },
+    {
+      "firm": "Wiggin",
+      "event_name": "Training Contract",
+      "deadline_label": "31/03/2027"
+    },
+    {
+      "firm": "Bates Wells",
+      "event_name": "Training Contract",
+      "deadline_label": "02/04/2027"
+    },
+    {
+      "firm": "Wedlake Bell",
+      "event_name": "Training Contract",
+      "deadline_label": "03/05/2027"
+    },
+    {
+      "firm": "Fried Frank",
+      "event_name": "Training Contract",
+      "deadline_label": "21/05/2027"
+    },
+    {
+      "firm": "BCLP",
+      "event_name": "Training Contract 2028/29",
+      "deadline_label": "31/05/2027"
+    },
+    {
+      "firm": "Sullivan & Cromwell",
+      "event_name": "Training Contract",
+      "deadline_label": "31/05/2027"
+    },
+    {
+      "firm": "Morgan Lewis",
+      "event_name": "Training Contract",
+      "deadline_label": "16/06/2027"
+    },
+    {
+      "firm": "Eversheds Sutherland",
+      "event_name": "Edinburgh Training Contract 2029",
+      "deadline_label": "20/06/2027"
+    },
+    {
+      "firm": "Burges Salmon",
+      "event_name": "Bristol Direct Training Contract",
+      "deadline_label": "22/06/2027"
+    },
+    {
+      "firm": "Watson Farley & Williams",
+      "event_name": "Direct Training Contract",
+      "deadline_label": "28/06/2027"
+    },
+    {
+      "firm": "Paul Hastings",
+      "event_name": "Direct Training Contract",
+      "deadline_label": "30/06/2027"
+    },
+    {
+      "firm": "HFW",
+      "event_name": "Training Contract",
+      "deadline_label": "08/07/2027"
+    },
+    {
+      "firm": "Hogan Lovells Cadwalader",
+      "event_name": "London Training Contract",
+      "deadline_label": "17/07/2027"
+    },
+    {
+      "firm": "K&L Gates",
+      "event_name": "Training Contract",
+      "deadline_label": "31/07/2027"
+    },
+    {
+      "firm": "Walker Morris",
+      "event_name": "Direct Training Contract",
+      "deadline_label": "31/07/2027"
+    }
+  ]
 }
