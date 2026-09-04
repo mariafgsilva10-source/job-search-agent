@@ -161,12 +161,303 @@ TC_OVERRIDES = {
         "apply_link": "https://gibsondunn.grad.allhires.com/app/",
         "eligibility_note": "Open to final-year students, career changers and recent graduates applying directly - no vacation scheme required.",
     },
+    # --- Batch 2, researched 2026-09-04 against each firm's own site. ---
+    ("Winston Taylor", "Dublin Training Contract"): {
+        "opens_date": "2026-09-01",
+        "opens_confirmed": False,
+        "apply_link": "https://www.taylorwessing.com/en/careers/ireland",
+        "eligibility_note": "Open to those who've completed (or are completing) the FE1 exams - no vacation scheme or final-year-only restriction stated.",
+    },
+    ("Travers Smith", "Direct Training Contract 1"): {
+        "opens_date": "2026-09-18",
+        "opens_confirmed": True,
+        "apply_link": "https://traverssmithhires.app.candidats.io/roles",
+        "eligibility_note": "Firm states direct applicants (via Recruitment Days) have the same chances as Vacation Scheme applicants - no vacation scheme required.",
+    },
+    ("Travers Smith", "Direct Training Contract 2"): {
+        "opens_date": "2026-10-16",
+        "opens_confirmed": True,
+        "apply_link": "https://traverssmithhires.app.candidats.io/roles",
+        "eligibility_note": "Second direct-application window at the same firm, same policy - no vacation scheme required.",
+    },
+    ("TLT", "Belfast Training Contract"): {
+        "opens_date": "2026-09-01",
+        "opens_confirmed": True,
+        "apply_link": "https://apply.tlt.com/vacancies/4932/apply/",
+        "eligibility_note": "Open to law graduates from England, Wales and Northern Ireland - no vacation scheme required.",
+    },
+    ("Slaughter and May", "Training Contract 2029/2030"): {
+        "opens_date": "2026-08-17",
+        "opens_confirmed": True,
+        "apply_link": "https://joinus.slaughterandmay.com/V2/Vacancy",
+        "eligibility_note": "Open to finalists and graduates, law or non-law - firm states no legal work experience is required to apply.",
+    },
+    ("CMS", "England Training Contract"): {
+        "opens_date": "2026-10-01",
+        "opens_confirmed": True,
+        "apply_link": "https://cmsemergingtalent.com/programmes/england-wales-ni/training-contract/",
+        "eligibility_note": "Firm's eligibility explicitly includes graduates of law and non-law subjects and career changers - no vacation scheme required.",
+    },
+    ("CMS", "Scotland Training Contract"): {
+        "opens_date": "2026-09-24",
+        "opens_confirmed": True,
+        "apply_link": "https://cmsemergingtalent.com/programmes/scotland/training-contract/",
+        "eligibility_note": "Same firm-wide graduate eligibility as the England route - no vacation scheme required.",
+    },
+    ("Irwin Mitchell", "Training Contract (business services group)"): {
+        "opens_date": "2026-09-01",
+        "opens_confirmed": False,
+        "apply_link": "https://www.irwinmitchell.com/about-us/careers/training-contracts",
+        "eligibility_note": "Eligibility explicitly includes law or non-law graduates - the firm currently runs no legal work placement route at all, so nothing is gated behind one.",
+    },
+    ("Irwin Mitchell", "Training Contract (legal services for individuals)"): {
+        "opens_date": "2026-09-01",
+        "opens_confirmed": False,
+        "apply_link": "https://www.irwinmitchell.com/about-us/careers/training-contracts",
+        "eligibility_note": "Eligibility explicitly includes law or non-law graduates - no vacation scheme required.",
+    },
+    ("Linklaters", "Training Contract"): {
+        "opens_date": "2026-09-01",
+        "opens_confirmed": False,
+        "apply_link": "https://linklaters.apply.cappats.com/Jobs",
+        "eligibility_note": "Open to penultimate/final-year students, graduates and postgraduates - the firm asks for general legal work experience (paralegal role, vacation scheme or internship, any of the three), not specifically its own vacation scheme.",
+    },
+    ("Akin", "Middle East Training Programme"): {
+        "opens_date": "2026-09-01",
+        "opens_confirmed": False,
+        "apply_link": "https://www.akingump.com/en/careers/middle-east-early-careers/uae-early-careers",
+        "eligibility_note": "Explicitly aimed at law graduates (or non-law graduates with a PGDL) who've already passed LPC/SQE1 and SQE2 - a graduate-only route by design, no vacation scheme required.",
+    },
+    ("DWF", "Direct Training Contract"): {
+        "opens_date": "2026-09-01",
+        "opens_confirmed": False,
+        "apply_link": "https://dwfgroup.com/en/careers/join-us/early-careers/training-contract",
+        "eligibility_note": "Firm's own site implies direct (non-vacation-scheme) training contract applications remain open outside Scotland - no graduate exclusion stated.",
+    },
+    ("Brabners", "Training Contract"): {
+        "opens_date": "2026-10-01",
+        "opens_confirmed": True,
+        "apply_link": "https://www.brabners.com/careers/early-law-careers-opportunities",
+        "eligibility_note": "Firm confirms a direct training contract route exists alongside the vacation scheme; eligibility includes postgraduates and degree-holders - no vacation scheme required.",
+    },
+    ("Withers", "Training Contract 2029"): {
+        "opens_date": "2026-10-01",
+        "opens_confirmed": True,
+        "apply_link": "https://www.withersworldwide.com/en-gb/careers/students-and-graduates/united-kingdom/training-in-london",
+        "eligibility_note": "Firm welcomes applicants \"at all stages of their careers\", including those who've completed their degree - no vacation scheme required.",
+    },
+    ("Weightmans", "Training Contract"): {
+        "opens_date": "2026-09-30",
+        "opens_confirmed": False,
+        "apply_link": "https://www.weightmans.com/careers/early-careers/training-contracts/",
+        "eligibility_note": "Open to graduates studying towards or holding the LPC/SQE route - no vacation scheme required.",
+    },
+    ("Charles Russell Speechlys", "Cheltenham Direct Training Contract"): {
+        "opens_date": "2026-10-01",
+        "opens_confirmed": False,
+        "apply_link": "https://www.charlesrussellspeechlys.com/en/careers/early-talent/uk-graduate-opportunities/apply/",
+        "eligibility_note": "Firm's FAQ explicitly welcomes \"those that have already graduated\" via a direct training contract route separate from the placement scheme - one firm-wide policy across all its offices.",
+    },
+    ("Charles Russell Speechlys", "Guilford Direct Training Contract"): {
+        "opens_date": "2026-10-01",
+        "opens_confirmed": False,
+        "apply_link": "https://www.charlesrussellspeechlys.com/en/careers/early-talent/uk-graduate-opportunities/apply/",
+        "eligibility_note": "Same firm-wide policy as Cheltenham/London - graduates explicitly welcomed, no vacation scheme required.",
+    },
+    ("Charles Russell Speechlys", "London Direct Training Contract"): {
+        "opens_date": "2026-10-01",
+        "opens_confirmed": False,
+        "apply_link": "https://www.charlesrussellspeechlys.com/en/careers/early-talent/uk-graduate-opportunities/apply/",
+        "eligibility_note": "Same firm-wide policy as Cheltenham/Guildford - graduates explicitly welcomed, no vacation scheme required.",
+    },
+    ("Osborne Clarke", "Training Contract 2029"): {
+        "opens_date": "2026-10-01",
+        "opens_confirmed": True,
+        "apply_link": "https://join.osborneclarke.com/apply",
+        "eligibility_note": "Firm's own \"Apply\" page lists a \"Graduate or Career Changer\" direct Training Contract route for those who can't do the summer Vacation Scheme.",
+    },
+    ("Cripps", "Training Contract"): {
+        "opens_date": "2026-10-05",
+        "opens_confirmed": False,
+        "apply_link": "https://www.cripps.co.uk/join-us/graduates-and-students/trainee-solicitor-programme/",
+        "eligibility_note": "Firm explicitly welcomes \"graduates who have already completed their studies\" - no vacation scheme required.",
+    },
+    ("Mayer Brown", "Training Contract"): {
+        "opens_date": "2026-09-01",
+        "opens_confirmed": True,
+        "apply_link": "https://www.apply4law.com/mayerbrown/",
+        "eligibility_note": "Firm's FAQ states graduates can apply directly at any point in the cycle - the vacation scheme is recommended but not required.",
+    },
+    ("Kingsley Napley", "Training Contract"): {
+        "opens_date": "2026-12-01",
+        "opens_confirmed": False,
+        "apply_link": "https://apply.candidats.io/a7d4f5ac-60fc-4351-9990-15b280543d24?utm_campaign=KNwebsite",
+        "eligibility_note": "Firm explicitly welcomes \"candidates who already hold a degree\" - no vacation scheme required.",
+    },
+    ("Russell-Cooke", "Training Contract"): {
+        "opens_date": "2026-11-03",
+        "opens_confirmed": True,
+        "apply_link": "https://russell-cooke.grad.allhires.com/app/",
+        "eligibility_note": "Firm's FAQ explicitly offers the direct training contract route to those who can't attend the vacation scheme - no vacation scheme required.",
+    },
+    ("Broadfield", "Training Contract"): {
+        "opens_date": "2026-09-01",
+        "opens_confirmed": True,
+        "apply_link": "https://broadfield.grad.allhires.com/app/",
+        "eligibility_note": "Eligibility is simply holding/completing a qualifying law route by Sept 2027 - no vacation scheme or final-year-only restriction stated.",
+    },
+    ("King & Spalding", "Training Contract"): {
+        "opens_date": "2026-09-01",
+        "opens_confirmed": False,
+        "apply_link": "https://kslaw.grad.allhires.com/app/",
+        "eligibility_note": "Firm's own site explicitly lists \"have already graduated\" as an eligible route - no vacation scheme required.",
+    },
+    ("Winckworth Sherwood", "Training Contract"): {
+        "opens_date": "2026-12-01",
+        "opens_confirmed": False,
+        "apply_link": "https://www.apply4law.com/winckworths/",
+        "eligibility_note": "Firm accepts applications from \"law and non-law undergraduates and graduates\" - no vacation scheme mentioned anywhere on the site.",
+    },
+    ("Foot Anstey", "Training Contract"): {
+        "opens_date": "2026-12-01",
+        "opens_confirmed": False,
+        "apply_link": "https://footanstey.app.candidats.io/roles",
+        "eligibility_note": "Firm's FAQ explicitly says a vacation scheme isn't required - \"some people... don't do one at all\" and are still considered.",
+    },
+    ("Stephenson Harwood", "London Training Contract"): {
+        "opens_date": "2026-10-05",
+        "opens_confirmed": True,
+        "apply_link": "https://shlegal.app.candidats.io/roles",
+        "eligibility_note": "Firm's site explicitly states \"you may also have already graduated\" - no vacation scheme required.",
+    },
+    ("Bevan Brittan", "Training Contract"): {
+        "opens_date": "2027-01-01",
+        "opens_confirmed": False,
+        "apply_link": "https://www.bevanbrittan.com/careers/opportunities/trainee-solicitors/",
+        "eligibility_note": "Firm explicitly states it \"also consider[s] direct applicants for training contracts\" alongside graduates - no vacation scheme required.",
+    },
+    ("Farrer & Co", "Training Contract"): {
+        "opens_date": "2026-11-01",
+        "opens_confirmed": False,
+        "apply_link": "https://farrer.grad.allhires.com/app/",
+        "eligibility_note": "Firm welcomes \"graduates from any academic discipline\" and runs the vacation scheme and training contract as separate application processes.",
+    },
+    ("RPC", "Bristol Training Contract"): {
+        "opens_date": "2026-10-01",
+        "opens_confirmed": True,
+        "apply_link": "https://www.rpclegal.com/careers/early-talent/uk/training-contract/bristol-training-contract/",
+        "eligibility_note": "Firm's own site states \"graduates can apply at any time\" - no vacation scheme required.",
+    },
+    ("Payne Hicks Beach", "Training Contract"): {
+        "opens_date": "2026-09-01",
+        "opens_confirmed": False,
+        "apply_link": "https://phb.grad.allhires.com/app/",
+        "eligibility_note": "Firm recruits \"both law and non-law graduates and also mature students\" - no vacation scheme mentioned as a prerequisite.",
+    },
+    ("Ashfords", "Bristol Training Contract"): {
+        "opens_date": "2026-11-01",
+        "opens_confirmed": True,
+        "apply_link": "https://ashfords.app.candidats.io/",
+        "eligibility_note": "Firm runs a standalone Assessment Centre route separate from the Summer Scheme, open to anyone \"at least\" in their qualifying study year - graduates included.",
+    },
+    ("Ashfords", "Exeter Training Contract"): {
+        "opens_date": "2026-11-01",
+        "opens_confirmed": True,
+        "apply_link": "https://ashfords.app.candidats.io/",
+        "eligibility_note": "Same firm-wide policy as Bristol - firm confirms eligibility criteria are identical across both locations.",
+    },
+    ("Bates Wells", "Training Contract"): {
+        "opens_date": "2026-12-01",
+        "opens_confirmed": True,
+        "apply_link": "https://bateswells.grad.allhires.com/app/",
+        "eligibility_note": "Firm's FAQ explicitly confirms it \"consider[s] all direct training contract applications\" - no vacation scheme required.",
+    },
+    ("Wedlake Bell", "Training Contract"): {
+        "opens_date": "2026-11-01",
+        "opens_confirmed": True,
+        "apply_link": "https://wedlakebell.app.candidats.io/roles",
+        "eligibility_note": "Firm's own criteria explicitly list \"already graduated with a law/non-law degree\" as qualifying routes - no vacation scheme required.",
+    },
+    ("Fried Frank", "Training Contract"): {
+        "opens_date": "2026-09-01",
+        "opens_confirmed": False,
+        "apply_link": "https://www.friedfrank.com/careers/attorneyjobopportunities?gh_jid=5680560004",
+        "eligibility_note": "Firm's own page states it \"welcome[s] graduates and those changing careers\" - no vacation scheme required.",
+    },
+    ("BCLP", "Training Contract 2028/29"): {
+        "opens_date": "2026-10-13",
+        "opens_confirmed": True,
+        "apply_link": "https://apply.candidats.io/5a98a4ec-b014-4b41-81d9-679f3e0893eb",
+        "eligibility_note": "Firm's FAQ explicitly lists \"graduates and postgraduates from any discipline\" as eligible for the Direct Training Contract route - a separate route from the Vacation Scheme.",
+    },
+    ("Sullivan & Cromwell", "Training Contract"): {
+        "opens_date": "2027-05-03",
+        "opens_confirmed": True,
+        "apply_link": "https://sullcrom.grad.allhires.com/",
+        "eligibility_note": "Firm's site explicitly includes \"graduates and postgraduates\" alongside students - no vacation scheme required.",
+    },
+    ("Morgan Lewis", "Training Contract"): {
+        "opens_date": "2026-10-01",
+        "opens_confirmed": False,
+        "apply_link": "https://www.apply4law.com/morganlewis/",
+        "eligibility_note": "Firm states the vacation scheme and training contract are both open to \"graduates\" separately - the vacation scheme is presented as optional, not a prerequisite.",
+    },
+    ("Eversheds Sutherland", "Edinburgh Training Contract 2029"): {
+        "opens_date": "2027-03-01",
+        "opens_confirmed": True,
+        "apply_link": "https://eversheds-sutherland.grad.allhires.com/app/",
+        "eligibility_note": "Firm confirms the process is the same whether applying via the Vacation Scheme or applying directly, and explicitly welcomes those \"who've already graduated\".",
+    },
+    ("Burges Salmon", "Bristol Direct Training Contract"): {
+        "opens_date": "2026-10-01",
+        "opens_confirmed": False,
+        "apply_link": "https://www.burges-salmon.com/jobs/",
+        "eligibility_note": "Firm's own listing explicitly welcomes \"applicants that have graduated or are changing careers\" - a direct (non-vacation-scheme) route by design.",
+    },
+    ("Paul Hastings", "Direct Training Contract"): {
+        "opens_date": "2026-01-05",
+        "opens_confirmed": False,
+        "apply_link": "https://paulhastings.grad.allhires.com/",
+        "eligibility_note": "Firm's early-careers routes are open to \"final-year non-law students and graduates\", with the training contract application handled separately from the PHirst Steps scheme.",
+    },
+    ("HFW", "Training Contract"): {
+        "opens_date": "2026-09-01",
+        "opens_confirmed": False,
+        "apply_link": "https://hfw.grad.allhires.com/",
+        "eligibility_note": "Firm's own site states outright: \"You can also apply for a Training Contract without completing a vacation scheme.\"",
+    },
+    ("K&L Gates", "Training Contract"): {
+        "opens_date": "2026-11-01",
+        "opens_confirmed": False,
+        "apply_link": "https://klgateseurope.bigredsky.com/page.php?pageID=160&windowUID=0&AdvertID=1071",
+        "eligibility_note": "Firm welcomes law and non-law applicants without restricting to current penultimate/final-year status - no vacation scheme required.",
+    },
+    ("Walker Morris", "Direct Training Contract"): {
+        "opens_date": "2026-04-30",
+        "opens_confirmed": False,
+        "apply_link": "https://walkermorris.grad.allhires.com/app/",
+        "eligibility_note": "Firm runs a dedicated Direct Training Contract route for people who can't commit to the full vacation scheme (e.g. because they're working or studying) - graduates welcomed.",
+    },
     # --- Excluded: confirmed to require this firm's own vacation scheme first,
     # or otherwise not open to direct graduate applicants. Kept here (rather
     # than just omitted) so it's obvious on inspection that these were
     # checked, not missed. ---
     ("Gateley", "Training Contract"): None,  # recruits all trainees from its own summer vacation placements
     ("Davis Polk & Wardwell", "Training Programme"): None,  # filled exclusively via the vacation scheme
+    # --- Researched 2026-09-04 but left OUT deliberately (not None, not
+    # included): each firm's own site was ambiguous or contradictory on
+    # graduate/vacation-scheme eligibility, so these stay in needs_review
+    # until a clearer source is found rather than risking a wrong guess
+    # either way. See conversation notes for what was checked:
+    #   - Lawrence Stephens (Training Contract): no clear statement either way
+    #   - DAC Beachcroft (Training Contract): no clear statement either way
+    #   - Thomson Snell & Passmore (Training Contract): no clear statement either way
+    #   - Kennedys (Training Contract): every live vacancy checked shows "closed"
+    #   - Wiggin (Training Contract): no clear statement on graduates specifically
+    #   - Watson Farley & Williams (Direct Training Contract): no clear statement either way
+    #   - Hogan Lovells Cadwalader (London Training Contract): firm identity itself
+    #     unconfirmed (possible 2025 merger of Hogan Lovells + Cadwalader) - held
+    #     back until that can be verified independently.
 }
 
 
