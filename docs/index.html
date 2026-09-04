@@ -249,12 +249,17 @@
   .oday-deadline { font-size: 0.85rem; font-weight: 600; margin-bottom: 10px; }
   .oday-deadline.is-soon { color: #b3491f; }
   .oday-deadline.is-normal { color: var(--muted); }
+
+  .tc-eligibility { font-size: 0.85rem; line-height: 1.45; margin-bottom: 8px; }
+  .tc-window { font-size: 0.85rem; color: var(--muted); margin-bottom: 4px; }
+  .tc-window.is-estimated::after { content: ' (estimated)'; }
 </style>
 </head>
 <body>
   <div class="tabs">
     <button class="tab-btn active" data-tab="jobs" id="tabJobsBtn">Job Search</button>
     <button class="tab-btn" data-tab="opendays" id="tabOpenDaysBtn">Open Days &amp; Insight Days</button>
+    <button class="tab-btn" data-tab="tc" id="tabTcBtn">Training Contracts</button>
   </div>
 
   <div class="ask-claude-box">
@@ -291,6 +296,13 @@
     <label for="hideRegisteredToggle">Hide events marked as registered</label>
   </div>
   <div id="root-opendays"><div class="empty">Loading…</div></div>
+  </div>
+
+  <div class="tab-panel" id="panel-tc">
+  <h1>Training Contracts</h1>
+  <div class="sub">Direct training contract deadlines open to graduates — auto-refreshed daily</div>
+  <div class="oday-source-note">Sourced from <a href="https://www.legalcheek.com/key-deadlines-calendar/" target="_blank">Legal Cheek's deadlines calendar</a>, manually checked against each firm's own site so only training contracts open to graduates applying directly (no prior vacation scheme needed at that firm) are shown. Opening dates marked "estimated" are carried over from last year's cycle where the firm hadn't published this year's exact date yet — worth double-checking on the firm's site nearer the time.</div>
+  <div id="root-tc"><div class="empty">Loading…</div></div>
   </div>
 
 <script>
@@ -358,6 +370,7 @@ function showTab(tab) {
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
   document.getElementById('panel-jobs').classList.toggle('active', tab === 'jobs');
   document.getElementById('panel-opendays').classList.toggle('active', tab === 'opendays');
+  document.getElementById('panel-tc').classList.toggle('active', tab === 'tc');
   setActiveTab(tab);
 }
 
@@ -717,6 +730,57 @@ function openDayCard(ev, isRegistered) {
   `;
 }
 
+let lastTc = null;
+
+async function loadTc() {
+  const root = document.getElementById('root-tc');
+  try {
+    const res = await fetch('tc_deadlines.json?_=' + Date.now());
+    const payload = await res.json();
+    lastTc = (payload && payload.events) || [];
+    renderTc();
+  } catch (e) {
+    root.innerHTML = '<div class="empty">No data yet — the first automated run will populate this.</div>';
+  }
+}
+
+function renderTc() {
+  const root = document.getElementById('root-tc');
+  const events = lastTc;
+  if (!events || !events.length) {
+    root.innerHTML = '<div class="empty">No verified graduate training contract deadlines found right now.</div>';
+    return;
+  }
+  root.innerHTML = events.map(ev => tcCard(ev)).join('');
+}
+
+function formatOpens(opensDate, confirmed) {
+  if (!opensDate) return '';
+  const d = new Date(opensDate + 'T00:00:00');
+  const niceDate = d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  return confirmed ? `Opens: ${niceDate}` : `Opens: around ${niceDate}`;
+}
+
+function tcCard(ev) {
+  const deadline = formatDeadline(ev.closes_date);
+  const opensText = formatOpens(ev.opens_date, ev.opens_confirmed);
+  const label = (ev.firm || '') + ' — ' + (ev.event_name || '');
+  return `
+    <div class="oday-card" data-tc-id="${escapeHtml(ev.id || '')}">
+      <div class="oday-firm">${escapeHtml(ev.firm || '')}</div>
+      <div class="oday-event-name">${escapeHtml(ev.event_name || '')}</div>
+      <div class="tc-eligibility">${escapeHtml(ev.eligibility_note || '')}</div>
+      <div class="tc-window${ev.opens_confirmed ? '' : ' is-estimated'}">${escapeHtml(opensText)}</div>
+      <div class="oday-deadline ${deadline.cls}">${escapeHtml(deadline.text)}</div>
+      <div class="btn-row">
+        ${ev.apply_link ? `<a class="copy-btn" href="${ev.apply_link}" target="_blank">Apply</a>` : ''}
+        <button class="copy-btn" data-apply-link="${escapeHtml(ev.apply_link || '')}" data-apply-label="${escapeHtml(label)}">Copy message for Claude</button>
+        <button class="copy-btn" data-apply-link="${escapeHtml(ev.apply_link || '')}" data-apply-label="${escapeHtml(label)}" data-open-claude="1">Open in Claude</button>
+      </div>
+    </div>
+  `;
+}
+
 function companySearchUrl(job) {
   const q = [job.employer, job.title, 'careers'].filter(Boolean).join(' ');
   return 'https://www.google.com/search?q=' + encodeURIComponent(q);
@@ -977,6 +1041,7 @@ document.addEventListener('click', (e) => {
   renderDropboxStatus();
   await load();
   await loadOpenDays();
+  await loadTc();
 })();
 </script>
 </body>
