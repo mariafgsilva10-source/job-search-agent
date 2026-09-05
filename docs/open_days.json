@@ -1,1516 +1,1404 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-05T07:10:46Z",
+  "generated_at": "2026-09-05T14:47:34Z",
+  "note": "Only includes Open Day / Insight Day listings manually verified against the firm's own site. New listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "events": [
     {
-      "id": "a88093d00dfea717",
+      "id": "paul,-weiss|september-insight-afternoon|07-09-2026",
       "firm": "Paul, Weiss",
-      "firm_profile_link": "https://www.legalcheek.com/firm/paul-weiss/",
       "event_name": "September Insight Afternoon",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "07/09/2026",
       "deadline_date": "2026-09-07",
-      "apply_link": "https://www.paulweissukearlycareers.com/"
+      "apply_link": "https://pweuropecareers.app.candidats.io/roles",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "37d445316041fec5",
+      "id": "simpson-thacher-&-bartlett|october-open-day|13-09-2026",
       "firm": "Simpson Thacher & Bartlett",
-      "firm_profile_link": "https://www.legalcheek.com/firm/simpson-thacher-bartlett/",
       "event_name": "October Open Day",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "13/09/2026",
       "deadline_date": "2026-09-13",
-      "apply_link": "https://ukearlycareers.stblaw.com/"
+      "apply_link": "https://ukearlycareers.stblaw.com/our-offer/events/",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "f9ec6811e59c6cb5",
+      "id": "goodwin|insight-into-applications-–-demystifying-the-application-process|18-09-2026",
       "firm": "Goodwin",
-      "firm_profile_link": "https://www.legalcheek.com/firm/goodwin/",
       "event_name": "Insight into Applications – Demystifying the Application Process",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "18/09/2026",
       "deadline_date": "2026-09-18",
-      "apply_link": "https://www.goodwinlaw.com/en/careers-pages/early-careers-in-the-united-kingdom"
+      "apply_link": "https://goodwinlaw.app.candidats.io/event/3cae80ec-5b90-4a54-a960-c4040ec066e5",
+      "link_is_specific": true,
+      "eligibility_note": null
     },
     {
-      "id": "a1a97f8b73694c08",
-      "firm": "Akin",
-      "firm_profile_link": "https://www.legalcheek.com/firm/akin-gump/",
-      "event_name": "Open Day (virtual)",
-      "summary": "A virtual/online session featuring a virtual tour and talks introducing the firm and its application process.",
-      "deadline_label": "25/09/2026",
-      "deadline_date": "2026-09-25",
-      "apply_link": "https://akingump.grad.allhires.com/app/"
-    },
-    {
-      "id": "21f9aa6f41fbc0e3",
+      "id": "bclp|open-day|25-09-2026",
       "firm": "BCLP",
-      "firm_profile_link": "https://www.legalcheek.com/firm/bryan-cave-leighton-paisner/",
       "event_name": "Open Day",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "25/09/2026",
       "deadline_date": "2026-09-25",
-      "apply_link": "https://trainee.bclplaw.com/"
+      "apply_link": "https://apply.candidats.io/4043257c-7a63-449b-ac60-50b45db8edd5",
+      "link_is_specific": true,
+      "eligibility_note": null
     },
     {
-      "id": "9660c4c85f80e20b",
-      "firm": "Winston Taylor",
-      "firm_profile_link": "https://www.legalcheek.com/firm/winston-taylor/",
-      "event_name": "Application Success: Insights & Tips (Online)",
-      "summary": "A virtual/online session featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "deadline_label": "25/09/2026",
-      "deadline_date": "2026-09-25",
-      "apply_link": "https://earlytalenteme.winstontaylor.com/eme/"
-    },
-    {
-      "id": "a13423af878532bb",
-      "firm": "Winston Taylor",
-      "firm_profile_link": "https://www.legalcheek.com/firm/winston-taylor/",
-      "event_name": "Dublin Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "deadline_label": "25/09/2026",
-      "deadline_date": "2026-09-25",
-      "apply_link": "https://earlytalenteme.winstontaylor.com/eme/"
-    },
-    {
-      "id": "acab391061e28165",
-      "firm": "Winston Taylor",
-      "firm_profile_link": "https://www.legalcheek.com/firm/winston-taylor/",
-      "event_name": "In-Person Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "deadline_label": "25/09/2026",
-      "deadline_date": "2026-09-25",
-      "apply_link": "https://earlytalenteme.winstontaylor.com/eme/"
-    },
-    {
-      "id": "408a79ba66b55d94",
-      "firm": "Winston Taylor",
-      "firm_profile_link": "https://www.legalcheek.com/firm/winston-taylor/",
-      "event_name": "In-Person Open Day (under-represented groups)",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, focused on supporting candidates from underrepresented or minority groups into the legal profession.",
-      "deadline_label": "25/09/2026",
-      "deadline_date": "2026-09-25",
-      "apply_link": "https://earlytalenteme.winstontaylor.com/eme/"
-    },
-    {
-      "id": "4f3fb8b6fef8af87",
-      "firm": "Winston Taylor",
-      "firm_profile_link": "https://www.legalcheek.com/firm/winston-taylor/",
-      "event_name": "In-Person STEM Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, aimed at STEM students exploring a career in law.",
-      "deadline_label": "25/09/2026",
-      "deadline_date": "2026-09-25",
-      "apply_link": "https://earlytalenteme.winstontaylor.com/eme/"
-    },
-    {
-      "id": "dcdc138d00e265ac",
-      "firm": "Winston Taylor",
-      "firm_profile_link": "https://www.legalcheek.com/firm/winston-taylor/",
-      "event_name": "SQE Explained: Future Trainee Insights (Online)",
-      "summary": "A virtual/online session featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "deadline_label": "25/09/2026",
-      "deadline_date": "2026-09-25",
-      "apply_link": "https://earlytalenteme.winstontaylor.com/eme/"
-    },
-    {
-      "id": "d05040629fed15d8",
-      "firm": "Winston Taylor",
-      "firm_profile_link": "https://www.legalcheek.com/firm/winston-taylor/",
-      "event_name": "Virtual Open Day",
-      "summary": "A virtual/online session featuring a virtual tour and talks introducing the firm and its application process.",
-      "deadline_label": "25/09/2026",
-      "deadline_date": "2026-09-25",
-      "apply_link": "https://earlytalenteme.winstontaylor.com/eme/"
-    },
-    {
-      "id": "43de19bb605d1289",
+      "id": "weightmans-—-solicitor-apprenticeship|birmingham-open-evening|28-09-2026",
       "firm": "Weightmans — solicitor apprenticeship",
-      "firm_profile_link": "https://www.legalcheek.com/solicitor-apprenticeship/weightmans/",
       "event_name": "Birmingham Open Evening",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "28/09/2026",
       "deadline_date": "2026-09-28",
-      "apply_link": "https://www.weightmans.com/careers/early-careers/apprenticeships/solicitor-degree-apprenticeship/"
+      "apply_link": "https://www.eventbrite.co.uk/e/1997832167794",
+      "link_is_specific": true,
+      "eligibility_note": "This is the firm's solicitor apprenticeship route (a school-leaver / non-graduate entry path funded alongside a law degree and the SQE) - not the graduate training contract route."
     },
     {
-      "id": "0c13e5bc31e65532",
+      "id": "brick-court-chambers|brick-court-chambers-student-open-day|29-09-2026",
       "firm": "Brick Court Chambers",
-      "firm_profile_link": "https://www.legalcheek.com/chamber/brick-court-chambers/",
       "event_name": "Brick Court Chambers Student Open Day",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "29/09/2026",
       "deadline_date": "2026-09-29",
-      "apply_link": "https://www.brickcourt.co.uk/pupillage-and-mini-pupillage"
+      "apply_link": "https://www.brickcourt.co.uk/pupillage-and-mini-pupillage/equal-opportunities-social-mobility-events",
+      "link_is_specific": true,
+      "eligibility_note": "Barristers' chambers (pupillage, not a training contract). No online application - apply by emailing a CV directly to the Pupillage Manager (details on the page)."
     },
     {
-      "id": "6fe8b36df0314b94",
+      "id": "davis-polk-&-wardwell|penultimate-year-&-postgraduate-insight-day|30-09-2026",
       "firm": "Davis Polk & Wardwell",
-      "firm_profile_link": "https://www.legalcheek.com/firm/davis-polk/",
       "event_name": "Penultimate Year & Postgraduate Insight Day",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm, aimed at penultimate-year students.",
+      "opens_date": "2026-09-10",
+      "opens_confirmed": true,
       "deadline_label": "30/09/2026",
       "deadline_date": "2026-09-30",
-      "apply_link": "https://www.davispolk.com/careers/law-students-trainees/london"
+      "apply_link": "https://www.davispolk.com/careers/law-students-trainees/london",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "de3897ad5876ce05",
+      "id": "weightmans-—-solicitor-apprenticeship|newcastle-open-evening|30-09-2026",
       "firm": "Weightmans — solicitor apprenticeship",
-      "firm_profile_link": "https://www.legalcheek.com/solicitor-apprenticeship/weightmans/",
       "event_name": "Newcastle Open Evening",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "30/09/2026",
       "deadline_date": "2026-09-30",
-      "apply_link": "https://www.weightmans.com/careers/early-careers/apprenticeships/solicitor-degree-apprenticeship/"
+      "apply_link": "https://www.eventbrite.co.uk/e/1997837897933",
+      "link_is_specific": true,
+      "eligibility_note": "This is the firm's solicitor apprenticeship route (a school-leaver / non-graduate entry path funded alongside a law degree and the SQE) - not the graduate training contract route."
     },
     {
-      "id": "d9d71e8805360411",
+      "id": "weil-gotshal-&-manges|insight-day-1|30-09-2026",
       "firm": "Weil Gotshal & Manges",
-      "firm_profile_link": "https://www.legalcheek.com/firm/weil-gotshal-manges/",
       "event_name": "Insight Day 1",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "opens_date": "2026-09-01",
+      "opens_confirmed": true,
       "deadline_label": "30/09/2026",
       "deadline_date": "2026-09-30",
-      "apply_link": "https://ukrecruiting.weil.com/"
+      "apply_link": "https://weil.app.candidats.io/roles",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "21c6d2963cb0a28d",
+      "id": "bristows-—-solicitor-apprenticeship|solicitor-apprenticeship-open-evening|01-10-2026",
       "firm": "Bristows — solicitor apprenticeship",
-      "firm_profile_link": "https://www.legalcheek.com/solicitor-apprenticeship/bristows/",
       "event_name": "Solicitor Apprenticeship Open Evening",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, for prospective solicitor apprenticeship candidates.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "01/10/2026",
       "deadline_date": "2026-10-01",
-      "apply_link": "https://bristows.grad.allhires.com/app/"
+      "apply_link": "https://sites-bristows.vuturevx.com/44/1601/landing-pages/rsvp---blank.asp",
+      "link_is_specific": true,
+      "eligibility_note": "This is the firm's solicitor apprenticeship route (a school-leaver / non-graduate entry path funded alongside a law degree and the SQE) - not the graduate training contract route."
     },
     {
-      "id": "ff0d9e81039a9014",
+      "id": "herbert-smith-freehills-kramer|ip-open-day|01-10-2026",
       "firm": "Herbert Smith Freehills Kramer",
-      "firm_profile_link": "https://www.legalcheek.com/firm/herbert-smith-freehills-kramer/",
       "event_name": "IP Open Day",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "01/10/2026",
       "deadline_date": "2026-10-01",
-      "apply_link": "https://ad.doubleclick.net/ddm/clk/648911054;455200287;g;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755}"
+      "apply_link": "https://careers.hsfkramer.com/global/en/uk/early-careers/open-days",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "0bde567d29295b38",
+      "id": "herbert-smith-freehills-kramer|social-mobility-open-day|01-10-2026",
       "firm": "Herbert Smith Freehills Kramer",
-      "firm_profile_link": "https://www.legalcheek.com/firm/herbert-smith-freehills-kramer/",
       "event_name": "Social Mobility Open Day",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, focused on supporting candidates from underrepresented or minority groups into the legal profession.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "01/10/2026",
       "deadline_date": "2026-10-01",
-      "apply_link": "https://ad.doubleclick.net/ddm/clk/648911054;455200287;g;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755}"
+      "apply_link": "https://careers.hsfkramer.com/global/en/uk/early-careers/open-days",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "aa432fee79d44420",
+      "id": "milbank|open-day|01-10-2026",
       "firm": "Milbank",
-      "firm_profile_link": "https://www.legalcheek.com/firm/milbank/",
       "event_name": "Open Day",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": "2026-09-03",
+      "opens_confirmed": true,
       "deadline_label": "01/10/2026",
       "deadline_date": "2026-10-01",
-      "apply_link": "https://www.milbank.com/en/careers/london/index.html"
+      "apply_link": "https://www.apply4law.com/milbank/",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "f0411480d0c46893",
+      "id": "milbank|open-day-(leveraged-finance-track)|01-10-2026",
       "firm": "Milbank",
-      "firm_profile_link": "https://www.legalcheek.com/firm/milbank/",
       "event_name": "Open Day (Leveraged Finance track)",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": "2026-09-03",
+      "opens_confirmed": true,
       "deadline_label": "01/10/2026",
       "deadline_date": "2026-10-01",
-      "apply_link": "https://www.milbank.com/en/careers/london/index.html"
+      "apply_link": "https://www.apply4law.com/milbank/",
+      "link_is_specific": false,
+      "eligibility_note": "For students on a Finance LLM."
     },
     {
-      "id": "984a55f513de2c34",
-      "firm": "Akin",
-      "firm_profile_link": "https://www.legalcheek.com/firm/akin-gump/",
-      "event_name": "Open Day (London office)",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "deadline_label": "02/10/2026",
-      "deadline_date": "2026-10-02",
-      "apply_link": "https://akingump.grad.allhires.com/app/"
-    },
-    {
-      "id": "39413f59f65a4ffd",
+      "id": "forsters|open-day-1|02-10-2026",
       "firm": "Forsters",
-      "firm_profile_link": "https://www.legalcheek.com/firm/forsters/",
       "event_name": "Open Day 1",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": "2026-09-03",
+      "opens_confirmed": true,
       "deadline_label": "02/10/2026",
       "deadline_date": "2026-10-02",
-      "apply_link": "https://www.forsters.co.uk/early-careers"
+      "apply_link": "https://forsters.grad.allhires.com/app/",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "c7701820a6f5b331",
+      "id": "goodwin|insight-into-applications-–-demystifying-the-application-process|02-10-2026",
       "firm": "Goodwin",
-      "firm_profile_link": "https://www.legalcheek.com/firm/goodwin/",
       "event_name": "Insight into Applications – Demystifying the Application Process",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "02/10/2026",
       "deadline_date": "2026-10-02",
-      "apply_link": "https://www.goodwinlaw.com/en/careers-pages/early-careers-in-the-united-kingdom"
+      "apply_link": "https://goodwinlaw.app.candidats.io/event/7daf0946-4519-4c67-9dfe-d6b69f87c123",
+      "link_is_specific": true,
+      "eligibility_note": null
     },
     {
-      "id": "f06e2f4574906cb7",
+      "id": "mills-&-reeve|in-person-insight-event-(manchester)|05-10-2026",
       "firm": "Mills & Reeve",
-      "firm_profile_link": "https://www.legalcheek.com/firm/mills-reeve/",
       "event_name": "In person Insight Event (Manchester)",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "05/10/2026",
       "deadline_date": "2026-10-05",
-      "apply_link": "https://www.mills-reeve.com/careers/emerging-talent-be-part-of-it/placement-schemes-and-training-contracts/"
+      "apply_link": "https://apply.candidats.io/ca0b7f0c-fe8a-441f-9048-030f548e6464",
+      "link_is_specific": true,
+      "eligibility_note": null
     },
     {
-      "id": "d8c49b2958e2d427",
+      "id": "rpc-—-solicitor-apprenticeship|solicitor-apprenticeship-virtual-insight-evening|05-10-2026",
       "firm": "RPC — solicitor apprenticeship",
-      "firm_profile_link": "https://www.legalcheek.com/solicitor-apprenticeship/rpc/",
       "event_name": "Solicitor Apprenticeship Virtual Insight Evening",
       "summary": "A virtual/online session featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm, for prospective solicitor apprenticeship candidates.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "05/10/2026",
       "deadline_date": "2026-10-05",
-      "apply_link": "https://www.rpclegal.com/careers/early-talent/uk/solicitor-apprenticeship/"
+      "apply_link": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/london-solicitor-apprenticeship-insight-event",
+      "link_is_specific": true,
+      "eligibility_note": "This is the firm's solicitor apprenticeship route (a school-leaver / non-graduate entry path funded alongside a law degree and the SQE) - not the graduate training contract route."
     },
     {
-      "id": "656a6bbd0b69ad3e",
-      "firm": "Baker McKenzie",
-      "firm_profile_link": "https://www.legalcheek.com/firm/baker-mckenzie/",
-      "event_name": "General Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "deadline_label": "07/10/2026",
-      "deadline_date": "2026-10-07",
-      "apply_link": "https://uk-graduates.bakermckenzie.com/"
-    },
-    {
-      "id": "19b921591e7b5061",
+      "id": "weightmans-—-solicitor-apprenticeship|leeds-open-evening|07-10-2026",
       "firm": "Weightmans — solicitor apprenticeship",
-      "firm_profile_link": "https://www.legalcheek.com/solicitor-apprenticeship/weightmans/",
       "event_name": "Leeds Open Evening",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "07/10/2026",
       "deadline_date": "2026-10-07",
-      "apply_link": "https://www.weightmans.com/careers/early-careers/apprenticeships/solicitor-degree-apprenticeship/"
+      "apply_link": "https://www.eventbrite.co.uk/e/1997838114581",
+      "link_is_specific": true,
+      "eligibility_note": "This is the firm's solicitor apprenticeship route (a school-leaver / non-graduate entry path funded alongside a law degree and the SQE) - not the graduate training contract route."
     },
     {
-      "id": "082afb1664f0e023",
+      "id": "weightmans-—-solicitor-apprenticeship|online-open-evening|08-10-2026",
       "firm": "Weightmans — solicitor apprenticeship",
-      "firm_profile_link": "https://www.legalcheek.com/solicitor-apprenticeship/weightmans/",
       "event_name": "Online Open Evening",
       "summary": "A virtual/online session featuring a virtual tour and talks introducing the firm and its application process.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "08/10/2026",
       "deadline_date": "2026-10-08",
-      "apply_link": "https://www.weightmans.com/careers/early-careers/apprenticeships/solicitor-degree-apprenticeship/"
+      "apply_link": "https://www.eventbrite.co.uk/e/1998432780242",
+      "link_is_specific": true,
+      "eligibility_note": "This is the firm's solicitor apprenticeship route (a school-leaver / non-graduate entry path funded alongside a law degree and the SQE) - not the graduate training contract route."
     },
     {
-      "id": "e4c80df106391e2c",
+      "id": "goodwin|insight-into-the-trainee-experience:-meet-our-trainees-and-q&a|09-10-2026",
       "firm": "Goodwin",
-      "firm_profile_link": "https://www.legalcheek.com/firm/goodwin/",
       "event_name": "Insight into the Trainee Experience: Meet Our Trainees and Q&A",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "09/10/2026",
       "deadline_date": "2026-10-09",
-      "apply_link": "https://www.goodwinlaw.com/en/careers-pages/early-careers-in-the-united-kingdom"
+      "apply_link": "https://goodwinlaw.app.candidats.io/event/ed2ce890-e0fe-41a5-a966-da86dc7ecb26",
+      "link_is_specific": true,
+      "eligibility_note": null
     },
     {
-      "id": "e97cb7939127b679",
-      "firm": "DWF",
-      "firm_profile_link": "https://www.legalcheek.com/firm/dwf/",
-      "event_name": "Insight Days",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "deadline_label": "11/10/2026",
-      "deadline_date": "2026-10-11",
-      "apply_link": "https://dwf.grad.allhires.com/app/"
-    },
-    {
-      "id": "55a497f97c61d3cc",
-      "firm": "DWF — solicitor apprenticeship",
-      "firm_profile_link": "https://www.legalcheek.com/solicitor-apprenticeship/dwf/",
-      "event_name": "Insight days",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "deadline_label": "11/10/2026",
-      "deadline_date": "2026-10-11",
-      "apply_link": "https://dwf.grad.allhires.com/app/"
-    },
-    {
-      "id": "b4450274edb41082",
+      "id": "latham-&-watkins|london-open-day-2026-(october)|11-10-2026",
       "firm": "Latham & Watkins",
-      "firm_profile_link": "https://www.legalcheek.com/firm/latham-watkins/",
       "event_name": "London Open Day 2026 (October)",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": "2026-09-01",
+      "opens_confirmed": false,
       "deadline_label": "11/10/2026",
       "deadline_date": "2026-10-11",
-      "apply_link": "https://lathamwatkins.grad.allhires.com/app/"
+      "apply_link": "https://uk-earlyassociatecareers-lw.icims.com/jobs/10939/open-day---graduate-recruitment---28-october-2026---london/job",
+      "link_is_specific": true,
+      "eligibility_note": null
     },
     {
-      "id": "7fb84718064c51f8",
-      "firm": "Baker McKenzie",
-      "firm_profile_link": "https://www.legalcheek.com/firm/baker-mckenzie/",
-      "event_name": "Opportunity Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "deadline_label": "12/10/2026",
-      "deadline_date": "2026-10-12",
-      "apply_link": "https://uk-graduates.bakermckenzie.com/"
-    },
-    {
-      "id": "9b9f9de0e4cd15a6",
-      "firm": "Baker McKenzie",
-      "firm_profile_link": "https://www.legalcheek.com/firm/baker-mckenzie/",
-      "event_name": "Women’s Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "deadline_label": "12/10/2026",
-      "deadline_date": "2026-10-12",
-      "apply_link": "https://uk-graduates.bakermckenzie.com/"
-    },
-    {
-      "id": "b0c5a37af13d2857",
+      "id": "herbert-smith-freehills-kramer|black-talent-open-day|12-10-2026",
       "firm": "Herbert Smith Freehills Kramer",
-      "firm_profile_link": "https://www.legalcheek.com/firm/herbert-smith-freehills-kramer/",
       "event_name": "Black Talent Open Day",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, focused on supporting candidates from underrepresented or minority groups into the legal profession.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "12/10/2026",
       "deadline_date": "2026-10-12",
-      "apply_link": "https://ad.doubleclick.net/ddm/clk/648911054;455200287;g;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755}"
+      "apply_link": "https://careers.hsfkramer.com/global/en/uk/early-careers/open-days",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "f809d5ec106e512c",
+      "id": "herbert-smith-freehills-kramer|disputes-open-day|12-10-2026",
       "firm": "Herbert Smith Freehills Kramer",
-      "firm_profile_link": "https://www.legalcheek.com/firm/herbert-smith-freehills-kramer/",
       "event_name": "Disputes Open Day",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "12/10/2026",
       "deadline_date": "2026-10-12",
-      "apply_link": "https://ad.doubleclick.net/ddm/clk/648911054;455200287;g;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755}"
+      "apply_link": "https://careers.hsfkramer.com/global/en/uk/early-careers/open-days",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "0be5a84cb5ad11d6",
+      "id": "herbert-smith-freehills-kramer|iris-open-day|12-10-2026",
       "firm": "Herbert Smith Freehills Kramer",
-      "firm_profile_link": "https://www.legalcheek.com/firm/herbert-smith-freehills-kramer/",
       "event_name": "IRIS Open Day",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "12/10/2026",
       "deadline_date": "2026-10-12",
-      "apply_link": "https://ad.doubleclick.net/ddm/clk/648911054;455200287;g;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755}"
+      "apply_link": "https://careers.hsfkramer.com/global/en/uk/early-careers/open-days",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "9b333d39fe0e1bf4",
+      "id": "herbert-smith-freehills-kramer|myplus-open-day|12-10-2026",
       "firm": "Herbert Smith Freehills Kramer",
-      "firm_profile_link": "https://www.legalcheek.com/firm/herbert-smith-freehills-kramer/",
       "event_name": "MyPlus Open Day",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, focused on supporting candidates from underrepresented or minority groups into the legal profession.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "12/10/2026",
       "deadline_date": "2026-10-12",
-      "apply_link": "https://ad.doubleclick.net/ddm/clk/648911054;455200287;g;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755}"
+      "apply_link": "https://careers.hsfkramer.com/global/en/uk/early-careers/open-days",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "dd2ea1e764d41d2a",
-      "firm": "Squire Patton Boggs",
-      "firm_profile_link": "https://www.legalcheek.com/firm/squire-patton-boggs/",
-      "event_name": "Open Day (Birmingham)",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "deadline_label": "12/10/2026",
-      "deadline_date": "2026-10-12",
-      "apply_link": "https://www.squirepattonboggs.com/join-us/student-and-graduate-opportunities/trainee-solicitor-program/"
-    },
-    {
-      "id": "6e64dcb51f9dc30d",
-      "firm": "Squire Patton Boggs",
-      "firm_profile_link": "https://www.legalcheek.com/firm/squire-patton-boggs/",
-      "event_name": "Open Day (Leeds)",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "deadline_label": "12/10/2026",
-      "deadline_date": "2026-10-12",
-      "apply_link": "https://www.squirepattonboggs.com/join-us/student-and-graduate-opportunities/trainee-solicitor-program/"
-    },
-    {
-      "id": "b960b3b8155112bf",
-      "firm": "Squire Patton Boggs",
-      "firm_profile_link": "https://www.legalcheek.com/firm/squire-patton-boggs/",
-      "event_name": "Open Day (London)",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "deadline_label": "12/10/2026",
-      "deadline_date": "2026-10-12",
-      "apply_link": "https://www.squirepattonboggs.com/join-us/student-and-graduate-opportunities/trainee-solicitor-program/"
-    },
-    {
-      "id": "c2f47f7925b662cc",
-      "firm": "Squire Patton Boggs",
-      "firm_profile_link": "https://www.legalcheek.com/firm/squire-patton-boggs/",
-      "event_name": "Open Day (Manchester)",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "deadline_label": "12/10/2026",
-      "deadline_date": "2026-10-12",
-      "apply_link": "https://www.squirepattonboggs.com/join-us/student-and-graduate-opportunities/trainee-solicitor-program/"
-    },
-    {
-      "id": "d2bedf5e89a3f801",
-      "firm": "Squire Patton Boggs",
-      "firm_profile_link": "https://www.legalcheek.com/firm/squire-patton-boggs/",
-      "event_name": "Open Day (Online)",
-      "summary": "A virtual/online session featuring a virtual tour and talks introducing the firm and its application process.",
-      "deadline_label": "12/10/2026",
-      "deadline_date": "2026-10-12",
-      "apply_link": "https://www.squirepattonboggs.com/join-us/student-and-graduate-opportunities/trainee-solicitor-program/"
-    },
-    {
-      "id": "88b377283ae58310",
+      "id": "weightmans-—-solicitor-apprenticeship|liverpool-open-evening|12-10-2026",
       "firm": "Weightmans — solicitor apprenticeship",
-      "firm_profile_link": "https://www.legalcheek.com/solicitor-apprenticeship/weightmans/",
       "event_name": "Liverpool Open Evening",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "12/10/2026",
       "deadline_date": "2026-10-12",
-      "apply_link": "https://www.weightmans.com/careers/early-careers/apprenticeships/solicitor-degree-apprenticeship/"
+      "apply_link": "https://www.eventbrite.co.uk/e/1997838450586",
+      "link_is_specific": true,
+      "eligibility_note": "This is the firm's solicitor apprenticeship route (a school-leaver / non-graduate entry path funded alongside a law degree and the SQE) - not the graduate training contract route."
     },
     {
-      "id": "021fabd216a31330",
+      "id": "weil-gotshal-&-manges|insight-day-2|13-10-2026",
       "firm": "Weil Gotshal & Manges",
-      "firm_profile_link": "https://www.legalcheek.com/firm/weil-gotshal-manges/",
       "event_name": "Insight Day 2",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "opens_date": "2026-09-01",
+      "opens_confirmed": true,
       "deadline_label": "13/10/2026",
       "deadline_date": "2026-10-13",
-      "apply_link": "https://ukrecruiting.weil.com/"
+      "apply_link": "https://weil.app.candidats.io/roles",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "a9d8d4343c30b4ba",
+      "id": "bird-&-bird|trainee-solicitor-open-day|14-10-2026",
       "firm": "Bird & Bird",
-      "firm_profile_link": "https://www.legalcheek.com/firm/bird-bird/",
       "event_name": "Trainee Solicitor Open Day",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "14/10/2026",
       "deadline_date": "2026-10-14",
-      "apply_link": "https://twobirds.app.candidats.io/roles"
+      "apply_link": "https://twobirds.app.candidats.io/roles",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "7299e6c2afc25489",
-      "firm": "Bird & Bird — solicitor apprenticeship",
-      "firm_profile_link": "https://www.legalcheek.com/solicitor-apprenticeship/bird-bird/",
-      "event_name": "Solicitor Apprentice Open Day (In Person)",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "deadline_label": "14/10/2026",
-      "deadline_date": "2026-10-14",
-      "apply_link": "https://twobirds.app.candidats.io/roles"
-    },
-    {
-      "id": "f99e20bec29f0bf2",
+      "id": "mills-&-reeve|in-person-insight-event-(birmingham)|15-10-2026",
       "firm": "Mills & Reeve",
-      "firm_profile_link": "https://www.legalcheek.com/firm/mills-reeve/",
       "event_name": "In person Insight Event (Birmingham)",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "15/10/2026",
       "deadline_date": "2026-10-15",
-      "apply_link": "https://www.mills-reeve.com/careers/emerging-talent-be-part-of-it/placement-schemes-and-training-contracts/"
+      "apply_link": "https://apply.candidats.io/061385f8-ee8c-4173-a84a-afced419232d",
+      "link_is_specific": true,
+      "eligibility_note": null
     },
     {
-      "id": "5910dc39d9964dd3",
+      "id": "mills-&-reeve|in-person-insight-event-(leeds)|15-10-2026",
       "firm": "Mills & Reeve",
-      "firm_profile_link": "https://www.legalcheek.com/firm/mills-reeve/",
       "event_name": "In person Insight Event (Leeds)",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "15/10/2026",
       "deadline_date": "2026-10-15",
-      "apply_link": "https://www.mills-reeve.com/careers/emerging-talent-be-part-of-it/placement-schemes-and-training-contracts/"
+      "apply_link": "https://apply.candidats.io/6c37d888-74d3-4691-91eb-f8fd377686c1",
+      "link_is_specific": true,
+      "eligibility_note": null
     },
     {
-      "id": "1dd6369ffed02555",
+      "id": "rpc|london-insight-day|15-10-2026",
       "firm": "RPC",
-      "firm_profile_link": "https://www.legalcheek.com/firm/rpc/",
       "event_name": "London Insight Day",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "opens_date": "2026-09-01",
+      "opens_confirmed": true,
       "deadline_label": "15/10/2026",
       "deadline_date": "2026-10-15",
-      "apply_link": "https://www.rpclegal.com/careers/early-talent/"
+      "apply_link": "https://fsr.cvmailuk.com/rpc/main.cfm?page=jobSpecific&jobId=76370&rcd=86628&queryString=groupType%5F4%3D5614%26groupType%5F73%3D%26x%2Dtoken%3Dca1nfctbox2mrfuqfudsbjnh146e5p6uccl853sb",
+      "link_is_specific": true,
+      "eligibility_note": null
     },
     {
-      "id": "6b133e383331e0f0",
+      "id": "weightmans-—-solicitor-apprenticeship|manchester-open-evening|15-10-2026",
       "firm": "Weightmans — solicitor apprenticeship",
-      "firm_profile_link": "https://www.legalcheek.com/solicitor-apprenticeship/weightmans/",
       "event_name": "Manchester Open Evening",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "15/10/2026",
       "deadline_date": "2026-10-15",
-      "apply_link": "https://www.weightmans.com/careers/early-careers/apprenticeships/solicitor-degree-apprenticeship/"
+      "apply_link": "https://www.eventbrite.co.uk/e/1997838304148",
+      "link_is_specific": true,
+      "eligibility_note": "This is the firm's solicitor apprenticeship route (a school-leaver / non-graduate entry path funded alongside a law degree and the SQE) - not the graduate training contract route."
     },
     {
-      "id": "995cc33dbda654c4",
+      "id": "forsters-—-solicitor-apprenticeship|apprenticeship-insights-afternoon-(online)|16-10-2026",
       "firm": "Forsters — solicitor apprenticeship",
-      "firm_profile_link": "https://www.legalcheek.com/solicitor-apprenticeship/forsters/",
       "event_name": "Apprenticeship Insights Afternoon (Online)",
       "summary": "A virtual/online session featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm, for prospective solicitor apprenticeship candidates.",
+      "opens_date": "2026-09-03",
+      "opens_confirmed": true,
       "deadline_label": "16/10/2026",
       "deadline_date": "2026-10-16",
-      "apply_link": "https://www.forsters.co.uk/careers/solicitor-apprenticeships"
+      "apply_link": "https://forsters.grad.allhires.com/app/",
+      "link_is_specific": false,
+      "eligibility_note": "This is the firm's solicitor apprenticeship route (a school-leaver / non-graduate entry path funded alongside a law degree and the SQE) - not the graduate training contract route."
     },
     {
-      "id": "55abf147d22b6a90",
+      "id": "forsters-—-solicitor-apprenticeship|open-day-(in-person)|16-10-2026",
       "firm": "Forsters — solicitor apprenticeship",
-      "firm_profile_link": "https://www.legalcheek.com/solicitor-apprenticeship/forsters/",
       "event_name": "Open day (in person)",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": "2026-09-03",
+      "opens_confirmed": true,
       "deadline_label": "16/10/2026",
       "deadline_date": "2026-10-16",
-      "apply_link": "https://www.forsters.co.uk/careers/solicitor-apprenticeships"
+      "apply_link": "https://forsters.grad.allhires.com/app/",
+      "link_is_specific": false,
+      "eligibility_note": "This is the firm's solicitor apprenticeship route (a school-leaver / non-graduate entry path funded alongside a law degree and the SQE) - not the graduate training contract route."
     },
     {
-      "id": "af679276c8ffcc62",
+      "id": "goodwin|insight-into-the-trainee-experience:-meet-our-trainees-and-q&a|16-10-2026",
       "firm": "Goodwin",
-      "firm_profile_link": "https://www.legalcheek.com/firm/goodwin/",
       "event_name": "Insight into the Trainee Experience: Meet Our Trainees and Q&A",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "16/10/2026",
       "deadline_date": "2026-10-16",
-      "apply_link": "https://www.goodwinlaw.com/en/careers-pages/early-careers-in-the-united-kingdom"
+      "apply_link": "https://goodwinlaw.app.candidats.io/event/c04c8ed0-8f3e-48a8-95ac-425534c084a4",
+      "link_is_specific": true,
+      "eligibility_note": null
     },
     {
-      "id": "2e797c830799b0dc",
+      "id": "latham-&-watkins|london-open-day-2026-(november)|18-10-2026",
       "firm": "Latham & Watkins",
-      "firm_profile_link": "https://www.legalcheek.com/firm/latham-watkins/",
       "event_name": "London Open Day 2026 (November)",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": "2026-09-01",
+      "opens_confirmed": false,
       "deadline_label": "18/10/2026",
       "deadline_date": "2026-10-18",
-      "apply_link": "https://lathamwatkins.grad.allhires.com/app/"
+      "apply_link": "https://uk-earlyassociatecareers-lw.icims.com/jobs/10940/job",
+      "link_is_specific": true,
+      "eligibility_note": null
     },
     {
-      "id": "708ee9865cbc109b",
-      "firm": "Clifford Chance",
-      "firm_profile_link": "https://www.legalcheek.com/firm/clifford-chance/",
-      "event_name": "London Insight Day",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "deadline_label": "19/10/2026",
-      "deadline_date": "2026-10-19",
-      "apply_link": "https://jobs.cliffordchance.com/early-careers-london"
-    },
-    {
-      "id": "d19e9e9eabd4b292",
+      "id": "jones-day|open-evening-2|22-10-2026",
       "firm": "Jones Day",
-      "firm_profile_link": "https://www.legalcheek.com/firm/jones-day/",
       "event_name": "Open Evening 2",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": "2026-10-08",
+      "opens_confirmed": true,
       "deadline_label": "22/10/2026",
       "deadline_date": "2026-10-22",
-      "apply_link": "https://jonesday.grad.allhires.com/app/"
+      "apply_link": "https://www.jonesday.com/en/careers/locations/united-kingdom?tab=events",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "c3ef4f43c876b122",
+      "id": "latham-&-watkins|london-lgbtq+-lawyers-group-open-day-2026|25-10-2026",
       "firm": "Latham & Watkins",
-      "firm_profile_link": "https://www.legalcheek.com/firm/latham-watkins/",
       "event_name": "London LGBTQ+ Lawyers Group Open Day 2026",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, focused on supporting candidates from underrepresented or minority groups into the legal profession.",
+      "opens_date": "2026-09-01",
+      "opens_confirmed": false,
       "deadline_label": "25/10/2026",
       "deadline_date": "2026-10-25",
-      "apply_link": "https://lathamwatkins.grad.allhires.com/app/"
+      "apply_link": "https://uk-earlyassociatecareers-lw.icims.com/jobs/10941/job",
+      "link_is_specific": true,
+      "eligibility_note": "Themed for the LGBTQ+ Lawyers Group but open to all interested students."
     },
     {
-      "id": "0753918232b7cf7c",
-      "firm": "Baker McKenzie",
-      "firm_profile_link": "https://www.legalcheek.com/firm/baker-mckenzie/",
-      "event_name": "Baker Ethnicity Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "deadline_label": "26/10/2026",
-      "deadline_date": "2026-10-26",
-      "apply_link": "https://uk-graduates.bakermckenzie.com/"
-    },
-    {
-      "id": "538a14daf3023f07",
+      "id": "paul,-weiss|november-insight-afternoon|26-10-2026",
       "firm": "Paul, Weiss",
-      "firm_profile_link": "https://www.legalcheek.com/firm/paul-weiss/",
       "event_name": "November Insight Afternoon",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "26/10/2026",
       "deadline_date": "2026-10-26",
-      "apply_link": "https://www.paulweissukearlycareers.com/"
+      "apply_link": "https://pweuropecareers.app.candidats.io/roles",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "0fc66aab16383b4c",
-      "firm": "Cripps — solicitor apprenticeship",
-      "firm_profile_link": "https://www.legalcheek.com/solicitor-apprenticeship/cripps/",
-      "event_name": "Solicitors Apprenticeship Open Evening",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, for prospective solicitor apprenticeship candidates.",
-      "deadline_label": "28/10/2026",
-      "deadline_date": "2026-10-28",
-      "apply_link": "https://www.cripps.co.uk/join-us/graduates-and-students/legal-apprenticeships/"
-    },
-    {
-      "id": "4d82f744aa315e0f",
-      "firm": "Clyde & Co",
-      "firm_profile_link": "https://www.legalcheek.com/firm/clyde-co/",
-      "event_name": "Bristol Insight Day (in-person)",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "deadline_label": "29/10/2026",
-      "deadline_date": "2026-10-29",
-      "apply_link": "https://clydecoearlycareers.com/en-gb/"
-    },
-    {
-      "id": "09ed7d2f31858796",
-      "firm": "Express Chambers",
-      "firm_profile_link": "https://www.legalcheek.com/chamber/express-chambers/",
-      "event_name": "Insight Event",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "deadline_label": "29/10/2026",
-      "deadline_date": "2026-10-29",
-      "apply_link": "https://www.expresssolicitors.co.uk/express-chambers"
-    },
-    {
-      "id": "efee964bde5f9e62",
+      "id": "weil-gotshal-&-manges|insight-day-3|29-10-2026",
       "firm": "Weil Gotshal & Manges",
-      "firm_profile_link": "https://www.legalcheek.com/firm/weil-gotshal-manges/",
       "event_name": "Insight Day 3",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "opens_date": "2026-09-01",
+      "opens_confirmed": true,
       "deadline_label": "29/10/2026",
       "deadline_date": "2026-10-29",
-      "apply_link": "https://ukrecruiting.weil.com/"
+      "apply_link": "https://weil.app.candidats.io/roles",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "3c05df0eac80051f",
+      "id": "eversheds-sutherland|graduate-insight-evenings|30-10-2026",
       "firm": "Eversheds Sutherland",
-      "firm_profile_link": "https://www.legalcheek.com/firm/eversheds-sutherland/",
       "event_name": "Graduate Insight Evenings",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "30/10/2026",
       "deadline_date": "2026-10-30",
-      "apply_link": "https://eversheds-sutherland.grad.allhires.com/app/"
+      "apply_link": "https://eversheds-sutherland.grad.allhires.com/app/",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "772b11afc5a5d670",
+      "id": "tlt|virtual-open-evening|30-10-2026",
       "firm": "TLT",
-      "firm_profile_link": "https://www.legalcheek.com/firm/tlt/",
       "event_name": "Virtual Open Evening",
       "summary": "A virtual/online session featuring a virtual tour and talks introducing the firm and its application process.",
+      "opens_date": "2026-10-01",
+      "opens_confirmed": true,
       "deadline_label": "30/10/2026",
       "deadline_date": "2026-10-30",
-      "apply_link": "https://apply.tlt.com/vacancies/"
+      "apply_link": "https://www.tlt.com/careers/early-careers/",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "c673403f4741f8d8",
+      "id": "davis-polk-&-wardwell|penultimate-year-&-postgraduate-insight-day|31-10-2026",
       "firm": "Davis Polk & Wardwell",
-      "firm_profile_link": "https://www.legalcheek.com/firm/davis-polk/",
       "event_name": "Penultimate Year & Postgraduate Insight Day",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm, aimed at penultimate-year students.",
+      "opens_date": "2026-10-01",
+      "opens_confirmed": true,
       "deadline_label": "31/10/2026",
       "deadline_date": "2026-10-31",
-      "apply_link": "https://www.davispolk.com/careers/law-students-trainees/london"
+      "apply_link": "https://www.davispolk.com/careers/law-students-trainees/london",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "aac2ac934cf3c97b",
-      "firm": "Kirkland & Ellis",
-      "firm_profile_link": "https://www.legalcheek.com/firm/kirkland-ellis/",
-      "event_name": "Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "deadline_label": "01/11/2026",
-      "deadline_date": "2026-11-01",
-      "apply_link": "https://ukgraduate.kirkland.com"
-    },
-    {
-      "id": "fb0763076322a08e",
+      "id": "latham-&-watkins|london-black-lawyers-group-open-day-2026|01-11-2026",
       "firm": "Latham & Watkins",
-      "firm_profile_link": "https://www.legalcheek.com/firm/latham-watkins/",
       "event_name": "London Black Lawyers Group Open Day 2026",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, focused on supporting candidates from underrepresented or minority groups into the legal profession.",
+      "opens_date": "2026-09-01",
+      "opens_confirmed": false,
       "deadline_label": "01/11/2026",
       "deadline_date": "2026-11-01",
-      "apply_link": "https://lathamwatkins.grad.allhires.com/app/"
+      "apply_link": "https://uk-earlyassociatecareers-lw.icims.com/jobs/10942/job",
+      "link_is_specific": true,
+      "eligibility_note": null
     },
     {
-      "id": "362f4b23df6f303b",
-      "firm": "Pinsent Masons",
-      "firm_profile_link": "https://www.legalcheek.com/firm/pinsent-masons/",
-      "event_name": "Pinsent Mason Insight Days",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "deadline_label": "01/11/2026",
-      "deadline_date": "2026-11-01",
-      "apply_link": "https://www.pinsentmasons.com/careers/graduate"
-    },
-    {
-      "id": "a1e075d8665692ac",
-      "firm": "HFW — solicitor apprenticeship",
-      "firm_profile_link": "https://www.legalcheek.com/solicitor-apprenticeship/hfw/",
-      "event_name": "Solicitor Apprenticeship Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, for prospective solicitor apprenticeship candidates.",
-      "deadline_label": "02/11/2026",
-      "deadline_date": "2026-11-02",
-      "apply_link": "https://hfw.grad.allhires.com/app/"
-    },
-    {
-      "id": "57ff28754c8d9e4e",
-      "firm": "Norton Rose Fulbright",
-      "firm_profile_link": "https://www.legalcheek.com/firm/norton-rose-fulbright/",
-      "event_name": "Aspiring Black Lawyers Insights Day",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm, focused on supporting candidates from underrepresented or minority groups into the legal profession.",
-      "deadline_label": "02/11/2026",
-      "deadline_date": "2026-11-02",
-      "apply_link": "https://www.nortonrosefulbright.com/en-gb/graduates/apply"
-    },
-    {
-      "id": "4dca6f8e8432c106",
-      "firm": "Monckton Chambers",
-      "firm_profile_link": "https://www.legalcheek.com/chamber/monckton-chambers/",
-      "event_name": "Pupillage Open Evening",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "deadline_label": "03/11/2026",
-      "deadline_date": "2026-11-03",
-      "apply_link": "https://www.monckton.com/pupillage/"
-    },
-    {
-      "id": "0fdd7a2512cec7dd",
-      "firm": "5 Essex Chambers",
-      "firm_profile_link": "https://www.legalcheek.com/chamber/5-essex-chambers/",
-      "event_name": "Inside 5 Open Evening 1",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "deadline_label": "04/11/2026",
-      "deadline_date": "2026-11-04",
-      "apply_link": "https://www.5essex.co.uk/careers/"
-    },
-    {
-      "id": "27c44ca8398261d0",
+      "id": "forsters-—-solicitor-apprenticeship|early-careers-insights-q&a|04-11-2026",
       "firm": "Forsters — solicitor apprenticeship",
-      "firm_profile_link": "https://www.legalcheek.com/solicitor-apprenticeship/forsters/",
       "event_name": "Early Careers Insights Q&A",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "opens_date": "2026-09-03",
+      "opens_confirmed": true,
       "deadline_label": "04/11/2026",
       "deadline_date": "2026-11-04",
-      "apply_link": "https://www.forsters.co.uk/careers/solicitor-apprenticeships"
+      "apply_link": "https://forsters.grad.allhires.com/app/",
+      "link_is_specific": false,
+      "eligibility_note": "This is the firm's solicitor apprenticeship route (a school-leaver / non-graduate entry path funded alongside a law degree and the SQE) - not the graduate training contract route."
     },
     {
-      "id": "c1dbad2287171d7a",
-      "firm": "HFW",
-      "firm_profile_link": "https://www.legalcheek.com/firm/holman-fenwick-willan/",
-      "event_name": "Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "deadline_label": "05/11/2026",
-      "deadline_date": "2026-11-05",
-      "apply_link": "https://hfw.grad.allhires.com/app/"
-    },
-    {
-      "id": "4e1fe74312556ab4",
+      "id": "fieldfisher|pathways-to-practice-scheme-(first-year-insight-scheme)|06-11-2026",
       "firm": "Fieldfisher",
-      "firm_profile_link": "https://www.legalcheek.com/firm/fieldfisher/",
       "event_name": "Pathways to Practice Scheme (First year insight scheme)",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm, aimed at first-year students.",
+      "opens_date": "2026-09-14",
+      "opens_confirmed": true,
       "deadline_label": "06/11/2026",
       "deadline_date": "2026-11-06",
-      "apply_link": "https://www.fieldfisher.com/en/careers/earlycareers"
+      "apply_link": "https://www.fieldfisher.com/en/careers/earlycareers/future-lawyer-programmes",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "9edeb93fb1354edd",
+      "id": "withers|open-day|06-11-2026",
       "firm": "Withers",
-      "firm_profile_link": "https://www.legalcheek.com/firm/withers/",
       "event_name": "Open Day",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": "2026-10-01",
+      "opens_confirmed": true,
       "deadline_label": "06/11/2026",
       "deadline_date": "2026-11-06",
-      "apply_link": "https://www.withersworldwide.com/en-gb/careers/students-and-graduates"
+      "apply_link": "https://www.witherscareers.com/",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "10c209bba447e441",
-      "firm": "Norton Rose Fulbright",
-      "firm_profile_link": "https://www.legalcheek.com/firm/norton-rose-fulbright/",
-      "event_name": "Law Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "deadline_label": "09/11/2026",
-      "deadline_date": "2026-11-09",
-      "apply_link": "https://www.nortonrosefulbright.com/en-gb/graduates/apply"
-    },
-    {
-      "id": "8b903e59e217280b",
+      "id": "trowers-&-hamlins|london-office-graduate-insight-day|09-11-2026",
       "firm": "Trowers & Hamlins",
-      "firm_profile_link": "https://www.legalcheek.com/firm/trowers-hamlins/",
       "event_name": "London Office Graduate Insight Day",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "opens_date": "2026-10-01",
+      "opens_confirmed": true,
       "deadline_label": "09/11/2026",
       "deadline_date": "2026-11-09",
-      "apply_link": "https://www.trowers.com/careers/early-talent"
+      "apply_link": "https://www.apply4law.com/Trowers/",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "949acc3eb96216c3",
-      "firm": "Charles Russell Speechlys",
-      "firm_profile_link": "https://www.legalcheek.com/firm/charles-russell-speechlys/",
-      "event_name": "Cheltenham Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "deadline_label": "12/11/2026",
-      "deadline_date": "2026-11-12",
-      "apply_link": "https://charlesrussellspeechlys.app.candidats.io/roles"
-    },
-    {
-      "id": "2be28bb961ec65b9",
-      "firm": "Charles Russell Speechlys",
-      "firm_profile_link": "https://www.legalcheek.com/firm/charles-russell-speechlys/",
-      "event_name": "Guildford Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "deadline_label": "12/11/2026",
-      "deadline_date": "2026-11-12",
-      "apply_link": "https://charlesrussellspeechlys.app.candidats.io/roles"
-    },
-    {
-      "id": "fffc8ef1a062ae22",
-      "firm": "Charles Russell Speechlys",
-      "firm_profile_link": "https://www.legalcheek.com/firm/charles-russell-speechlys/",
-      "event_name": "London Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "deadline_label": "12/11/2026",
-      "deadline_date": "2026-11-12",
-      "apply_link": "https://charlesrussellspeechlys.app.candidats.io/roles"
-    },
-    {
-      "id": "24446a4062c3b482",
-      "firm": "Charles Russell Speechlys",
-      "firm_profile_link": "https://www.legalcheek.com/firm/charles-russell-speechlys/",
-      "event_name": "Virtual Open Day",
-      "summary": "A virtual/online session featuring a virtual tour and talks introducing the firm and its application process.",
-      "deadline_label": "12/11/2026",
-      "deadline_date": "2026-11-12",
-      "apply_link": "https://charlesrussellspeechlys.app.candidats.io/roles"
-    },
-    {
-      "id": "69eb21e1c7dc74ad",
+      "id": "mills-&-reeve|virtual-insight-event|12-11-2026",
       "firm": "Mills & Reeve",
-      "firm_profile_link": "https://www.legalcheek.com/firm/mills-reeve/",
       "event_name": "Virtual Insight Event",
       "summary": "A virtual/online session featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "12/11/2026",
       "deadline_date": "2026-11-12",
-      "apply_link": "https://www.mills-reeve.com/careers/emerging-talent-be-part-of-it/placement-schemes-and-training-contracts/"
+      "apply_link": "https://apply.candidats.io/a8f00b84-f1fb-4b6b-abde-ecf792f4d573",
+      "link_is_specific": true,
+      "eligibility_note": null
     },
     {
-      "id": "2e4f12901e7a70c8",
-      "firm": "Bates Wells — solicitor apprenticeship",
-      "firm_profile_link": "https://www.legalcheek.com/solicitor-apprenticeship/bates-wells/",
-      "event_name": "Solicitor Apprenticeship Open Evening",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, for prospective solicitor apprenticeship candidates.",
-      "deadline_label": "13/11/2026",
-      "deadline_date": "2026-11-13",
-      "apply_link": "https://bateswells.grad.allhires.com/app/"
-    },
-    {
-      "id": "e4152c70451ae0b4",
+      "id": "goodwin|insight-into-applications-–-demystifying-the-application-process|13-11-2026",
       "firm": "Goodwin",
-      "firm_profile_link": "https://www.legalcheek.com/firm/goodwin/",
       "event_name": "Insight into Applications – Demystifying the Application Process",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "13/11/2026",
       "deadline_date": "2026-11-13",
-      "apply_link": "https://www.goodwinlaw.com/en/careers-pages/early-careers-in-the-united-kingdom"
+      "apply_link": "https://goodwinlaw.app.candidats.io/event/a6272983-248e-4d31-a7fd-b099838d027f",
+      "link_is_specific": true,
+      "eligibility_note": null
     },
     {
-      "id": "cb5b47397cba95e3",
-      "firm": "Baker McKenzie",
-      "firm_profile_link": "https://www.legalcheek.com/firm/baker-mckenzie/",
-      "event_name": "Employability Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "deadline_label": "16/11/2026",
-      "deadline_date": "2026-11-16",
-      "apply_link": "https://uk-graduates.bakermckenzie.com/"
-    },
-    {
-      "id": "971107deaa5d2c8f",
+      "id": "wedlake-bell|open-day|16-11-2026",
       "firm": "Wedlake Bell",
-      "firm_profile_link": "https://www.legalcheek.com/firm/wedlake-bell/",
       "event_name": "Open Day",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "16/11/2026",
       "deadline_date": "2026-11-16",
-      "apply_link": "https://wedlakebell.app.candidats.io/roles"
+      "apply_link": "https://wedlakebell.app.candidats.io/roles",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "9c3f326b374da1ce",
-      "firm": "Cripps — solicitor apprenticeship",
-      "firm_profile_link": "https://www.legalcheek.com/solicitor-apprenticeship/cripps/",
-      "event_name": "Virtual Insight Session",
-      "summary": "A virtual/online session featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "deadline_label": "17/11/2026",
-      "deadline_date": "2026-11-17",
-      "apply_link": "https://www.cripps.co.uk/join-us/graduates-and-students/legal-apprenticeships/"
-    },
-    {
-      "id": "ee28df523fdc7163",
-      "firm": "Serle Court",
-      "firm_profile_link": "https://www.legalcheek.com/chamber/serle-court/",
-      "event_name": "Open Day (In-Person)",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "deadline_label": "17/11/2026",
-      "deadline_date": "2026-11-17",
-      "apply_link": "https://www.serlecourt.co.uk/join-us/pupillage"
-    },
-    {
-      "id": "8dd4a8fe8df61d36",
+      "id": "trowers-&-hamlins|birmingham-office-graduate-insight-day|17-11-2026",
       "firm": "Trowers & Hamlins",
-      "firm_profile_link": "https://www.legalcheek.com/firm/trowers-hamlins/",
       "event_name": "Birmingham Office Graduate Insight Day",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "opens_date": "2026-10-01",
+      "opens_confirmed": true,
       "deadline_label": "17/11/2026",
       "deadline_date": "2026-11-17",
-      "apply_link": "https://www.trowers.com/careers/early-talent"
+      "apply_link": "https://www.apply4law.com/Trowers/",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "aad7bd84f2fcc3bb",
-      "firm": "Norton Rose Fulbright",
-      "firm_profile_link": "https://www.legalcheek.com/firm/norton-rose-fulbright/",
-      "event_name": "Non-law Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, aimed at non-law students.",
-      "deadline_label": "18/11/2026",
-      "deadline_date": "2026-11-18",
-      "apply_link": "https://www.nortonrosefulbright.com/en-gb/graduates/apply"
-    },
-    {
-      "id": "11015006ade54727",
-      "firm": "Serle Court",
-      "firm_profile_link": "https://www.legalcheek.com/chamber/serle-court/",
-      "event_name": "Open Day (Virtual)",
-      "summary": "A virtual/online session featuring a virtual tour and talks introducing the firm and its application process.",
-      "deadline_label": "18/11/2026",
-      "deadline_date": "2026-11-18",
-      "apply_link": "https://www.serlecourt.co.uk/join-us/pupillage"
-    },
-    {
-      "id": "475b895c19e95188",
+      "id": "forsters|open-day-2|20-11-2026",
       "firm": "Forsters",
-      "firm_profile_link": "https://www.legalcheek.com/firm/forsters/",
       "event_name": "Open Day 2",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": "2026-10-05",
+      "opens_confirmed": true,
       "deadline_label": "20/11/2026",
       "deadline_date": "2026-11-20",
-      "apply_link": "https://www.forsters.co.uk/early-careers"
+      "apply_link": "https://forsters.grad.allhires.com/app/",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "4ee42a81a310a5f0",
+      "id": "goodwin|insight-into-the-trainee-experience:-meet-our-trainees-and-q&a|21-11-2026",
       "firm": "Goodwin",
-      "firm_profile_link": "https://www.legalcheek.com/firm/goodwin/",
       "event_name": "Insight into the Trainee Experience: Meet Our Trainees and Q&A",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "21/11/2026",
       "deadline_date": "2026-11-21",
-      "apply_link": "https://www.goodwinlaw.com/en/careers-pages/early-careers-in-the-united-kingdom"
+      "apply_link": "https://goodwinlaw.app.candidats.io/event/338ddfd7-d308-47ed-8983-4dc6d35ff6c2",
+      "link_is_specific": true,
+      "eligibility_note": null
     },
     {
-      "id": "b5d068a71be1c592",
+      "id": "payne-hicks-beach|open-day-1|22-11-2026",
       "firm": "Payne Hicks Beach",
-      "firm_profile_link": "https://www.legalcheek.com/firm/payne-hicks-beach/",
       "event_name": "Open Day 1",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "22/11/2026",
       "deadline_date": "2026-11-22",
-      "apply_link": "https://phb.grad.allhires.com/app/"
+      "apply_link": "https://phb.grad.allhires.com/app/",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "d8f78464388106b5",
+      "id": "payne-hicks-beach|open-day-2|22-11-2026",
       "firm": "Payne Hicks Beach",
-      "firm_profile_link": "https://www.legalcheek.com/firm/payne-hicks-beach/",
       "event_name": "Open Day 2",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "22/11/2026",
       "deadline_date": "2026-11-22",
-      "apply_link": "https://phb.grad.allhires.com/app/"
+      "apply_link": "https://phb.grad.allhires.com/app/",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "3668cfa945a4b430",
+      "id": "trowers-&-hamlins|manchester-office-graduate-insight-day|23-11-2026",
       "firm": "Trowers & Hamlins",
-      "firm_profile_link": "https://www.legalcheek.com/firm/trowers-hamlins/",
       "event_name": "Manchester Office Graduate Insight Day",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "opens_date": "2026-10-01",
+      "opens_confirmed": true,
       "deadline_label": "23/11/2026",
       "deadline_date": "2026-11-23",
-      "apply_link": "https://www.trowers.com/careers/early-talent"
+      "apply_link": "https://www.apply4law.com/Trowers/",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "dfe16e8de63e578b",
-      "firm": "Norton Rose Fulbright",
-      "firm_profile_link": "https://www.legalcheek.com/firm/norton-rose-fulbright/",
-      "event_name": "STEM Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, aimed at STEM students exploring a career in law.",
-      "deadline_label": "24/11/2026",
-      "deadline_date": "2026-11-24",
-      "apply_link": "https://www.nortonrosefulbright.com/en-gb/graduates/apply"
-    },
-    {
-      "id": "47b3ea70adbacf6d",
-      "firm": "Tanfield Chambers",
-      "firm_profile_link": "https://www.legalcheek.com/chamber/tanfield-chambers/",
-      "event_name": "Pupillage Open Evening",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "deadline_label": "24/11/2026",
-      "deadline_date": "2026-11-24",
-      "apply_link": "https://tanfieldchambers.co.uk/join/pupillage/"
-    },
-    {
-      "id": "a80b25ccd4ca0283",
+      "id": "trowers-&-hamlins|exeter-office-graduate-insight-day|25-11-2026",
       "firm": "Trowers & Hamlins",
-      "firm_profile_link": "https://www.legalcheek.com/firm/trowers-hamlins/",
       "event_name": "Exeter Office Graduate Insight Day",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "opens_date": "2026-10-01",
+      "opens_confirmed": true,
       "deadline_label": "25/11/2026",
       "deadline_date": "2026-11-25",
-      "apply_link": "https://www.trowers.com/careers/early-talent"
+      "apply_link": "https://www.apply4law.com/Trowers/",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "9574f5779c05745e",
-      "firm": "Paul Hastings",
-      "firm_profile_link": "https://www.legalcheek.com/firm/paul-hastings/",
-      "event_name": "December Insight Day",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "deadline_label": "29/11/2026",
-      "deadline_date": "2026-11-29",
-      "apply_link": "https://paulhastings.grad.allhires.com/app/"
-    },
-    {
-      "id": "e0898555454d5884",
-      "firm": "5 Essex Chambers",
-      "firm_profile_link": "https://www.legalcheek.com/chamber/5-essex-chambers/",
-      "event_name": "Inside 5 Open Evening 2",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "deadline_label": "02/12/2026",
-      "deadline_date": "2026-12-02",
-      "apply_link": "https://www.5essex.co.uk/careers/"
-    },
-    {
-      "id": "fc846868688912e4",
-      "firm": "Simmons & Simmons — solicitor apprenticeship",
-      "firm_profile_link": "https://www.legalcheek.com/solicitor-apprenticeship/simmons-simmons/",
-      "event_name": "Solicitor Apprenticeship Open Day (London)",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, for prospective solicitor apprenticeship candidates.",
-      "deadline_label": "02/12/2026",
-      "deadline_date": "2026-12-02",
-      "apply_link": "https://www.simmons-simmons.com/en/about-us/careers/early-careers/apprenticeships"
-    },
-    {
-      "id": "5face85f4673c78c",
-      "firm": "Linklaters — solicitor apprenticeship",
-      "firm_profile_link": "https://www.legalcheek.com/solicitor-apprenticeship/linklaters/",
-      "event_name": "Solicitor Apprentice open day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "deadline_label": "16/12/2026",
-      "deadline_date": "2026-12-16",
-      "apply_link": "https://www.linklaters.com/careers/early-careers/school-opportunities"
-    },
-    {
-      "id": "6a19d6980c40f1bd",
-      "firm": "Farrer & Co",
-      "firm_profile_link": "https://www.legalcheek.com/firm/farrer-co/",
-      "event_name": "First Year Insight Vacation Scheme",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm, aimed at first-year students.",
-      "deadline_label": "18/12/2026",
-      "deadline_date": "2026-12-18",
-      "apply_link": "https://www.farrer.co.uk/careers/early-careers/"
-    },
-    {
-      "id": "cc4630baaa539dc5",
+      "id": "dechert|first-year-insight-event|31-12-2026",
       "firm": "Dechert",
-      "firm_profile_link": "https://www.legalcheek.com/firm/dechert/",
       "event_name": "First Year Insight Event",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm, aimed at first-year students.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "31/12/2026",
       "deadline_date": "2026-12-31",
-      "apply_link": "https://www.dechert.com/careers/london-training-programme.html"
+      "apply_link": "https://dechert.app.candidats.io/roles",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "f8d232807ccd388d",
+      "id": "debevoise-&-plimpton|open-day|04-01-2027",
       "firm": "Debevoise & Plimpton",
-      "firm_profile_link": "https://www.legalcheek.com/firm/debevoise-plimpton/",
       "event_name": "Open Day",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "04/01/2027",
       "deadline_date": "2027-01-04",
-      "apply_link": "https://www.debevoise.com/careers/london"
+      "apply_link": "https://debevoise.grad.allhires.com/app/",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "d55223331b1eac59",
-      "firm": "Burges Salmon",
-      "firm_profile_link": "https://www.legalcheek.com/firm/burges-salmon/",
-      "event_name": "Trainee Insight Day for first-year students",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "deadline_label": "05/01/2027",
-      "deadline_date": "2027-01-05",
-      "apply_link": "https://www.burges-salmon.com/join-us/emerging-talent/"
-    },
-    {
-      "id": "4224e72473fcf779",
-      "firm": "Burges Salmon",
-      "firm_profile_link": "https://www.legalcheek.com/firm/burges-salmon/",
-      "event_name": "Trainee Insight Day for non-law students",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm, aimed at non-law students.",
-      "deadline_label": "05/01/2027",
-      "deadline_date": "2027-01-05",
-      "apply_link": "https://www.burges-salmon.com/join-us/emerging-talent/"
-    },
-    {
-      "id": "e4208b4ed86cb9a6",
-      "firm": "5 Essex Chambers",
-      "firm_profile_link": "https://www.legalcheek.com/chamber/5-essex-chambers/",
-      "event_name": "Inside 5 Open Evening 3",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "deadline_label": "06/01/2027",
-      "deadline_date": "2027-01-06",
-      "apply_link": "https://www.5essex.co.uk/careers/"
-    },
-    {
-      "id": "2a9359a55653d896",
+      "id": "slaughter-and-may|spring-open-day-1|06-01-2027",
       "firm": "Slaughter and May",
-      "firm_profile_link": "https://www.legalcheek.com/firm/slaughter-and-may/",
       "event_name": "Spring Open Day 1",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": "2026-10-05",
+      "opens_confirmed": true,
       "deadline_label": "06/01/2027",
       "deadline_date": "2027-01-06",
-      "apply_link": "https://www.slaughterandmay.com/careers/early-careers/"
+      "apply_link": "https://www.slaughterandmay.com/careers/early-careers/apply/",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "17ea82c29c805d1d",
+      "id": "slaughter-and-may|spring-open-day-2|06-01-2027",
       "firm": "Slaughter and May",
-      "firm_profile_link": "https://www.legalcheek.com/firm/slaughter-and-may/",
       "event_name": "Spring Open Day 2",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": "2026-10-05",
+      "opens_confirmed": true,
       "deadline_label": "06/01/2027",
       "deadline_date": "2027-01-06",
-      "apply_link": "https://www.slaughterandmay.com/careers/early-careers/"
+      "apply_link": "https://www.slaughterandmay.com/careers/early-careers/apply/",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "a950252d74c02a51",
+      "id": "slaughter-and-may|spring-open-day-3|06-01-2027",
       "firm": "Slaughter and May",
-      "firm_profile_link": "https://www.legalcheek.com/firm/slaughter-and-may/",
       "event_name": "Spring Open Day 3",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": "2026-10-05",
+      "opens_confirmed": true,
       "deadline_label": "06/01/2027",
       "deadline_date": "2027-01-06",
-      "apply_link": "https://www.slaughterandmay.com/careers/early-careers/"
+      "apply_link": "https://www.slaughterandmay.com/careers/early-careers/apply/",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "1ab4eb434f72ce50",
-      "firm": "Simmons & Simmons — solicitor apprenticeship",
-      "firm_profile_link": "https://www.legalcheek.com/solicitor-apprenticeship/simmons-simmons/",
-      "event_name": "Solicitor Apprenticeship Open Day (Bristol)",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, for prospective solicitor apprenticeship candidates.",
-      "deadline_label": "07/01/2027",
-      "deadline_date": "2027-01-07",
-      "apply_link": "https://www.simmons-simmons.com/en/about-us/careers/early-careers/apprenticeships"
-    },
-    {
-      "id": "b4f56a549d551d0e",
-      "firm": "Morgan Lewis",
-      "firm_profile_link": "https://www.legalcheek.com/firm/morgan-lewis/",
-      "event_name": "Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "deadline_label": "08/01/2027",
-      "deadline_date": "2027-01-08",
-      "apply_link": "https://www.morganlewis.com/careers/students-trainees-judicial-clerks#emea"
-    },
-    {
-      "id": "81c1ac78b1115b12",
+      "id": "macfarlanes|first-year-insight-scheme|15-01-2027",
       "firm": "Macfarlanes",
-      "firm_profile_link": "https://www.legalcheek.com/firm/macfarlanes/",
       "event_name": "First Year Insight Scheme",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm, aimed at first-year students.",
+      "opens_date": "2026-11-02",
+      "opens_confirmed": true,
       "deadline_label": "15/01/2027",
       "deadline_date": "2027-01-15",
-      "apply_link": "https://www.macfarlanes.com/join-us/early-careers/"
+      "apply_link": "https://apply.candidats.io/267c1af6-28a4-4634-8fdf-34cd677ae806",
+      "link_is_specific": true,
+      "eligibility_note": null
     },
     {
-      "id": "3be9f846eddfad1f",
-      "firm": "Winston Taylor — solicitor apprenticeship",
-      "firm_profile_link": "https://www.legalcheek.com/solicitor-apprenticeship/winston-taylor/",
-      "event_name": "Solicitor Apprenticeship Open Evening",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, for prospective solicitor apprenticeship candidates.",
-      "deadline_label": "22/01/2027",
-      "deadline_date": "2027-01-22",
-      "apply_link": "https://earlytalenteme.winstontaylor.com/eme/"
-    },
-    {
-      "id": "a7e0fa7d71d1c267",
+      "id": "willkie-farr-&-gallagher|first-year-spring-insight-day|25-01-2027",
       "firm": "Willkie Farr & Gallagher",
-      "firm_profile_link": "https://www.legalcheek.com/firm/willkie-farr-gallagher/",
       "event_name": "First Year Spring Insight Day",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm, aimed at first-year students.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "25/01/2027",
       "deadline_date": "2027-01-25",
-      "apply_link": "https://www.willkie.com/careers/legal-professional/early-careers/discover-more-and-apply/united-kingdom"
+      "apply_link": "https://www.willkie.com/careers/legal-professional/early-careers/discover-more-and-apply/united-kingdom",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "2502e8166858ba25",
-      "firm": "Addleshaw Goddard",
-      "firm_profile_link": "https://www.legalcheek.com/firm/addleshaw-goddard/",
-      "event_name": "London In-person Insight Day",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "deadline_label": "29/01/2027",
-      "deadline_date": "2027-01-29",
-      "apply_link": "http://earlycareers.addleshawgoddard.com/"
-    },
-    {
-      "id": "47b4d2faa67e398b",
-      "firm": "Addleshaw Goddard",
-      "firm_profile_link": "https://www.legalcheek.com/firm/addleshaw-goddard/",
-      "event_name": "Scotland In-person Insight Day",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "deadline_label": "29/01/2027",
-      "deadline_date": "2027-01-29",
-      "apply_link": "http://earlycareers.addleshawgoddard.com/"
-    },
-    {
-      "id": "8dc645906d66ae71",
-      "firm": "Addleshaw Goddard",
-      "firm_profile_link": "https://www.legalcheek.com/firm/addleshaw-goddard/",
-      "event_name": "The North In-person Insight Day",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "deadline_label": "29/01/2027",
-      "deadline_date": "2027-01-29",
-      "apply_link": "http://earlycareers.addleshawgoddard.com/"
-    },
-    {
-      "id": "659d8d3ede8372db",
-      "firm": "Addleshaw Goddard",
-      "firm_profile_link": "https://www.legalcheek.com/firm/addleshaw-goddard/",
-      "event_name": "Virtual Insight Day",
-      "summary": "A virtual/online session featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "deadline_label": "29/01/2027",
-      "deadline_date": "2027-01-29",
-      "apply_link": "http://earlycareers.addleshawgoddard.com/"
-    },
-    {
-      "id": "2b3b49776e423d16",
+      "id": "mayer-brown|london-first-year-virtual-insight-session|31-01-2027",
       "firm": "Mayer Brown",
-      "firm_profile_link": "https://www.legalcheek.com/firm/mayer-brown/",
       "event_name": "London First Year Virtual Insight Session",
       "summary": "A virtual/online session featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm, aimed at first-year students.",
+      "opens_date": "2026-09-01",
+      "opens_confirmed": false,
       "deadline_label": "31/01/2027",
       "deadline_date": "2027-01-31",
-      "apply_link": "https://www.mayerbrownfutures.com/our-programs/europe"
+      "apply_link": "https://mayerbrown.grad.allhires.com/app/",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "44000cfabdf7ed27",
-      "firm": "Simmons & Simmons",
-      "firm_profile_link": "https://www.legalcheek.com/firm/simmons-simmons/",
-      "event_name": "Spring Insight Scheme",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "deadline_label": "31/01/2027",
-      "deadline_date": "2027-01-31",
-      "apply_link": "https://www.simmons-simmons.com/en/graduates"
-    },
-    {
-      "id": "56de46cd90114891",
+      "id": "dentons|open-day-(london)|05-02-2027",
       "firm": "Dentons",
-      "firm_profile_link": "https://www.legalcheek.com/firm/dentons/",
       "event_name": "Open Day (London)",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": "2026-09-01",
+      "opens_confirmed": false,
       "deadline_label": "05/02/2027",
       "deadline_date": "2027-02-05",
-      "apply_link": "https://challengers.dentons.com"
+      "apply_link": "https://challengers.dentons.com/uk-trainees/opportunities/open-days/",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "47bc749d1894ba54",
+      "id": "dentons|open-day-(scotland)|05-02-2027",
       "firm": "Dentons",
-      "firm_profile_link": "https://www.legalcheek.com/firm/dentons/",
       "event_name": "Open Day (Scotland)",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "opens_date": "2026-09-01",
+      "opens_confirmed": false,
       "deadline_label": "05/02/2027",
       "deadline_date": "2027-02-05",
-      "apply_link": "https://challengers.dentons.com"
+      "apply_link": "https://challengers.dentons.com/uk-trainees/opportunities/open-days/",
+      "link_is_specific": false,
+      "eligibility_note": "For students on a qualifying Scots law degree."
     },
     {
-      "id": "41cb84a5aa9bf252",
-      "firm": "Vinson & Elkins",
-      "firm_profile_link": "https://www.legalcheek.com/firm/vinson-elkins/",
-      "event_name": "Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "deadline_label": "05/02/2027",
-      "deadline_date": "2027-02-05",
-      "apply_link": "https://www.velaw.com/careers/london-graduate-recruitment/"
-    },
-    {
-      "id": "dee0f3b1d6982f20",
+      "id": "ashfords|bristol-first-year-insight-day|08-02-2027",
       "firm": "Ashfords",
-      "firm_profile_link": "https://www.legalcheek.com/firm/ashfords/",
       "event_name": "Bristol First Year Insight Day",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm, aimed at first-year students.",
+      "opens_date": "2026-12-01",
+      "opens_confirmed": true,
       "deadline_label": "08/02/2027",
       "deadline_date": "2027-02-08",
-      "apply_link": "https://ashfords.app.candidats.io/roles"
+      "apply_link": "https://ashfords.hr.candidats.io/events",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "2f94d59101665753",
+      "id": "ashfords|exeter-first-year-insight-day|08-02-2027",
       "firm": "Ashfords",
-      "firm_profile_link": "https://www.legalcheek.com/firm/ashfords/",
       "event_name": "Exeter First Year Insight Day",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm, aimed at first-year students.",
+      "opens_date": "2026-12-01",
+      "opens_confirmed": true,
       "deadline_label": "08/02/2027",
       "deadline_date": "2027-02-08",
-      "apply_link": "https://ashfords.app.candidats.io/roles"
+      "apply_link": "https://ashfords.hr.candidats.io/events",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "c01f80dde004df0d",
-      "firm": "HFW",
-      "firm_profile_link": "https://www.legalcheek.com/firm/holman-fenwick-willan/",
-      "event_name": "Virtual Insight Day",
-      "summary": "A virtual/online session featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "deadline_label": "11/02/2027",
-      "deadline_date": "2027-02-11",
-      "apply_link": "https://hfw.grad.allhires.com/app/"
-    },
-    {
-      "id": "c7f04e1d11eab16b",
+      "id": "freshfields|first-years-insight-scheme|12-02-2027",
       "firm": "Freshfields",
-      "firm_profile_link": "https://www.legalcheek.com/firm/freshfields/",
       "event_name": "First Years Insight Scheme",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm, aimed at first-year students.",
+      "opens_date": "2026-11-30",
+      "opens_confirmed": true,
       "deadline_label": "12/02/2027",
       "deadline_date": "2027-02-12",
-      "apply_link": "https://www.freshfields.com/en/your-career/united-kingdom/early-careers"
+      "apply_link": "https://www.freshfields.com/en/your-career/united-kingdom/early-careers/first-years-insight-scheme",
+      "link_is_specific": true,
+      "eligibility_note": null
     },
     {
-      "id": "701b4e540a2f3ef9",
+      "id": "gibson-dunn|first-year-insight-day-(in-person)|12-02-2027",
       "firm": "Gibson Dunn",
-      "firm_profile_link": "https://www.legalcheek.com/firm/gibson-dunn/",
       "event_name": "First Year Insight Day (In-person)",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm, aimed at first-year students.",
+      "opens_date": "2026-09-01",
+      "opens_confirmed": true,
       "deadline_label": "12/02/2027",
       "deadline_date": "2027-02-12",
-      "apply_link": "https://gibsondunn.grad.allhires.com/app/"
+      "apply_link": "https://www.apply4law.com/GibsonDunn/",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "b78019db92dd02e7",
+      "id": "gibson-dunn|first-year-insight-day-(virtual)|12-02-2027",
       "firm": "Gibson Dunn",
-      "firm_profile_link": "https://www.legalcheek.com/firm/gibson-dunn/",
       "event_name": "First Year Insight Day (Virtual)",
       "summary": "A virtual/online session featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm, aimed at first-year students.",
+      "opens_date": "2026-09-01",
+      "opens_confirmed": true,
       "deadline_label": "12/02/2027",
       "deadline_date": "2027-02-12",
-      "apply_link": "https://gibsondunn.grad.allhires.com/app/"
+      "apply_link": "https://www.apply4law.com/GibsonDunn/",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "777e15586c9c21e2",
+      "id": "rpc|bristol-insight-day|18-02-2027",
       "firm": "RPC",
-      "firm_profile_link": "https://www.legalcheek.com/firm/rpc/",
       "event_name": "Bristol Insight Day",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "opens_date": "2026-09-01",
+      "opens_confirmed": true,
       "deadline_label": "18/02/2027",
       "deadline_date": "2027-02-18",
-      "apply_link": "https://www.rpclegal.com/careers/early-talent/"
+      "apply_link": "https://fsr.cvmailuk.com/rpc/main.cfm?page=jobSpecific&jobId=76369&rcd=81569&queryString=groupType%5F4%3D5614%26groupType%5F112%3D%26groupType%5F73%3D%26x%2Dtoken%3Dfvvfqvo5kmynfbodecpl22jrbj1o62ckk3kuq5wm",
+      "link_is_specific": true,
+      "eligibility_note": null
     },
     {
-      "id": "6e38cb4058a51803",
+      "id": "davis-polk-&-wardwell|first-year-insight-day|22-02-2027",
       "firm": "Davis Polk & Wardwell",
-      "firm_profile_link": "https://www.legalcheek.com/firm/davis-polk/",
       "event_name": "First Year Insight Day",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm, aimed at first-year students.",
+      "opens_date": "2027-02-01",
+      "opens_confirmed": true,
       "deadline_label": "22/02/2027",
       "deadline_date": "2027-02-22",
-      "apply_link": "https://www.davispolk.com/careers/law-students-trainees/london"
+      "apply_link": "https://www.davispolk.com/careers/law-students-trainees/london",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "de495fb605267823",
-      "firm": "Ashfords",
-      "firm_profile_link": "https://www.legalcheek.com/firm/ashfords/",
-      "event_name": "Virtual Insight Afternoon",
-      "summary": "A virtual/online session featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "deadline_label": "24/02/2027",
-      "deadline_date": "2027-02-24",
-      "apply_link": "https://ashfords.app.candidats.io/roles"
-    },
-    {
-      "id": "25b9d844babde287",
-      "firm": "Dentons",
-      "firm_profile_link": "https://www.legalcheek.com/firm/dentons/",
-      "event_name": "Middle East Summer Insight Scheme",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "deadline_label": "26/02/2027",
-      "deadline_date": "2027-02-26",
-      "apply_link": "https://challengers.dentons.com"
-    },
-    {
-      "id": "f1778f093b51e961",
+      "id": "hogan-lovells-cadwalader|first-year-insight-scheme|28-02-2027",
       "firm": "Hogan Lovells Cadwalader",
-      "firm_profile_link": "https://www.legalcheek.com/firm/hogan-lovells-cadwalader/",
       "event_name": "First Year Insight Scheme",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm, aimed at first-year students.",
+      "opens_date": "2027-01-04",
+      "opens_confirmed": true,
       "deadline_label": "28/02/2027",
       "deadline_date": "2027-02-28",
-      "apply_link": "https://ukearlycareers.hlc.com/"
+      "apply_link": "https://apply.candidats.io/210ee084-369b-4abc-b7c0-7eb878c06281",
+      "link_is_specific": true,
+      "eligibility_note": "Firm identity independently verified: Hogan Lovells and Cadwalader, Wickersham & Taft merged, forming Hogan Lovells Cadwalader (combined firm launched 1 July 2026)."
     },
     {
-      "id": "1c792345b68bc3a1",
+      "id": "osborne-clarke|insight-scheme|28-02-2027",
       "firm": "Osborne Clarke",
-      "firm_profile_link": "https://www.legalcheek.com/firm/osborne-clarke/",
       "event_name": "Insight Scheme",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "opens_date": "2026-10-01",
+      "opens_confirmed": true,
       "deadline_label": "28/02/2027",
       "deadline_date": "2027-02-28",
-      "apply_link": "https://join.osborneclarke.com/apply"
+      "apply_link": "https://join.osborneclarke.com/insight-scheme",
+      "link_is_specific": true,
+      "eligibility_note": null
     },
     {
-      "id": "bdad7288e75d16ef",
-      "firm": "Winston Taylor",
-      "firm_profile_link": "https://www.legalcheek.com/firm/winston-taylor/",
-      "event_name": "First Year Insight Day",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm, aimed at first-year students.",
-      "deadline_label": "01/03/2027",
-      "deadline_date": "2027-03-01",
-      "apply_link": "https://earlytalenteme.winstontaylor.com/eme/"
-    },
-    {
-      "id": "676fb0bf4991aeff",
+      "id": "eversheds-sutherland|first-year-law-second-year-non-law-open-day|02-03-2027",
       "firm": "Eversheds Sutherland",
-      "firm_profile_link": "https://www.legalcheek.com/firm/eversheds-sutherland/",
       "event_name": "First Year Law/Second Year Non-Law Open Day",
       "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, aimed at non-law students.",
+      "opens_date": null,
+      "opens_confirmed": false,
       "deadline_label": "02/03/2027",
       "deadline_date": "2027-03-02",
-      "apply_link": "https://eversheds-sutherland.grad.allhires.com/app/"
+      "apply_link": "https://eversheds-sutherland.grad.allhires.com/app/",
+      "link_is_specific": false,
+      "eligibility_note": null
     },
     {
-      "id": "503618514de28223",
-      "firm": "Weightmans",
-      "firm_profile_link": "https://www.legalcheek.com/firm/weightmans/",
-      "event_name": "Legal Insights Programme (In-person)",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "deadline_label": "19/03/2027",
-      "deadline_date": "2027-03-19",
-      "apply_link": "https://www.weightmans.com/careers/early-careers/"
-    },
-    {
-      "id": "ce3a1a68cf8e5d48",
-      "firm": "Weightmans",
-      "firm_profile_link": "https://www.legalcheek.com/firm/weightmans/",
-      "event_name": "Legal Insights Programme (Virtual)",
-      "summary": "A virtual/online session featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "deadline_label": "19/03/2027",
-      "deadline_date": "2027-03-19",
-      "apply_link": "https://www.weightmans.com/careers/early-careers/"
-    },
-    {
-      "id": "60552167b5778e15",
+      "id": "forsters|first-year-insight-day|23-04-2027",
       "firm": "Forsters",
-      "firm_profile_link": "https://www.legalcheek.com/firm/forsters/",
       "event_name": "First Year Insight Day",
       "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm, aimed at first-year students.",
+      "opens_date": "2026-09-03",
+      "opens_confirmed": true,
       "deadline_label": "23/04/2027",
       "deadline_date": "2027-04-23",
-      "apply_link": "https://www.forsters.co.uk/early-careers"
+      "apply_link": "https://forsters.grad.allhires.com/app/",
+      "link_is_specific": false,
+      "eligibility_note": null
+    }
+  ],
+  "needs_review": [
+    {
+      "firm": "Akin",
+      "event_name": "Open Day (virtual)",
+      "deadline_label": "25/09/2026"
     },
     {
-      "id": "cbf69e1ec0ff30b1",
+      "firm": "Winston Taylor",
+      "event_name": "Application Success: Insights & Tips (Online)",
+      "deadline_label": "25/09/2026"
+    },
+    {
+      "firm": "Winston Taylor",
+      "event_name": "Dublin Open Day",
+      "deadline_label": "25/09/2026"
+    },
+    {
+      "firm": "Winston Taylor",
+      "event_name": "In-Person Open Day",
+      "deadline_label": "25/09/2026"
+    },
+    {
+      "firm": "Winston Taylor",
+      "event_name": "In-Person Open Day (under-represented groups)",
+      "deadline_label": "25/09/2026"
+    },
+    {
+      "firm": "Winston Taylor",
+      "event_name": "In-Person STEM Open Day",
+      "deadline_label": "25/09/2026"
+    },
+    {
+      "firm": "Winston Taylor",
+      "event_name": "SQE Explained: Future Trainee Insights (Online)",
+      "deadline_label": "25/09/2026"
+    },
+    {
+      "firm": "Winston Taylor",
+      "event_name": "Virtual Open Day",
+      "deadline_label": "25/09/2026"
+    },
+    {
+      "firm": "Akin",
+      "event_name": "Open Day (London office)",
+      "deadline_label": "02/10/2026"
+    },
+    {
+      "firm": "Baker McKenzie",
+      "event_name": "General Open Day",
+      "deadline_label": "07/10/2026"
+    },
+    {
+      "firm": "DWF",
+      "event_name": "Insight Days",
+      "deadline_label": "11/10/2026"
+    },
+    {
+      "firm": "DWF — solicitor apprenticeship",
+      "event_name": "Insight days",
+      "deadline_label": "11/10/2026"
+    },
+    {
+      "firm": "Baker McKenzie",
+      "event_name": "Opportunity Open Day",
+      "deadline_label": "12/10/2026"
+    },
+    {
+      "firm": "Baker McKenzie",
+      "event_name": "Women’s Open Day",
+      "deadline_label": "12/10/2026"
+    },
+    {
+      "firm": "Squire Patton Boggs",
+      "event_name": "Open Day (Birmingham)",
+      "deadline_label": "12/10/2026"
+    },
+    {
+      "firm": "Squire Patton Boggs",
+      "event_name": "Open Day (Leeds)",
+      "deadline_label": "12/10/2026"
+    },
+    {
+      "firm": "Squire Patton Boggs",
+      "event_name": "Open Day (London)",
+      "deadline_label": "12/10/2026"
+    },
+    {
+      "firm": "Squire Patton Boggs",
+      "event_name": "Open Day (Manchester)",
+      "deadline_label": "12/10/2026"
+    },
+    {
+      "firm": "Squire Patton Boggs",
+      "event_name": "Open Day (Online)",
+      "deadline_label": "12/10/2026"
+    },
+    {
+      "firm": "Bird & Bird — solicitor apprenticeship",
+      "event_name": "Solicitor Apprentice Open Day (In Person)",
+      "deadline_label": "14/10/2026"
+    },
+    {
+      "firm": "Clifford Chance",
+      "event_name": "London Insight Day",
+      "deadline_label": "19/10/2026"
+    },
+    {
+      "firm": "Baker McKenzie",
+      "event_name": "Baker Ethnicity Open Day",
+      "deadline_label": "26/10/2026"
+    },
+    {
+      "firm": "Cripps — solicitor apprenticeship",
+      "event_name": "Solicitors Apprenticeship Open Evening",
+      "deadline_label": "28/10/2026"
+    },
+    {
+      "firm": "Clyde & Co",
+      "event_name": "Bristol Insight Day (in-person)",
+      "deadline_label": "29/10/2026"
+    },
+    {
+      "firm": "Express Chambers",
+      "event_name": "Insight Event",
+      "deadline_label": "29/10/2026"
+    },
+    {
+      "firm": "Kirkland & Ellis",
+      "event_name": "Open Day",
+      "deadline_label": "01/11/2026"
+    },
+    {
+      "firm": "Pinsent Masons",
+      "event_name": "Pinsent Mason Insight Days",
+      "deadline_label": "01/11/2026"
+    },
+    {
+      "firm": "HFW — solicitor apprenticeship",
+      "event_name": "Solicitor Apprenticeship Open Day",
+      "deadline_label": "02/11/2026"
+    },
+    {
+      "firm": "Norton Rose Fulbright",
+      "event_name": "Aspiring Black Lawyers Insights Day",
+      "deadline_label": "02/11/2026"
+    },
+    {
+      "firm": "Monckton Chambers",
+      "event_name": "Pupillage Open Evening",
+      "deadline_label": "03/11/2026"
+    },
+    {
+      "firm": "5 Essex Chambers",
+      "event_name": "Inside 5 Open Evening 1",
+      "deadline_label": "04/11/2026"
+    },
+    {
+      "firm": "HFW",
+      "event_name": "Open Day",
+      "deadline_label": "05/11/2026"
+    },
+    {
+      "firm": "Norton Rose Fulbright",
+      "event_name": "Law Open Day",
+      "deadline_label": "09/11/2026"
+    },
+    {
+      "firm": "Charles Russell Speechlys",
+      "event_name": "Cheltenham Open Day",
+      "deadline_label": "12/11/2026"
+    },
+    {
+      "firm": "Charles Russell Speechlys",
+      "event_name": "Guildford Open Day",
+      "deadline_label": "12/11/2026"
+    },
+    {
+      "firm": "Charles Russell Speechlys",
+      "event_name": "London Open Day",
+      "deadline_label": "12/11/2026"
+    },
+    {
+      "firm": "Charles Russell Speechlys",
+      "event_name": "Virtual Open Day",
+      "deadline_label": "12/11/2026"
+    },
+    {
+      "firm": "Bates Wells — solicitor apprenticeship",
+      "event_name": "Solicitor Apprenticeship Open Evening",
+      "deadline_label": "13/11/2026"
+    },
+    {
+      "firm": "Baker McKenzie",
+      "event_name": "Employability Open Day",
+      "deadline_label": "16/11/2026"
+    },
+    {
+      "firm": "Cripps — solicitor apprenticeship",
+      "event_name": "Virtual Insight Session",
+      "deadline_label": "17/11/2026"
+    },
+    {
+      "firm": "Serle Court",
+      "event_name": "Open Day (In-Person)",
+      "deadline_label": "17/11/2026"
+    },
+    {
+      "firm": "Norton Rose Fulbright",
+      "event_name": "Non-law Open Day",
+      "deadline_label": "18/11/2026"
+    },
+    {
+      "firm": "Serle Court",
+      "event_name": "Open Day (Virtual)",
+      "deadline_label": "18/11/2026"
+    },
+    {
+      "firm": "Norton Rose Fulbright",
+      "event_name": "STEM Open Day",
+      "deadline_label": "24/11/2026"
+    },
+    {
+      "firm": "Tanfield Chambers",
+      "event_name": "Pupillage Open Evening",
+      "deadline_label": "24/11/2026"
+    },
+    {
+      "firm": "Paul Hastings",
+      "event_name": "December Insight Day",
+      "deadline_label": "29/11/2026"
+    },
+    {
+      "firm": "5 Essex Chambers",
+      "event_name": "Inside 5 Open Evening 2",
+      "deadline_label": "02/12/2026"
+    },
+    {
+      "firm": "Simmons & Simmons — solicitor apprenticeship",
+      "event_name": "Solicitor Apprenticeship Open Day (London)",
+      "deadline_label": "02/12/2026"
+    },
+    {
+      "firm": "Linklaters — solicitor apprenticeship",
+      "event_name": "Solicitor Apprentice open day",
+      "deadline_label": "16/12/2026"
+    },
+    {
+      "firm": "Farrer & Co",
+      "event_name": "First Year Insight Vacation Scheme",
+      "deadline_label": "18/12/2026"
+    },
+    {
+      "firm": "Burges Salmon",
+      "event_name": "Trainee Insight Day for first-year students",
+      "deadline_label": "05/01/2027"
+    },
+    {
+      "firm": "Burges Salmon",
+      "event_name": "Trainee Insight Day for non-law students",
+      "deadline_label": "05/01/2027"
+    },
+    {
+      "firm": "5 Essex Chambers",
+      "event_name": "Inside 5 Open Evening 3",
+      "deadline_label": "06/01/2027"
+    },
+    {
+      "firm": "Simmons & Simmons — solicitor apprenticeship",
+      "event_name": "Solicitor Apprenticeship Open Day (Bristol)",
+      "deadline_label": "07/01/2027"
+    },
+    {
+      "firm": "Morgan Lewis",
+      "event_name": "Open Day",
+      "deadline_label": "08/01/2027"
+    },
+    {
+      "firm": "Winston Taylor — solicitor apprenticeship",
+      "event_name": "Solicitor Apprenticeship Open Evening",
+      "deadline_label": "22/01/2027"
+    },
+    {
+      "firm": "Addleshaw Goddard",
+      "event_name": "London In-person Insight Day",
+      "deadline_label": "29/01/2027"
+    },
+    {
+      "firm": "Addleshaw Goddard",
+      "event_name": "Scotland In-person Insight Day",
+      "deadline_label": "29/01/2027"
+    },
+    {
+      "firm": "Addleshaw Goddard",
+      "event_name": "The North In-person Insight Day",
+      "deadline_label": "29/01/2027"
+    },
+    {
+      "firm": "Addleshaw Goddard",
+      "event_name": "Virtual Insight Day",
+      "deadline_label": "29/01/2027"
+    },
+    {
+      "firm": "Simmons & Simmons",
+      "event_name": "Spring Insight Scheme",
+      "deadline_label": "31/01/2027"
+    },
+    {
+      "firm": "Vinson & Elkins",
+      "event_name": "Open Day",
+      "deadline_label": "05/02/2027"
+    },
+    {
+      "firm": "HFW",
+      "event_name": "Virtual Insight Day",
+      "deadline_label": "11/02/2027"
+    },
+    {
+      "firm": "Ashfords",
+      "event_name": "Virtual Insight Afternoon",
+      "deadline_label": "24/02/2027"
+    },
+    {
+      "firm": "Dentons",
+      "event_name": "Middle East Summer Insight Scheme",
+      "deadline_label": "26/02/2027"
+    },
+    {
+      "firm": "Winston Taylor",
+      "event_name": "First Year Insight Day",
+      "deadline_label": "01/03/2027"
+    },
+    {
+      "firm": "Weightmans",
+      "event_name": "Legal Insights Programme (In-person)",
+      "deadline_label": "19/03/2027"
+    },
+    {
+      "firm": "Weightmans",
+      "event_name": "Legal Insights Programme (Virtual)",
+      "deadline_label": "19/03/2027"
+    },
+    {
       "firm": "Slaughter and May",
-      "firm_profile_link": "https://www.legalcheek.com/firm/slaughter-and-may/",
       "event_name": "Commercial Law Virtual Insight Programme",
-      "summary": "A virtual/online session featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "deadline_label": "01/09/2027",
-      "deadline_date": "2027-09-01",
-      "apply_link": "https://www.slaughterandmay.com/careers/early-careers/"
+      "deadline_label": "01/09/2027"
     },
     {
-      "id": "ebed2ac84d3c4467",
       "firm": "Slaughter and May",
-      "firm_profile_link": "https://www.legalcheek.com/firm/slaughter-and-may/",
       "event_name": "Explore Law Virtual Insight Programme",
-      "summary": "A virtual/online session featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "deadline_label": "01/09/2027",
-      "deadline_date": "2027-09-01",
-      "apply_link": "https://www.slaughterandmay.com/careers/early-careers/"
+      "deadline_label": "01/09/2027"
     },
     {
-      "id": "ce47f4f84ede9bc3",
       "firm": "King & Spalding",
-      "firm_profile_link": "https://www.legalcheek.com/firm/king-spalding/",
       "event_name": "Fund Finance Insight Day",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "deadline_label": "26/10/2027",
-      "deadline_date": "2027-10-26",
-      "apply_link": "https://www.kslaw.com/careers/early-careers/uk-training-contracts"
+      "deadline_label": "26/10/2027"
     }
   ]
 }
