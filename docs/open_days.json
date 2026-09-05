@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-04T07:11:56Z",
+  "generated_at": "2026-09-05T07:10:46Z",
   "events": [
     {
       "id": "a88093d00dfea717",
@@ -273,6 +273,16 @@
       "apply_link": "https://www.rpclegal.com/careers/early-talent/uk/solicitor-apprenticeship/"
     },
     {
+      "id": "656a6bbd0b69ad3e",
+      "firm": "Baker McKenzie",
+      "firm_profile_link": "https://www.legalcheek.com/firm/baker-mckenzie/",
+      "event_name": "General Open Day",
+      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "deadline_label": "07/10/2026",
+      "deadline_date": "2026-10-07",
+      "apply_link": "https://uk-graduates.bakermckenzie.com/"
+    },
+    {
       "id": "19b921591e7b5061",
       "firm": "Weightmans — solicitor apprenticeship",
       "firm_profile_link": "https://www.legalcheek.com/solicitor-apprenticeship/weightmans/",
@@ -331,6 +341,26 @@
       "deadline_label": "11/10/2026",
       "deadline_date": "2026-10-11",
       "apply_link": "https://lathamwatkins.grad.allhires.com/app/"
+    },
+    {
+      "id": "7fb84718064c51f8",
+      "firm": "Baker McKenzie",
+      "firm_profile_link": "https://www.legalcheek.com/firm/baker-mckenzie/",
+      "event_name": "Opportunity Open Day",
+      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "deadline_label": "12/10/2026",
+      "deadline_date": "2026-10-12",
+      "apply_link": "https://uk-graduates.bakermckenzie.com/"
+    },
+    {
+      "id": "9b9f9de0e4cd15a6",
+      "firm": "Baker McKenzie",
+      "firm_profile_link": "https://www.legalcheek.com/firm/baker-mckenzie/",
+      "event_name": "Women’s Open Day",
+      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "deadline_label": "12/10/2026",
+      "deadline_date": "2026-10-12",
+      "apply_link": "https://uk-graduates.bakermckenzie.com/"
     },
     {
       "id": "b0c5a37af13d2857",
@@ -573,6 +603,16 @@
       "apply_link": "https://lathamwatkins.grad.allhires.com/app/"
     },
     {
+      "id": "0753918232b7cf7c",
+      "firm": "Baker McKenzie",
+      "firm_profile_link": "https://www.legalcheek.com/firm/baker-mckenzie/",
+      "event_name": "Baker Ethnicity Open Day",
+      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "deadline_label": "26/10/2026",
+      "deadline_date": "2026-10-26",
+      "apply_link": "https://uk-graduates.bakermckenzie.com/"
+    },
+    {
       "id": "538a14daf3023f07",
       "firm": "Paul, Weiss",
       "firm_profile_link": "https://www.legalcheek.com/firm/paul-weiss/",
@@ -601,6 +641,16 @@
       "deadline_label": "29/10/2026",
       "deadline_date": "2026-10-29",
       "apply_link": "https://clydecoearlycareers.com/en-gb/"
+    },
+    {
+      "id": "09ed7d2f31858796",
+      "firm": "Express Chambers",
+      "firm_profile_link": "https://www.legalcheek.com/chamber/express-chambers/",
+      "event_name": "Insight Event",
+      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "deadline_label": "29/10/2026",
+      "deadline_date": "2026-10-29",
+      "apply_link": "https://www.expresssolicitors.co.uk/express-chambers"
     },
     {
       "id": "efee964bde5f9e62",
@@ -691,6 +741,16 @@
       "deadline_label": "02/11/2026",
       "deadline_date": "2026-11-02",
       "apply_link": "https://www.nortonrosefulbright.com/en-gb/graduates/apply"
+    },
+    {
+      "id": "4dca6f8e8432c106",
+      "firm": "Monckton Chambers",
+      "firm_profile_link": "https://www.legalcheek.com/chamber/monckton-chambers/",
+      "event_name": "Pupillage Open Evening",
+      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "deadline_label": "03/11/2026",
+      "deadline_date": "2026-11-03",
+      "apply_link": "https://www.monckton.com/pupillage/"
     },
     {
       "id": "0fdd7a2512cec7dd",
@@ -831,6 +891,16 @@
       "deadline_label": "13/11/2026",
       "deadline_date": "2026-11-13",
       "apply_link": "https://www.goodwinlaw.com/en/careers-pages/early-careers-in-the-united-kingdom"
+    },
+    {
+      "id": "cb5b47397cba95e3",
+      "firm": "Baker McKenzie",
+      "firm_profile_link": "https://www.legalcheek.com/firm/baker-mckenzie/",
+      "event_name": "Employability Open Day",
+      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "deadline_label": "16/11/2026",
+      "deadline_date": "2026-11-16",
+      "apply_link": "https://uk-graduates.bakermckenzie.com/"
     },
     {
       "id": "971107deaa5d2c8f",

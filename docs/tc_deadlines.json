@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-04T13:34:34Z",
+  "generated_at": "2026-09-05T07:10:48Z",
   "note": "Only includes Training Contract listings manually verified as open to graduates applying directly, without needing to have done that firm's own vacation scheme first. New listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "events": [
     {
@@ -180,17 +180,6 @@
       "eligibility_note": "Open to penultimate/final-year students, graduates and postgraduates - the firm asks for general legal work experience (paralegal role, vacation scheme or internship, any of the three), not specifically its own vacation scheme."
     },
     {
-      "id": "kirkland-&-ellis|training-contract",
-      "firm": "Kirkland & Ellis",
-      "event_name": "Training Contract",
-      "opens_date": "2026-10-01",
-      "opens_confirmed": false,
-      "closes_date": "2026-12-13",
-      "closes_label": "13/12/2026",
-      "apply_link": "https://ukgraduate.kirkland.com/your-application/",
-      "eligibility_note": "Open to law students from penultimate year onwards, non-law students from final year onwards, and graduates - no vacation scheme required."
-    },
-    {
       "id": "akin|middle-east-training-programme",
       "firm": "Akin",
       "event_name": "Middle East Training Programme",
@@ -211,6 +200,17 @@
       "closes_label": "13/12/2026",
       "apply_link": "https://dwfgroup.com/en/careers/join-us/early-careers/training-contract",
       "eligibility_note": "Firm's own site implies direct (non-vacation-scheme) training contract applications remain open outside Scotland - no graduate exclusion stated."
+    },
+    {
+      "id": "kirkland-&-ellis|training-contract",
+      "firm": "Kirkland & Ellis",
+      "event_name": "Training Contract",
+      "opens_date": "2026-10-01",
+      "opens_confirmed": false,
+      "closes_date": "2026-12-13",
+      "closes_label": "13/12/2026",
+      "apply_link": "https://ukgraduate.kirkland.com/your-application/",
+      "eligibility_note": "Open to law students from penultimate year onwards, non-law students from final year onwards, and graduates - no vacation scheme required."
     },
     {
       "id": "brabners|training-contract",
