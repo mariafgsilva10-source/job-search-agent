@@ -253,6 +253,92 @@
   .tc-eligibility { font-size: 0.85rem; line-height: 1.45; margin-bottom: 8px; }
   .tc-window { font-size: 0.85rem; color: var(--muted); margin-bottom: 4px; }
   .tc-window.is-estimated::after { content: ' (estimated)'; }
+
+  .app-form {
+    background: #f5f4f1;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .app-form input {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    font-family: inherit;
+  }
+  .app-form input.app-firm-input,
+  .app-form input.app-role-input { flex: 1 1 200px; }
+  .app-form input.app-link-input { flex: 1 1 260px; }
+  .app-form button {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #fff;
+    background: var(--accent);
+    border: none;
+    border-radius: 6px;
+    padding: 7px 16px;
+    cursor: pointer;
+  }
+  .app-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--line);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 16px;
+  }
+  .app-card-main { flex: 1 1 220px; }
+  .app-firm { font-weight: 600; font-size: 1.0rem; }
+  .app-firm a { color: var(--ink); text-decoration: none; }
+  .app-firm a:hover { text-decoration: underline; }
+  .app-role { color: var(--muted); font-size: 0.85rem; margin-top: 1px; }
+  .app-meta { color: var(--muted); font-size: 0.78rem; margin-top: 4px; }
+  .app-status-select {
+    font-family: inherit;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 5px 8px;
+    border-radius: 6px;
+    border: 1px solid var(--line);
+    cursor: pointer;
+    background: #fff;
+  }
+  .app-card[data-status="Applied"] { border-left-color: #6b7268; }
+  .app-card[data-status="In Progress"] { border-left-color: #2f6f91; }
+  .app-card[data-status="Under Review"] { border-left-color: #2f6f91; }
+  .app-card[data-status="Written Stage"] { border-left-color: #8a6d1f; }
+  .app-card[data-status="Interview"] { border-left-color: #b3491f; }
+  .app-card[data-status="Assessment Centre"] { border-left-color: #b3491f; }
+  .app-card[data-status="Offer"] { border-left-color: var(--accent); }
+  .app-card[data-status="Rejected"] { border-left-color: #9a2f2f; opacity: 0.7; }
+  .app-card[data-status="Withdrawn"] { border-left-color: var(--line); opacity: 0.6; }
+  .app-delete-btn {
+    font-size: 0.78rem;
+    color: var(--muted);
+    background: none;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  .app-delete-btn:hover { color: #9a2f2f; border-color: #9a2f2f; }
+  .app-note-input {
+    flex-basis: 100%;
+    font-size: 0.82rem;
+    padding: 6px 10px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    font-family: inherit;
+    color: var(--ink);
+  }
 </style>
 </head>
 <body>
@@ -260,6 +346,7 @@
     <button class="tab-btn active" data-tab="jobs" id="tabJobsBtn">Job Search</button>
     <button class="tab-btn" data-tab="opendays" id="tabOpenDaysBtn">Open Days &amp; Insight Days</button>
     <button class="tab-btn" data-tab="tc" id="tabTcBtn">Training Contracts</button>
+    <button class="tab-btn" data-tab="apps" id="tabAppsBtn">My Applications</button>
   </div>
 
   <div class="ask-claude-box">
@@ -303,6 +390,19 @@
   <div class="sub">Direct training contract deadlines open to graduates — auto-refreshed daily</div>
   <div class="oday-source-note">Sourced from <a href="https://www.legalcheek.com/key-deadlines-calendar/" target="_blank">Legal Cheek's deadlines calendar</a>, manually checked against each firm's own site so only training contracts open to graduates applying directly (no prior vacation scheme needed at that firm) are shown. Opening dates marked "estimated" are carried over from last year's cycle where the firm hadn't published this year's exact date yet — worth double-checking on the firm's site nearer the time.</div>
   <div id="root-tc"><div class="empty">Loading…</div></div>
+  </div>
+
+  <div class="tab-panel" id="panel-apps">
+  <h1>My Applications</h1>
+  <div class="sub">Everything you've applied to, tracked in one place — saved only in this browser.</div>
+  <div class="oday-source-note">This list lives in this browser's storage, not on a server — it won't show up on another device or browser, and clearing your browser data will clear it too.</div>
+  <form class="app-form" id="appForm">
+    <input type="text" class="app-firm-input" id="appFirmInput" placeholder="Firm" required>
+    <input type="text" class="app-role-input" id="appRoleInput" placeholder="Role / scheme (e.g. Training Contract, Vacation Scheme)" required>
+    <input type="url" class="app-link-input" id="appLinkInput" placeholder="Link to application (optional)">
+    <button type="submit">Add application</button>
+  </form>
+  <div id="root-apps"><div class="empty">No applications tracked yet — add one above.</div></div>
   </div>
 
 <script>
@@ -371,7 +471,79 @@ function showTab(tab) {
   document.getElementById('panel-jobs').classList.toggle('active', tab === 'jobs');
   document.getElementById('panel-opendays').classList.toggle('active', tab === 'opendays');
   document.getElementById('panel-tc').classList.toggle('active', tab === 'tc');
+  document.getElementById('panel-apps').classList.toggle('active', tab === 'apps');
   setActiveTab(tab);
+}
+
+// --- "My Applications" tracker: entirely client-side (this browser's
+// storage only, no server involved) so Maria can log every firm/scheme
+// she's applied to and move it through stages herself. ---
+const APP_STATUSES = ['Applied', 'In Progress', 'Under Review', 'Written Stage', 'Interview', 'Assessment Centre', 'Offer', 'Rejected', 'Withdrawn'];
+
+function getApps() {
+  try {
+    return JSON.parse(localStorage.getItem('myApplications') || '[]');
+  } catch (e) {
+    return [];
+  }
+}
+
+function saveApps(apps) {
+  try { localStorage.setItem('myApplications', JSON.stringify(apps)); } catch (e) {}
+}
+
+function addApp(firm, role, link) {
+  const apps = getApps();
+  apps.unshift({
+    id: 'app-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8),
+    firm, role, link: link || '',
+    status: 'Applied',
+    note: '',
+    addedAt: new Date().toISOString(),
+  });
+  saveApps(apps);
+  renderApps();
+}
+
+function updateApp(id, changes) {
+  const apps = getApps();
+  const idx = apps.findIndex(a => a.id === id);
+  if (idx === -1) return;
+  apps[idx] = { ...apps[idx], ...changes };
+  saveApps(apps);
+}
+
+function deleteApp(id) {
+  saveApps(getApps().filter(a => a.id !== id));
+  renderApps();
+}
+
+function appCard(app) {
+  const added = new Date(app.addedAt);
+  const addedText = isNaN(added) ? '' : `Added ${added.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}`;
+  const statusOptions = APP_STATUSES.map(s => `<option value="${s}"${s === app.status ? ' selected' : ''}>${s}</option>`).join('');
+  return `
+    <div class="app-card" data-app-id="${escapeHtml(app.id)}" data-status="${escapeHtml(app.status)}">
+      <div class="app-card-main">
+        <div class="app-firm">${app.link ? `<a href="${escapeHtml(app.link)}" target="_blank">${escapeHtml(app.firm)}</a>` : escapeHtml(app.firm)}</div>
+        <div class="app-role">${escapeHtml(app.role)}</div>
+        <div class="app-meta">${escapeHtml(addedText)}</div>
+        <input type="text" class="app-note-input" placeholder="Notes (optional)" value="${escapeHtml(app.note || '')}">
+      </div>
+      <select class="app-status-select">${statusOptions}</select>
+      <button class="app-delete-btn" type="button">Remove</button>
+    </div>
+  `;
+}
+
+function renderApps() {
+  const root = document.getElementById('root-apps');
+  const apps = getApps();
+  if (!apps.length) {
+    root.innerHTML = '<div class="empty">No applications tracked yet — add one above.</div>';
+    return;
+  }
+  root.innerHTML = apps.map(appCard).join('');
 }
 
 // --- Dropbox saving: entirely client-side (no server involved), triggered
@@ -700,31 +872,27 @@ function formatDeadline(deadlineDate) {
   return { text, cls };
 }
 
-function eventSearchUrl(ev) {
-  const q = [ev.firm, ev.event_name, 'apply', 'register'].filter(Boolean).join(' ');
-  return 'https://www.google.com/search?q=' + encodeURIComponent(q);
-}
-
 function openDayCard(ev, isRegistered) {
   const deadline = formatDeadline(ev.deadline_date);
-  const search = eventSearchUrl(ev);
+  const opensText = formatOpens(ev.opens_date, ev.opens_confirmed);
+  const label = (ev.firm || '') + ' — ' + (ev.event_name || '');
+  const applyLabel = ev.link_is_specific ? 'Apply / register' : "Firm's events page";
   return `
     <div class="oday-card${isRegistered ? ' is-registered' : ''}" data-oday-id="${escapeHtml(ev.id || '')}">
-      <div class="oday-firm">${ev.firm_profile_link
-        ? `<a href="${ev.firm_profile_link}" target="_blank">${escapeHtml(ev.firm || '')}</a>`
-        : escapeHtml(ev.firm || '')}</div>
+      <div class="oday-firm">${escapeHtml(ev.firm || '')}</div>
       <div class="oday-event-name">${escapeHtml(ev.event_name || '')}</div>
       <div class="oday-summary">${escapeHtml(ev.summary || '')}</div>
+      ${ev.eligibility_note ? `<div class="tc-eligibility">${escapeHtml(ev.eligibility_note)}</div>` : ''}
+      ${opensText ? `<div class="tc-window${ev.opens_confirmed ? '' : ' is-estimated'}">${escapeHtml(opensText)}</div>` : ''}
       <div class="oday-deadline ${deadline.cls}">${escapeHtml(deadline.text)}</div>
       <label class="applied-row">
         <input type="checkbox" class="oday-registered-checkbox" ${isRegistered ? 'checked' : ''}>
         Registered / applied
       </label>
       <div class="btn-row">
-        <a class="copy-btn" href="${search}" target="_blank">Find this event's page</a>
-        ${ev.apply_link ? `<a class="copy-btn" href="${ev.apply_link}" target="_blank">Firm's early careers site</a>` : ''}
-        <button class="copy-btn" data-apply-link="${escapeHtml(search)}" data-apply-label="${escapeHtml((ev.firm || '') + ' — ' + (ev.event_name || ''))}" data-is-event="1">Copy message for Claude</button>
-        <button class="copy-btn" data-apply-link="${escapeHtml(search)}" data-apply-label="${escapeHtml((ev.firm || '') + ' — ' + (ev.event_name || ''))}" data-is-event="1" data-open-claude="1">Open in Claude</button>
+        ${ev.apply_link ? `<a class="copy-btn" href="${ev.apply_link}" target="_blank">${escapeHtml(applyLabel)}</a>` : ''}
+        <button class="copy-btn" data-apply-link="${escapeHtml(ev.apply_link || '')}" data-apply-label="${escapeHtml(label)}" data-is-event="1">Copy message for Claude</button>
+        <button class="copy-btn" data-apply-link="${escapeHtml(ev.apply_link || '')}" data-apply-label="${escapeHtml(label)}" data-is-event="1" data-open-claude="1">Open in Claude</button>
       </div>
     </div>
   `;
@@ -926,7 +1094,7 @@ function escapeHtml(str) {
 
 function buildClaudeApplyMessage(label, link, isEvent, needsLogin) {
   if (isEvent) {
-    return `Please find and open the registration/application page for this specific event: ${label}. The link below is just a search starting point — firms usually only publish one general early-careers site rather than a page per event, so please track down the actual event page first, then start filling in my details and show me the form before submitting anything: ${link}`;
+    return `Please open the registration/application page for this event (${label}) and start filling in my details, then show me the form before submitting anything: ${link}`;
   }
   const what = label ? `this application (${label})` : 'this application';
   if (needsLogin) {
@@ -1033,6 +1201,49 @@ document.addEventListener('click', (e) => {
   if (tabBtn) {
     showTab(tabBtn.dataset.tab);
   }
+  const appDeleteBtn = e.target.closest('.app-delete-btn');
+  if (appDeleteBtn) {
+    const card = appDeleteBtn.closest('.app-card');
+    const id = card && card.dataset.appId;
+    if (id) deleteApp(id);
+  }
+});
+
+document.addEventListener('change', (e) => {
+  const statusSelect = e.target.closest('.app-status-select');
+  if (statusSelect) {
+    const card = statusSelect.closest('.app-card');
+    const id = card && card.dataset.appId;
+    if (id) {
+      updateApp(id, { status: statusSelect.value });
+      card.dataset.status = statusSelect.value;
+    }
+  }
+});
+
+document.addEventListener('input', (e) => {
+  const noteInput = e.target.closest('.app-note-input');
+  if (noteInput) {
+    const card = noteInput.closest('.app-card');
+    const id = card && card.dataset.appId;
+    if (id) updateApp(id, { note: noteInput.value });
+  }
+});
+
+document.getElementById('appForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const firmEl = document.getElementById('appFirmInput');
+  const roleEl = document.getElementById('appRoleInput');
+  const linkEl = document.getElementById('appLinkInput');
+  const firm = firmEl.value.trim();
+  const role = roleEl.value.trim();
+  const link = linkEl.value.trim();
+  if (!firm || !role) return;
+  addApp(firm, role, link);
+  firmEl.value = '';
+  roleEl.value = '';
+  linkEl.value = '';
+  firmEl.focus();
 });
 
 (async function init() {
@@ -1042,6 +1253,7 @@ document.addEventListener('click', (e) => {
   await load();
   await loadOpenDays();
   await loadTc();
+  renderApps();
 })();
 </script>
 </body>
