@@ -572,6 +572,32 @@ OPEN_DAY_OVERRIDES = {
     #     the site
 }
 
+# Events verified directly on a firm's own site/registration page that
+# Legal Cheek's calendar does not list at all - unlike OPEN_DAY_OVERRIDES
+# above (which only fills in the opening date/apply link for a row Legal
+# Cheek DOES show), these have no Legal Cheek row to cross-reference, so
+# the full record (including the deadline) is entered here from the firm's
+# own page directly. If Legal Cheek later starts listing the same event,
+# build_entries() skips the manual copy so it isn't shown twice.
+MANUAL_EVENTS = [
+    {
+        "firm": "Goodwin",
+        "event_name": "In-Person Open Afternoon",
+        "summary": (
+            "An in-person event giving a comprehensive overview of the firm, its "
+            "practice areas and its opportunities, with application guidance for "
+            "vacation schemes and trainee solicitor roles and networking with "
+            "current staff. Event held 10 November 2026."
+        ),
+        "opens_date": None,
+        "opens_confirmed": False,
+        "deadline_label": "16/10/2026",
+        "deadline_date": "2026-10-16",
+        "apply_link": "https://apply.candidats.io/b075c749-882c-4b93-9d74-40170c143384",
+        "link_is_specific": True,
+        "eligibility_note": None,
+    },
+]
 
 
 def fetch_rows():
@@ -639,6 +665,7 @@ def build_entries():
     rows = fetch_rows()
     entries = []
     needs_review = []
+    legal_cheek_keys = set()
 
     for row in rows:
         date_el = row.select_one(".c-key-deadlines__date")
@@ -660,6 +687,7 @@ def build_entries():
             continue
 
         key = (firm, event_name, deadline_label)
+        legal_cheek_keys.add((firm, event_name))
         if key not in OPEN_DAY_OVERRIDES:
             needs_review.append({"firm": firm, "event_name": event_name, "deadline_label": deadline_label})
             continue
@@ -679,6 +707,32 @@ def build_entries():
             "apply_link": override["apply_link"],
             "link_is_specific": override["link_is_specific"],
             "eligibility_note": override["eligibility_note"],
+        })
+
+    # Add events verified directly on a firm's own site that Legal Cheek's
+    # calendar doesn't list at all (as opposed to OPEN_DAY_OVERRIDES, which
+    # only supplements a row Legal Cheek DOES show). If Legal Cheek starts
+    # listing the same (firm, event_name) itself, skip the manual copy here
+    # so it doesn't get shown twice - the scraped row (via OPEN_DAY_OVERRIDES
+    # or needs_review) takes over from then on.
+    for ev in MANUAL_EVENTS:
+        if (ev["firm"], ev["event_name"]) in legal_cheek_keys:
+            continue
+        deadline_date = parse_deadline(ev["deadline_label"], today)
+        if deadline_date is not None and deadline_date < today:
+            continue
+        entries.append({
+            "id": f"{ev['firm']}|{ev['event_name']}|{ev['deadline_label']}".lower().replace(" ", "-").replace("/", "-"),
+            "firm": ev["firm"],
+            "event_name": ev["event_name"],
+            "summary": ev["summary"],
+            "opens_date": ev["opens_date"],
+            "opens_confirmed": ev["opens_confirmed"],
+            "deadline_label": ev["deadline_label"],
+            "deadline_date": ev["deadline_date"],
+            "apply_link": ev["apply_link"],
+            "link_is_specific": ev["link_is_specific"],
+            "eligibility_note": ev["eligibility_note"],
         })
 
     # Soonest deadline first; entries with an unparsed date go last.
