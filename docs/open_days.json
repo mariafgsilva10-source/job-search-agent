@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-05T14:47:34Z",
+  "generated_at": "2026-09-05T15:17:39Z",
   "note": "Only includes Open Day / Insight Day listings manually verified against the firm's own site. New listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "events": [
     {
@@ -468,6 +468,19 @@
       "deadline_label": "16/10/2026",
       "deadline_date": "2026-10-16",
       "apply_link": "https://goodwinlaw.app.candidats.io/event/c04c8ed0-8f3e-48a8-95ac-425534c084a4",
+      "link_is_specific": true,
+      "eligibility_note": null
+    },
+    {
+      "id": "goodwin|in-person-open-afternoon|16-10-2026",
+      "firm": "Goodwin",
+      "event_name": "In-Person Open Afternoon",
+      "summary": "An in-person event giving a comprehensive overview of the firm, its practice areas and its opportunities, with application guidance for vacation schemes and trainee solicitor roles and networking with current staff. Event held 10 November 2026.",
+      "opens_date": null,
+      "opens_confirmed": false,
+      "deadline_label": "16/10/2026",
+      "deadline_date": "2026-10-16",
+      "apply_link": "https://apply.candidats.io/b075c749-882c-4b93-9d74-40170c143384",
       "link_is_specific": true,
       "eligibility_note": null
     },
