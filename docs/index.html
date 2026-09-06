@@ -254,6 +254,34 @@
   .tc-window { font-size: 0.85rem; color: var(--muted); margin-bottom: 4px; }
   .tc-window.is-estimated::after { content: ' (estimated)'; }
 
+  .oday-badges { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 8px; }
+  .badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 2px 8px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    color: var(--muted);
+  }
+  .badge-new { color: #7a4a00; background: #fdf3e0; border-color: #e8d4a8; }
+  .badge-location { color: var(--accent); background: #eef3ee; border-color: #cfdccf; }
+
+  .leads-section { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line); }
+  .leads-head { font-size: 1.05rem; font-weight: 600; margin-bottom: 4px; }
+  .lead-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-left: 4px solid #e8d4a8;
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+  }
+  .lead-firm { font-weight: 600; font-size: 0.95rem; }
+  .lead-title { font-size: 0.88rem; margin: 2px 0 6px; }
+  .lead-meta { color: var(--muted); font-size: 0.78rem; margin-bottom: 8px; }
+
   .app-form {
     background: #f5f4f1;
     border-radius: 8px;
@@ -375,14 +403,15 @@
   </div>
 
   <div class="tab-panel" id="panel-opendays">
-  <h1>Open Days &amp; Insight Days</h1>
-  <div class="sub">Law firm open days, insight days &amp; insight schemes — auto-refreshed daily</div>
-  <div class="oday-source-note">Sourced from <a href="https://www.legalcheek.com/key-deadlines-calendar/" target="_blank">Legal Cheek's deadlines calendar</a>, which links through to each firm's own application page.</div>
+  <h1>London Open Days &amp; Insight Days</h1>
+  <div class="sub">London law firm open days, insight days &amp; insight schemes — auto-refreshed daily</div>
+  <div class="oday-source-note">Built from <a href="https://www.legalcheek.com/key-deadlines-calendar/" target="_blank">Legal Cheek's deadlines calendar</a> <em>plus</em> a daily sweep of London firms' own application portals, so events the calendar never lists still show up. Every event here has been checked against the firm's own site. London offices and virtual sessions only; barristers' chambers are left out since pupillage is a different route to a training contract.</div>
   <div class="top-controls">
     <input type="checkbox" id="hideRegisteredToggle">
     <label for="hideRegisteredToggle">Hide events marked as registered</label>
   </div>
   <div id="root-opendays"><div class="empty">Loading…</div></div>
+  <div id="root-leads"></div>
   </div>
 
   <div class="tab-panel" id="panel-tc">
@@ -872,6 +901,30 @@ function formatDeadline(deadlineDate) {
   return { text, cls };
 }
 
+// An event counts as a recent find for two weeks after the daily sweep
+// first turned it up, so Maria can see what's appeared since she last
+// looked without it staying badged forever.
+function isRecentFind(ev) {
+  if (!ev.found_on) return false;
+  const found = new Date(ev.found_on + 'T00:00:00');
+  if (isNaN(found)) return false;
+  return (Date.now() - found.getTime()) / 86400000 <= 14;
+}
+
+function openDayBadges(ev) {
+  const badges = [];
+  if (isRecentFind(ev)) {
+    const found = new Date(ev.found_on + 'T00:00:00');
+    const nice = found.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+    badges.push(`<span class="badge badge-new">New — found ${escapeHtml(nice)}</span>`);
+  }
+  if (ev.location && ev.location !== 'London') {
+    badges.push(`<span class="badge badge-location">${escapeHtml(ev.location)}</span>`);
+  }
+  if (!badges.length) return '';
+  return `<div class="oday-badges">${badges.join('')}</div>`;
+}
+
 function openDayCard(ev, isRegistered) {
   const deadline = formatDeadline(ev.deadline_date);
   const opensText = formatOpens(ev.opens_date, ev.opens_confirmed);
@@ -881,6 +934,7 @@ function openDayCard(ev, isRegistered) {
     <div class="oday-card${isRegistered ? ' is-registered' : ''}" data-oday-id="${escapeHtml(ev.id || '')}">
       <div class="oday-firm">${escapeHtml(ev.firm || '')}</div>
       <div class="oday-event-name">${escapeHtml(ev.event_name || '')}</div>
+      ${openDayBadges(ev)}
       <div class="oday-summary">${escapeHtml(ev.summary || '')}</div>
       ${ev.eligibility_note ? `<div class="tc-eligibility">${escapeHtml(ev.eligibility_note)}</div>` : ''}
       ${opensText ? `<div class="tc-window${ev.opens_confirmed ? '' : ' is-estimated'}">${escapeHtml(opensText)}</div>` : ''}
@@ -893,6 +947,74 @@ function openDayCard(ev, isRegistered) {
         ${ev.apply_link ? `<a class="copy-btn" href="${ev.apply_link}" target="_blank">${escapeHtml(applyLabel)}</a>` : ''}
         <button class="copy-btn" data-apply-link="${escapeHtml(ev.apply_link || '')}" data-apply-label="${escapeHtml(label)}" data-is-event="1">Copy message for Claude</button>
         <button class="copy-btn" data-apply-link="${escapeHtml(ev.apply_link || '')}" data-apply-label="${escapeHtml(label)}" data-is-event="1" data-open-claude="1">Open in Claude</button>
+      </div>
+    </div>
+  `;
+}
+
+// --- Leads from the daily sweep of firms' own portals. These have NOT
+// been checked yet, so they sit below the verified list and are labelled
+// as such - the point is to see what appeared overnight, not to treat it
+// as confirmed. ---
+let lastLeads = null;
+
+async function loadLeads() {
+  const root = document.getElementById('root-leads');
+  if (!root) return;
+  try {
+    const res = await fetch('discovered_events.json?_=' + Date.now());
+    if (!res.ok) throw new Error('no leads file');
+    const payload = await res.json();
+    lastLeads = payload;
+    renderLeads();
+  } catch (e) {
+    root.innerHTML = '';   // no sweep has run yet - stay quiet rather than showing an error
+  }
+}
+
+function renderLeads() {
+  const root = document.getElementById('root-leads');
+  if (!root || !lastLeads) return;
+  const all = lastLeads.leads || [];
+  // Show what the sweep turned up in the last fortnight; older leads have
+  // either been verified onto the list above or judged not worth adding.
+  const cutoff = Date.now() - 14 * 86400000;
+  const recent = all.filter(l => {
+    const d = new Date((l.first_seen || '') + 'T00:00:00');
+    return !isNaN(d) && d.getTime() >= cutoff;
+  });
+  if (!recent.length) {
+    root.innerHTML = '';
+    return;
+  }
+  const swept = lastLeads.counts ? lastLeads.counts.sources_checked : 0;
+  root.innerHTML = `
+    <div class="leads-section">
+      <div class="leads-head">Spotted on firms' own sites — not checked yet</div>
+      <div class="oday-source-note">
+        Turned up by the daily sweep of ${swept} London firms' application portals and events pages, and not yet on Legal Cheek.
+        Nothing here has been verified — dates, eligibility and the real closing date still need confirming on the firm's own page
+        before it joins the list above. ${recent.length} from the last two weeks.
+      </div>
+      ${recent.map(leadCard).join('')}
+    </div>
+  `;
+}
+
+function leadCard(lead) {
+  const seen = new Date((lead.first_seen || '') + 'T00:00:00');
+  const seenText = isNaN(seen)
+    ? ''
+    : 'First seen ' + seen.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  const label = (lead.firm || '') + ' — ' + (lead.title || '');
+  return `
+    <div class="lead-card">
+      <div class="lead-firm">${escapeHtml(lead.firm || '')}</div>
+      <div class="lead-title">${escapeHtml(lead.title || '')}</div>
+      <div class="lead-meta">${escapeHtml(seenText)}${lead.is_new ? ' · new today' : ''}</div>
+      <div class="btn-row">
+        ${lead.url ? `<a class="copy-btn" href="${lead.url}" target="_blank">Open listing</a>` : ''}
+        <button class="copy-btn" data-apply-link="${escapeHtml(lead.url || '')}" data-apply-label="${escapeHtml(label)}" data-is-event="1" data-open-claude="1">Check it in Claude</button>
       </div>
     </div>
   `;
@@ -1252,6 +1374,7 @@ document.getElementById('appForm').addEventListener('submit', (e) => {
   renderDropboxStatus();
   await load();
   await loadOpenDays();
+  await loadLeads();
   await loadTc();
   renderApps();
 })();
