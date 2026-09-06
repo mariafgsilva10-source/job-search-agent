@@ -22,9 +22,11 @@ eligibility and the apply link. A lead here means "worth a look today", and
 the daily verification pass is what turns a confirmed one into a
 MANUAL_EVENTS entry in fetch_open_days.py.
 
-Scope matches the rest of the pipeline: London law firms only. Barristers'
-chambers are excluded (pupillage is a different career route to a training
-contract), as are listings whose title names a non-London office.
+Scope matches the rest of the pipeline: London law firms, events a GRADUATE
+can actually apply to. Barristers' chambers are excluded (pupillage is a
+different career route), as are solicitor apprenticeships (a school-leaver
+route), first- and second-year insight schemes, and listings whose title
+names a non-London office.
 
 Outputs:
   docs/discovered_events.json          - leads, newest first
@@ -141,11 +143,35 @@ OPEN_DAY_RE = re.compile(
     re.IGNORECASE,
 )
 
-# Things that look like an event but aren't the thing we want.
+# Things that look like an event but aren't the thing we want. Solicitor
+# apprenticeships are in here because that is a school-leaver route - Maria
+# has a degree, so it is closed to her.
 NOT_WANTED_RE = re.compile(
     r"vacation scheme|training contract application|work placement application|"
     r"apprentice|apprenticeship|paralegal|legal secretary|business services|"
     r"lateral|associate|partner|privacy|cookie|terms|accessibility|sitemap",
+    re.IGNORECASE,
+)
+
+# Schemes aimed at a year group Maria has already passed. Same rule as
+# fetch_open_days.py's GRADUATES_ONLY filter, applied here so the lead list
+# doesn't fill up with schemes she can't apply to.
+NOT_FOR_GRADUATES_RE = re.compile(
+    r"\bfirst[- ]?years?\b|\b1st[- ]?year\b|\bsecond[- ]?year\b|"
+    r"\bfreshers?\b|\bpre[- ]?penultimate\b|\bschool[- ]leaver\b|\bsixth[- ]form\b",
+    re.IGNORECASE,
+)
+
+# Boilerplate these pages hang off the end of a link or card title - job-board
+# furniture, the office, the firm's own name repeated. Stripping it is what
+# lets the same event scraped from a link and from a card collapse into one.
+TITLE_NOISE_RE = re.compile(
+    r"\s*(save job|close panel|read more|find out more|learn more|apply now|"
+    r"register now|sign up|view details|more info(rmation)?)\s*$",
+    re.IGNORECASE,
+)
+TRAILING_PLACE_RE = re.compile(
+    r"\s*[-,|]?\s*(london|united kingdom|uk|england)\s*[,-]?\s*(united kingdom|uk|england)?\s*$",
     re.IGNORECASE,
 )
 
@@ -168,19 +194,74 @@ def fingerprint(firm, title, url):
     return hashlib.sha1(raw.encode("utf-8")).hexdigest()[:16]
 
 
+def clean_title(title, firm):
+    """Strip the page furniture off a scraped title.
+
+    The same event often gets picked up twice - once from its link and once
+    from the card around it - with the card version carrying trailing junk
+    like "London, United Kingdom A&O Shearman Save job". Cleaning first is
+    what lets dedupe_leads() see the two as one event.
+    """
+    text = " ".join((title or "").split())
+    for _ in range(3):                       # noise often layers up
+        before = text
+        text = TITLE_NOISE_RE.sub("", text)
+        if firm:
+            text = re.sub(r"\s*" + re.escape(firm) + r"\s*$", "", text, flags=re.IGNORECASE)
+        text = TRAILING_PLACE_RE.sub("", text)
+        text = text.strip(" -,|·–—")
+        if text == before:
+            break
+    return " ".join(text.split())
+
+
+def dedupe_leads(leads):
+    """Collapse the same event appearing more than once for one firm.
+
+    Two rules, in order: identical cleaned titles are the same event, and a
+    title that is just a shorter prefix of another ("London Insight Event" vs
+    "London Insight Event - 30th September 2026") is the same event described
+    less precisely - so the longer, more specific one wins.
+    """
+    by_firm = {}
+    for lead in leads:
+        by_firm.setdefault(lead["firm"], []).append(lead)
+
+    kept = []
+    for firm_leads in by_firm.values():
+        # Longest title first, so the most specific version is seen first and
+        # anything it subsumes gets dropped rather than the other way round.
+        firm_leads.sort(key=lambda l: len(l["title"]), reverse=True)
+        chosen = []
+        for lead in firm_leads:
+            low = lead["title"].lower()
+            if any(c["title"].lower().startswith(low) for c in chosen):
+                continue
+            chosen.append(lead)
+        kept.extend(chosen)
+    return kept
+
+
 def is_relevant(title, firm=""):
     """Keyword gate: reads like an open day, isn't a chambers event, isn't
     pinned to a non-London office. Every entry in SOURCES is a law firm, but
     the firm name is checked too so adding a chambers URL by mistake can't
     quietly put pupillage events in front of Maria."""
     text = " ".join(title.split())
-    if len(text) < 6 or len(text) > 160:
+    if len(text) < 6 or len(text) > 120:
+        return False
+    # Marketing copy and blog headlines scraped off the same pages: a real
+    # event listing is a name, not a sentence with an exclamation mark or a
+    # trailing ellipsis.
+    if text.endswith("!") or "..." in text or "…" in text:
         return False
     if not OPEN_DAY_RE.search(text):
         return False
     if NOT_WANTED_RE.search(text):
         return False
     if CHAMBERS_RE.search(text) or CHAMBERS_RE.search(firm):
+        return False
+    if NOT_FOR_GRADUATES_RE.search(text):
         return False
     if NON_LONDON_PLACE_RE.search(text) and not LONDON_RE.search(text):
         return False
@@ -203,7 +284,7 @@ def extract_listings(html, page_url, firm):
     hits = {}
 
     for a in soup.find_all("a", href=True):
-        title = a.get_text(" ", strip=True)
+        title = clean_title(a.get_text(" ", strip=True), firm)
         if not is_relevant(title, firm):
             continue
         href = urljoin(page_url, a["href"])
@@ -215,7 +296,7 @@ def extract_listings(html, page_url, firm):
 
     # Headings often carry the event name with the booking link nearby.
     for h in soup.find_all(["h1", "h2", "h3", "h4", "li"]):
-        title = h.get_text(" ", strip=True)
+        title = clean_title(h.get_text(" ", strip=True), firm)
         if not is_relevant(title, firm):
             continue
         link = h.find("a", href=True)
@@ -282,6 +363,8 @@ def sweep():
 
 def main():
     leads, failures, seen, first_run = sweep()
+    before_dedupe = len(leads)
+    leads = dedupe_leads(leads)
 
     cutoff = (date.today() - timedelta(days=7)).isoformat()
     new_leads = [l for l in leads if l["is_new"]]
@@ -305,6 +388,7 @@ def main():
             "sources_checked": len(SOURCES),
             "sources_failed": len(failures),
             "leads_total": len(leads),
+            "duplicates_merged": before_dedupe - len(leads),
             "new_today": len(new_leads),
             "new_last_7_days": len(recent),
         },
@@ -320,7 +404,11 @@ def main():
     SEEN_PATH.write_text(json.dumps(seen, indent=2, sort_keys=True), encoding="utf-8")
 
     print(f"Swept {len(SOURCES)} sources ({len(failures)} unreachable)")
-    print(f"{len(leads)} open-day-ish listings found, {len(new_leads)} new since yesterday")
+    print(
+        f"{len(leads)} open-day-ish listings found "
+        f"({before_dedupe - len(leads)} duplicates merged), "
+        f"{len(new_leads)} new since yesterday"
+    )
     if first_run:
         print("First run - baseline recorded, nothing flagged as new")
     for lead in new_leads:
