@@ -1,0 +1,6 @@
+# Python bytecode caches, created whenever the scripts are imported or run
+__pycache__/
+*.py[cod]
+
+# Local scratch
+.DS_Store
