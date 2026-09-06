@@ -1,0 +1,332 @@
+{
+  "generated_at": "2026-09-06T18:26:14Z",
+  "note": "Unverified leads from a daily sweep of London law firms' own application portals and events pages - the places firms announce open days before (or instead of) Legal Cheek listing them. Nothing here has been checked yet: a lead only reaches the Open Days tab once its dates, eligibility and apply link have been confirmed on the firm's own site.",
+  "first_run": true,
+  "counts": {
+    "sources_checked": 52,
+    "sources_failed": 17,
+    "leads_total": 23,
+    "new_today": 0,
+    "new_last_7_days": 23
+  },
+  "new_today": [],
+  "leads": [
+    {
+      "id": "599b05286cc8f282",
+      "firm": "Addleshaw Goddard",
+      "title": "Insight Days",
+      "url": "https://earlycareers.addleshawgoddard.com/careers/insight-days/",
+      "source_page": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "db82c96a2c845d0b",
+      "firm": "Addleshaw Goddard",
+      "title": "Insight DayS",
+      "url": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
+      "source_page": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "c87d01b6e45bffde",
+      "firm": "Addleshaw Goddard",
+      "title": "Open arms, open minds at our insight days!",
+      "url": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
+      "source_page": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "6e42338b2c3d9e60",
+      "firm": "Addleshaw Goddard",
+      "title": "London In-person Insight Day – 15th March 2027",
+      "url": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
+      "source_page": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "a5e7d38760f6170b",
+      "firm": "Addleshaw Goddard",
+      "title": "Virtual Insight Day for UK & Ireland – 23rd March 2027",
+      "url": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
+      "source_page": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "328ac01c7f5476ee",
+      "firm": "Addleshaw Goddard",
+      "title": "INNOVATION & LEGAL TECHNOLOGY INSIGHT EVENING",
+      "url": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
+      "source_page": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "182a3dbb5e9f4a82",
+      "firm": "Burges Salmon",
+      "title": "Meet our team",
+      "url": "https://www.burges-salmon.com/join-us/emerging-talent/",
+      "source_page": "https://www.burges-salmon.com/join-us/emerging-talent/",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "020cf0e087954995",
+      "firm": "Freshfields",
+      "title": "First Years Insight Scheme",
+      "url": "https://www.freshfields.com/en/your-career/united-kingdom/early-careers/",
+      "source_page": "https://www.freshfields.com/en/your-career/united-kingdom/early-careers/",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "5b8ad2bb422dbe6e",
+      "firm": "Herbert Smith Freehills Kramer",
+      "title": "Open days",
+      "url": "https://careers.hsfkramer.com/global/en/uk/early-careers/open-days",
+      "source_page": "https://careers.hsfkramer.com/global/en/uk/early-careers/open-days",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "d0dd28a725e21d22",
+      "firm": "Hogan Lovells Cadwalader",
+      "title": "First Year Insight Scheme",
+      "url": "https://ukearlycareers.hlc.com/what-we-offer/first-year-insight-scheme",
+      "source_page": "https://ukearlycareers.hlc.com/",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "84361f2e0cc8da7a",
+      "firm": "Hogan Lovells Cadwalader",
+      "title": "First Year Insight",
+      "url": "https://ukearlycareers.hlc.com/what-we-offer/first-year-insight-scheme",
+      "source_page": "https://ukearlycareers.hlc.com/",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "58aee3f53f7173b2",
+      "firm": "Osborne Clarke",
+      "title": "Insight scheme",
+      "url": "https://join.osborneclarke.com/insight-scheme",
+      "source_page": "https://join.osborneclarke.com/insight-scheme",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "a3fc1c06d15808a2",
+      "firm": "RPC",
+      "title": "Legal Cheek Virtual Law Fair",
+      "url": "https://www.legalcheek.com/fair/the-legal-cheek-uk-virtual-law-fair-series/",
+      "source_page": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "a37eddfd9ca8a32d",
+      "firm": "RPC",
+      "title": "All About Law Virtual Law Fair",
+      "url": "https://www.allaboutlaw.co.uk/events/virtual-law-fair",
+      "source_page": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "7d2a418fff96f4ba",
+      "firm": "RPC",
+      "title": "Find out more about our insight days...",
+      "url": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
+      "source_page": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "6e4ae6eda902d63f",
+      "firm": "RPC",
+      "title": "London Insight Event",
+      "url": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
+      "source_page": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "06f3792f5dfcc151",
+      "firm": "RPC",
+      "title": "London Insight Event Close panel",
+      "url": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
+      "source_page": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "ddb26d6d9f3c449f",
+      "firm": "Simpson Thacher & Bartlett",
+      "title": "Open Day",
+      "url": "https://ukearlycareers.stblaw.com/our-offer/events/",
+      "source_page": "https://ukearlycareers.stblaw.com/our-offer/events/",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "6110641219b21709",
+      "firm": "Slaughter and May",
+      "title": "Open days",
+      "url": "https://www.slaughterandmay.com/careers/early-careers/apply/",
+      "source_page": "https://www.slaughterandmay.com/careers/early-careers/apply/",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "84b6f2451114d663",
+      "firm": "Slaughter and May",
+      "title": "Virtual insight programmes (for example our Commercial Law and Explore Law programmes)",
+      "url": "https://www.theforage.com/simulations/slaughter-may/commercial-law-fevz?utm_source=company_website%3F+utm_medium%3Dcareers+page%3Futm_campaign%3D2021%3Futm_creative%3Dsharelink",
+      "source_page": "https://www.slaughterandmay.com/careers/early-careers/apply/",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "5dc8099e7e0e5ff8",
+      "firm": "Slaughter and May",
+      "title": "University events such as law fairs or law presentations",
+      "url": "https://www.slaughterandmay.com/careers/early-careers/apply/",
+      "source_page": "https://www.slaughterandmay.com/careers/early-careers/apply/",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "35c6576f599a53d3",
+      "firm": "TLT",
+      "title": "From Open Evening attendee to Trainee Solicitor",
+      "url": "https://www.tlt.com/insights-and-events/insight/from-open-evening-attendee-to-trainee-solicitor",
+      "source_page": "https://www.tlt.com/careers/early-careers/",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "5f1e1b7c5ae3aaab",
+      "firm": "TLT",
+      "title": "From Open Evening attendee to Trainee Solicitor",
+      "url": "https://www.tlt.com/careers/early-careers/",
+      "source_page": "https://www.tlt.com/careers/early-careers/",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    }
+  ],
+  "failures": [
+    {
+      "firm": "Fieldfisher",
+      "url": "https://www.fieldfisher.com/en/careers/earlycareers/future-lawyer-programmes",
+      "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.fieldfisher.com/en/careers/earlycareers/future-lawyer-programmes"
+    },
+    {
+      "firm": "BCLP",
+      "url": "https://www.bclplaw.com/en-US/careers/trainee-solicitors-uk.html",
+      "error": "HTTPError: 404 Client Error: Not Found for url: https://www.bclplaw.com/en-US/careers/trainee-solicitors-uk.html"
+    },
+    {
+      "firm": "Bristows",
+      "url": "https://www.bristows.com/join-us/early-careers/",
+      "error": "HTTPError: 404 Client Error: Not Found for url: https://www.bristows.com/join-us/early-careers/"
+    },
+    {
+      "firm": "Clifford Chance",
+      "url": "https://careers.cliffordchance.com/london/early-careers/meet-us.html",
+      "error": "HTTPError: 404 Client Error: Not Found for url: https://careers.cliffordchance.com/london/early-careers/meet-us.html"
+    },
+    {
+      "firm": "A&O Shearman",
+      "url": "https://www.aoshearman.com/en/careers/early-careers/uk",
+      "error": "HTTPError: 404 Client Error: Not Found for url: https://www.aoshearman.com/en/careers/early-careers/uk"
+    },
+    {
+      "firm": "Ashurst",
+      "url": "https://www.ashurst.com/en/careers/early-careers/uk-early-careers/",
+      "error": "HTTPError: 404 Client Error: Not Found for url: https://www.ashurstperkinscoie.com/en/careers/early-careers/uk-early-careers/"
+    },
+    {
+      "firm": "Travers Smith",
+      "url": "https://www.traverssmith.com/early-careers/",
+      "error": "HTTPError: 404 Client Error: Not Found for url: https://www.traverssmith.com/early-careers/"
+    },
+    {
+      "firm": "Kirkland & Ellis",
+      "url": "https://www.kirkland.com/careers/law-students/london",
+      "error": "HTTPError: 404 Client Error: Not Found for url: https://www.kirkland.com/careers/law-students/london"
+    },
+    {
+      "firm": "Sidley Austin",
+      "url": "https://www.sidleycareers.com/en/europe/london-trainee-solicitor-programme",
+      "error": "HTTPError: 500 Server Error: Internal Server Error for url: https://www.sidleycareers.com/error?aspxerrorpath=/europe/london-trainee-solicitor-programme"
+    },
+    {
+      "firm": "White & Case",
+      "url": "https://www.whitecase.com/careers/locations/united-kingdom/london",
+      "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.whitecase.com/careers/locations/united-kingdom/london"
+    },
+    {
+      "firm": "Baker McKenzie",
+      "url": "https://careers.bakermckenzie.com/global/en/uk-graduates",
+      "error": "HTTPError: 404 Client Error: Not Found for url: https://careers.bakermckenzie.com/global/en/uk-graduates"
+    },
+    {
+      "firm": "Norton Rose Fulbright",
+      "url": "https://www.nortonrosefulbright.com/en-gb/careers/graduates/united-kingdom",
+      "error": "HTTPError: 404 Client Error: Not Found for url: https://www.nortonrosefulbright.com/Error%20Pages/404?item=%2fcareers%2fgraduates%2funited-kingdom&user=extranet%5cAnonymous&site=NRFWeb"
+    },
+    {
+      "firm": "Pinsent Masons",
+      "url": "https://www.pinsentmasons.com/careers/early-careers",
+      "error": "HTTPError: 404 Client Error: Not Found for url: https://www.pinsentmasons.com/careers/early-careers"
+    },
+    {
+      "firm": "Charles Russell Speechlys",
+      "url": "https://www.charlesrussellspeechlys.com/en/careers/early-careers/",
+      "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.charlesrussellspeechlys.com/en/careers/early-careers/"
+    },
+    {
+      "firm": "Taylor Wessing",
+      "url": "https://united-kingdom.taylorwessing.com/en/careers/graduates",
+      "error": "SSLError: HTTPSConnectionPool(host='united-kingdom.taylorwessing.com', port=443): Max retries exceeded with url: /en/careers/graduates (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICAT"
+    },
+    {
+      "firm": "Farrer & Co",
+      "url": "https://www.farrer.co.uk/careers/early-careers/",
+      "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.farrer.co.uk/careers/early-careers/"
+    },
+    {
+      "firm": "Latham & Watkins",
+      "url": "https://uk-earlyassociatecareers-lw.icims.com/jobs/search",
+      "error": "HTTPError: 405 Client Error: Not Allowed for url: https://uk-earlyassociatecareers-lw.icims.com/jobs/search"
+    }
+  ]
+}
