@@ -23,18 +23,9 @@ fetch_tc_deadlines.py's fail-closed design: better to leave an event out
 for a day than show Maria an opening date or "apply" link that turns out to
 be wrong or, worse, a stale/expired listing from a prior year's cycle.
 
-Some entries are for a firm's SOLICITOR APPRENTICESHIP route rather than
-its graduate training contract (the firm name is suffixed
-"- solicitor apprenticeship" in Legal Cheek's own listing). These are kept
-in the output (Maria may still want to see them) but carry an
-"eligibility_note" flagging that the apprenticeship route is a school
-leaver / non-graduate entry path, not the graduate route - mirroring how
-fetch_tc_deadlines.py flags graduate eligibility for Training Contracts.
-Flip EXCLUDE_APPRENTICESHIPS to True to drop them entirely.
-
-TWO RELEVANCE FILTERS are applied on top of all that, both per Maria's
-brief (she is a graduate aiming for a solicitor training contract, based
-near London):
+FOUR RELEVANCE FILTERS are applied on top of all that, all per Maria's
+brief. She is a LAW GRADUATE going for a solicitor training contract, based
+near London, so an event only reaches her if she could actually apply to it:
 
   1. LAW FIRMS ONLY - barristers' chambers are dropped entirely. Chambers
      offer pupillage, not training contracts, so their open days are for a
@@ -44,10 +35,18 @@ near London):
      Dublin, overseas) are dropped. Virtual/online sessions are kept
      regardless of which office runs them, since she can attend from
      anywhere, as are multi-office series that include London.
+  3. NO SOLICITOR APPRENTICESHIPS - that route is a school-leaver /
+     non-graduate entry path (Legal Cheek suffixes the firm name
+     "- solicitor apprenticeship"). She has a degree, so it is closed to her.
+  4. GRADUATE-ELIGIBLE ONLY - first-year and second-year insight schemes are
+     aimed at current undergraduates. EVENT_AUDIENCE overrides the title test
+     where a firm's wording is misleading, e.g. Davis Polk's "Penultimate Year
+     & Postgraduate Insight Day" explicitly includes postgraduates and is kept.
 
-Both filters are flags (EXCLUDE_CHAMBERS / LONDON_ONLY) and non-matching
-events keep their researched override data, so widening the net later is a
-one-line change rather than a re-research job.
+Every filter is a flag (EXCLUDE_CHAMBERS / LONDON_ONLY /
+EXCLUDE_APPRENTICESHIPS / GRADUATES_ONLY) and rejected events keep their
+researched override data, so widening the net later is a one-line change
+rather than a re-research job.
 
 Output: docs/open_days.json
 """
@@ -83,7 +82,36 @@ APPRENTICESHIP_NOTE = (
 # --- Relevance filters (see module docstring) ---
 LONDON_ONLY = True
 EXCLUDE_CHAMBERS = True
-EXCLUDE_APPRENTICESHIPS = False
+EXCLUDE_APPRENTICESHIPS = True
+GRADUATES_ONLY = True
+
+# Maria has finished her law degree. A "first year insight scheme" is aimed at
+# undergraduates two or three years behind her and she cannot apply, so those
+# are filtered out rather than shown as noise. Titles are explicit enough for
+# this to be a safe title-level test; EVENT_AUDIENCE below overrides it for the
+# handful where the wording is misleading.
+NOT_FOR_GRADUATES_RE = re.compile(
+    r"\bfirst[- ]?years?\b|\b1st[- ]?year\b|\bsecond[- ]?year\b|"
+    r"\bfreshers?\b|\bpre[- ]?penultimate\b|\bschool[- ]leaver\b|\bsixth[- ]form\b",
+    re.IGNORECASE,
+)
+
+# Overrides for events whose title implies a year restriction that doesn't
+# actually shut a graduate out (or vice versa). "graduates" = she can apply.
+EVENT_AUDIENCE = {
+    # Explicitly open to postgraduates as well as penultimate-year students,
+    # so a graduate is in scope - the firm's own wording, not an assumption.
+    ("Davis Polk & Wardwell", "Penultimate Year & Postgraduate Insight Day"): "graduates",
+}
+
+# Shown on the card so Maria can see why an event survived the filter when its
+# name still mentions a year group.
+AUDIENCE_NOTES = {
+    ("Davis Polk & Wardwell", "Penultimate Year & Postgraduate Insight Day"): (
+        "Open to penultimate-year students and postgraduates - the firm's own "
+        "wording. Worth confirming you qualify as a postgraduate for their purposes."
+    ),
+}
 
 # Barristers' chambers offer pupillage, not training contracts, so their
 # open days are for a different career route entirely. Most are caught by
@@ -208,6 +236,14 @@ def is_chambers(firm, event_name):
     if firm in KNOWN_CHAMBERS:
         return True
     return bool(CHAMBERS_RE.search(firm) or CHAMBERS_RE.search(event_name))
+
+
+def is_graduate_eligible(firm, event_name):
+    """False for schemes aimed at a year group Maria has already passed."""
+    override = EVENT_AUDIENCE.get((firm, event_name))
+    if override is not None:
+        return override == "graduates"
+    return not NOT_FOR_GRADUATES_RE.search(event_name)
 
 
 def looks_non_london(firm, event_name):
@@ -824,7 +860,7 @@ def build_entries():
     entries = []
     needs_review = []
     legal_cheek_keys = set()
-    filtered_out = {"chambers": 0, "outside_london": 0, "apprenticeships": 0}
+    filtered_out = {"chambers": 0, "outside_london": 0, "apprenticeships": 0, "not_graduate_eligible": 0}
 
     for row in rows:
         date_el = row.select_one(".c-key-deadlines__date")
@@ -851,8 +887,15 @@ def build_entries():
             filtered_out["chambers"] += 1
             continue
 
-        if EXCLUDE_APPRENTICESHIPS and "apprenticeship" in firm.lower():
+        if EXCLUDE_APPRENTICESHIPS and (
+            "apprenticeship" in firm.lower() or "apprentice" in event_name.lower()
+        ):
             filtered_out["apprenticeships"] += 1
+            continue
+
+        # She is a graduate - schemes for current first/second years are out.
+        if GRADUATES_ONLY and not is_graduate_eligible(firm, event_name):
+            filtered_out["not_graduate_eligible"] += 1
             continue
 
         key = (firm, event_name, deadline_label)
@@ -888,7 +931,7 @@ def build_entries():
             "deadline_date": deadline_iso,
             "apply_link": override["apply_link"],
             "link_is_specific": override["link_is_specific"],
-            "eligibility_note": override["eligibility_note"],
+            "eligibility_note": AUDIENCE_NOTES.get((firm, event_name)) or override["eligibility_note"],
             "source": "legal_cheek",
             "found_on": None,
         })
@@ -907,6 +950,14 @@ def build_entries():
             continue
         if LONDON_ONLY and ev.get("location") not in LONDON_RELEVANT:
             filtered_out["outside_london"] += 1
+            continue
+        if EXCLUDE_APPRENTICESHIPS and (
+            "apprenticeship" in ev["firm"].lower() or "apprentice" in ev["event_name"].lower()
+        ):
+            filtered_out["apprenticeships"] += 1
+            continue
+        if GRADUATES_ONLY and not is_graduate_eligible(ev["firm"], ev["event_name"]):
+            filtered_out["not_graduate_eligible"] += 1
             continue
         deadline_date = parse_deadline(ev["deadline_label"], today)
         if deadline_date is not None and deadline_date < today:
@@ -939,17 +990,20 @@ def main():
         "source": SOURCE_URL,
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"),
         "note": (
-            "London law firm Open Days / Insight Days only - barristers' chambers "
-            "(pupillage, not training contracts) and events tied to a firm's "
-            "non-London office are filtered out; virtual sessions are kept. Every "
-            "event shown has been manually verified against the firm's own site. "
-            "New listings Legal Cheek starts showing are held back in needs_review "
-            "until checked, not guessed at."
+            "London law firm Open Days / Insight Days that a graduate can apply "
+            "to. Filtered out: barristers' chambers (pupillage is a different "
+            "route), solicitor apprenticeships (a school-leaver route), first- "
+            "and second-year insight schemes, and events tied to a firm's "
+            "non-London office. Virtual sessions are kept. Every event shown has "
+            "been manually verified against the firm's own site; new listings "
+            "Legal Cheek starts showing are held back in needs_review until "
+            "checked, not guessed at."
         ),
         "filters": {
             "london_only": LONDON_ONLY,
             "exclude_chambers": EXCLUDE_CHAMBERS,
             "exclude_apprenticeships": EXCLUDE_APPRENTICESHIPS,
+            "graduates_only": GRADUATES_ONLY,
             "filtered_out_counts": filtered_out,
         },
         "events": entries,
@@ -961,7 +1015,8 @@ def main():
     print(
         f"Filtered out: {filtered_out['chambers']} chambers, "
         f"{filtered_out['outside_london']} outside London, "
-        f"{filtered_out['apprenticeships']} apprenticeship"
+        f"{filtered_out['apprenticeships']} apprenticeship, "
+        f"{filtered_out['not_graduate_eligible']} not open to graduates"
     )
     if needs_review:
         print(f"{len(needs_review)} new/unverified entries held back - see needs_review in the output file")
