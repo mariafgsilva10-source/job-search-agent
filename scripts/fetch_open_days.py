@@ -30,6 +30,24 @@ in the output (Maria may still want to see them) but carry an
 "eligibility_note" flagging that the apprenticeship route is a school
 leaver / non-graduate entry path, not the graduate route - mirroring how
 fetch_tc_deadlines.py flags graduate eligibility for Training Contracts.
+Flip EXCLUDE_APPRENTICESHIPS to True to drop them entirely.
+
+TWO RELEVANCE FILTERS are applied on top of all that, both per Maria's
+brief (she is a graduate aiming for a solicitor training contract, based
+near London):
+
+  1. LAW FIRMS ONLY - barristers' chambers are dropped entirely. Chambers
+     offer pupillage, not training contracts, so their open days are for a
+     different career route.
+  2. LONDON ONLY - events tied to a firm's non-London office (Birmingham,
+     Manchester, Leeds, Bristol, Exeter, Newcastle, Liverpool, Scotland,
+     Dublin, overseas) are dropped. Virtual/online sessions are kept
+     regardless of which office runs them, since she can attend from
+     anywhere, as are multi-office series that include London.
+
+Both filters are flags (EXCLUDE_CHAMBERS / LONDON_ONLY) and non-matching
+events keep their researched override data, so widening the net later is a
+one-line change rather than a re-research job.
 
 Output: docs/open_days.json
 """
@@ -61,6 +79,144 @@ APPRENTICESHIP_NOTE = (
     "non-graduate entry path funded alongside a law degree and the SQE) - "
     "not the graduate training contract route."
 )
+
+# --- Relevance filters (see module docstring) ---
+LONDON_ONLY = True
+EXCLUDE_CHAMBERS = True
+EXCLUDE_APPRENTICESHIPS = False
+
+# Barristers' chambers offer pupillage, not training contracts, so their
+# open days are for a different career route entirely. Most are caught by
+# the regex; the set covers chambers whose name doesn't contain a giveaway
+# word (Serle Court, Forum Chambers-style names, Inns of Court, etc.).
+KNOWN_CHAMBERS = {
+    "Serle Court",
+    "Brick Court Chambers",
+    "5 Essex Chambers",
+    "Tanfield Chambers",
+    "Monckton Chambers",
+    "Express Chambers",
+}
+CHAMBERS_RE = re.compile(r"\bchambers\b|\bpupillage\b|\bbarrister", re.IGNORECASE)
+
+# A non-London UK/overseas city named in the event title means the event is
+# tied to that office. "London" appearing anywhere wins, so a listing like
+# "London & Manchester Open Day" is kept.
+NON_LONDON_PLACE_RE = re.compile(
+    r"\b(birmingham|manchester|leeds|bristol|exeter|newcastle|liverpool|"
+    r"scotland|glasgow|edinburgh|aberdeen|dublin|belfast|cardiff|"
+    r"nottingham|sheffield|cambridge|oxford|guildford|cheltenham|"
+    r"southampton|middle east|dubai|abu dhabi|hong kong|singapore|"
+    r"new york|paris|brussels|amsterdam|frankfurt|madrid|milan)\b",
+    re.IGNORECASE,
+)
+LONDON_RE = re.compile(r"\blondon\b", re.IGNORECASE)
+
+# Locations kept when LONDON_ONLY is on. "Virtual" sessions are
+# location-independent; the multi-office value covers series a firm runs
+# across several offices, London included.
+LONDON_RELEVANT = {"London", "Virtual", "Multiple UK offices (incl. London)"}
+
+# Where each verified event actually takes place, established alongside the
+# OPEN_DAY_OVERRIDES research. Keyed on (firm, event_name) because a firm
+# that repeats an event across the cycle runs every instance at the same
+# office. An event in OPEN_DAY_OVERRIDES but missing here is treated as
+# unknown location and held back, same fail-closed principle as the rest of
+# this script.
+EVENT_LOCATIONS = {
+    ("Ashfords", "Bristol First Year Insight Day"): "Bristol",
+    ("Ashfords", "Exeter First Year Insight Day"): "Exeter",
+    ("BCLP", "Open Day"): "London",
+    ("Bird & Bird", "Trainee Solicitor Open Day"): "London",
+    ("Bristows — solicitor apprenticeship", "Solicitor Apprenticeship Open Evening"): "London",
+    ("Davis Polk & Wardwell", "First Year Insight Day"): "London",
+    ("Davis Polk & Wardwell", "Penultimate Year & Postgraduate Insight Day"): "London",
+    ("Debevoise & Plimpton", "Open Day"): "London",
+    ("Dechert", "First Year Insight Event"): "London",
+    ("Dentons", "Open Day (London)"): "London",
+    ("Dentons", "Open Day (Scotland)"): "Scotland",
+    ("Eversheds Sutherland", "First Year Law/Second Year Non-Law Open Day"): "Multiple UK offices (incl. London)",
+    ("Eversheds Sutherland", "Graduate Insight Evenings"): "Multiple UK offices (incl. London)",
+    ("Fieldfisher", "Pathways to Practice Scheme (First year insight scheme)"): "London",
+    ("Forsters", "First Year Insight Day"): "London",
+    ("Forsters", "Open Day 1"): "London",
+    ("Forsters", "Open Day 2"): "London",
+    ("Forsters — solicitor apprenticeship", "Apprenticeship Insights Afternoon (Online)"): "Virtual",
+    ("Forsters — solicitor apprenticeship", "Early Careers Insights Q&A"): "London",
+    ("Forsters — solicitor apprenticeship", "Open day (in person)"): "London",
+    ("Freshfields", "First Years Insight Scheme"): "London",
+    ("Gibson Dunn", "First Year Insight Day (In-person)"): "London",
+    ("Gibson Dunn", "First Year Insight Day (Virtual)"): "Virtual",
+    ("Goodwin", "In-Person Open Afternoon"): "London",
+    ("Goodwin", "Insight into Applications – Demystifying the Application Process"): "London",
+    ("Goodwin", "Insight into the Trainee Experience: Meet Our Trainees and Q&A"): "London",
+    ("Herbert Smith Freehills Kramer", "Black Talent Open Day"): "London",
+    ("Herbert Smith Freehills Kramer", "Disputes Open Day"): "London",
+    ("Herbert Smith Freehills Kramer", "IP Open Day"): "London",
+    ("Herbert Smith Freehills Kramer", "IRIS Open Day"): "London",
+    ("Herbert Smith Freehills Kramer", "MyPlus Open Day"): "London",
+    ("Herbert Smith Freehills Kramer", "Social Mobility Open Day"): "London",
+    ("Hogan Lovells Cadwalader", "First Year Insight Scheme"): "London",
+    ("Jones Day", "Open Evening 2"): "London",
+    ("Latham & Watkins", "London Black Lawyers Group Open Day 2026"): "London",
+    ("Latham & Watkins", "London LGBTQ+ Lawyers Group Open Day 2026"): "London",
+    ("Latham & Watkins", "London Open Day 2026 (November)"): "London",
+    ("Latham & Watkins", "London Open Day 2026 (October)"): "London",
+    ("Macfarlanes", "First Year Insight Scheme"): "London",
+    ("Mayer Brown", "London First Year Virtual Insight Session"): "Virtual",
+    ("Milbank", "Open Day"): "London",
+    ("Milbank", "Open Day (Leveraged Finance track)"): "London",
+    ("Mills & Reeve", "In person Insight Event (Birmingham)"): "Birmingham",
+    ("Mills & Reeve", "In person Insight Event (Leeds)"): "Leeds",
+    ("Mills & Reeve", "In person Insight Event (Manchester)"): "Manchester",
+    ("Mills & Reeve", "Virtual Insight Event"): "Virtual",
+    ("Osborne Clarke", "Insight Scheme"): "Multiple UK offices (incl. London)",
+    ("Paul, Weiss", "November Insight Afternoon"): "London",
+    ("Paul, Weiss", "September Insight Afternoon"): "London",
+    ("Payne Hicks Beach", "Open Day 1"): "London",
+    ("Payne Hicks Beach", "Open Day 2"): "London",
+    ("RPC", "Bristol Insight Day"): "Bristol",
+    ("RPC", "London Insight Day"): "London",
+    ("RPC — solicitor apprenticeship", "Solicitor Apprenticeship Virtual Insight Evening"): "Virtual",
+    ("Simpson Thacher & Bartlett", "October Open Day"): "London",
+    ("Slaughter and May", "Spring Open Day 1"): "London",
+    ("Slaughter and May", "Spring Open Day 2"): "London",
+    ("Slaughter and May", "Spring Open Day 3"): "London",
+    ("TLT", "Virtual Open Evening"): "Virtual",
+    ("Trowers & Hamlins", "Birmingham Office Graduate Insight Day"): "Birmingham",
+    ("Trowers & Hamlins", "Exeter Office Graduate Insight Day"): "Exeter",
+    ("Trowers & Hamlins", "London Office Graduate Insight Day"): "London",
+    ("Trowers & Hamlins", "Manchester Office Graduate Insight Day"): "Manchester",
+    ("Wedlake Bell", "Open Day"): "London",
+    ("Weightmans — solicitor apprenticeship", "Birmingham Open Evening"): "Birmingham",
+    ("Weightmans — solicitor apprenticeship", "Leeds Open Evening"): "Leeds",
+    ("Weightmans — solicitor apprenticeship", "Liverpool Open Evening"): "Liverpool",
+    ("Weightmans — solicitor apprenticeship", "Manchester Open Evening"): "Manchester",
+    ("Weightmans — solicitor apprenticeship", "Newcastle Open Evening"): "Newcastle",
+    ("Weightmans — solicitor apprenticeship", "Online Open Evening"): "Virtual",
+    ("Weil Gotshal & Manges", "Insight Day 1"): "London",
+    ("Weil Gotshal & Manges", "Insight Day 2"): "London",
+    ("Weil Gotshal & Manges", "Insight Day 3"): "London",
+    ("Willkie Farr & Gallagher", "First Year Spring Insight Day"): "London",
+    ("Withers", "Open Day"): "London",
+}
+
+
+def is_chambers(firm, event_name):
+    """True for barristers' chambers - a different career route to a
+    solicitor training contract, so filtered out entirely."""
+    if firm in KNOWN_CHAMBERS:
+        return True
+    return bool(CHAMBERS_RE.search(firm) or CHAMBERS_RE.search(event_name))
+
+
+def looks_non_london(firm, event_name):
+    """Cheap title-based check, used for listings we haven't researched yet
+    (needs_review) where no EVENT_LOCATIONS entry exists. A title naming
+    London anywhere wins over a named regional office."""
+    if LONDON_RE.search(event_name) or LONDON_RE.search(firm):
+        return False
+    return bool(NON_LONDON_PLACE_RE.search(event_name))
 
 # Manually verified against each firm's own early-careers pages, 2026-09-04.
 # Key is (firm, event_name, deadline_label) exactly as Legal Cheek shows it -
@@ -596,6 +752,8 @@ MANUAL_EVENTS = [
         "apply_link": "https://apply.candidats.io/b075c749-882c-4b93-9d74-40170c143384",
         "link_is_specific": True,
         "eligibility_note": None,
+        "location": "London",
+        "found_on": "2026-09-05",
     },
 ]
 
@@ -666,6 +824,7 @@ def build_entries():
     entries = []
     needs_review = []
     legal_cheek_keys = set()
+    filtered_out = {"chambers": 0, "outside_london": 0, "apprenticeships": 0}
 
     for row in rows:
         date_el = row.select_one(".c-key-deadlines__date")
@@ -686,10 +845,32 @@ def build_entries():
         if deadline_date is not None and deadline_date < today:
             continue
 
+        # Barristers' chambers: wrong career route, dropped before anything
+        # else so they never reach the dashboard or needs_review.
+        if EXCLUDE_CHAMBERS and is_chambers(firm, event_name):
+            filtered_out["chambers"] += 1
+            continue
+
+        if EXCLUDE_APPRENTICESHIPS and "apprenticeship" in firm.lower():
+            filtered_out["apprenticeships"] += 1
+            continue
+
         key = (firm, event_name, deadline_label)
         legal_cheek_keys.add((firm, event_name))
         if key not in OPEN_DAY_OVERRIDES:
+            # Not researched yet. Skip the obviously-regional ones so the
+            # review list stays relevant, but keep anything unplaceable.
+            if LONDON_ONLY and looks_non_london(firm, event_name):
+                filtered_out["outside_london"] += 1
+                continue
             needs_review.append({"firm": firm, "event_name": event_name, "deadline_label": deadline_label})
+            continue
+
+        location = EVENT_LOCATIONS.get((firm, event_name))
+        if LONDON_ONLY and location not in LONDON_RELEVANT:
+            # Either a known non-London office, or a researched event whose
+            # location was never established - held back either way.
+            filtered_out["outside_london"] += 1
             continue
 
         override = OPEN_DAY_OVERRIDES[key]
@@ -700,6 +881,7 @@ def build_entries():
             "firm": firm,
             "event_name": event_name,
             "summary": describe_event(event_name),
+            "location": location,
             "opens_date": override["opens_date"],
             "opens_confirmed": override["opens_confirmed"],
             "deadline_label": deadline_label,
@@ -707,6 +889,8 @@ def build_entries():
             "apply_link": override["apply_link"],
             "link_is_specific": override["link_is_specific"],
             "eligibility_note": override["eligibility_note"],
+            "source": "legal_cheek",
+            "found_on": None,
         })
 
     # Add events verified directly on a firm's own site that Legal Cheek's
@@ -718,6 +902,12 @@ def build_entries():
     for ev in MANUAL_EVENTS:
         if (ev["firm"], ev["event_name"]) in legal_cheek_keys:
             continue
+        if EXCLUDE_CHAMBERS and is_chambers(ev["firm"], ev["event_name"]):
+            filtered_out["chambers"] += 1
+            continue
+        if LONDON_ONLY and ev.get("location") not in LONDON_RELEVANT:
+            filtered_out["outside_london"] += 1
+            continue
         deadline_date = parse_deadline(ev["deadline_label"], today)
         if deadline_date is not None and deadline_date < today:
             continue
@@ -726,6 +916,7 @@ def build_entries():
             "firm": ev["firm"],
             "event_name": ev["event_name"],
             "summary": ev["summary"],
+            "location": ev.get("location"),
             "opens_date": ev["opens_date"],
             "opens_confirmed": ev["opens_confirmed"],
             "deadline_label": ev["deadline_label"],
@@ -733,29 +924,45 @@ def build_entries():
             "apply_link": ev["apply_link"],
             "link_is_specific": ev["link_is_specific"],
             "eligibility_note": ev["eligibility_note"],
+            "source": "direct",
+            "found_on": ev.get("found_on"),
         })
 
     # Soonest deadline first; entries with an unparsed date go last.
     entries.sort(key=lambda e: (e["deadline_date"] is None, e["deadline_date"] or ""))
-    return entries, needs_review
+    return entries, needs_review, filtered_out
 
 
 def main():
-    entries, needs_review = build_entries()
+    entries, needs_review, filtered_out = build_entries()
     payload = {
         "source": SOURCE_URL,
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"),
         "note": (
-            "Only includes Open Day / Insight Day listings manually verified against "
-            "the firm's own site. New listings Legal Cheek starts showing are held "
-            "back in needs_review until checked, not guessed at."
+            "London law firm Open Days / Insight Days only - barristers' chambers "
+            "(pupillage, not training contracts) and events tied to a firm's "
+            "non-London office are filtered out; virtual sessions are kept. Every "
+            "event shown has been manually verified against the firm's own site. "
+            "New listings Legal Cheek starts showing are held back in needs_review "
+            "until checked, not guessed at."
         ),
+        "filters": {
+            "london_only": LONDON_ONLY,
+            "exclude_chambers": EXCLUDE_CHAMBERS,
+            "exclude_apprenticeships": EXCLUDE_APPRENTICESHIPS,
+            "filtered_out_counts": filtered_out,
+        },
         "events": entries,
         "needs_review": needs_review,
     }
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_PATH.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
-    print(f"Wrote {len(entries)} verified open day / insight day events to {OUTPUT_PATH}")
+    print(f"Wrote {len(entries)} verified London open day / insight day events to {OUTPUT_PATH}")
+    print(
+        f"Filtered out: {filtered_out['chambers']} chambers, "
+        f"{filtered_out['outside_london']} outside London, "
+        f"{filtered_out['apprenticeships']} apprenticeship"
+    )
     if needs_review:
         print(f"{len(needs_review)} new/unverified entries held back - see needs_review in the output file")
 
