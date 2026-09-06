@@ -282,6 +282,56 @@
   .lead-title { font-size: 0.88rem; margin: 2px 0 6px; }
   .lead-meta { color: var(--muted); font-size: 0.78rem; margin-bottom: 8px; }
 
+  .badge-manual { color: #2f4f6f; background: #eaf1f7; border-color: #c6d8e6; }
+  .add-event { margin-bottom: 20px; }
+  .add-event > summary {
+    cursor: pointer;
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .add-event-hint { font-size: 0.78rem; color: var(--muted); margin-bottom: 10px; }
+  .add-event-form {
+    background: #f5f4f1;
+    border-radius: 8px;
+    padding: 14px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .add-event-form input {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    font-family: inherit;
+  }
+  .add-event-form input.ae-firm,
+  .add-event-form input.ae-name { flex: 1 1 200px; }
+  .add-event-form input.ae-link { flex: 1 1 240px; }
+  .add-event-form input.ae-date { flex: 0 0 auto; }
+  .add-event-form button {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #fff;
+    background: var(--accent);
+    border: none;
+    border-radius: 6px;
+    padding: 7px 16px;
+    cursor: pointer;
+  }
+  .oday-remove-btn {
+    font-size: 0.78rem;
+    color: var(--muted);
+    background: none;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 4px 10px;
+    cursor: pointer;
+  }
+  .oday-remove-btn:hover { color: #9a2f2f; border-color: #9a2f2f; }
+
   .app-form {
     background: #f5f4f1;
     border-radius: 8px;
@@ -405,11 +455,22 @@
   <div class="tab-panel" id="panel-opendays">
   <h1>London Open Days &amp; Insight Days</h1>
   <div class="sub">London law firm open days, insight days &amp; insight schemes — auto-refreshed daily</div>
-  <div class="oday-source-note">Built from <a href="https://www.legalcheek.com/key-deadlines-calendar/" target="_blank">Legal Cheek's deadlines calendar</a> <em>plus</em> a daily sweep of London firms' own application portals, so events the calendar never lists still show up. Every event here has been checked against the firm's own site. London offices and virtual sessions only; barristers' chambers are left out since pupillage is a different route to a training contract.</div>
+  <div class="oday-source-note">Built from <a href="https://www.legalcheek.com/key-deadlines-calendar/" target="_blank">Legal Cheek's deadlines calendar</a> <em>plus</em> a daily sweep of London firms' own application portals, so events the calendar never lists still show up. Every event here has been checked against the firm's own site. Only events a graduate can apply to: London offices and virtual sessions, no barristers' chambers, no solicitor apprenticeships, and no first- or second-year schemes.</div>
   <div class="top-controls">
     <input type="checkbox" id="hideRegisteredToggle">
     <label for="hideRegisteredToggle">Hide events marked as registered</label>
   </div>
+  <details class="add-event">
+    <summary>+ Add an event yourself</summary>
+    <div class="add-event-hint">A few firms block the automated check — White &amp; Case, Farrer &amp; Co, Charles Russell Speechlys, Fieldfisher, Taylor Wessing, Sidley Austin and Latham &amp; Watkins. If you spot an event on one of their sites, add it here and it'll sit in your list with everything else. Saved in this browser only.</div>
+    <form class="add-event-form" id="addEventForm">
+      <input type="text" class="ae-firm" id="aeFirm" placeholder="Firm" required>
+      <input type="text" class="ae-name" id="aeName" placeholder="Event (e.g. London Open Day)" required>
+      <input type="date" class="ae-date" id="aeDate" title="Application deadline" required>
+      <input type="url" class="ae-link" id="aeLink" placeholder="Link to register (optional)">
+      <button type="submit">Add event</button>
+    </form>
+  </details>
   <div id="root-opendays"><div class="empty">Loading…</div></div>
   <div id="root-leads"></div>
   </div>
@@ -868,9 +929,64 @@ async function loadOpenDays() {
   }
 }
 
+// --- Events Maria adds by hand. A handful of firms block the automated
+// check, so she needs a way to put those on the list herself. Stored in this
+// browser only, and merged into the same deadline-ordered list as everything
+// else rather than shunted into a separate box. ---
+function getManualEvents() {
+  try {
+    return JSON.parse(localStorage.getItem('manualOpenDays') || '[]');
+  } catch (e) {
+    return [];
+  }
+}
+
+function saveManualEvents(list) {
+  try { localStorage.setItem('manualOpenDays', JSON.stringify(list)); } catch (e) {}
+}
+
+function addManualEvent(firm, eventName, deadlineDate, link) {
+  const list = getManualEvents();
+  list.push({
+    id: 'manual-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8),
+    firm: firm,
+    event_name: eventName,
+    summary: '',
+    location: null,
+    opens_date: null,
+    opens_confirmed: false,
+    deadline_label: deadlineDate,
+    deadline_date: deadlineDate,
+    apply_link: link || '',
+    link_is_specific: !!link,
+    eligibility_note: null,
+    source: 'manual',
+    found_on: null,
+    is_manual: true,
+  });
+  saveManualEvents(list);
+  renderOpenDays();
+}
+
+function deleteManualEvent(id) {
+  saveManualEvents(getManualEvents().filter(e => e.id !== id));
+  renderOpenDays();
+}
+
+function allOpenDayEvents() {
+  const fetched = lastOpenDays || [];
+  const merged = fetched.concat(getManualEvents());
+  merged.sort((a, b) => {
+    const av = a.deadline_date || '9999';
+    const bv = b.deadline_date || '9999';
+    return av < bv ? -1 : av > bv ? 1 : 0;
+  });
+  return merged;
+}
+
 function renderOpenDays() {
   const root = document.getElementById('root-opendays');
-  const events = lastOpenDays;
+  const events = allOpenDayEvents();
   if (!events || !events.length) {
     root.innerHTML = '<div class="empty">No upcoming open days or insight days found.</div>';
     return;
@@ -913,6 +1029,9 @@ function isRecentFind(ev) {
 
 function openDayBadges(ev) {
   const badges = [];
+  if (ev.is_manual) {
+    badges.push('<span class="badge badge-manual">Added by you</span>');
+  }
   if (isRecentFind(ev)) {
     const found = new Date(ev.found_on + 'T00:00:00');
     const nice = found.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
@@ -947,6 +1066,7 @@ function openDayCard(ev, isRegistered) {
         ${ev.apply_link ? `<a class="copy-btn" href="${ev.apply_link}" target="_blank">${escapeHtml(applyLabel)}</a>` : ''}
         <button class="copy-btn" data-apply-link="${escapeHtml(ev.apply_link || '')}" data-apply-label="${escapeHtml(label)}" data-is-event="1">Copy message for Claude</button>
         <button class="copy-btn" data-apply-link="${escapeHtml(ev.apply_link || '')}" data-apply-label="${escapeHtml(label)}" data-is-event="1" data-open-claude="1">Open in Claude</button>
+        ${ev.is_manual ? `<button class="oday-remove-btn" data-remove-manual="${escapeHtml(ev.id)}">Remove</button>` : ''}
       </div>
     </div>
   `;
@@ -1350,6 +1470,29 @@ document.addEventListener('input', (e) => {
     const id = card && card.dataset.appId;
     if (id) updateApp(id, { note: noteInput.value });
   }
+});
+
+document.getElementById('addEventForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const firmEl = document.getElementById('aeFirm');
+  const nameEl = document.getElementById('aeName');
+  const dateEl = document.getElementById('aeDate');
+  const linkEl = document.getElementById('aeLink');
+  const firm = firmEl.value.trim();
+  const name = nameEl.value.trim();
+  const deadline = dateEl.value;
+  if (!firm || !name || !deadline) return;
+  addManualEvent(firm, name, deadline, linkEl.value.trim());
+  firmEl.value = '';
+  nameEl.value = '';
+  dateEl.value = '';
+  linkEl.value = '';
+  firmEl.focus();
+});
+
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('[data-remove-manual]');
+  if (btn) deleteManualEvent(btn.dataset.removeManual);
 });
 
 document.getElementById('appForm').addEventListener('submit', (e) => {
