@@ -59,6 +59,13 @@ MAX_HITS_PER_SOURCE = 40
 # shared application platforms first (candidats.io, allhires, apply4law,
 # icims - these carry the real per-event booking links), then firms' own
 # events pages. Every firm here recruits into a London office.
+#
+# URLs verified 2026-09-06. A few firms render their event list with
+# JavaScript (Travers Smith, Norton Rose Fulbright) or sit behind bot
+# protection (White & Case, Farrer & Co, Charles Russell Speechlys,
+# Fieldfisher), so those return little or fail outright - they are recorded
+# in the output's "failures" list rather than silently ignored, and the
+# daily verification pass covers them by search instead.
 SOURCES = [
     # --- candidats.io firm portals ---
     {"firm": "Goodwin", "url": "https://goodwinlaw.app.candidats.io/roles"},
@@ -97,22 +104,22 @@ SOURCES = [
     {"firm": "Davis Polk & Wardwell", "url": "https://www.davispolk.com/careers/law-students-trainees/london"},
     {"firm": "Willkie Farr & Gallagher", "url": "https://www.willkie.com/careers/legal-professional/early-careers/discover-more-and-apply/united-kingdom"},
     {"firm": "Freshfields", "url": "https://www.freshfields.com/en/your-career/united-kingdom/early-careers/"},
-    {"firm": "BCLP", "url": "https://www.bclplaw.com/en-US/careers/trainee-solicitors-uk.html"},
-    {"firm": "Bristows", "url": "https://www.bristows.com/join-us/early-careers/"},
+    {"firm": "BCLP", "url": "https://trainee.bclplaw.com/meet-us"},
+    {"firm": "Bristows", "url": "https://www.bristows.com/careers/trainees/what-we-offer/workshops/"},
     {"firm": "RPC", "url": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/"},
 
     # --- major London firms not currently represented in the tracker ---
-    {"firm": "Clifford Chance", "url": "https://careers.cliffordchance.com/london/early-careers/meet-us.html"},
+    {"firm": "Clifford Chance", "url": "https://jobs.cliffordchance.com/meet-us-london"},
     {"firm": "Linklaters", "url": "https://careers.linklaters.com/en/early-careers/uk/events"},
-    {"firm": "A&O Shearman", "url": "https://www.aoshearman.com/en/careers/early-careers/uk"},
-    {"firm": "Ashurst", "url": "https://www.ashurst.com/en/careers/early-careers/uk-early-careers/"},
-    {"firm": "Travers Smith", "url": "https://www.traverssmith.com/early-careers/"},
-    {"firm": "Kirkland & Ellis", "url": "https://www.kirkland.com/careers/law-students/london"},
+    {"firm": "A&O Shearman", "url": "https://careers.aoshearman.com/en/early-careers-london"},
+    {"firm": "Ashurst Perkins Coie", "url": "https://www.ashurstperkinscoie.com/en/careers/students-and-graduates/uk-london-training-contract/"},
+    {"firm": "Travers Smith", "url": "https://traverssmithhires.app.candidats.io/events"},
+    {"firm": "Kirkland & Ellis", "url": "https://ukgraduate.kirkland.com/events"},
     {"firm": "Sidley Austin", "url": "https://www.sidleycareers.com/en/europe/london-trainee-solicitor-programme"},
     {"firm": "White & Case", "url": "https://www.whitecase.com/careers/locations/united-kingdom/london"},
-    {"firm": "Baker McKenzie", "url": "https://careers.bakermckenzie.com/global/en/uk-graduates"},
-    {"firm": "Norton Rose Fulbright", "url": "https://www.nortonrosefulbright.com/en-gb/careers/graduates/united-kingdom"},
-    {"firm": "Pinsent Masons", "url": "https://www.pinsentmasons.com/careers/early-careers"},
+    {"firm": "Baker McKenzie", "url": "https://uk-graduates.bakermckenzie.com/events/"},
+    {"firm": "Norton Rose Fulbright", "url": "https://www.nortonrosefulbright.com/en-gb/graduates/opportunities"},
+    {"firm": "Pinsent Masons", "url": "https://www.pinsentmasons.com/careers/early-talent/events"},
     {"firm": "Charles Russell Speechlys", "url": "https://www.charlesrussellspeechlys.com/en/careers/early-careers/"},
     {"firm": "Taylor Wessing", "url": "https://united-kingdom.taylorwessing.com/en/careers/graduates"},
     {"firm": "Stephenson Harwood", "url": "https://www.shlegal.com/careers/early-careers"},
@@ -120,7 +127,7 @@ SOURCES = [
     {"firm": "Burges Salmon", "url": "https://www.burges-salmon.com/join-us/emerging-talent/"},
     {"firm": "Addleshaw Goddard", "url": "https://earlycareers.addleshawgoddard.com/careers/insight-day/"},
     {"firm": "Simmons & Simmons", "url": "https://www.simmons-simmons.com/en/careers/early-careers"},
-    {"firm": "Latham & Watkins", "url": "https://uk-earlyassociatecareers-lw.icims.com/jobs/search"},
+    {"firm": "Latham & Watkins", "url": "https://uk-earlyassociatecareers-lw.icims.com/jobs"},
 ]
 
 # What counts as an open day / insight event.
