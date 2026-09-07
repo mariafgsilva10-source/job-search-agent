@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T19:10:09Z",
+  "generated_at": "2026-09-07T07:08:25Z",
   "note": "Unverified leads from a daily sweep of London law firms' own application portals and events pages - the places firms announce open days before (or instead of) Legal Cheek listing them. Nothing here has been checked yet: a lead only reaches the Open Days tab once its dates, eligibility and apply link have been confirmed on the firm's own site.",
   "first_run": false,
   "counts": {
@@ -7,291 +7,10 @@
     "sources_failed": 7,
     "leads_total": 28,
     "duplicates_merged": 4,
-    "new_today": 28,
+    "new_today": 0,
     "new_last_7_days": 28
   },
-  "new_today": [
-    {
-      "id": "ddb26d6d9f3c449f",
-      "firm": "Simpson Thacher & Bartlett",
-      "title": "Open Day",
-      "url": "https://ukearlycareers.stblaw.com/our-offer/events/",
-      "source_page": "https://ukearlycareers.stblaw.com/our-offer/events/",
-      "first_seen": "2026-09-06",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "5b8ad2bb422dbe6e",
-      "firm": "Herbert Smith Freehills Kramer",
-      "title": "Open days",
-      "url": "https://careers.hsfkramer.com/global/en/uk/early-careers/open-days",
-      "source_page": "https://careers.hsfkramer.com/global/en/uk/early-careers/open-days",
-      "first_seen": "2026-09-06",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "84b6f2451114d663",
-      "firm": "Slaughter and May",
-      "title": "Virtual insight programmes (for example our Commercial Law and Explore Law programmes)",
-      "url": "https://www.theforage.com/simulations/slaughter-may/commercial-law-fevz?utm_source=company_website%3F+utm_medium%3Dcareers+page%3Futm_campaign%3D2021%3Futm_creative%3Dsharelink",
-      "source_page": "https://www.slaughterandmay.com/careers/early-careers/apply/",
-      "first_seen": "2026-09-06",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "5dc8099e7e0e5ff8",
-      "firm": "Slaughter and May",
-      "title": "University events such as law fairs or law presentations",
-      "url": "https://www.slaughterandmay.com/careers/early-careers/apply/",
-      "source_page": "https://www.slaughterandmay.com/careers/early-careers/apply/",
-      "first_seen": "2026-09-06",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "6110641219b21709",
-      "firm": "Slaughter and May",
-      "title": "Open days",
-      "url": "https://www.slaughterandmay.com/careers/early-careers/apply/",
-      "source_page": "https://www.slaughterandmay.com/careers/early-careers/apply/",
-      "first_seen": "2026-09-06",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "58aee3f53f7173b2",
-      "firm": "Osborne Clarke",
-      "title": "Insight scheme",
-      "url": "https://join.osborneclarke.com/insight-scheme",
-      "source_page": "https://join.osborneclarke.com/insight-scheme",
-      "first_seen": "2026-09-06",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "35c6576f599a53d3",
-      "firm": "TLT",
-      "title": "From Open Evening attendee to Trainee Solicitor",
-      "url": "https://www.tlt.com/insights-and-events/insight/from-open-evening-attendee-to-trainee-solicitor",
-      "source_page": "https://www.tlt.com/careers/early-careers/",
-      "first_seen": "2026-09-06",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "475d0ebe68ff2306",
-      "firm": "BCLP",
-      "title": "BCLP Open Day",
-      "url": "https://apply.candidats.io/4043257c-7a63-449b-ac60-50b45db8edd5",
-      "source_page": "https://trainee.bclplaw.com/meet-us",
-      "first_seen": "2026-09-06",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "7f0a3d8188b12387",
-      "firm": "BCLP",
-      "title": "Meet the team",
-      "url": "https://trainee.bclplaw.com/meet-us",
-      "source_page": "https://trainee.bclplaw.com/meet-us",
-      "first_seen": "2026-09-06",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "fe132090ab076f2c",
-      "firm": "Bristows",
-      "title": "Workshop IP Workshop (Online) This IP workshop provides insight into the firm and the work we do.",
-      "url": "https://www.bristows.com/events/ip-workshop-online-2026/",
-      "source_page": "https://www.bristows.com/careers/trainees/what-we-offer/workshops/",
-      "first_seen": "2026-09-06",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "a37eddfd9ca8a32d",
-      "firm": "RPC",
-      "title": "All About Law Virtual Law Fair",
-      "url": "https://www.allaboutlaw.co.uk/events/virtual-law-fair",
-      "source_page": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
-      "first_seen": "2026-09-06",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "a3fc1c06d15808a2",
-      "firm": "RPC",
-      "title": "Legal Cheek Virtual Law Fair",
-      "url": "https://www.legalcheek.com/fair/the-legal-cheek-uk-virtual-law-fair-series/",
-      "source_page": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
-      "first_seen": "2026-09-06",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "6e4ae6eda902d63f",
-      "firm": "RPC",
-      "title": "London Insight Event",
-      "url": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
-      "source_page": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
-      "first_seen": "2026-09-06",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "5c5d5b592b7f1d76",
-      "firm": "Clifford Chance",
-      "title": "Insight Events",
-      "url": "https://jobs.cliffordchance.com/meet-us-london",
-      "source_page": "https://jobs.cliffordchance.com/meet-us-london",
-      "first_seen": "2026-09-06",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "4f76e65dbbec605c",
-      "firm": "A&O Shearman",
-      "title": "London Training Contract Open Evening - 21st September 2026",
-      "url": "https://careers.aoshearman.com/en/job/london/london-training-contract-open-evening-21st-september-2026/3392/43423843008",
-      "source_page": "https://careers.aoshearman.com/en/early-careers-london",
-      "first_seen": "2026-09-06",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "dc30c4c5e2b20227",
-      "firm": "A&O Shearman",
-      "title": "London Open Day - 9th October 2026",
-      "url": "https://careers.aoshearman.com/en/job/london/london-open-day-9th-october-2026/3392/43410641600",
-      "source_page": "https://careers.aoshearman.com/en/early-careers-london",
-      "first_seen": "2026-09-06",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "9a127341679e5c3e",
-      "firm": "Baker McKenzie",
-      "title": "Baker Ethnicity Open Day",
-      "url": "https://uk-graduates.bakermckenzie.com/events/",
-      "source_page": "https://uk-graduates.bakermckenzie.com/events/",
-      "first_seen": "2026-09-06",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "af4002df893c05ee",
-      "firm": "Baker McKenzie",
-      "title": "Employability Open Day",
-      "url": "https://uk-graduates.bakermckenzie.com/events/",
-      "source_page": "https://uk-graduates.bakermckenzie.com/events/",
-      "first_seen": "2026-09-06",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "0e75bffd5bb933ea",
-      "firm": "Baker McKenzie",
-      "title": "Opportunity Open Day",
-      "url": "https://uk-graduates.bakermckenzie.com/events/",
-      "source_page": "https://uk-graduates.bakermckenzie.com/events/",
-      "first_seen": "2026-09-06",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "69d1297f060cba77",
-      "firm": "Baker McKenzie",
-      "title": "General Open Day",
-      "url": "https://uk-graduates.bakermckenzie.com/events/",
-      "source_page": "https://uk-graduates.bakermckenzie.com/events/",
-      "first_seen": "2026-09-06",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "cb85a2405e4be436",
-      "firm": "Baker McKenzie",
-      "title": "Women’s Open Day",
-      "url": "https://uk-graduates.bakermckenzie.com/events/",
-      "source_page": "https://uk-graduates.bakermckenzie.com/events/",
-      "first_seen": "2026-09-06",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "e23a570370bd749e",
-      "firm": "Norton Rose Fulbright",
-      "title": "Aspiring Black Lawyers Insight Day",
-      "url": "https://www.nortonrosefulbright.com/en-gb/graduates/opportunities",
-      "source_page": "https://www.nortonrosefulbright.com/en-gb/graduates/opportunities",
-      "first_seen": "2026-09-06",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "e399889a21a509ea",
-      "firm": "Pinsent Masons",
-      "title": "London Insight Event - 30th September 2026",
-      "url": "https://www.eventbrite.co.uk/e/pinsent-masons-london-insight-event-tickets-1997553597583?aff=oddtdtcreator",
-      "source_page": "https://www.pinsentmasons.com/careers/early-talent/events",
-      "first_seen": "2026-09-06",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "182a3dbb5e9f4a82",
-      "firm": "Burges Salmon",
-      "title": "Meet our team",
-      "url": "https://www.burges-salmon.com/join-us/emerging-talent/",
-      "source_page": "https://www.burges-salmon.com/join-us/emerging-talent/",
-      "first_seen": "2026-09-06",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "a5e7d38760f6170b",
-      "firm": "Addleshaw Goddard",
-      "title": "Virtual Insight Day for UK & Ireland – 23rd March 2027",
-      "url": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
-      "source_page": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
-      "first_seen": "2026-09-06",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "6e42338b2c3d9e60",
-      "firm": "Addleshaw Goddard",
-      "title": "London In-person Insight Day – 15th March 2027",
-      "url": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
-      "source_page": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
-      "first_seen": "2026-09-06",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "328ac01c7f5476ee",
-      "firm": "Addleshaw Goddard",
-      "title": "INNOVATION & LEGAL TECHNOLOGY INSIGHT EVENING",
-      "url": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
-      "source_page": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
-      "first_seen": "2026-09-06",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "599b05286cc8f282",
-      "firm": "Addleshaw Goddard",
-      "title": "Insight Days",
-      "url": "https://earlycareers.addleshawgoddard.com/careers/insight-days/",
-      "source_page": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
-      "first_seen": "2026-09-06",
-      "is_new": true,
-      "status": "unverified"
-    }
-  ],
+  "new_today": [],
   "leads": [
     {
       "id": "4f76e65dbbec605c",
@@ -300,7 +19,7 @@
       "url": "https://careers.aoshearman.com/en/job/london/london-training-contract-open-evening-21st-september-2026/3392/43423843008",
       "source_page": "https://careers.aoshearman.com/en/early-careers-london",
       "first_seen": "2026-09-06",
-      "is_new": true,
+      "is_new": false,
       "status": "unverified"
     },
     {
@@ -310,7 +29,7 @@
       "url": "https://careers.aoshearman.com/en/job/london/london-open-day-9th-october-2026/3392/43410641600",
       "source_page": "https://careers.aoshearman.com/en/early-careers-london",
       "first_seen": "2026-09-06",
-      "is_new": true,
+      "is_new": false,
       "status": "unverified"
     },
     {
@@ -320,7 +39,7 @@
       "url": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
       "source_page": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
       "first_seen": "2026-09-06",
-      "is_new": true,
+      "is_new": false,
       "status": "unverified"
     },
     {
@@ -330,7 +49,7 @@
       "url": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
       "source_page": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
       "first_seen": "2026-09-06",
-      "is_new": true,
+      "is_new": false,
       "status": "unverified"
     },
     {
@@ -340,7 +59,7 @@
       "url": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
       "source_page": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
       "first_seen": "2026-09-06",
-      "is_new": true,
+      "is_new": false,
       "status": "unverified"
     },
     {
@@ -350,7 +69,7 @@
       "url": "https://earlycareers.addleshawgoddard.com/careers/insight-days/",
       "source_page": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
       "first_seen": "2026-09-06",
-      "is_new": true,
+      "is_new": false,
       "status": "unverified"
     },
     {
@@ -360,7 +79,7 @@
       "url": "https://apply.candidats.io/4043257c-7a63-449b-ac60-50b45db8edd5",
       "source_page": "https://trainee.bclplaw.com/meet-us",
       "first_seen": "2026-09-06",
-      "is_new": true,
+      "is_new": false,
       "status": "unverified"
     },
     {
@@ -370,7 +89,7 @@
       "url": "https://trainee.bclplaw.com/meet-us",
       "source_page": "https://trainee.bclplaw.com/meet-us",
       "first_seen": "2026-09-06",
-      "is_new": true,
+      "is_new": false,
       "status": "unverified"
     },
     {
@@ -380,7 +99,7 @@
       "url": "https://uk-graduates.bakermckenzie.com/events/",
       "source_page": "https://uk-graduates.bakermckenzie.com/events/",
       "first_seen": "2026-09-06",
-      "is_new": true,
+      "is_new": false,
       "status": "unverified"
     },
     {
@@ -390,7 +109,7 @@
       "url": "https://uk-graduates.bakermckenzie.com/events/",
       "source_page": "https://uk-graduates.bakermckenzie.com/events/",
       "first_seen": "2026-09-06",
-      "is_new": true,
+      "is_new": false,
       "status": "unverified"
     },
     {
@@ -400,7 +119,7 @@
       "url": "https://uk-graduates.bakermckenzie.com/events/",
       "source_page": "https://uk-graduates.bakermckenzie.com/events/",
       "first_seen": "2026-09-06",
-      "is_new": true,
+      "is_new": false,
       "status": "unverified"
     },
     {
@@ -410,7 +129,7 @@
       "url": "https://uk-graduates.bakermckenzie.com/events/",
       "source_page": "https://uk-graduates.bakermckenzie.com/events/",
       "first_seen": "2026-09-06",
-      "is_new": true,
+      "is_new": false,
       "status": "unverified"
     },
     {
@@ -420,7 +139,7 @@
       "url": "https://uk-graduates.bakermckenzie.com/events/",
       "source_page": "https://uk-graduates.bakermckenzie.com/events/",
       "first_seen": "2026-09-06",
-      "is_new": true,
+      "is_new": false,
       "status": "unverified"
     },
     {
@@ -430,7 +149,7 @@
       "url": "https://www.bristows.com/events/ip-workshop-online-2026/",
       "source_page": "https://www.bristows.com/careers/trainees/what-we-offer/workshops/",
       "first_seen": "2026-09-06",
-      "is_new": true,
+      "is_new": false,
       "status": "unverified"
     },
     {
@@ -440,7 +159,7 @@
       "url": "https://www.burges-salmon.com/join-us/emerging-talent/",
       "source_page": "https://www.burges-salmon.com/join-us/emerging-talent/",
       "first_seen": "2026-09-06",
-      "is_new": true,
+      "is_new": false,
       "status": "unverified"
     },
     {
@@ -450,7 +169,7 @@
       "url": "https://jobs.cliffordchance.com/meet-us-london",
       "source_page": "https://jobs.cliffordchance.com/meet-us-london",
       "first_seen": "2026-09-06",
-      "is_new": true,
+      "is_new": false,
       "status": "unverified"
     },
     {
@@ -460,7 +179,7 @@
       "url": "https://careers.hsfkramer.com/global/en/uk/early-careers/open-days",
       "source_page": "https://careers.hsfkramer.com/global/en/uk/early-careers/open-days",
       "first_seen": "2026-09-06",
-      "is_new": true,
+      "is_new": false,
       "status": "unverified"
     },
     {
@@ -470,7 +189,7 @@
       "url": "https://www.nortonrosefulbright.com/en-gb/graduates/opportunities",
       "source_page": "https://www.nortonrosefulbright.com/en-gb/graduates/opportunities",
       "first_seen": "2026-09-06",
-      "is_new": true,
+      "is_new": false,
       "status": "unverified"
     },
     {
@@ -480,7 +199,7 @@
       "url": "https://join.osborneclarke.com/insight-scheme",
       "source_page": "https://join.osborneclarke.com/insight-scheme",
       "first_seen": "2026-09-06",
-      "is_new": true,
+      "is_new": false,
       "status": "unverified"
     },
     {
@@ -490,7 +209,7 @@
       "url": "https://www.eventbrite.co.uk/e/pinsent-masons-london-insight-event-tickets-1997553597583?aff=oddtdtcreator",
       "source_page": "https://www.pinsentmasons.com/careers/early-talent/events",
       "first_seen": "2026-09-06",
-      "is_new": true,
+      "is_new": false,
       "status": "unverified"
     },
     {
@@ -500,7 +219,7 @@
       "url": "https://www.allaboutlaw.co.uk/events/virtual-law-fair",
       "source_page": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
       "first_seen": "2026-09-06",
-      "is_new": true,
+      "is_new": false,
       "status": "unverified"
     },
     {
@@ -510,7 +229,7 @@
       "url": "https://www.legalcheek.com/fair/the-legal-cheek-uk-virtual-law-fair-series/",
       "source_page": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
       "first_seen": "2026-09-06",
-      "is_new": true,
+      "is_new": false,
       "status": "unverified"
     },
     {
@@ -520,7 +239,7 @@
       "url": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
       "source_page": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
       "first_seen": "2026-09-06",
-      "is_new": true,
+      "is_new": false,
       "status": "unverified"
     },
     {
@@ -530,7 +249,7 @@
       "url": "https://ukearlycareers.stblaw.com/our-offer/events/",
       "source_page": "https://ukearlycareers.stblaw.com/our-offer/events/",
       "first_seen": "2026-09-06",
-      "is_new": true,
+      "is_new": false,
       "status": "unverified"
     },
     {
@@ -540,7 +259,7 @@
       "url": "https://www.theforage.com/simulations/slaughter-may/commercial-law-fevz?utm_source=company_website%3F+utm_medium%3Dcareers+page%3Futm_campaign%3D2021%3Futm_creative%3Dsharelink",
       "source_page": "https://www.slaughterandmay.com/careers/early-careers/apply/",
       "first_seen": "2026-09-06",
-      "is_new": true,
+      "is_new": false,
       "status": "unverified"
     },
     {
@@ -550,7 +269,7 @@
       "url": "https://www.slaughterandmay.com/careers/early-careers/apply/",
       "source_page": "https://www.slaughterandmay.com/careers/early-careers/apply/",
       "first_seen": "2026-09-06",
-      "is_new": true,
+      "is_new": false,
       "status": "unverified"
     },
     {
@@ -560,7 +279,7 @@
       "url": "https://www.slaughterandmay.com/careers/early-careers/apply/",
       "source_page": "https://www.slaughterandmay.com/careers/early-careers/apply/",
       "first_seen": "2026-09-06",
-      "is_new": true,
+      "is_new": false,
       "status": "unverified"
     },
     {
@@ -570,7 +289,7 @@
       "url": "https://www.tlt.com/insights-and-events/insight/from-open-evening-attendee-to-trainee-solicitor",
       "source_page": "https://www.tlt.com/careers/early-careers/",
       "first_seen": "2026-09-06",
-      "is_new": true,
+      "is_new": false,
       "status": "unverified"
     }
   ],
