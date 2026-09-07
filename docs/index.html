@@ -283,6 +283,26 @@
   .lead-meta { color: var(--muted); font-size: 0.78rem; margin-bottom: 8px; }
 
   .badge-manual { color: #2f4f6f; background: #eaf1f7; border-color: #c6d8e6; }
+
+  .write-docs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .write-docs-btn {
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #fff;
+    background: var(--accent);
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+  .write-docs-hint { font-size: 0.78rem; color: var(--muted); }
   .add-event { margin-bottom: 20px; }
   .add-event > summary {
     cursor: pointer;
@@ -1196,11 +1216,51 @@ function companySearchUrl(job) {
   return 'https://www.google.com/search?q=' + encodeURIComponent(q);
 }
 
+// The daily run no longer writes a cover letter and CV for every job it
+// finds - that was paying for ten sets of documents a day when Maria applies
+// to a handful. Instead each job carries a button that opens Claude with
+// everything it needs to write them, so the cost lands only on the jobs she
+// actually wants. This builds that request.
+function buildWriteDocsMessage(job) {
+  const bits = [
+    `Please write my cover letter and a CV adapted for this job, then put them on my dashboard.`,
+    ``,
+    `JOB`,
+    `Title: ${job.title || ''}`,
+    `Employer: ${job.employer || ''}`,
+    `Location: ${job.location || ''}`,
+  ];
+  if (job.salary) bits.push(`Salary: ${job.salary}`);
+  if (job.url) bits.push(`Listing: ${job.url}`);
+  bits.push(`Job id: ${job.id || ''}`);
+  if (job.description) {
+    bits.push(``, `DESCRIPTION`, String(job.description).slice(0, 3000));
+  }
+  bits.push(
+    ``,
+    `HOW`,
+    `My dashboard repo is https://github.com/mariafgsilva10-source/job-search-agent.`,
+    `Clone it, then follow SYSTEM_PROMPT in scripts/draft_materials.py exactly for my`,
+    `cover-letter voice and drafting rules, using data/base_cv.md as my background.`,
+    `Write the letter body only (the salutation and sign-off get added automatically),`,
+    `and an adapted_cv object in the same shape the script produces.`,
+    ``,
+    `Then set "cover_letter" and "adapted_cv" on the job with the id above in`,
+    `docs/data.json, run python scripts/generate_pdfs.py to render the PDFs, and push`,
+    `docs/data.json plus the new files in docs/pdfs to main. Show me the letter here`,
+    `before you push so I can change anything I want.`
+  );
+  return bits.join('\n');
+}
+
 function jobCard(job, isApplied, isDropboxSaved) {
   const cardId = Math.random().toString(36).slice(2);
   const cv = job.adapted_cv;
   const hasCv = !!(cv && typeof cv === 'object' && (cv.summary || (cv.experience || []).length));
   const hasLegacyCv = !!(cv && typeof cv === 'string' && cv.trim());
+  const hasLetter = !!(job.cover_letter && String(job.cover_letter).trim()
+    && !String(job.cover_letter).startsWith('(drafting failed'));
+  const needsDocs = !hasLetter && !hasCv && !hasLegacyCv;
   const canSaveToDropbox = !!(job.cv_pdf && job.cover_letter_pdf);
   return `
     <div class="job-card${isApplied ? ' is-applied' : ''}" data-job-id="${escapeHtml(job.id || '')}">
@@ -1219,6 +1279,12 @@ function jobCard(job, isApplied, isDropboxSaved) {
       <div class="btn-row save-dropbox-row">
         <button class="copy-btn save-dropbox-btn${isDropboxSaved ? ' is-saved' : ''}" data-save-dropbox="1">${isDropboxSaved ? 'Saved to Dropbox ✓' : 'Save to Dropbox'}</button>
       </div>` : ''}
+      ${needsDocs ? `
+      <div class="write-docs">
+        <button class="write-docs-btn" data-write-docs="${escapeHtml(job.id || '')}">Write CV &amp; cover letter</button>
+        <span class="write-docs-hint">Opens Claude to write them for this job. Nothing is written until you ask.</span>
+      </div>` : ''}
+      ${hasLetter ? `
       <details>
         <summary>Cover letter (ready to send)</summary>
         <div class="cover-letter" id="cl-${cardId}">${escapeHtml(job.cover_letter || '')}</div>
@@ -1226,7 +1292,7 @@ function jobCard(job, isApplied, isDropboxSaved) {
           <button class="copy-btn" data-copy-target="cl-${cardId}">Copy cover letter</button>
           ${job.cover_letter_pdf ? `<a class="copy-btn pdf-btn" href="${job.cover_letter_pdf}" target="_blank">Download PDF</a>` : ''}
         </div>
-      </details>
+      </details>` : ''}
       ${hasCv ? `
       <details>
         <summary>CV adapted for this role</summary>
@@ -1493,6 +1559,20 @@ document.getElementById('addEventForm').addEventListener('submit', (e) => {
 document.addEventListener('click', (e) => {
   const btn = e.target.closest('[data-remove-manual]');
   if (btn) deleteManualEvent(btn.dataset.removeManual);
+});
+
+// "Write CV & cover letter" - hands the job to Claude rather than calling any
+// API from this page. The page is public, so it holds no key and can't spend
+// anything on its own; the work happens in the Claude app when Maria asks.
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('[data-write-docs]');
+  if (!btn) return;
+  const job = findJobById(btn.dataset.writeDocs);
+  if (!job) return;
+  window.open(buildClaudeDeepLink(buildWriteDocsMessage(job)), '_blank');
+  const original = btn.textContent;
+  btn.textContent = 'Opening Claude…';
+  setTimeout(() => { btn.textContent = original; }, 2500);
 });
 
 document.getElementById('appForm').addEventListener('submit', (e) => {
