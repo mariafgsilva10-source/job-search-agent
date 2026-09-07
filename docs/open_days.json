@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-07T07:07:02Z",
+  "generated_at": "2026-09-07T17:09:28Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -8,7 +8,7 @@
     "exclude_apprenticeships": true,
     "graduates_only": true,
     "filtered_out_counts": {
-      "chambers": 7,
+      "chambers": 10,
       "outside_london": 16,
       "apprenticeships": 21,
       "not_graduate_eligible": 17
@@ -743,6 +743,11 @@
       "deadline_label": "Today"
     },
     {
+      "firm": "Macfarlanes",
+      "event_name": "Practice Area Open Day",
+      "deadline_label": "14/09/2026"
+    },
+    {
       "firm": "Akin",
       "event_name": "Open Day (virtual)",
       "deadline_label": "25/09/2026"
@@ -819,7 +824,7 @@
     },
     {
       "firm": "Baker McKenzie",
-      "event_name": "Baker Ethnicity Open Day",
+      "event_name": "BakerEthnicity Open Day",
       "deadline_label": "26/10/2026"
     },
     {
@@ -848,6 +853,11 @@
       "deadline_label": "09/11/2026"
     },
     {
+      "firm": "Baker McKenzie",
+      "event_name": "Pride at Baker McKenzie Open Day",
+      "deadline_label": "10/11/2026"
+    },
+    {
       "firm": "Charles Russell Speechlys",
       "event_name": "London Open Day",
       "deadline_label": "12/11/2026"
@@ -858,8 +868,13 @@
       "deadline_label": "12/11/2026"
     },
     {
+      "firm": "Hill Dickinson",
+      "event_name": "Training Contract Open Evening",
+      "deadline_label": "15/11/2026"
+    },
+    {
       "firm": "Baker McKenzie",
-      "event_name": "Employability Open Day",
+      "event_name": "EmployAbility Open Day",
       "deadline_label": "16/11/2026"
     },
     {
@@ -881,6 +896,11 @@
       "firm": "Burges Salmon",
       "event_name": "Trainee Insight Day for non-law students",
       "deadline_label": "05/01/2027"
+    },
+    {
+      "firm": "Hill Dickinson",
+      "event_name": "Summer Insight Day and Training Contract",
+      "deadline_label": "08/01/2027"
     },
     {
       "firm": "Morgan Lewis",
@@ -909,7 +929,7 @@
     },
     {
       "firm": "Dentons",
-      "event_name": "Open Day: London",
+      "event_name": "London Open Day",
       "deadline_label": "05/02/2027"
     },
     {

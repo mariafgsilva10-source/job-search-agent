@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-07T07:08:27Z",
+  "generated_at": "2026-09-07T17:11:10Z",
   "note": "Only includes Training Contract listings manually verified as open to graduates applying directly, without needing to have done that firm's own vacation scheme first. New listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "events": [
     {
@@ -710,9 +710,29 @@
   ],
   "needs_review": [
     {
+      "firm": "Hill Dickinson",
+      "event_name": "Training Contract Open Evening",
+      "deadline_label": "15/11/2026"
+    },
+    {
       "firm": "Lawrence Stephens",
       "event_name": "Training Contract",
       "deadline_label": "30/11/2026"
+    },
+    {
+      "firm": "Hill Dickinson",
+      "event_name": "Direct Training Contract",
+      "deadline_label": "08/01/2027"
+    },
+    {
+      "firm": "Hill Dickinson",
+      "event_name": "Summer Insight Day and Training Contract",
+      "deadline_label": "08/01/2027"
+    },
+    {
+      "firm": "Womble Bond Dickinson",
+      "event_name": "Training Contract",
+      "deadline_label": "25/01/2027"
     },
     {
       "firm": "DAC Beachcroft",
@@ -730,9 +750,19 @@
       "deadline_label": "26/02/2027"
     },
     {
+      "firm": "Ashurst Perkins Coie",
+      "event_name": "Training Contract",
+      "deadline_label": "26/03/2027"
+    },
+    {
       "firm": "Wiggin",
       "event_name": "Training Contract",
       "deadline_label": "31/03/2027"
+    },
+    {
+      "firm": "Baker McKenzie",
+      "event_name": "Direct Training Contract",
+      "deadline_label": "02/04/2027"
     },
     {
       "firm": "Watson Farley & Williams",

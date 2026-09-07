@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T07:08:25Z",
+  "generated_at": "2026-09-07T17:11:06Z",
   "note": "Unverified leads from a daily sweep of London law firms' own application portals and events pages - the places firms announce open days before (or instead of) Legal Cheek listing them. Nothing here has been checked yet: a lead only reaches the Open Days tab once its dates, eligibility and apply link have been confirmed on the firm's own site.",
   "first_run": false,
   "counts": {
@@ -7,11 +7,32 @@
     "sources_failed": 7,
     "leads_total": 28,
     "duplicates_merged": 4,
-    "new_today": 0,
+    "new_today": 1,
     "new_last_7_days": 28
   },
-  "new_today": [],
+  "new_today": [
+    {
+      "id": "b5845ad355aee03e",
+      "firm": "Addleshaw Goddard",
+      "title": "Virtual Insight Day for UK & Ireland – 24th March 2027",
+      "url": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
+      "source_page": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
+      "first_seen": "2026-09-07",
+      "is_new": true,
+      "status": "unverified"
+    }
+  ],
   "leads": [
+    {
+      "id": "b5845ad355aee03e",
+      "firm": "Addleshaw Goddard",
+      "title": "Virtual Insight Day for UK & Ireland – 24th March 2027",
+      "url": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
+      "source_page": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
+      "first_seen": "2026-09-07",
+      "is_new": true,
+      "status": "unverified"
+    },
     {
       "id": "4f76e65dbbec605c",
       "firm": "A&O Shearman",
@@ -28,16 +49,6 @@
       "title": "London Open Day - 9th October 2026",
       "url": "https://careers.aoshearman.com/en/job/london/london-open-day-9th-october-2026/3392/43410641600",
       "source_page": "https://careers.aoshearman.com/en/early-careers-london",
-      "first_seen": "2026-09-06",
-      "is_new": false,
-      "status": "unverified"
-    },
-    {
-      "id": "a5e7d38760f6170b",
-      "firm": "Addleshaw Goddard",
-      "title": "Virtual Insight Day for UK & Ireland – 23rd March 2027",
-      "url": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
-      "source_page": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
       "first_seen": "2026-09-06",
       "is_new": false,
       "status": "unverified"
