@@ -29,12 +29,15 @@ jobs:
           ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
         run: python scripts/fetch_jobs.py
 
-      - name: Draft cover letters + CV suggestions
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      # Adds the day's new jobs to the dashboard WITHOUT drafting anything -
+      # no API call, so the daily run costs nothing. Cover letters and CVs are
+      # written per job, on demand, from the button on the dashboard.
+      - name: Add new jobs to the dashboard
         run: python scripts/draft_materials.py
 
-      - name: Generate PDF cover letters + CVs
+      # A no-op for undrafted jobs; renders PDFs for any job whose documents
+      # were written since the last run.
+      - name: Generate PDFs for any newly drafted jobs
         run: python scripts/generate_pdfs.py
 
       - name: Fetch law firm open days + insight days
