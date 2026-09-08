@@ -303,6 +303,30 @@
     cursor: pointer;
   }
   .write-docs-hint { font-size: 0.78rem; color: var(--muted); }
+  .write-docs.is-waiting { color: var(--accent); }
+  .write-docs-spinner {
+    width: 13px;
+    height: 13px;
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    display: inline-block;
+    animation: write-docs-spin 0.9s linear infinite;
+  }
+  @keyframes write-docs-spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) {
+    .write-docs-spinner { animation-duration: 3s; }
+  }
+  .write-docs-cancel {
+    font-family: inherit;
+    font-size: 0.75rem;
+    color: var(--muted);
+    background: none;
+    border: none;
+    padding: 0;
+    text-decoration: underline;
+    cursor: pointer;
+  }
   .add-event { margin-bottom: 20px; }
   .add-event > summary {
     cursor: pointer;
@@ -894,6 +918,7 @@ function findJobById(id) {
 }
 
 let lastHistory = null;
+let pendingDocs = {};   // job ids whose documents are being written right now
 
 async function load() {
   const root = document.getElementById('root');
@@ -918,6 +943,7 @@ function render() {
   const applied = getAppliedSet();
   const hideApplied = getHideApplied();
   const dropboxSaved = getDropboxSavedSet();
+  pendingDocs = getPendingDocs();
   root.innerHTML = history.map(day => {
     const visibleJobs = hideApplied ? day.jobs.filter(j => !applied.has(j.id)) : day.jobs;
     const appliedCount = day.jobs.filter(j => applied.has(j.id)).length;
@@ -1240,17 +1266,91 @@ function buildWriteDocsMessage(job) {
     ``,
     `HOW`,
     `My dashboard repo is https://github.com/mariafgsilva10-source/job-search-agent.`,
-    `Clone it, then follow SYSTEM_PROMPT in scripts/draft_materials.py exactly for my`,
-    `cover-letter voice and drafting rules, using data/base_cv.md as my background.`,
-    `Write the letter body only (the salutation and sign-off get added automatically),`,
-    `and an adapted_cv object in the same shape the script produces.`,
+    `Clone it. Read SYSTEM_PROMPT in scripts/draft_materials.py and follow every rule`,
+    `in it exactly, using data/base_cv.md as my background. Write the letter body only,`,
+    `under 350 words, with no salutation and no sign-off, and an adapted_cv object in`,
+    `the shape SYSTEM_PROMPT describes.`,
     ``,
-    `Then set "cover_letter" and "adapted_cv" on the job with the id above in`,
-    `docs/data.json, run python scripts/generate_pdfs.py to render the PDFs, and push`,
-    `docs/data.json plus the new files in docs/pdfs to main. Show me the letter here`,
-    `before you push so I can change anything I want.`
+    `Save both to draft.json as {"cover_letter": "...", "adapted_cv": {...}}, then run`,
+    ``,
+    `  python scripts/add_draft.py ${job.id || ''} draft.json`,
+    ``,
+    `That checks the letter against my drafting rules and tells you what to fix if it`,
+    `breaks any of them. Once it passes it renders both PDFs and updates the dashboard`,
+    `files. Then commit and push docs/data.json, docs/drafts.json and docs/pdfs to main.`,
+    ``,
+    `Please do all of that in one go without stopping to check with me. My dashboard`,
+    `picks the PDFs up on its own once they are pushed. Show me the finished letter at`,
+    `the end so I can ask for changes if I want any.`
   );
   return bits.join('\n');
+}
+
+// After the button is clicked, the documents are written in a separate Claude
+// session and pushed to the repo, so the page has to notice them arriving.
+// data.json is well over a megabyte, so instead the page polls drafts.json - a
+// few kilobytes listing which jobs have PDFs - and only re-reads data.json once
+// the job it is waiting for shows up there.
+const PENDING_DOCS_KEY = 'pendingDocJobs';
+const DOCS_POLL_MS = 15000;
+const DOCS_GIVE_UP_MS = 2 * 60 * 60 * 1000;
+
+function getPendingDocs() {
+  try { return JSON.parse(localStorage.getItem(PENDING_DOCS_KEY) || '{}'); }
+  catch (e) { return {}; }
+}
+function savePendingDocs(map) {
+  try { localStorage.setItem(PENDING_DOCS_KEY, JSON.stringify(map)); } catch (e) {}
+}
+function markDocsPending(id) {
+  const map = getPendingDocs();
+  map[id] = Date.now();
+  savePendingDocs(map);
+}
+function clearDocsPending(id) {
+  const map = getPendingDocs();
+  delete map[id];
+  savePendingDocs(map);
+}
+
+let docsPollTimer = null;
+
+async function pollForDocs() {
+  docsPollTimer = null;
+
+  // Drop anything that has been waiting far too long, so a session that was
+  // abandoned halfway does not leave a card spinning forever.
+  const waiting = getPendingDocs();
+  const cutoff = Date.now() - DOCS_GIVE_UP_MS;
+  let expired = false;
+  for (const id of Object.keys(waiting)) {
+    if (!(waiting[id] > cutoff)) { delete waiting[id]; expired = true; }
+  }
+  if (expired) savePendingDocs(waiting);
+
+  let landed = false;
+  try {
+    const res = await fetch('drafts.json?_=' + Date.now());
+    const index = await res.json();
+    for (const id of Object.keys(getPendingDocs())) {
+      if (index && index[id]) { clearDocsPending(id); landed = true; }
+    }
+  } catch (e) {
+    // Not published yet, or offline. Nothing to do but try again.
+  }
+
+  if (landed) {
+    await load();          // re-reads data.json, so the card gains its letter, CV and PDFs
+  } else if (expired) {
+    render();
+  }
+  startDocsPolling();
+}
+
+function startDocsPolling() {
+  if (docsPollTimer) return;
+  if (!Object.keys(getPendingDocs()).length) return;
+  docsPollTimer = setTimeout(pollForDocs, DOCS_POLL_MS);
 }
 
 function jobCard(job, isApplied, isDropboxSaved) {
@@ -1279,11 +1379,16 @@ function jobCard(job, isApplied, isDropboxSaved) {
       <div class="btn-row save-dropbox-row">
         <button class="copy-btn save-dropbox-btn${isDropboxSaved ? ' is-saved' : ''}" data-save-dropbox="1">${isDropboxSaved ? 'Saved to Dropbox ✓' : 'Save to Dropbox'}</button>
       </div>` : ''}
-      ${needsDocs ? `
+      ${needsDocs ? (pendingDocs[job.id] ? `
+      <div class="write-docs is-waiting">
+        <span class="write-docs-spinner" aria-hidden="true"></span>
+        <span class="write-docs-hint">Writing your CV and cover letter. They will appear here on their own, usually within a few minutes.</span>
+        <button class="write-docs-cancel" data-cancel-docs="${escapeHtml(job.id || '')}">Cancel</button>
+      </div>` : `
       <div class="write-docs">
         <button class="write-docs-btn" data-write-docs="${escapeHtml(job.id || '')}">Write CV &amp; cover letter</button>
         <span class="write-docs-hint">Opens Claude to write them for this job. Nothing is written until you ask.</span>
-      </div>` : ''}
+      </div>`) : ''}
       ${hasLetter ? `
       <details>
         <summary>Cover letter (ready to send)</summary>
@@ -1570,9 +1675,18 @@ document.addEventListener('click', (e) => {
   const job = findJobById(btn.dataset.writeDocs);
   if (!job) return;
   window.open(buildClaudeDeepLink(buildWriteDocsMessage(job)), '_blank');
-  const original = btn.textContent;
-  btn.textContent = 'Opening Claude…';
-  setTimeout(() => { btn.textContent = original; }, 2500);
+  markDocsPending(job.id);
+  render();
+  startDocsPolling();
+});
+
+// If she changes her mind, or the Claude session never finished, this puts the
+// card back to a plain button rather than leaving it waiting.
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('[data-cancel-docs]');
+  if (!btn) return;
+  clearDocsPending(btn.dataset.cancelDocs);
+  render();
 });
 
 document.getElementById('appForm').addEventListener('submit', (e) => {
@@ -1600,6 +1714,7 @@ document.getElementById('appForm').addEventListener('submit', (e) => {
   await loadLeads();
   await loadTc();
   renderApps();
+  startDocsPolling();   // a job asked for before the page was closed is still coming
 })();
 </script>
 </body>
