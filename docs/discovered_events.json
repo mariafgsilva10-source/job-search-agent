@@ -1,37 +1,17 @@
 {
-  "generated_at": "2026-09-08T07:07:39Z",
+  "generated_at": "2026-09-08T20:56:25Z",
   "note": "Unverified leads from a daily sweep of London law firms' own application portals and events pages - the places firms announce open days before (or instead of) Legal Cheek listing them. Nothing here has been checked yet: a lead only reaches the Open Days tab once its dates, eligibility and apply link have been confirmed on the firm's own site.",
   "first_run": false,
   "counts": {
     "sources_checked": 52,
     "sources_failed": 7,
-    "leads_total": 28,
+    "leads_total": 26,
     "duplicates_merged": 4,
     "new_today": 0,
-    "new_last_7_days": 28
+    "new_last_7_days": 26
   },
   "new_today": [],
   "leads": [
-    {
-      "id": "4f76e65dbbec605c",
-      "firm": "A&O Shearman",
-      "title": "London Training Contract Open Evening - 21st September 2026",
-      "url": "https://careers.aoshearman.com/en/job/london/london-training-contract-open-evening-21st-september-2026/3392/43423843008",
-      "source_page": "https://careers.aoshearman.com/en/early-careers-london",
-      "first_seen": "2026-09-06",
-      "is_new": false,
-      "status": "unverified"
-    },
-    {
-      "id": "dc30c4c5e2b20227",
-      "firm": "A&O Shearman",
-      "title": "London Open Day - 9th October 2026",
-      "url": "https://careers.aoshearman.com/en/job/london/london-open-day-9th-october-2026/3392/43410641600",
-      "source_page": "https://careers.aoshearman.com/en/early-careers-london",
-      "first_seen": "2026-09-06",
-      "is_new": false,
-      "status": "unverified"
-    },
     {
       "id": "6e42338b2c3d9e60",
       "firm": "Addleshaw Goddard",
