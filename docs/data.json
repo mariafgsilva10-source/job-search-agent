@@ -10,7 +10,117 @@
         "location": "London, UK",
         "salary": "\u00a337710-37710",
         "url": "https://www.adzuna.co.uk/jobs/land/ad/5874840768?se=HmLvxVOr8RGl-_JRamYmYw&utm_medium=api&utm_source=d98dd21f&v=1BB4906396D620CF72C32AEDC80B26CAB6047D23",
-        "description": "We are currently recruiting for a Knowledge Paralegal to join our Global Financial Markets Group. Department purpose Our Global Financial Markets (GFM) team covers an exciting and broad area of finance. We work with colleagues across practice groups and jurisdictions on helping the world\u2019s most successful companies fund themselves and manage risk. Our work shapes market practice and our lawyers are involved in innovative, cutting edge and high-profile deals. We have advised on many industry \u2018fi\u2026"
+        "description": "We are currently recruiting for a Knowledge Paralegal to join our Global Financial Markets Group. Department purpose Our Global Financial Markets (GFM) team covers an exciting and broad area of finance. We work with colleagues across practice groups and jurisdictions on helping the world\u2019s most successful companies fund themselves and manage risk. Our work shapes market practice and our lawyers are involved in innovative, cutting edge and high-profile deals. We have advised on many industry \u2018fi\u2026",
+        "cover_letter": "Dear Hiring Manager,\n\nI am applying for the Knowledge Paralegal role in A&O Shearman's Global Financial Markets Group. My interest in financial markets work developed from a specific point. At the A&O Shearman open day in August 2026, a session on private equity transactions and a workshop on lender security, including examples involving aircraft and ship financing, gave me a concrete picture of how legal work shapes market practice at the transactional level. I followed that up by completing a Coursera course on private equity, studying fund structures, leverage and exit strategies, because I wanted to understand the commercial mechanics that sit behind the legal documentation. That progression is why a knowledge-focused role in GFM is the right next step for me, not a generic ambition.\n\nMy research and writing skills have been tested in contexts that translate directly to knowledge work. At BCLP, across a year-long placement in international arbitration and real estate disputes, I drafted procedural histories, amended sections of a claimant's memorial and prepared procedural orders. I also conducted legal and factual research on easements, leasehold issues and rights of light, writing up findings in a form the fee-earner could use immediately. At Q-Legal, I produced a formal written advice letter on UK GDPR obligations for a data-driven start-up, translating statutory requirements into commercially focused guidance under a solicitor's supervision. Both roles required me to frame legal analysis clearly for a specific audience rather than reproduce the law in the abstract.\n\nOrganising and maintaining structured materials under pressure is something I have done consistently. At BCLP I became the sole junior supporting an arbitration team shortly before a significant submission deadline, coordinating documents, tracking outstanding actions and helping ensure on-time filing. At Citizens Advice I now manage matters from instruction to submission, maintaining confidential case records and meeting deadlines across a varied caseload. I understand that knowledge work depends on that same discipline applied to resources and outputs the wider team relies on.\n\nA&O Shearman is where the interest started, and this role is a direct extension of that.\n\nYours sincerely,\nMaria Silva",
+        "adapted_cv": {
+          "summary": "LLB and LLM graduate with practical experience in legal research, drafting and document management gained at BCLP, Q-Legal and Citizens Advice. Experienced in producing clear written analysis, organising and maintaining structured case materials, and translating complex legal and regulatory requirements into accessible outputs. Developing interest in financial markets and private equity work, followed up through independent study of fund structures, leverage and transactional mechanics. Accurate, organised and comfortable working to tight deadlines across competing matters.",
+          "education": [
+            {
+              "title": "Comparative and International Dispute Resolution LLM \u2014 Merit",
+              "institution": "Queen Mary University of London",
+              "dateline": "Sept 2024 \u2013 Oct 2025",
+              "bullets": [
+                "Modules in international arbitration, dispute resolution, procedural issues, legal research and evidence analysis",
+                "Transnational Law and Governance Applied module (data privacy and democracy) \u2014 75%",
+                "Dissertation on data protection and the development of GDPR across jurisdictions"
+              ]
+            },
+            {
+              "title": "Law LLB \u2014 2:1",
+              "institution": "University College London",
+              "dateline": "Sept 2020 \u2013 June 2024",
+              "bullets": [
+                "Modules included Advanced Contract Law, Commercial Law, Company Law and Alternative Dispute Resolution"
+              ]
+            },
+            {
+              "title": "International Foundation Programme \u2014 Law and International Relations",
+              "institution": "King's College London",
+              "dateline": "Sept 2019 \u2013 June 2020",
+              "bullets": [
+                "Awarded the Leaders of Tomorrow prize (top 20 of a 200-student cohort; partial funding toward undergraduate degree)"
+              ]
+            }
+          ],
+          "experience": [
+            {
+              "employer": "Bryan Cave Leighton Paisner LLP (BCLP)",
+              "location": "London",
+              "role": "Legal Placement Student \u2014 International Arbitration",
+              "dateline": "Aug 2023 \u2013 Feb 2024",
+              "bullets": [
+                "Conducted legal research and drafted procedural histories, procedural orders and sections of the Claimant's memorial in a complex investment arbitration",
+                "Became the sole junior supporting the team before a significant submission deadline: coordinated documents, tracked outstanding actions and helped ensure on-time filing",
+                "Reviewed and organised large volumes of evidence for procedural submissions; maintained structured electronic case files and monitored procedural deadlines",
+                "Liaised with the client on required documents; coordinated Romanian translations with an external translator",
+                "Received feedback from a partner and associate that performance was comparable to a newly qualified solicitor"
+              ]
+            },
+            {
+              "employer": "Bryan Cave Leighton Paisner LLP (BCLP)",
+              "location": "London",
+              "role": "Legal Placement Student \u2014 Real Estate Disputes",
+              "dateline": "Feb 2024 \u2013 Aug 2024",
+              "bullets": [
+                "Conducted legal and factual research on rights of light, easements, leasehold issues and landlord and tenant disputes; wrote up findings for immediate use by fee-earners",
+                "Supported hearing preparation: reviewed documents, prepared electronic bundles and assisted with skeleton arguments and court materials",
+                "Maintained matter records via iManage; assisted with court filings, deadline tracking and cost comparisons across several concurrent matters"
+              ]
+            },
+            {
+              "employer": "Citizens Advice East Berkshire",
+              "location": "Maidenhead",
+              "role": "Legal Adviser",
+              "dateline": "July 2026 \u2013 Present",
+              "bullets": [
+                "Manages matters from instruction to submission: drafts correspondence, prepares applications and document schedules, maintains confidential case records and meets deadlines across a varied caseload",
+                "Interviews clients, takes detailed factual statements, establishes chronologies and identifies relevant legal and evidential issues across welfare, employment, housing and debt matters",
+                "Assesses eligibility against statutory and regulatory criteria; researches complex points; translates detailed rules into clear, practical guidance for vulnerable individuals"
+              ]
+            },
+            {
+              "employer": "Q-Legal",
+              "location": "London",
+              "role": "Legal Adviser",
+              "dateline": "Oct 2024 \u2013 Jan 2025",
+              "bullets": [
+                "Produced a formal written advice letter on UK GDPR and Data Protection Act 2018 obligations for a data-driven start-up, including children's personal data and adtech, under a qualified solicitor's supervision",
+                "Identified legal and compliance risks from the client's data processing and recommended practical mitigations in commercially focused, accessible language",
+                "Coordinated with the client and supervising solicitor to meet the agreed deadline"
+              ]
+            },
+            {
+              "employer": "Adobe",
+              "location": "London",
+              "role": "Legal Intern",
+              "dateline": "June 2022 \u2013 Aug 2022",
+              "bullets": [
+                "Reviewed and amended software licensing agreements; identified contractual risks and assessed alignment with internal legal and compliance requirements",
+                "Researched UK GDPR, EU GDPR and cross-border personal data transfer requirements; reviewed confidentiality and data-processing provisions",
+                "Liaised with sales, legal and international business teams to resolve contractual queries and reconcile commercial objectives with legal risk",
+                "Prepared and delivered an internal presentation on breach-of-contract risks and mitigation measures"
+              ]
+            }
+          ],
+          "skills": [
+            {
+              "label": "Languages",
+              "text": "Portuguese (native), English (fluent), Spanish (basic)"
+            },
+            {
+              "label": "Technical skills",
+              "text": "Legal and commercial research; documentary analysis; concise report and advice writing; Microsoft Word, Excel and PowerPoint; iManage; legal research databases; electronic court filing portals; document review; electronic bundling; case management and time-recording systems"
+            },
+            {
+              "label": "Case and evidence management",
+              "text": "Evidence review, hearing bundles, procedural histories, structured case-file organisation, deadline tracking across concurrent matters"
+            }
+          ],
+          "name": "Maria Silva",
+          "contact": "38, Marlborough Road, Maidenhead, Berkshire \u00b7 +447935308070 \u00b7 mariafgsilva10@gmail.com \u00b7 linkedin.com/in/mariafgsilva10"
+        },
+        "cover_letter_pdf": "pdfs/adzuna_5874840768_cover_letter.pdf",
+        "cv_pdf": "pdfs/adzuna_5874840768_cv.pdf"
       },
       {
         "source": "adzuna",
