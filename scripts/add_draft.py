@@ -1,24 +1,23 @@
 """
 Attach a freshly written cover letter and adapted CV to a job, and render both PDFs.
 
-This is the one command the Claude session runs after the "Write CV & cover
-letter" button on the dashboard hands it a job. It exists so that route is a
-single deterministic step rather than several hand-edits of a 1.4MB JSON file.
+This is the hand-written route. The dashboard button does not use it: that runs
+the draft-one-job workflow, which drafts through the API and pushes by itself.
+Use this when a letter is written by hand, in a chat, or anywhere other than the
+API, and needs putting onto the dashboard in the same shape as everything else.
 
     python scripts/add_draft.py <job-id> <draft.json>
 
-<draft.json> is whatever the model wrote, in the same shape draft_materials.py
+<draft.json> is whatever was written, in the same shape draft_materials.py
 produces:
 
     {"cover_letter": "<body paragraphs only>", "adapted_cv": { ... }}
 
 What this does, in order:
 
-1. Checks the letter against Maria's absolute drafting rules (no dashes, no
-   colons, no contractions or abbreviations, no banned constructions). A
-   violation stops the run and prints the offending text, so it gets fixed
-   before anything is written. These are her hard rules, so they are enforced
-   here rather than left to the model remembering them.
+1. Checks the letter against Maria's absolute drafting rules, the same
+   check_letter() the API route uses. A violation stops the run and prints the
+   offending text, so it gets fixed before anything is written.
 2. Adds the fixed salutation and sign-off to the letter, and the fixed name and
    contact block to the CV, exactly as the API path does.
 3. Writes both onto that job in docs/data.json.
@@ -30,7 +29,6 @@ Then commit and push docs/data.json, docs/drafts.json and docs/pdfs.
 """
 
 import json
-import re
 import sys
 from pathlib import Path
 
@@ -42,77 +40,7 @@ from generate_pdfs import (
     safe_id,
     write_drafts_index,
 )
-from draft_materials import CV_CONTACT, CV_NAME
-
-# Maria's absolute drafting rules. Each is (label, pattern, hint). They apply to
-# the letter body only - the CV is bullet-shaped and uses different conventions.
-BANNED = [
-    (
-        "em dash or en dash",
-        re.compile(r"[—–]"),
-        "Rewrite as two sentences, or use a comma or parentheses.",
-    ),
-    (
-        "hyphen used as sentence punctuation",
-        re.compile(r"(?<=\s)-(?=\s)"),
-        "A hyphen inside a compound word is fine, a spaced one is not.",
-    ),
-    (
-        "colon",
-        re.compile(r":"),
-        "Rephrase as separate sentences.",
-    ),
-    (
-        "contraction",
-        re.compile(
-            r"\b(?:do|does|did|is|are|was|were|has|have|had|would|should|could|will|ca|must)n't\b"
-            r"|\b(?:I|you|we|they|he|she|it|that|there|here|who|what|let)'(?:s|re|ve|ll|d|m)\b",
-            re.IGNORECASE,
-        ),
-        "Spell it out in full, for example \"do not\" in place of the short form.",
-    ),
-    (
-        "contrastive framing for where the interest came from",
-        re.compile(
-            r"\b(?:interest|interested|drawn|appeal\w*|motivat\w*|attracted)\b[^.]{0,90}\brather than\b",
-            re.IGNORECASE,
-        ),
-        "State directly where the interest comes from, with no contrast.",
-    ),
-    (
-        "\"where X meets Y\" construction",
-        re.compile(r"\bwhere\b[^.]{0,60}\bmeets\b", re.IGNORECASE),
-        "Say what the work actually involves instead.",
-    ),
-    (
-        "salutation or sign-off in the body",
-        re.compile(r"^\s*(?:Dear\b|Yours (?:sincerely|faithfully)\b)", re.IGNORECASE | re.MULTILINE),
-        "Write the body paragraphs only, both are added automatically.",
-    ),
-]
-
-MAX_WORDS = 380
-
-
-def context(text, match, width=60):
-    start = max(0, match.start() - width)
-    end = min(len(text), match.end() + width)
-    return ("..." if start else "") + text[start:end].replace("\n", " ") + ("..." if end < len(text) else "")
-
-
-def check_letter(body):
-    """Return a list of human-readable problems with the letter body."""
-    problems = []
-    for label, pattern, hint in BANNED:
-        for m in pattern.finditer(body):
-            problems.append(f"{label}: ...{context(body, m)}...\n      {hint}")
-            break        # one example per rule is enough to act on
-    words = len(body.split())
-    if words > MAX_WORDS:
-        problems.append(
-            f"too long: {words} words. Keep it under {MAX_WORDS} so it stays on one page."
-        )
-    return problems
+from draft_materials import CV_CONTACT, CV_NAME, check_letter
 
 
 def find_job(history, job_id):
