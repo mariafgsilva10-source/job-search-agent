@@ -327,6 +327,46 @@
     text-decoration: underline;
     cursor: pointer;
   }
+  .write-docs-btn[disabled] { opacity: 0.6; cursor: default; }
+  .write-docs-error {
+    margin-top: 6px;
+    font-size: 0.78rem;
+    color: #8a2a2a;
+    background: #fdf0f0;
+    border: 1px solid #f0d3d3;
+    border-radius: 6px;
+    padding: 6px 9px;
+  }
+
+  .gh-setup {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 18px;
+    background: #fbfbfa;
+  }
+  .gh-setup-help { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+  .gh-setup-help p { margin: 0 0 8px; }
+  .gh-setup-help ul { margin: 0 0 8px; padding-left: 20px; }
+  .gh-setup-help li { margin-bottom: 3px; }
+  .gh-setup-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin-top: 4px;
+  }
+  .gh-setup-row input {
+    font-family: inherit;
+    font-size: 0.82rem;
+    padding: 6px 9px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    flex: 1 1 260px;
+    min-width: 0;
+  }
+  .gh-setup-msg { font-size: 0.78rem; color: var(--muted); margin-top: 8px; }
+  .gh-setup-msg.is-bad { color: #8a2a2a; }
   .add-event { margin-bottom: 20px; }
   .add-event > summary {
     cursor: pointer;
@@ -492,6 +532,24 @@
     <input type="checkbox" id="hideAppliedToggle">
     <label for="hideAppliedToggle">Hide jobs marked as applied</label>
     <span class="dropbox-status" id="dropboxStatus"></span>
+    <span class="dropbox-status" id="githubStatus"></span>
+  </div>
+  <div class="gh-setup" id="ghSetup" hidden>
+    <div class="gh-setup-help">
+      <p>The "Generate CV &amp; cover letter" button writes your documents on GitHub, where your Anthropic key already lives as a repository secret. This page never sees that key. It needs a GitHub token of its own so it is allowed to start the run.</p>
+      <p>On GitHub, open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">Settings &rarr; Developer settings &rarr; Fine-grained tokens</a> and make one with:</p>
+      <ul>
+        <li>Repository access &mdash; only <strong>job-search-agent</strong></li>
+        <li>Repository permissions &rarr; <strong>Actions</strong> set to <strong>Read and write</strong></li>
+      </ul>
+      <p>That token can start this one workflow in this one repository and nothing else. It is saved in this browser only, exactly like your Dropbox connection, and never leaves it except to talk to GitHub.</p>
+    </div>
+    <div class="gh-setup-row">
+      <input type="password" id="ghTokenInput" placeholder="Paste your token here" autocomplete="off" spellcheck="false">
+      <button class="dropbox-btn" id="ghTokenSave">Save</button>
+      <button class="dropbox-btn" id="ghTokenCancel">Cancel</button>
+    </div>
+    <div class="gh-setup-msg" id="ghSetupMsg"></div>
   </div>
   <div id="root"><div class="empty">Loading…</div></div>
   </div>
@@ -919,6 +977,7 @@ function findJobById(id) {
 
 let lastHistory = null;
 let pendingDocs = {};   // job ids whose documents are being written right now
+const docErrors = {};   // job id -> why the last attempt to start a run failed
 
 async function load() {
   const root = document.getElementById('root');
@@ -1242,48 +1301,82 @@ function companySearchUrl(job) {
   return 'https://www.google.com/search?q=' + encodeURIComponent(q);
 }
 
-// The daily run no longer writes a cover letter and CV for every job it
-// finds - that was paying for ten sets of documents a day when Maria applies
-// to a handful. Instead each job carries a button that opens Claude with
-// everything it needs to write them, so the cost lands only on the jobs she
-// actually wants. This builds that request.
-function buildWriteDocsMessage(job) {
-  const bits = [
-    `Please write my cover letter and a CV adapted for this job, then put them on my dashboard.`,
-    ``,
-    `JOB`,
-    `Title: ${job.title || ''}`,
-    `Employer: ${job.employer || ''}`,
-    `Location: ${job.location || ''}`,
-  ];
-  if (job.salary) bits.push(`Salary: ${job.salary}`);
-  if (job.url) bits.push(`Listing: ${job.url}`);
-  bits.push(`Job id: ${job.id || ''}`);
-  if (job.description) {
-    bits.push(``, `DESCRIPTION`, String(job.description).slice(0, 3000));
-  }
-  bits.push(
-    ``,
-    `HOW`,
-    `My dashboard repo is https://github.com/mariafgsilva10-source/job-search-agent.`,
-    `Clone it. Read SYSTEM_PROMPT in scripts/draft_materials.py and follow every rule`,
-    `in it exactly, using data/base_cv.md as my background. Write the letter body only,`,
-    `under 350 words, with no salutation and no sign-off, and an adapted_cv object in`,
-    `the shape SYSTEM_PROMPT describes.`,
-    ``,
-    `Save both to draft.json as {"cover_letter": "...", "adapted_cv": {...}}, then run`,
-    ``,
-    `  python scripts/add_draft.py ${job.id || ''} draft.json`,
-    ``,
-    `That checks the letter against my drafting rules and tells you what to fix if it`,
-    `breaks any of them. Once it passes it renders both PDFs and updates the dashboard`,
-    `files. Then commit and push docs/data.json, docs/drafts.json and docs/pdfs to main.`,
-    ``,
-    `Please do all of that in one go without stopping to check with me. My dashboard`,
-    `picks the PDFs up on its own once they are pushed. Show me the finished letter at`,
-    `the end so I can ask for changes if I want any.`
+// The daily run does not write documents for every job it finds - that was
+// paying for ten sets a day when Maria applies to a handful. Each job carries a
+// button instead, and this is what it starts.
+//
+// The page is public, so it can never hold an API key. Her Anthropic key lives
+// as a repository secret on GitHub, and the button asks GitHub to run the
+// drafting workflow there. What this page holds is a GitHub token limited to
+// starting that one workflow in that one repository, kept in this browser only.
+const GH_REPO = 'mariafgsilva10-source/job-search-agent';
+const GH_WORKFLOW = 'draft-one-job.yml';
+const GH_TOKEN_KEY = 'githubToken';
+
+function getGithubToken() {
+  try { return localStorage.getItem(GH_TOKEN_KEY) || ''; } catch (e) { return ''; }
+}
+function saveGithubToken(t) {
+  try { localStorage.setItem(GH_TOKEN_KEY, t); } catch (e) {}
+}
+function clearGithubToken() {
+  try { localStorage.removeItem(GH_TOKEN_KEY); } catch (e) {}
+}
+function isGithubConnected() { return !!getGithubToken(); }
+
+function ghHeaders() {
+  return {
+    'Authorization': 'Bearer ' + getGithubToken(),
+    'Accept': 'application/vnd.github+json',
+    'X-GitHub-Api-Version': '2022-11-28',
+  };
+}
+
+function renderGithubStatus() {
+  const el = document.getElementById('githubStatus');
+  if (!el) return;
+  el.innerHTML = isGithubConnected()
+    ? `<span class="dropbox-connected-label">Document writing on</span><button class="dropbox-btn" id="ghDisconnectBtn">Disconnect</button>`
+    : `<button class="dropbox-btn" id="ghConnectBtn">Set up document writing</button>`;
+}
+
+// Turns whatever GitHub said into something worth reading. A token problem and
+// a workflow problem look the same from here otherwise.
+function ghProblem(status, body) {
+  if (status === 401) return 'That GitHub token is not valid any more. Set it up again.';
+  if (status === 403) return 'That token cannot start workflow runs. It needs Actions set to Read and write.';
+  if (status === 404) return 'GitHub could not find the workflow, which usually means the token cannot see this repository.';
+  if (status === 422) return 'GitHub refused the run: ' + ((body && body.message) || 'unprocessable request') + '.';
+  return 'GitHub returned ' + status + ((body && body.message) ? ': ' + body.message : '') + '.';
+}
+
+async function dispatchDraftRun(jobId) {
+  const res = await fetch(
+    `https://api.github.com/repos/${GH_REPO}/actions/workflows/${GH_WORKFLOW}/dispatches`,
+    {
+      method: 'POST',
+      headers: { ...ghHeaders(), 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ref: 'main', inputs: { job_id: jobId } }),
+    }
   );
-  return bits.join('\n');
+  if (res.status === 204) return;                 // GitHub says nothing on success
+  let body = null;
+  try { body = await res.json(); } catch (e) {}
+  throw new Error(ghProblem(res.status, body));
+}
+
+// Checked when a token is saved, so a bad one is caught then rather than on the
+// first job. Read access to the workflow is not proof it can start a run, but it
+// catches a wrong, expired or wrongly-scoped token straight away.
+async function checkGithubToken() {
+  const res = await fetch(
+    `https://api.github.com/repos/${GH_REPO}/actions/workflows/${GH_WORKFLOW}`,
+    { headers: ghHeaders() }
+  );
+  if (res.ok) return;
+  let body = null;
+  try { body = await res.json(); } catch (e) {}
+  throw new Error(ghProblem(res.status, body));
 }
 
 // After the button is clicked, the documents are written in a separate Claude
@@ -1382,13 +1475,16 @@ function jobCard(job, isApplied, isDropboxSaved) {
       ${needsDocs ? (pendingDocs[job.id] ? `
       <div class="write-docs is-waiting">
         <span class="write-docs-spinner" aria-hidden="true"></span>
-        <span class="write-docs-hint">Writing your CV and cover letter. They will appear here on their own, usually within a few minutes.</span>
+        <span class="write-docs-hint">Writing your CV and cover letter. They will appear here on their own, usually in a couple of minutes.</span>
         <button class="write-docs-cancel" data-cancel-docs="${escapeHtml(job.id || '')}">Cancel</button>
       </div>` : `
       <div class="write-docs">
-        <button class="write-docs-btn" data-write-docs="${escapeHtml(job.id || '')}">Write CV &amp; cover letter</button>
-        <span class="write-docs-hint">Opens Claude to write them for this job. Nothing is written until you ask.</span>
-      </div>`) : ''}
+        <button class="write-docs-btn" data-write-docs="${escapeHtml(job.id || '')}">Generate CV &amp; cover letter</button>
+        <span class="write-docs-hint">${docErrors[job.id]
+          ? ''
+          : 'Written for this job when you ask, never before.'}</span>
+      </div>
+      ${docErrors[job.id] ? `<div class="write-docs-error">${escapeHtml(docErrors[job.id])}</div>` : ''}`) : ''}
       ${hasLetter ? `
       <details>
         <summary>Cover letter (ready to send)</summary>
@@ -1666,27 +1762,99 @@ document.addEventListener('click', (e) => {
   if (btn) deleteManualEvent(btn.dataset.removeManual);
 });
 
-// "Write CV & cover letter" - hands the job to Claude rather than calling any
-// API from this page. The page is public, so it holds no key and can't spend
-// anything on its own; the work happens in the Claude app when Maria asks.
-document.addEventListener('click', (e) => {
+// "Generate CV & cover letter". Everything happens from this page: the run
+// starts on GitHub, the card waits, and the finished PDFs come back to it.
+document.addEventListener('click', async (e) => {
   const btn = e.target.closest('[data-write-docs]');
   if (!btn) return;
-  const job = findJobById(btn.dataset.writeDocs);
+  const jobId = btn.dataset.writeDocs;
+  const job = findJobById(jobId);
   if (!job) return;
-  window.open(buildClaudeDeepLink(buildWriteDocsMessage(job)), '_blank');
-  markDocsPending(job.id);
-  render();
-  startDocsPolling();
+
+  if (!isGithubConnected()) {
+    openGithubSetup('Set this up once and the button works from then on.');
+    return;
+  }
+
+  delete docErrors[jobId];
+  btn.disabled = true;
+  btn.textContent = 'Starting…';
+  try {
+    await dispatchDraftRun(jobId);
+    markDocsPending(jobId);
+    render();
+    startDocsPolling();
+  } catch (err) {
+    docErrors[jobId] = (err && err.message) || String(err);
+    render();
+  }
 });
 
-// If she changes her mind, or the Claude session never finished, this puts the
-// card back to a plain button rather than leaving it waiting.
+// If she changes her mind, or the run failed on GitHub, this puts the card back
+// to a plain button rather than leaving it waiting.
 document.addEventListener('click', (e) => {
   const btn = e.target.closest('[data-cancel-docs]');
   if (!btn) return;
   clearDocsPending(btn.dataset.cancelDocs);
   render();
+});
+
+// ---------- Setting up the GitHub token ----------
+
+function openGithubSetup(msg) {
+  const panel = document.getElementById('ghSetup');
+  const note = document.getElementById('ghSetupMsg');
+  if (!panel) return;
+  panel.hidden = false;
+  note.textContent = msg || '';
+  note.className = 'gh-setup-msg';
+  const input = document.getElementById('ghTokenInput');
+  input.value = '';
+  input.focus();
+  panel.scrollIntoView({ block: 'nearest' });
+}
+
+function closeGithubSetup() {
+  const panel = document.getElementById('ghSetup');
+  if (!panel) return;
+  document.getElementById('ghTokenInput').value = '';   // never leave it lying around
+  panel.hidden = true;
+}
+
+document.addEventListener('click', async (e) => {
+  if (e.target.closest('#ghConnectBtn')) {
+    openGithubSetup('');
+    return;
+  }
+  if (e.target.closest('#ghDisconnectBtn')) {
+    clearGithubToken();
+    renderGithubStatus();
+    return;
+  }
+  if (e.target.closest('#ghTokenCancel')) {
+    closeGithubSetup();
+    return;
+  }
+  if (e.target.closest('#ghTokenSave')) {
+    const input = document.getElementById('ghTokenInput');
+    const note = document.getElementById('ghSetupMsg');
+    const token = input.value.trim();
+    if (!token) { note.textContent = 'Paste the token first.'; return; }
+    note.textContent = 'Checking…';
+    note.className = 'gh-setup-msg';
+    saveGithubToken(token);
+    try {
+      await checkGithubToken();
+      closeGithubSetup();
+      renderGithubStatus();
+      render();
+    } catch (err) {
+      clearGithubToken();                              // do not keep one that does not work
+      note.textContent = (err && err.message) || String(err);
+      note.className = 'gh-setup-msg is-bad';
+      renderGithubStatus();
+    }
+  }
 });
 
 document.getElementById('appForm').addEventListener('submit', (e) => {
@@ -1709,6 +1877,7 @@ document.getElementById('appForm').addEventListener('submit', (e) => {
   showTab(getActiveTab());
   await handleDropboxRedirect();
   renderDropboxStatus();
+  renderGithubStatus();
   await load();
   await loadOpenDays();
   await loadLeads();
