@@ -54,11 +54,8 @@ def esc(s):
 
 # ---------- Cover letter ----------
 
-def render_cover_letter_pdf(job, out_path):
-    text = (job.get("cover_letter") or "").strip()
-    if not text or text.startswith("(drafting failed"):
-        return False
-
+def _build_cover_letter(text, out_path, title, font_size, leading, gap):
+    """Build the letter at one particular size. Returns the page count."""
     name_style = ParagraphStyle(
         "Name", fontName="Helvetica-Bold", fontSize=13, textColor=ACCENT, leading=16,
     )
@@ -69,15 +66,15 @@ def render_cover_letter_pdf(job, out_path):
         "Date", fontName="Helvetica", fontSize=10.5, textColor=INK, leading=14,
     )
     body_style = ParagraphStyle(
-        "Body", fontName="Helvetica", fontSize=11, textColor=INK, leading=16,
-        spaceAfter=11,
+        "Body", fontName="Helvetica", fontSize=font_size, textColor=INK,
+        leading=leading, spaceAfter=gap,
     )
 
     doc = SimpleDocTemplate(
         str(out_path), pagesize=A4,
         topMargin=2.4 * cm, bottomMargin=2.4 * cm,
         leftMargin=2.2 * cm, rightMargin=2.2 * cm,
-        title=f"Cover letter - {job.get('title', '')}",
+        title=title,
     )
 
     story = [
@@ -93,6 +90,34 @@ def render_cover_letter_pdf(job, out_path):
             story.append(Paragraph(esc(para).replace("\n", "<br/>"), body_style))
 
     doc.build(story)
+    return doc.page
+
+
+# A cover letter must always fit on one page. The drafting prompt asks for a
+# length that does, but the rule is absolute, so rather than trusting the word
+# count we build the letter and, if it spills onto a second page, rebuild it a
+# notch tighter. The steps are small enough that the last one still reads well.
+LETTER_SIZES = [
+    (11, 16, 11),
+    (10.5, 15, 10),
+    (10, 14, 9),
+    (9.5, 13, 8),
+]
+
+
+def render_cover_letter_pdf(job, out_path):
+    text = (job.get("cover_letter") or "").strip()
+    if not text or text.startswith("(drafting failed"):
+        return False
+
+    title = f"Cover letter - {job.get('title', '')}"
+    for font_size, leading, gap in LETTER_SIZES:
+        pages = _build_cover_letter(text, out_path, title, font_size, leading, gap)
+        if pages <= 1:
+            return True
+    # Even the tightest setting spilled over. The file on disk is the tightest
+    # version, which is the closest we can get without rewriting her words.
+    print(f"  Note: cover letter for {job.get('id')} still runs to {pages} pages - it is too long")
     return True
 
 
@@ -214,6 +239,29 @@ def render_cv_pdf(job, out_path):
     return True
 
 
+DRAFTS_FILE = DOCS_DIR / "drafts.json"
+
+
+def write_drafts_index(history):
+    """Write the small index the dashboard polls after asking for documents.
+
+    data.json is well over a megabyte, so the page cannot re-fetch it every few
+    seconds to find out whether a job's documents have landed. This is the same
+    information in a few kilobytes: which jobs have PDFs, and where they are.
+    """
+    index = {}
+    for day in history:
+        for job in day.get("jobs", []):
+            jid = job.get("id")
+            if jid and (job.get("cover_letter_pdf") or job.get("cv_pdf")):
+                index[jid] = {
+                    "cover_letter_pdf": job.get("cover_letter_pdf"),
+                    "cv_pdf": job.get("cv_pdf"),
+                }
+    DRAFTS_FILE.write_text(json.dumps(index, indent=1))
+    return index
+
+
 def main():
     if not DATA_FILE.exists():
         print("No data.json found, nothing to render")
@@ -255,7 +303,8 @@ def main():
 
     if changed:
         DATA_FILE.write_text(json.dumps(history, indent=2))
-    print(f"Generated {generated} PDF(s), {failed} failure(s)")
+    index = write_drafts_index(history)
+    print(f"Generated {generated} PDF(s), {failed} failure(s); {len(index)} job(s) have documents")
 
 
 if __name__ == "__main__":
