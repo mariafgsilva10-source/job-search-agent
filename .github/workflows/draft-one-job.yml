@@ -1,0 +1,65 @@
+# Writes the cover letter and adapted CV for ONE job, on demand.
+#
+# The "Generate CV & cover letter" button on the dashboard starts this run. The
+# dashboard is a public page, so it can never hold an API key; it holds a GitHub
+# token scoped to starting this workflow, and the Anthropic key stays here as a
+# repository secret. That is the whole reason this file exists rather than the
+# page calling the API itself.
+#
+# It can also be run by hand from the Actions tab with a job id.
+name: Draft One Job
+
+on:
+  workflow_dispatch:
+    inputs:
+      job_id:
+        description: 'Job id from the dashboard (e.g. adzuna_5874840768)'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+# One at a time. Two runs finishing together would both push docs/data.json and
+# the second would lose to the first.
+concurrency:
+  group: draft-one-job
+  cancel-in-progress: false
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install anthropic reportlab
+
+      # Re-drafts if the letter breaks one of Maria's absolute rules, so what
+      # reaches the dashboard has already passed the same check the hand-written
+      # route applies.
+      - name: Write the documents
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/draft_materials.py --draft "${{ inputs.job_id }}"
+
+      - name: Render the PDFs
+        run: python scripts/generate_pdfs.py
+
+      - name: Publish to the dashboard
+        run: |
+          git config user.name "job-search-bot"
+          git config user.email "actions@github.com"
+          git add docs/data.json docs/drafts.json docs/pdfs
+          if git diff --staged --quiet; then
+            echo "Nothing new to publish - that job already had its documents"
+          else
+            git commit -m "Documents for ${{ inputs.job_id }}"
+            # The daily run may have pushed while this was drafting.
+            git pull --rebase --autostash origin main
+            git push
+          fi
