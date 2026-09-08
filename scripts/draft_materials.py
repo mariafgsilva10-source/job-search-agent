@@ -30,6 +30,7 @@ Either way the output shape is identical: a "cover_letter" string and an
 import argparse
 import os
 import json
+import re
 from pathlib import Path
 from datetime import date
 
@@ -217,6 +218,91 @@ no markdown fences, no preamble, no commentary or notes before or after it. The 
 first character of your response must be "{" and the very last character must be "}"."""
 
 
+# ---------- Maria's absolute drafting rules, checked rather than trusted ----------
+#
+# These are the rules she has been most consistent about, and the ones a model is
+# most likely to slip on. SYSTEM_PROMPT states them, and this checks them, so a
+# letter that breaks one never reaches her. Both drafting routes use this: the
+# API path re-drafts, and add_draft.py refuses to write.
+#
+# The letter BODY only. The CV is bullet-shaped and uses different conventions.
+BANNED = [
+    (
+        "em dash or en dash",
+        re.compile(r"[—–]"),
+        "Rewrite as two sentences, or use a comma or parentheses.",
+    ),
+    (
+        "hyphen used as sentence punctuation",
+        re.compile(r"(?<=\s)-(?=\s)"),
+        "A hyphen inside a compound word is fine, a spaced one is not.",
+    ),
+    (
+        "colon",
+        re.compile(r":"),
+        "Rephrase as separate sentences.",
+    ),
+    (
+        "contraction",
+        re.compile(
+            r"\b(?:do|does|did|is|are|was|were|has|have|had|would|should|could|will|ca|must)n't\b"
+            r"|\b(?:I|you|we|they|he|she|it|that|there|here|who|what|let)'(?:s|re|ve|ll|d|m)\b",
+            re.IGNORECASE,
+        ),
+        "Spell it out in full, for example \"do not\" in place of the short form.",
+    ),
+    (
+        "contrastive framing for where the interest came from",
+        re.compile(
+            r"\b(?:interest|interested|drawn|appeal\w*|motivat\w*|attracted)\b[^.]{0,90}\brather than\b",
+            re.IGNORECASE,
+        ),
+        "State directly where the interest comes from, with no contrast.",
+    ),
+    (
+        "\"where X meets Y\" construction",
+        re.compile(r"\bwhere\b[^.]{0,60}\bmeets\b", re.IGNORECASE),
+        "Say what the work actually involves instead.",
+    ),
+    (
+        "salutation or sign-off in the body",
+        re.compile(r"^\s*(?:Dear\b|Yours (?:sincerely|faithfully)\b)", re.IGNORECASE | re.MULTILINE),
+        "Write the body paragraphs only, both are added automatically.",
+    ),
+]
+
+MAX_WORDS = 380
+
+
+def quote_around(text, match, width=60):
+    start = max(0, match.start() - width)
+    end = min(len(text), match.end() + width)
+    return ("..." if start else "") + text[start:end].replace("\n", " ") + ("..." if end < len(text) else "")
+
+
+def check_letter(body):
+    """Return a list of human-readable problems with the letter body."""
+    problems = []
+    for label, pattern, hint in BANNED:
+        for m in pattern.finditer(body):
+            problems.append(f"{label}: ...{quote_around(body, m)}...\n      {hint}")
+            break        # one example per rule is enough to act on
+    words = len(body.split())
+    if words > MAX_WORDS:
+        problems.append(
+            f"too long: {words} words. Keep it under {MAX_WORDS} so it stays on one page."
+        )
+    return problems
+
+
+def strip_fixed_parts(letter):
+    """Recover just the body from a letter that already has the fixed wrapper."""
+    body = (letter or "").strip()
+    body = re.sub(r"^\s*Dear Hiring Manager,\s*", "", body)
+    body = re.sub(r"\s*Yours sincerely,\s*Maria Silva\s*$", "", body)
+    return body.strip()
+
+
 def build_user_prompt(job, base_cv_text):
     return f"""BACKGROUND (Maria's full base CV):
 {base_cv_text}
@@ -229,13 +315,15 @@ JOB DESCRIPTION:
 """
 
 
-def draft_for_job(job, base_cv_text):
+def draft_for_job(job, base_cv_text, extra_instruction=None):
     # Imported here rather than at module scope so the default collect-only
     # run needs neither the anthropic package nor an API key.
     import anthropic
 
     client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
     user_prompt = build_user_prompt(job, base_cv_text)
+    if extra_instruction:
+        user_prompt += "\n" + extra_instruction
 
     resp = client.messages.create(
         model="claude-sonnet-4-6",
@@ -284,6 +372,41 @@ def load_history(dashboard_file):
     return []
 
 
+MAX_ATTEMPTS = 3
+
+
+def draft_checked(job, base_cv_text):
+    """Draft, and re-draft while the letter breaks one of the hard rules.
+
+    The rules are absolute, so a letter that breaks one is not worth saving.
+    The specific violations go back to the model rather than a general reminder,
+    which is what makes a second attempt actually different from the first.
+    """
+    extra = None
+    result = None
+    for attempt in range(1, MAX_ATTEMPTS + 1):
+        result = draft_for_job(job, base_cv_text, extra)
+        body = strip_fixed_parts(result.get("cover_letter"))
+        problems = check_letter(body)
+        if not problems:
+            if attempt > 1:
+                print(f"    Passed on attempt {attempt}")
+            return result
+        print(f"    Attempt {attempt} broke {len(problems)} rule(s), asking again")
+        for p in problems:
+            print(f"      - {p.splitlines()[0]}")
+        extra = (
+            "Your previous draft broke these absolute rules. Write it again from "
+            "scratch, fixing every one of them and keeping everything else that "
+            "worked.\n" + "\n".join(f"- {p}" for p in problems)
+        )
+
+    # Out of attempts. Keep the last draft so she has something to work from,
+    # and say plainly that it still needs a look.
+    print(f"    Gave up after {MAX_ATTEMPTS} attempts; saving the last draft anyway")
+    return result
+
+
 def draft_existing_jobs(targets):
     """Draft for jobs already on the dashboard, named by id (or "all").
 
@@ -309,7 +432,7 @@ def draft_existing_jobs(targets):
     for job in todo:
         print(f"  {job['title']} @ {job['employer']}")
         try:
-            job.update(draft_for_job(job, base_cv_text))
+            job.update(draft_checked(job, base_cv_text))
         except Exception as e:                       # noqa: BLE001 - one bad job must not lose the rest
             print(f"    Failed: {e}")
 
