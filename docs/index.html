@@ -367,6 +367,34 @@
   }
   .gh-setup-msg { font-size: 0.78rem; color: var(--muted); margin-top: 8px; }
   .gh-setup-msg.is-bad { color: #8a2a2a; }
+
+  .manual-controls { margin-bottom: 14px; min-height: 1.2em; }
+  .manual-stale-note { font-size: 0.82rem; color: var(--muted); }
+  .manual-card.is-done { opacity: 0.62; }
+  .manual-why {
+    font-size: 0.83rem;
+    color: var(--muted);
+    line-height: 1.5;
+    margin: 6px 0 10px;
+  }
+  .manual-kind {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border-radius: 4px;
+    padding: 2px 7px;
+    margin-right: 7px;
+    border: 1px solid;
+    vertical-align: 1px;
+  }
+  .manual-kind-blocked { color: #7a3d12; background: #fdf3e7; border-color: #f0dcc2; }
+  .manual-kind-javascript { color: #2f4f6f; background: #eaf1f7; border-color: #c6d8e6; }
+  .manual-kind-moved { color: #6b4a86; background: #f6f1fa; border-color: #e2d6ec; }
+  .manual-kind-site-error,
+  .manual-kind-unreachable,
+  .manual-kind-unknown { color: #4d4d4d; background: #f2f2f0; border-color: #e0e0dc; }
+  .manual-checked-label { font-size: 0.78rem; color: var(--muted); align-self: center; }
   .add-event { margin-bottom: 20px; }
   .add-event > summary {
     cursor: pointer;
@@ -508,6 +536,7 @@
     <button class="tab-btn active" data-tab="jobs" id="tabJobsBtn">Job Search</button>
     <button class="tab-btn" data-tab="opendays" id="tabOpenDaysBtn">Open Days &amp; Insight Days</button>
     <button class="tab-btn" data-tab="tc" id="tabTcBtn">Training Contracts</button>
+    <button class="tab-btn" data-tab="manual" id="tabManualBtn">Check Yourself</button>
     <button class="tab-btn" data-tab="apps" id="tabAppsBtn">My Applications</button>
   </div>
 
@@ -582,6 +611,16 @@
   <div class="sub">Direct training contract deadlines open to graduates — auto-refreshed daily</div>
   <div class="oday-source-note">Sourced from <a href="https://www.legalcheek.com/key-deadlines-calendar/" target="_blank">Legal Cheek's deadlines calendar</a>, manually checked against each firm's own site so only training contracts open to graduates applying directly (no prior vacation scheme needed at that firm) are shown. Opening dates marked "estimated" are carried over from last year's cycle where the firm hadn't published this year's exact date yet — worth double-checking on the firm's site nearer the time.</div>
   <div id="root-tc"><div class="empty">Loading…</div></div>
+  </div>
+
+  <div class="tab-panel" id="panel-manual">
+  <h1>Check Yourself</h1>
+  <div class="sub">Firms the daily sweep cannot read — the only ones you need to look at by hand</div>
+  <div class="oday-source-note">Every other London firm on the list is swept automatically each morning, and anything it finds shows up under Open Days &amp; Insight Days. These are the ones it could not read. Most of them turn away automated visits, so their events will never appear on their own. Open each firm's page, and if you find something, add it with <strong>+ Add an event yourself</strong> on the Open Days tab so it sits with the rest and keeps its deadline.</div>
+  <div class="manual-controls">
+    <span class="manual-stale-note" id="manualStaleNote"></span>
+  </div>
+  <div id="root-manual"><div class="empty">Loading…</div></div>
   </div>
 
   <div class="tab-panel" id="panel-apps">
@@ -663,9 +702,134 @@ function showTab(tab) {
   document.getElementById('panel-jobs').classList.toggle('active', tab === 'jobs');
   document.getElementById('panel-opendays').classList.toggle('active', tab === 'opendays');
   document.getElementById('panel-tc').classList.toggle('active', tab === 'tc');
+  document.getElementById('panel-manual').classList.toggle('active', tab === 'manual');
   document.getElementById('panel-apps').classList.toggle('active', tab === 'apps');
   setActiveTab(tab);
 }
+
+// --- "Check Yourself": the firms the sweep cannot read ---
+//
+// Built from the failures the sweep records each morning, not a hand-kept list,
+// so a firm that starts blocking appears here by itself and one that is fixed
+// drops off. Marking a firm checked stores the date in this browser, which is
+// what makes a stale one obvious - the point of the tab is knowing which firms
+// you have not looked at lately, not just which ones are blocked.
+const MANUAL_CHECKED_KEY = 'manualFirmChecks';
+const STALE_AFTER_DAYS = 14;
+
+function getManualChecks() {
+  try { return JSON.parse(localStorage.getItem(MANUAL_CHECKED_KEY) || '{}'); }
+  catch (e) { return {}; }
+}
+function saveManualChecks(map) {
+  try { localStorage.setItem(MANUAL_CHECKED_KEY, JSON.stringify(map)); } catch (e) {}
+}
+function markFirmChecked(firm) {
+  const map = getManualChecks();
+  map[firm] = new Date().toISOString().slice(0, 10);
+  saveManualChecks(map);
+}
+function clearFirmChecked(firm) {
+  const map = getManualChecks();
+  delete map[firm];
+  saveManualChecks(map);
+}
+
+function daysSince(iso) {
+  if (!iso) return null;
+  const then = new Date(iso + 'T00:00:00');
+  if (isNaN(then)) return null;
+  const today = new Date();
+  return Math.floor((today - then) / 86400000);
+}
+
+function checkedLabel(iso) {
+  const days = daysSince(iso);
+  if (days === null) return '';
+  if (days <= 0) return 'Checked today';
+  if (days === 1) return 'Checked yesterday';
+  return `Checked ${days} days ago`;
+}
+
+const MANUAL_KIND_LABEL = {
+  blocked: 'Blocks automated visits',
+  javascript: 'Page arrives empty',
+  moved: 'Page has moved',
+  'site-error': "Firm's site returned an error",
+  unreachable: 'Could not connect',
+  unknown: 'Could not be read',
+};
+
+let lastFailures = null;
+
+async function loadManual() {
+  const root = document.getElementById('root-manual');
+  try {
+    const res = await fetch('discovered_events.json?_=' + Date.now());
+    const payload = await res.json();
+    lastFailures = (payload && payload.failures) || [];
+    renderManual();
+  } catch (e) {
+    root.innerHTML = '<div class="empty">Could not load the list — the first automated run will populate this.</div>';
+  }
+}
+
+function manualCard(fail, checkedOn) {
+  const kind = fail.kind || 'unknown';
+  const days = daysSince(checkedOn);
+  const isStale = days === null || days >= STALE_AFTER_DAYS;
+  return `
+    <div class="oday-card manual-card${isStale ? '' : ' is-done'}" data-manual-firm="${escapeHtml(fail.firm || '')}">
+      <div class="oday-firm">${escapeHtml(fail.firm || '')}</div>
+      <div class="manual-why">
+        <span class="manual-kind manual-kind-${escapeHtml(kind)}">${escapeHtml(MANUAL_KIND_LABEL[kind] || MANUAL_KIND_LABEL.unknown)}</span>
+        ${escapeHtml(fail.reason || '')}
+      </div>
+      <div class="btn-row">
+        ${fail.url ? `<a class="copy-btn" href="${escapeHtml(fail.url)}" target="_blank" rel="noopener">Open their events page</a>` : ''}
+        ${checkedOn
+          ? `<span class="manual-checked-label">${escapeHtml(checkedLabel(checkedOn))}</span>
+             <button class="oday-remove-btn" data-uncheck-firm="${escapeHtml(fail.firm || '')}">Undo</button>`
+          : `<button class="copy-btn" data-check-firm="${escapeHtml(fail.firm || '')}">Mark as checked</button>`}
+      </div>
+    </div>
+  `;
+}
+
+function renderManual() {
+  const root = document.getElementById('root-manual');
+  const note = document.getElementById('manualStaleNote');
+  const fails = lastFailures;
+  if (!fails) return;
+  if (!fails.length) {
+    root.innerHTML = '<div class="empty">Nothing to check by hand — the sweep read every firm on this morning\'s run.</div>';
+    note.textContent = '';
+    return;
+  }
+  const checks = getManualChecks();
+
+  // Anything not looked at in a fortnight comes first, since those are the ones
+  // actually worth opening. Within each group, keep the sweep's own order.
+  const stale = fails.filter(f => { const d = daysSince(checks[f.firm]); return d === null || d >= STALE_AFTER_DAYS; });
+  const recent = fails.filter(f => { const d = daysSince(checks[f.firm]); return d !== null && d < STALE_AFTER_DAYS; });
+
+  note.textContent = stale.length
+    ? `${stale.length} of ${fails.length} ${stale.length === 1 ? 'firm needs' : 'firms need'} a look`
+    : `All ${fails.length} checked within the last ${STALE_AFTER_DAYS} days`;
+
+  root.innerHTML =
+    stale.map(f => manualCard(f, checks[f.firm])).join('') +
+    (recent.length
+      ? `<div class="day-label">Checked recently</div>` + recent.map(f => manualCard(f, checks[f.firm])).join('')
+      : '');
+}
+
+document.addEventListener('click', (e) => {
+  const check = e.target.closest('[data-check-firm]');
+  if (check) { markFirmChecked(check.dataset.checkFirm); renderManual(); return; }
+  const uncheck = e.target.closest('[data-uncheck-firm]');
+  if (uncheck) { clearFirmChecked(uncheck.dataset.uncheckFirm); renderManual(); }
+});
 
 // --- "My Applications" tracker: entirely client-side (this browser's
 // storage only, no server involved) so Maria can log every firm/scheme
@@ -1882,6 +2046,7 @@ document.getElementById('appForm').addEventListener('submit', (e) => {
   await loadOpenDays();
   await loadLeads();
   await loadTc();
+  await loadManual();
   renderApps();
   startDocsPolling();   // a job asked for before the page was closed is still coming
 })();
