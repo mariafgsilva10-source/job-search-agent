@@ -1,17 +1,38 @@
 {
-  "generated_at": "2026-09-09T07:07:35Z",
+  "generated_at": "2026-09-10T07:07:47Z",
   "note": "Unverified leads from a daily sweep of London law firms' own application portals and events pages - the places firms announce open days before (or instead of) Legal Cheek listing them. Nothing here has been checked yet: a lead only reaches the Open Days tab once its dates, eligibility and apply link have been confirmed on the firm's own site.",
   "first_run": false,
   "counts": {
     "sources_checked": 52,
     "sources_failed": 7,
-    "leads_total": 26,
-    "duplicates_merged": 4,
-    "new_today": 0,
-    "new_last_7_days": 26
+    "leads_total": 27,
+    "duplicates_merged": 5,
+    "new_today": 1,
+    "new_last_7_days": 27
   },
-  "new_today": [],
+  "new_today": [
+    {
+      "id": "178e0b28a449ddff",
+      "firm": "Davis Polk & Wardwell",
+      "title": "Apply for an Insight Day",
+      "url": "https://www.davispolk.com/careers/law-students-trainees/london#insight",
+      "source_page": "https://www.davispolk.com/careers/law-students-trainees/london",
+      "first_seen": "2026-09-10",
+      "is_new": true,
+      "status": "unverified"
+    }
+  ],
   "leads": [
+    {
+      "id": "178e0b28a449ddff",
+      "firm": "Davis Polk & Wardwell",
+      "title": "Apply for an Insight Day",
+      "url": "https://www.davispolk.com/careers/law-students-trainees/london#insight",
+      "source_page": "https://www.davispolk.com/careers/law-students-trainees/london",
+      "first_seen": "2026-09-10",
+      "is_new": true,
+      "status": "unverified"
+    },
     {
       "id": "6e42338b2c3d9e60",
       "firm": "Addleshaw Goddard",
