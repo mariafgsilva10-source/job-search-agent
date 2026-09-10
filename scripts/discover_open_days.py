@@ -63,11 +63,10 @@ MAX_HITS_PER_SOURCE = 40
 # events pages. Every firm here recruits into a London office.
 #
 # URLs verified 2026-09-06. A few firms render their event list with
-# JavaScript (Travers Smith, Norton Rose Fulbright) or sit behind bot
-# protection (White & Case, Farrer & Co, Charles Russell Speechlys,
-# Fieldfisher), so those return little or fail outright - they are recorded
-# in the output's "failures" list rather than silently ignored, and the
-# daily verification pass covers them by search instead.
+# JavaScript, and a few sit behind bot protection, so those arrive empty or
+# fail outright. Both are recorded in the output's "failures" list rather
+# than silently ignored, and the dashboard's "Check Yourself" tab is built
+# from that list so Maria knows exactly which firms need a look by hand.
 SOURCES = [
     # --- candidats.io firm portals ---
     {"firm": "Goodwin", "url": "https://goodwinlaw.app.candidats.io/roles"},
@@ -117,19 +116,19 @@ SOURCES = [
     {"firm": "Ashurst Perkins Coie", "url": "https://www.ashurstperkinscoie.com/en/careers/students-and-graduates/uk-london-training-contract/"},
     {"firm": "Travers Smith", "url": "https://traverssmithhires.app.candidats.io/events"},
     {"firm": "Kirkland & Ellis", "url": "https://ukgraduate.kirkland.com/events"},
-    {"firm": "Sidley Austin", "url": "https://www.sidleycareers.com/en/europe/london-trainee-solicitor-programme"},
+    {"firm": "Sidley Austin", "url": "https://www.sidleycareers.com/en/europe/london-opportunities?tab=london-trainee-solicitor-programme"},
     {"firm": "White & Case", "url": "https://www.whitecase.com/careers/locations/united-kingdom/london"},
     {"firm": "Baker McKenzie", "url": "https://uk-graduates.bakermckenzie.com/events/"},
     {"firm": "Norton Rose Fulbright", "url": "https://www.nortonrosefulbright.com/en-gb/graduates/opportunities"},
     {"firm": "Pinsent Masons", "url": "https://www.pinsentmasons.com/careers/early-talent/events"},
     {"firm": "Charles Russell Speechlys", "url": "https://www.charlesrussellspeechlys.com/en/careers/early-careers/"},
-    {"firm": "Taylor Wessing", "url": "https://united-kingdom.taylorwessing.com/en/careers/graduates"},
+    {"firm": "Taylor Wessing", "url": "https://careers.taylorwessing.com/Earlycareeropportunities/go/Early-career-opportunities/9053855/"},
     {"firm": "Stephenson Harwood", "url": "https://www.shlegal.com/careers/early-careers"},
     {"firm": "Farrer & Co", "url": "https://www.farrer.co.uk/careers/early-careers/"},
     {"firm": "Burges Salmon", "url": "https://www.burges-salmon.com/join-us/emerging-talent/"},
     {"firm": "Addleshaw Goddard", "url": "https://earlycareers.addleshawgoddard.com/careers/insight-day/"},
     {"firm": "Simmons & Simmons", "url": "https://www.simmons-simmons.com/en/careers/early-careers"},
-    {"firm": "Latham & Watkins", "url": "https://uk-earlyassociatecareers-lw.icims.com/jobs"},
+    {"firm": "Latham & Watkins", "url": "https://lathamwatkins.grad.allhires.com/app/"},
 ]
 
 # What counts as an open day / insight event.
@@ -308,6 +307,24 @@ def extract_listings(html, page_url, firm):
     return list(hits.values())
 
 
+# A page that comes back as an empty shell is as unreadable as one that refuses
+# to load, but it fails silently: status 200, no listings, no complaint. Several
+# firms build their event lists with JavaScript, so this is what the sweep sees.
+# Counting what is actually in the HTML separates "this page has nothing on it
+# for us to read" from "this firm has no events on at the moment".
+MIN_LINKS_FOR_A_REAL_PAGE = 5
+MIN_TEXT_FOR_A_REAL_PAGE = 600
+
+
+def looks_like_an_empty_shell(html):
+    soup = BeautifulSoup(html, "html.parser")
+    for tag in soup(["script", "style", "noscript"]):
+        tag.decompose()
+    links = len(soup.find_all("a", href=True))
+    text = len(soup.get_text(" ", strip=True))
+    return links < MIN_LINKS_FOR_A_REAL_PAGE and text < MIN_TEXT_FOR_A_REAL_PAGE
+
+
 def load_seen():
     if SEEN_PATH.exists():
         try:
@@ -315,6 +332,46 @@ def load_seen():
         except (json.JSONDecodeError, OSError):
             return {}
     return {}
+
+
+# A source that cannot be read has to be checked by hand, so the dashboard lists
+# it on its own tab. What Maria needs there is not the Python exception but
+# whether the firm is turning automated visits away (in which case it will keep
+# needing checking) or something broke that is worth fixing (in which case it
+# should stop appearing once it is fixed).
+def classify_failure(exc):
+    """Return (kind, plain-English reason) for a failed source."""
+    name = type(exc).__name__
+    text = str(exc)
+    status = None
+    resp = getattr(exc, "response", None)
+    if resp is not None:
+        status = getattr(resp, "status_code", None)
+
+    if status in (401, 403, 405, 406, 429) or "cloudflare" in text.lower():
+        return "blocked", (
+            "This firm's site turns away automated visits, so the daily sweep "
+            "cannot read it. It has to be checked by hand."
+        )
+    if status == 404:
+        return "moved", (
+            "This page has moved or been taken down. Worth finding the firm's "
+            "current events page so the sweep can pick it up again."
+        )
+    if status is not None and 500 <= status < 600:
+        return "site-error", (
+            "The firm's own site returned an error. This may be temporary, so "
+            "it is worth checking by hand and seeing whether it recovers."
+        )
+    if name in ("SSLError", "ConnectionError", "ConnectTimeout", "ReadTimeout", "Timeout"):
+        return "unreachable", (
+            "The sweep could not connect to this site, so it may be a "
+            "certificate or network problem at the firm's end."
+        )
+    return "unknown", (
+        "The sweep could not read this page and it is not clear why. Worth a "
+        "look by hand."
+    )
 
 
 def sweep():
@@ -333,10 +390,31 @@ def sweep():
             resp.raise_for_status()
             listings = extract_listings(resp.text, url, firm)
         except Exception as exc:                      # noqa: BLE001 - one bad source must not stop the sweep
-            failures.append({"firm": firm, "url": url, "error": f"{type(exc).__name__}: {exc}"[:200]})
+            kind, reason = classify_failure(exc)
+            failures.append({
+                "firm": firm,
+                "url": url,
+                "kind": kind,
+                "reason": reason,
+                "error": f"{type(exc).__name__}: {exc}"[:200],
+            })
             continue
         finally:
             time.sleep(PAUSE_BETWEEN_REQUESTS)
+
+        if not listings and looks_like_an_empty_shell(resp.text):
+            failures.append({
+                "firm": firm,
+                "url": url,
+                "kind": "javascript",
+                "reason": (
+                    "This firm builds its event list with JavaScript, so the "
+                    "page arrives empty and the sweep sees nothing on it. It "
+                    "has to be checked by hand."
+                ),
+                "error": "empty page - nothing in the HTML to read",
+            })
+            continue
 
         for item in listings:
             fp = fingerprint(firm, item["title"], item["url"])
