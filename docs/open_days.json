@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-10T07:06:16Z",
+  "generated_at": "2026-09-10T20:56:30Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -11,7 +11,7 @@
       "chambers": 10,
       "outside_london": 16,
       "apprenticeships": 21,
-      "not_graduate_eligible": 18
+      "not_graduate_eligible": 17
     }
   },
   "events": [
@@ -298,22 +298,6 @@
       "deadline_label": "13/10/2026",
       "deadline_date": "2026-10-13",
       "apply_link": "https://weil.app.candidats.io/roles",
-      "link_is_specific": false,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
-    {
-      "id": "bird-&-bird|trainee-solicitor-open-day|14-10-2026",
-      "firm": "Bird & Bird",
-      "event_name": "Trainee Solicitor Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "location": "London",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "14/10/2026",
-      "deadline_date": "2026-10-14",
-      "apply_link": "https://twobirds.app.candidats.io/roles",
       "link_is_specific": false,
       "eligibility_note": null,
       "source": "legal_cheek",
@@ -783,9 +767,19 @@
       "deadline_label": "02/10/2026"
     },
     {
+      "firm": "Bird & Bird",
+      "event_name": "Trainee Solicitor Open Day",
+      "deadline_label": "02/10/2026"
+    },
+    {
       "firm": "Baker McKenzie",
       "event_name": "General Open Day",
       "deadline_label": "07/10/2026"
+    },
+    {
+      "firm": "4 Stone Buildings",
+      "event_name": "4 Stone Buildings Open Evening",
+      "deadline_label": "11/10/2026"
     },
     {
       "firm": "DWF",
@@ -886,6 +880,11 @@
       "firm": "Paul Hastings",
       "event_name": "December Insight Day",
       "deadline_label": "29/11/2026"
+    },
+    {
+      "firm": "Farrer & Co",
+      "event_name": "Insight Vacation Scheme",
+      "deadline_label": "18/12/2026"
     },
     {
       "firm": "Burges Salmon",

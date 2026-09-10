@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-10T07:07:49Z",
+  "generated_at": "2026-09-10T20:58:23Z",
   "note": "Only includes Training Contract listings manually verified as open to graduates applying directly, without needing to have done that firm's own vacation scheme first. New listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "events": [
     {
@@ -499,6 +499,17 @@
       "eligibility_note": "Firm's FAQ explicitly says a vacation scheme isn't required - \"some people... don't do one at all\" and are still considered."
     },
     {
+      "id": "farrer-&-co|training-contract",
+      "firm": "Farrer & Co",
+      "event_name": "Training Contract",
+      "opens_date": "2026-11-01",
+      "opens_confirmed": false,
+      "closes_date": "2027-03-05",
+      "closes_label": "05/03/2027",
+      "apply_link": "https://farrer.grad.allhires.com/app/",
+      "eligibility_note": "Firm welcomes \"graduates from any academic discipline\" and runs the vacation scheme and training contract as separate application processes."
+    },
+    {
       "id": "stephenson-harwood|london-training-contract",
       "firm": "Stephenson Harwood",
       "event_name": "London Training Contract",
@@ -519,17 +530,6 @@
       "closes_label": "08/03/2027",
       "apply_link": "https://www.bevanbrittan.com/careers/opportunities/trainee-solicitors/",
       "eligibility_note": "Firm explicitly states it \"also consider[s] direct applicants for training contracts\" alongside graduates - no vacation scheme required."
-    },
-    {
-      "id": "farrer-&-co|training-contract",
-      "firm": "Farrer & Co",
-      "event_name": "Training Contract",
-      "opens_date": "2026-11-01",
-      "opens_confirmed": false,
-      "closes_date": "2027-03-12",
-      "closes_label": "12/03/2027",
-      "apply_link": "https://farrer.grad.allhires.com/app/",
-      "eligibility_note": "Firm welcomes \"graduates from any academic discipline\" and runs the vacation scheme and training contract as separate application processes."
     },
     {
       "id": "rpc|bristol-training-contract",
