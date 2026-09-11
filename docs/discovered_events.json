@@ -1,78 +1,17 @@
 {
-  "generated_at": "2026-09-10T20:58:21Z",
+  "generated_at": "2026-09-11T07:07:20Z",
   "note": "Unverified leads from a daily sweep of London law firms' own application portals and events pages - the places firms announce open days before (or instead of) Legal Cheek listing them. Nothing here has been checked yet: a lead only reaches the Open Days tab once its dates, eligibility and apply link have been confirmed on the firm's own site.",
   "first_run": false,
   "counts": {
     "sources_checked": 52,
-    "sources_failed": 17,
-    "leads_total": 26,
+    "sources_failed": 16,
+    "leads_total": 29,
     "duplicates_merged": 5,
-    "new_today": 3,
-    "new_last_7_days": 26
+    "new_today": 0,
+    "new_last_7_days": 29
   },
-  "new_today": [
-    {
-      "id": "178e0b28a449ddff",
-      "firm": "Davis Polk & Wardwell",
-      "title": "Apply for an Insight Day",
-      "url": "https://www.davispolk.com/careers/law-students-trainees/london#insight",
-      "source_page": "https://www.davispolk.com/careers/law-students-trainees/london",
-      "first_seen": "2026-09-10",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "b7f374802e19cdcf",
-      "firm": "Sidley Austin",
-      "title": "Upcoming Insight Days",
-      "url": "https://www.sidleycareers.com/en/europe/london-opportunities?tab=london-trainee-solicitor-programme",
-      "source_page": "https://www.sidleycareers.com/en/europe/london-opportunities?tab=london-trainee-solicitor-programme",
-      "first_seen": "2026-09-10",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "d688a0e6b639e61a",
-      "firm": "Sidley Austin",
-      "title": "Sidley Insight Day",
-      "url": "https://www.sidleycareers.com/en/europe/london-opportunities?tab=london-trainee-solicitor-programme",
-      "source_page": "https://www.sidleycareers.com/en/europe/london-opportunities?tab=london-trainee-solicitor-programme",
-      "first_seen": "2026-09-10",
-      "is_new": true,
-      "status": "unverified"
-    }
-  ],
+  "new_today": [],
   "leads": [
-    {
-      "id": "178e0b28a449ddff",
-      "firm": "Davis Polk & Wardwell",
-      "title": "Apply for an Insight Day",
-      "url": "https://www.davispolk.com/careers/law-students-trainees/london#insight",
-      "source_page": "https://www.davispolk.com/careers/law-students-trainees/london",
-      "first_seen": "2026-09-10",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "b7f374802e19cdcf",
-      "firm": "Sidley Austin",
-      "title": "Upcoming Insight Days",
-      "url": "https://www.sidleycareers.com/en/europe/london-opportunities?tab=london-trainee-solicitor-programme",
-      "source_page": "https://www.sidleycareers.com/en/europe/london-opportunities?tab=london-trainee-solicitor-programme",
-      "first_seen": "2026-09-10",
-      "is_new": true,
-      "status": "unverified"
-    },
-    {
-      "id": "d688a0e6b639e61a",
-      "firm": "Sidley Austin",
-      "title": "Sidley Insight Day",
-      "url": "https://www.sidleycareers.com/en/europe/london-opportunities?tab=london-trainee-solicitor-programme",
-      "source_page": "https://www.sidleycareers.com/en/europe/london-opportunities?tab=london-trainee-solicitor-programme",
-      "first_seen": "2026-09-10",
-      "is_new": true,
-      "status": "unverified"
-    },
     {
       "id": "6e42338b2c3d9e60",
       "firm": "Addleshaw Goddard",
@@ -244,6 +183,36 @@
       "status": "unverified"
     },
     {
+      "id": "a37eddfd9ca8a32d",
+      "firm": "RPC",
+      "title": "All About Law Virtual Law Fair",
+      "url": "https://www.allaboutlaw.co.uk/events/virtual-law-fair",
+      "source_page": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "a3fc1c06d15808a2",
+      "firm": "RPC",
+      "title": "Legal Cheek Virtual Law Fair",
+      "url": "https://www.legalcheek.com/fair/the-legal-cheek-uk-virtual-law-fair-series/",
+      "source_page": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "6e4ae6eda902d63f",
+      "firm": "RPC",
+      "title": "London Insight Event",
+      "url": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
+      "source_page": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
       "id": "ddb26d6d9f3c449f",
       "firm": "Simpson Thacher & Bartlett",
       "title": "Open Day",
@@ -300,6 +269,36 @@
       "url": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
       "source_page": "https://earlycareers.addleshawgoddard.com/careers/insight-day/",
       "first_seen": "2026-09-07",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "178e0b28a449ddff",
+      "firm": "Davis Polk & Wardwell",
+      "title": "Apply for an Insight Day",
+      "url": "https://www.davispolk.com/careers/law-students-trainees/london#insight",
+      "source_page": "https://www.davispolk.com/careers/law-students-trainees/london",
+      "first_seen": "2026-09-10",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "b7f374802e19cdcf",
+      "firm": "Sidley Austin",
+      "title": "Upcoming Insight Days",
+      "url": "https://www.sidleycareers.com/en/europe/london-opportunities?tab=london-trainee-solicitor-programme",
+      "source_page": "https://www.sidleycareers.com/en/europe/london-opportunities?tab=london-trainee-solicitor-programme",
+      "first_seen": "2026-09-10",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "d688a0e6b639e61a",
+      "firm": "Sidley Austin",
+      "title": "Sidley Insight Day",
+      "url": "https://www.sidleycareers.com/en/europe/london-opportunities?tab=london-trainee-solicitor-programme",
+      "source_page": "https://www.sidleycareers.com/en/europe/london-opportunities?tab=london-trainee-solicitor-programme",
+      "first_seen": "2026-09-10",
       "is_new": false,
       "status": "unverified"
     }
@@ -374,13 +373,6 @@
       "kind": "blocked",
       "reason": "This firm's site turns away automated visits, so the daily sweep cannot read it. It has to be checked by hand.",
       "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.fieldfisher.com/en/careers/earlycareers/future-lawyer-programmes"
-    },
-    {
-      "firm": "RPC",
-      "url": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
-      "kind": "unreachable",
-      "reason": "The sweep could not connect to this site, so it may be a certificate or network problem at the firm's end.",
-      "error": "ReadTimeout: HTTPSConnectionPool(host='www.rpclegal.com', port=443): Read timed out. (read timeout=25)"
     },
     {
       "firm": "Travers Smith",
