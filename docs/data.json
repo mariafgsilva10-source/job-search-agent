@@ -30,7 +30,120 @@
         "location": "Fleet Street, Central London",
         "salary": "\u00a329867-29867",
         "url": "https://www.adzuna.co.uk/jobs/details/5676265075?utm_medium=api&utm_source=d98dd21f",
-        "description": "Global University Systems (GUS) is an international education group that empowers students to transform their lives through education. We believe education drives careers, lives, and society forward, enabling a brighter and more sustainable future for all. Our institutions offer the broadest range of industry-relevant skills through inclusive, accessible and digital-first learning. We offer a choice of career-enhancing certificates, degrees and post-graduate level qualifications, equipping our \u2026"
+        "description": "Global University Systems (GUS) is an international education group that empowers students to transform their lives through education. We believe education drives careers, lives, and society forward, enabling a brighter and more sustainable future for all. Our institutions offer the broadest range of industry-relevant skills through inclusive, accessible and digital-first learning. We offer a choice of career-enhancing certificates, degrees and post-graduate level qualifications, equipping our \u2026",
+        "cover_letter": "Dear Hiring Manager,\n\nI am applying for the Paralegal role at Global University Systems because the in-house legal context genuinely interests me, and my background in case management, document review, legal research and client-facing advice maps directly onto what the role requires.\n\nAt Bryan Cave Leighton Paisner, I spent a year supporting complex disputes across international arbitration and real estate litigation. In arbitration, I reviewed and organised evidence, amended sections of a claimant's memorial, drafted procedural orders and procedural histories, and coordinated documents across an international team under significant deadline pressure. When I became the only junior supporting the team shortly before a major submission, I tracked outstanding actions across multiple workstreams and helped ensure the filing went out on time. That experience gave me a clear picture of what organised, deadline-driven case management actually looks like in practice.\n\nSince July 2026, I have been advising clients at Citizens Advice East Berkshire on welfare, housing, employment and debt matters. Each matter involves taking detailed factual statements, identifying the relevant legal issues, drafting correspondence, preparing document schedules and maintaining confidential case records from instruction through to submission. Translating complex procedural rules into clear, practical guidance for people in difficult circumstances has sharpened my ability to communicate legal issues accessibly, which I expect would be useful in an in-house team dealing with colleagues and stakeholders who are not legally trained.\n\nMy academic work is also relevant. I hold a 2:1 LLB from UCL and an LLM in Comparative and International Dispute Resolution from Queen Mary, where I studied legal research, evidence analysis and international procedural law. My dissertation examined data protection law across jurisdictions, and a separate taught module on data privacy and governance received a mark of 75.\n\nGUS operates across multiple jurisdictions and institutions, and the legal team's work will span a wide range of issues touching on regulatory compliance, contracts and institutional governance. That breadth is exactly what I am looking to develop into at paralegal level, building on the foundation I have in research, case management and drafting.\n\nYours sincerely,\nMaria Silva",
+        "adapted_cv": {
+          "summary": "LLB and LLM graduate with practical experience supporting complex disputes, case management and client-facing legal advice at BCLP, Citizens Advice and Q-Legal. Experienced in reviewing evidence, drafting procedural documents, maintaining organised case files, meeting deadlines across competing matters and communicating with clients on sensitive issues. Strong legal research and written communication skills, with practical exposure to data protection, regulatory compliance and contractual review.",
+          "education": [
+            {
+              "title": "Comparative and International Dispute Resolution LLM \u2014 Merit",
+              "institution": "Queen Mary University of London",
+              "dateline": "Sept 2024 \u2013 Oct 2025",
+              "bullets": [
+                "Modules in international arbitration, dispute resolution procedure, legal research and evidence analysis",
+                "Dissertation on data protection and the development of GDPR across jurisdictions",
+                "Transnational Law and Governance Applied module (data privacy and democracy) \u2014 75%"
+              ]
+            },
+            {
+              "title": "Law LLB \u2014 2:1",
+              "institution": "University College London",
+              "dateline": "Sept 2020 \u2013 June 2024",
+              "bullets": [
+                "Modules included Alternative Dispute Resolution, Advanced Contract Law, Commercial Law and Company Law"
+              ]
+            },
+            {
+              "title": "International Foundation Programme in Law and International Relations",
+              "institution": "King's College London",
+              "dateline": "Sept 2019 \u2013 June 2020",
+              "bullets": [
+                "Awarded the Leaders of Tomorrow prize (top 20 of a 200-student cohort; carried partial funding toward undergraduate degree)"
+              ]
+            }
+          ],
+          "experience": [
+            {
+              "employer": "Citizens Advice East Berkshire",
+              "location": "Maidenhead",
+              "role": "Legal Adviser",
+              "dateline": "July 2026 \u2013 Present",
+              "bullets": [
+                "Advises clients across welfare benefits, employment, housing, family, debt and consumer matters; takes detailed factual statements, establishes chronologies and identifies relevant legal and evidential issues",
+                "Manages matters from instruction to submission: drafts correspondence, prepares applications and document schedules, maintains confidential case records and meets deadlines",
+                "Assesses eligibility against statutory and regulatory criteria; identifies evidential gaps; researches complex legal points",
+                "Translates complex procedural rules into clear, practical guidance for vulnerable individuals"
+              ]
+            },
+            {
+              "employer": "Bryan Cave Leighton Paisner LLP (BCLP)",
+              "location": "London",
+              "role": "Legal Placement Student \u2014 International Arbitration",
+              "dateline": "Feb 2024 \u2013 Aug 2024",
+              "bullets": [
+                "Supported a complex investment arbitration: reviewed and organised evidence for procedural submissions and the claimant's memorial; amended memorial sections and drafted procedural orders and procedural histories",
+                "Became the only junior supporting the team shortly before a significant submission deadline: coordinated documents, tracked outstanding actions across multiple workstreams and helped ensure on-time filing",
+                "Maintained structured electronic case files and monitored procedural deadlines throughout the matter",
+                "Liaised with the client on required documents; coordinated Romanian translations with an external translator",
+                "Received feedback from a partner and associate that performance was comparable to a newly qualified solicitor"
+              ]
+            },
+            {
+              "employer": "Bryan Cave Leighton Paisner LLP (BCLP)",
+              "location": "London",
+              "role": "Legal Placement Student \u2014 Real Estate Disputes",
+              "dateline": "Aug 2023 \u2013 Feb 2024",
+              "bullets": [
+                "Supported hearing preparation: reviewed documents, prepared electronic bundles, assisted with skeleton arguments and court materials",
+                "Conducted legal and factual research on rights of light, easements, leasehold issues and landlord and tenant disputes",
+                "Maintained matter records via iManage; assisted with court filings, hearing arrangements, matter opening and closure, and deadline tracking",
+                "Managed large volumes of confidential documents across several matters with competing deadlines"
+              ]
+            },
+            {
+              "employer": "Q-Legal",
+              "location": "London",
+              "role": "Legal Adviser",
+              "dateline": "Oct 2024 \u2013 Jan 2025",
+              "bullets": [
+                "Managed a data-privacy matter from client instruction through to a formal written advice letter, under a qualified solicitor's supervision",
+                "Researched UK GDPR and Data Protection Act 2018 obligations for a data-driven start-up, including children's personal data and adtech compliance",
+                "Identified legal and compliance risks arising from the client's data processing and recommended practical mitigations",
+                "Translated complex statutory requirements into clear, commercially focused advice; coordinated with the client and supervising solicitor to meet the agreed deadline"
+              ]
+            },
+            {
+              "employer": "Adobe",
+              "location": "London",
+              "role": "Legal Intern",
+              "dateline": "June 2022 \u2013 Aug 2022",
+              "bullets": [
+                "Reviewed and amended software licensing agreements; identified contractual risks and assessed alignment with Adobe's internal legal and compliance requirements",
+                "Reviewed confidentiality and data-processing provisions; researched UK GDPR, EU GDPR and cross-border personal data transfer requirements",
+                "Liaised with sales, legal and international business teams to resolve contractual queries and reconcile commercial objectives with legal risk",
+                "Prepared and delivered an internal presentation on breach-of-contract risks and mitigation measures"
+              ]
+            }
+          ],
+          "skills": [
+            {
+              "label": "Languages",
+              "text": "Portuguese (native), English (fluent), Spanish (basic)"
+            },
+            {
+              "label": "Technical skills",
+              "text": "Legal and commercial research; documentary analysis; concise report writing; Microsoft Word, Excel and PowerPoint; iManage; legal research databases; electronic court filing portals; document review; electronic bundling; case management and time-recording systems"
+            },
+            {
+              "label": "Case and evidence management",
+              "text": "Evidence review, hearing bundle preparation, procedural histories, case-file organisation, deadline tracking across competing matters"
+            }
+          ],
+          "name": "Maria Silva",
+          "contact": "38, Marlborough Road, Maidenhead, Berkshire \u00b7 +447935308070 \u00b7 mariafgsilva10@gmail.com \u00b7 linkedin.com/in/mariafgsilva10"
+        },
+        "cover_letter_pdf": "pdfs/adzuna_5676265075_cover_letter.pdf",
+        "cv_pdf": "pdfs/adzuna_5676265075_cv.pdf"
       },
       {
         "source": "adzuna",
