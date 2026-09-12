@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-11T07:05:46Z",
+  "generated_at": "2026-09-12T07:04:20Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -15,22 +15,6 @@
     }
   },
   "events": [
-    {
-      "id": "simpson-thacher-&-bartlett|october-open-day|13-09-2026",
-      "firm": "Simpson Thacher & Bartlett",
-      "event_name": "October Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "location": "London",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "13/09/2026",
-      "deadline_date": "2026-09-13",
-      "apply_link": "https://ukearlycareers.stblaw.com/our-offer/events/",
-      "link_is_specific": false,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
     {
       "id": "goodwin|insight-into-applications-–-demystifying-the-application-process|18-09-2026",
       "firm": "Goodwin",
@@ -721,6 +705,11 @@
     }
   ],
   "needs_review": [
+    {
+      "firm": "Simpson Thacher & Bartlett",
+      "event_name": "October Open Day",
+      "deadline_label": "Tomorrow"
+    },
     {
       "firm": "Macfarlanes",
       "event_name": "Practice Area Open Day",
