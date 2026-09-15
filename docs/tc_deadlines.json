@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-14T07:07:38Z",
+  "generated_at": "2026-09-15T07:09:25Z",
   "note": "Only includes Training Contract listings manually verified as open to graduates applying directly, without needing to have done that firm's own vacation scheme first. New listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "events": [
     {
@@ -620,6 +620,17 @@
       "eligibility_note": "Firm's FAQ explicitly lists \"graduates and postgraduates from any discipline\" as eligible for the Direct Training Contract route - a separate route from the Vacation Scheme."
     },
     {
+      "id": "paul-hastings|direct-training-contract",
+      "firm": "Paul Hastings",
+      "event_name": "Direct Training Contract",
+      "opens_date": "2026-01-05",
+      "opens_confirmed": false,
+      "closes_date": "2027-05-31",
+      "closes_label": "31/05/2027",
+      "apply_link": "https://paulhastings.grad.allhires.com/",
+      "eligibility_note": "Firm's early-careers routes are open to \"final-year non-law students and graduates\", with the training contract application handled separately from the PHirst Steps scheme."
+    },
+    {
       "id": "sullivan-&-cromwell|training-contract",
       "firm": "Sullivan & Cromwell",
       "event_name": "Training Contract",
@@ -662,17 +673,6 @@
       "closes_label": "22/06/2027",
       "apply_link": "https://www.burges-salmon.com/jobs/",
       "eligibility_note": "Firm's own listing explicitly welcomes \"applicants that have graduated or are changing careers\" - a direct (non-vacation-scheme) route by design."
-    },
-    {
-      "id": "paul-hastings|direct-training-contract",
-      "firm": "Paul Hastings",
-      "event_name": "Direct Training Contract",
-      "opens_date": "2026-01-05",
-      "opens_confirmed": false,
-      "closes_date": "2027-06-30",
-      "closes_label": "30/06/2027",
-      "apply_link": "https://paulhastings.grad.allhires.com/",
-      "eligibility_note": "Firm's early-careers routes are open to \"final-year non-law students and graduates\", with the training contract application handled separately from the PHirst Steps scheme."
     },
     {
       "id": "hfw|training-contract",
