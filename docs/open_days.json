@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-16T07:05:41Z",
+  "generated_at": "2026-09-17T07:06:40Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -8,29 +8,13 @@
     "exclude_apprenticeships": true,
     "graduates_only": true,
     "filtered_out_counts": {
-      "chambers": 10,
+      "chambers": 12,
       "outside_london": 16,
       "apprenticeships": 21,
       "not_graduate_eligible": 19
     }
   },
   "events": [
-    {
-      "id": "goodwin|insight-into-applications-–-demystifying-the-application-process|18-09-2026",
-      "firm": "Goodwin",
-      "event_name": "Insight into Applications – Demystifying the Application Process",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "location": "London",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "18/09/2026",
-      "deadline_date": "2026-09-18",
-      "apply_link": "https://goodwinlaw.app.candidats.io/event/3cae80ec-5b90-4a54-a960-c4040ec066e5",
-      "link_is_specific": true,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
     {
       "id": "bclp|open-day|25-09-2026",
       "firm": "BCLP",
@@ -706,19 +690,19 @@
   ],
   "needs_review": [
     {
-      "firm": "Mishcon de Reya",
-      "event_name": "Social Mobility Open Day (Virtual)",
-      "deadline_label": "Today"
+      "firm": "Goodwin",
+      "event_name": "Insight into Applications – Demystifying the Application Process",
+      "deadline_label": "Tomorrow"
     },
     {
       "firm": "Mishcon de Reya",
       "event_name": "Race Equity Open Day (In Person)",
-      "deadline_label": "18/09/2026"
+      "deadline_label": "Tomorrow"
     },
     {
       "firm": "Mishcon de Reya",
       "event_name": "Social Mobility Open Day (In Person)",
-      "deadline_label": "18/09/2026"
+      "deadline_label": "Tomorrow"
     },
     {
       "firm": "Mishcon de Reya",
