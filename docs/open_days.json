@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-17T07:06:40Z",
+  "generated_at": "2026-09-18T07:05:13Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -8,7 +8,7 @@
     "exclude_apprenticeships": true,
     "graduates_only": true,
     "filtered_out_counts": {
-      "chambers": 12,
+      "chambers": 13,
       "outside_london": 16,
       "apprenticeships": 21,
       "not_graduate_eligible": 19
@@ -692,27 +692,22 @@
     {
       "firm": "Goodwin",
       "event_name": "Insight into Applications – Demystifying the Application Process",
-      "deadline_label": "Tomorrow"
+      "deadline_label": "Today"
     },
     {
       "firm": "Mishcon de Reya",
       "event_name": "Race Equity Open Day (In Person)",
-      "deadline_label": "Tomorrow"
+      "deadline_label": "Today"
     },
     {
       "firm": "Mishcon de Reya",
       "event_name": "Social Mobility Open Day (In Person)",
-      "deadline_label": "Tomorrow"
+      "deadline_label": "Today"
     },
     {
       "firm": "Mishcon de Reya",
       "event_name": "Race Equity Open Day (Virtual)",
       "deadline_label": "23/09/2026"
-    },
-    {
-      "firm": "Akin",
-      "event_name": "Open Day (virtual)",
-      "deadline_label": "25/09/2026"
     },
     {
       "firm": "Winston Taylor",
@@ -745,14 +740,14 @@
       "deadline_label": "25/09/2026"
     },
     {
-      "firm": "Akin",
-      "event_name": "Open Day (London office)",
-      "deadline_label": "02/10/2026"
-    },
-    {
       "firm": "Bird & Bird",
       "event_name": "Trainee Solicitor Open Day",
       "deadline_label": "02/10/2026"
+    },
+    {
+      "firm": "Akin",
+      "event_name": "Ask Akin Open Day",
+      "deadline_label": "04/10/2026"
     },
     {
       "firm": "Baker McKenzie",
@@ -803,6 +798,11 @@
       "firm": "Mishcon de Reya",
       "event_name": "Disability Open Day (In Person)",
       "deadline_label": "16/10/2026"
+    },
+    {
+      "firm": "Akin",
+      "event_name": "Ask Akin Open Day (Virtual)",
+      "deadline_label": "18/10/2026"
     },
     {
       "firm": "Clifford Chance",
