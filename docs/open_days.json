@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-18T07:05:13Z",
+  "generated_at": "2026-09-19T07:04:20Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -689,21 +689,6 @@
     }
   ],
   "needs_review": [
-    {
-      "firm": "Goodwin",
-      "event_name": "Insight into Applications – Demystifying the Application Process",
-      "deadline_label": "Today"
-    },
-    {
-      "firm": "Mishcon de Reya",
-      "event_name": "Race Equity Open Day (In Person)",
-      "deadline_label": "Today"
-    },
-    {
-      "firm": "Mishcon de Reya",
-      "event_name": "Social Mobility Open Day (In Person)",
-      "deadline_label": "Today"
-    },
     {
       "firm": "Mishcon de Reya",
       "event_name": "Race Equity Open Day (Virtual)",

@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-18T07:06:48Z",
+  "generated_at": "2026-09-19T07:05:55Z",
   "note": "Only includes Training Contract listings manually verified as open to graduates applying directly, without needing to have done that firm's own vacation scheme first. New listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "events": [
     {
@@ -710,9 +710,19 @@
   ],
   "needs_review": [
     {
+      "firm": "Simmons & Simmons",
+      "event_name": "Journey to a Training Contract",
+      "deadline_label": "30/09/2026"
+    },
+    {
       "firm": "Hill Dickinson",
       "event_name": "Training Contract Open Evening",
       "deadline_label": "15/11/2026"
+    },
+    {
+      "firm": "Clyde & Co",
+      "event_name": "Bristol Energy & Construction Training Contract",
+      "deadline_label": "19/11/2026"
     },
     {
       "firm": "Lawrence Stephens",
