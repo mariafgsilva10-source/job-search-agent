@@ -791,6 +791,101 @@ MANUAL_EVENTS = [
         "location": "London",
         "found_on": "2026-09-05",
     },
+    # The three below fill in the "Open finding" noted 10 Sept 2026: Goodwin's
+    # own candidats.io portal (goodwinlaw.app.candidats.io/roles) lists two
+    # more In-Person Open Afternoon dates and a Virtual Open Afternoon that
+    # never showed up via Legal Cheek. Confirmed directly on each event's own
+    # apply page 2026-09-21 (clicked "Job Details" through to
+    # apply.candidats.io for each). "(3 November)"/"(12 November)" is added
+    # to the event_name only to keep each entry's id unique - both share the
+    # exact same 16/10/2026 deadline as the 10 November session above, which
+    # is a single shared application window covering three event dates, not
+    # a typo.
+    {
+        "firm": "Goodwin",
+        "event_name": "In-Person Open Afternoon (3 November)",
+        "summary": (
+            "An in-person event giving a comprehensive overview of the firm, its "
+            "practice areas and its opportunities, with application guidance for "
+            "vacation schemes and trainee solicitor roles and networking with "
+            "current staff. Event held 3 November 2026."
+        ),
+        "opens_date": None,
+        "opens_confirmed": False,
+        "deadline_label": "16/10/2026",
+        "deadline_date": "2026-10-16",
+        "apply_link": "https://apply.candidats.io/c31a84b0-74d0-40ea-a581-0aaecb281b51",
+        "link_is_specific": True,
+        "eligibility_note": None,
+        "location": "London",
+        "found_on": "2026-09-21",
+    },
+    {
+        "firm": "Goodwin",
+        "event_name": "In-Person Open Afternoon (12 November)",
+        "summary": (
+            "An in-person event giving a comprehensive overview of the firm, its "
+            "practice areas and its opportunities, with application guidance for "
+            "vacation schemes and trainee solicitor roles and networking with "
+            "current staff. Event held 12 November 2026."
+        ),
+        "opens_date": None,
+        "opens_confirmed": False,
+        "deadline_label": "16/10/2026",
+        "deadline_date": "2026-10-16",
+        "apply_link": "https://apply.candidats.io/602cfc51-ea22-45a8-b993-a5841ffc476f",
+        "link_is_specific": True,
+        "eligibility_note": None,
+        "location": "London",
+        "found_on": "2026-09-21",
+    },
+    {
+        "firm": "Goodwin",
+        "event_name": "Virtual Open Afternoon",
+        "summary": (
+            "A virtual/online event giving a comprehensive overview of the firm, "
+            "its practice areas and its opportunities, with application guidance "
+            "for vacation schemes and trainee solicitor roles and networking with "
+            "current staff. Event held 25 November 2026."
+        ),
+        "opens_date": None,
+        "opens_confirmed": False,
+        "deadline_label": "18/11/2026",
+        "deadline_date": "2026-11-18",
+        "apply_link": "https://apply.candidats.io/88f35414-cb0e-4033-98bf-780d6a6a3473",
+        "link_is_specific": True,
+        "eligibility_note": None,
+        "location": "Virtual",
+        "found_on": "2026-09-21",
+    },
+    # Jones Day's own events page (jonesday.com/en/careers/locations/united-
+    # kingdom?tab=events) lists two sessions literally titled "Open Evening":
+    # 22 Oct 2026 (already on the dashboard as "Open Evening 2", via
+    # OPEN_DAY_OVERRIDES/Legal Cheek) and this one, 11 Nov 2026, which Legal
+    # Cheek has not listed yet. Named "Open Evening 3" to match the firm's
+    # own sequential numbering (confirmed by third-party listings using the
+    # same name) and to avoid colliding with "Open Evening 2" if Legal Cheek
+    # adds this one later. Deadline follows this repo's existing convention
+    # for this exact event type at this firm (see Open Evening 2): the
+    # firm's page gives no separate closing date, so deadline = event date.
+    # Confirmed on the firm's own page 2026-09-21.
+    {
+        "firm": "Jones Day",
+        "event_name": "Open Evening 3",
+        "summary": (
+            "An in-person event featuring an office tour, talks from trainees "
+            "and partners, and Q&A about the firm and its application process."
+        ),
+        "opens_date": "2026-10-28",
+        "opens_confirmed": True,
+        "deadline_label": "11/11/2026",
+        "deadline_date": "2026-11-11",
+        "apply_link": "https://www.jonesday.com/en/careers/locations/united-kingdom?tab=events",
+        "link_is_specific": False,
+        "eligibility_note": None,
+        "location": "London",
+        "found_on": "2026-09-21",
+    },
 ]
 
 
