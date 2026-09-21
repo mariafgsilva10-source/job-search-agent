@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-21T07:06:15Z",
+  "generated_at": "2026-09-21T18:50:50Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -320,6 +320,38 @@
       "found_on": "2026-09-05"
     },
     {
+      "id": "goodwin|in-person-open-afternoon-(3-november)|16-10-2026",
+      "firm": "Goodwin",
+      "event_name": "In-Person Open Afternoon (3 November)",
+      "summary": "An in-person event giving a comprehensive overview of the firm, its practice areas and its opportunities, with application guidance for vacation schemes and trainee solicitor roles and networking with current staff. Event held 3 November 2026.",
+      "location": "London",
+      "opens_date": null,
+      "opens_confirmed": false,
+      "deadline_label": "16/10/2026",
+      "deadline_date": "2026-10-16",
+      "apply_link": "https://apply.candidats.io/c31a84b0-74d0-40ea-a581-0aaecb281b51",
+      "link_is_specific": true,
+      "eligibility_note": null,
+      "source": "direct",
+      "found_on": "2026-09-21"
+    },
+    {
+      "id": "goodwin|in-person-open-afternoon-(12-november)|16-10-2026",
+      "firm": "Goodwin",
+      "event_name": "In-Person Open Afternoon (12 November)",
+      "summary": "An in-person event giving a comprehensive overview of the firm, its practice areas and its opportunities, with application guidance for vacation schemes and trainee solicitor roles and networking with current staff. Event held 12 November 2026.",
+      "location": "London",
+      "opens_date": null,
+      "opens_confirmed": false,
+      "deadline_label": "16/10/2026",
+      "deadline_date": "2026-10-16",
+      "apply_link": "https://apply.candidats.io/602cfc51-ea22-45a8-b993-a5841ffc476f",
+      "link_is_specific": true,
+      "eligibility_note": null,
+      "source": "direct",
+      "found_on": "2026-09-21"
+    },
+    {
       "id": "latham-&-watkins|london-open-day-2026-(november)|18-10-2026",
       "firm": "Latham & Watkins",
       "event_name": "London Open Day 2026 (November)",
@@ -496,6 +528,22 @@
       "found_on": null
     },
     {
+      "id": "jones-day|open-evening-3|11-11-2026",
+      "firm": "Jones Day",
+      "event_name": "Open Evening 3",
+      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "location": "London",
+      "opens_date": "2026-10-28",
+      "opens_confirmed": true,
+      "deadline_label": "11/11/2026",
+      "deadline_date": "2026-11-11",
+      "apply_link": "https://www.jonesday.com/en/careers/locations/united-kingdom?tab=events",
+      "link_is_specific": false,
+      "eligibility_note": null,
+      "source": "direct",
+      "found_on": "2026-09-21"
+    },
+    {
       "id": "mills-&-reeve|virtual-insight-event|12-11-2026",
       "firm": "Mills & Reeve",
       "event_name": "Virtual Insight Event",
@@ -542,6 +590,22 @@
       "eligibility_note": null,
       "source": "legal_cheek",
       "found_on": null
+    },
+    {
+      "id": "goodwin|virtual-open-afternoon|18-11-2026",
+      "firm": "Goodwin",
+      "event_name": "Virtual Open Afternoon",
+      "summary": "A virtual/online event giving a comprehensive overview of the firm, its practice areas and its opportunities, with application guidance for vacation schemes and trainee solicitor roles and networking with current staff. Event held 25 November 2026.",
+      "location": "Virtual",
+      "opens_date": null,
+      "opens_confirmed": false,
+      "deadline_label": "18/11/2026",
+      "deadline_date": "2026-11-18",
+      "apply_link": "https://apply.candidats.io/88f35414-cb0e-4033-98bf-780d6a6a3473",
+      "link_is_specific": true,
+      "eligibility_note": null,
+      "source": "direct",
+      "found_on": "2026-09-21"
     },
     {
       "id": "forsters|open-day-2|20-11-2026",
