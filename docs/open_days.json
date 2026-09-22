@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-22T07:05:29Z",
+  "generated_at": "2026-09-22T14:16:00Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -158,6 +158,22 @@
       "eligibility_note": null,
       "source": "legal_cheek",
       "found_on": null
+    },
+    {
+      "id": "dla-piper|london-discovery-day|05-10-2026",
+      "firm": "DLA Piper",
+      "event_name": "London Discovery Day",
+      "summary": "An in-person event for students, graduates and career changers to learn about DLA Piper's practice areas, meet trainees and staff, and get guidance on the application process. One of five UK Discovery Days run this cycle (also in Manchester, Leeds, Birmingham and Edinburgh); event held 12 October 2026.",
+      "location": "London",
+      "opens_date": null,
+      "opens_confirmed": false,
+      "deadline_label": "05/10/2026",
+      "deadline_date": "2026-10-05",
+      "apply_link": "https://forms.rmp-connect.com/form/aeWYJ0eHRCrBtsQj9ap0sZVcPa/6dx8y5qzSBEqnn8Fa5Pg",
+      "link_is_specific": true,
+      "eligibility_note": null,
+      "source": "direct",
+      "found_on": "2026-09-22"
     },
     {
       "id": "goodwin|insight-into-the-trainee-experience:-meet-our-trainees-and-q&a|09-10-2026",
