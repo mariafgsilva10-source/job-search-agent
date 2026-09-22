@@ -4,6 +4,9 @@
   "note": "Maria's application tracker. Statuses corrected 22 Sept 2026 against confirmation emails, which are the authoritative record of what actually went in. Refreshed by a daily gather.",
   "applications": [
     {
+      "id": "hogan-lovells-pride+-event",
+      "firm": "Hogan Lovells",
+      "what": "Pride+ event",
       "type": "open_day",
       "stage": "submitted",
       "outcome": "Place confirmed",
@@ -15,12 +18,12 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": false,
-      "firm": "Hogan Lovells",
-      "what": "Pride+ event",
-      "id": "hogan-lovells-pride+-event"
+      "is_new": false
     },
     {
+      "id": "travers-smith-london-evening-presentation",
+      "firm": "Travers Smith",
+      "what": "London Evening Presentation",
       "type": "open_day",
       "stage": "submitted",
       "outcome": "Place confirmed",
@@ -32,12 +35,12 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": true,
-      "firm": "Travers Smith",
-      "what": "London Evening Presentation",
-      "id": "travers-smith-london-evening-presentation"
+      "is_new": true
     },
     {
+      "id": "milbank-open-day-2026-traditional-track",
+      "firm": "Milbank",
+      "what": "Open Day 2026 (Traditional Track)",
       "type": "open_day",
       "stage": "submitted",
       "outcome": null,
@@ -49,12 +52,12 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": false,
-      "firm": "Milbank",
-      "what": "Open Day 2026 (Traditional Track)",
-      "id": "milbank-open-day-2026-traditional-track"
+      "is_new": false
     },
     {
+      "id": "forsters-graduate-trainee-open-day-1",
+      "firm": "Forsters",
+      "what": "Graduate Trainee Open Day 1",
       "type": "open_day",
       "stage": "submitted",
       "outcome": null,
@@ -66,12 +69,12 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": false,
-      "firm": "Forsters",
-      "what": "Graduate Trainee Open Day 1",
-      "id": "forsters-graduate-trainee-open-day-1"
+      "is_new": false
     },
     {
+      "id": "davis-polk-london-penultimate-year-postgraduate-insight-day",
+      "firm": "Davis Polk",
+      "what": "London Penultimate Year & Postgraduate Insight Day",
       "type": "open_day",
       "stage": "submitted",
       "outcome": null,
@@ -83,12 +86,12 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": false,
-      "firm": "Davis Polk",
-      "what": "London Penultimate Year & Postgraduate Insight Day",
-      "id": "davis-polk-london-penultimate-year-postgraduate-insight-day"
+      "is_new": false
     },
     {
+      "id": "goodwin-in-person-open-afternoon",
+      "firm": "Goodwin",
+      "what": "In-Person Open Afternoon",
       "type": "open_day",
       "stage": "submitted",
       "outcome": null,
@@ -100,12 +103,12 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": false,
-      "firm": "Goodwin",
-      "what": "In-Person Open Afternoon",
-      "id": "goodwin-in-person-open-afternoon"
+      "is_new": false
     },
     {
+      "id": "linklaters-an-evening-with-linklaters-in-london",
+      "firm": "Linklaters",
+      "what": "An Evening with Linklaters in London",
       "type": "open_day",
       "stage": "submitted",
       "outcome": null,
@@ -117,12 +120,12 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": false,
-      "firm": "Linklaters",
-      "what": "An Evening with Linklaters in London",
-      "id": "linklaters-an-evening-with-linklaters-in-london"
+      "is_new": false
     },
     {
+      "id": "dechert-open-day-application",
+      "firm": "Dechert",
+      "what": "Open day application",
       "type": "open_day",
       "stage": "submitted",
       "outcome": null,
@@ -134,12 +137,12 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": true,
-      "firm": "Dechert",
-      "what": "Open day application",
-      "id": "dechert-open-day-application"
+      "is_new": true
     },
     {
+      "id": "herbert-smith-freehills-kramer-ip-cyber-and-technology-open-day",
+      "firm": "Herbert Smith Freehills Kramer",
+      "what": "IP, Cyber and Technology Open Day",
       "type": "open_day",
       "stage": "submitted",
       "outcome": null,
@@ -151,12 +154,12 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": true,
-      "firm": "Herbert Smith Freehills Kramer",
-      "what": "IP, Cyber and Technology Open Day",
-      "id": "herbert-smith-freehills-kramer-ip-cyber-and-technology-open-day"
+      "is_new": true
     },
     {
+      "id": "simpson-thacher-bartlett-open-day",
+      "firm": "Simpson Thacher & Bartlett",
+      "what": "Open Day (21 September)",
       "type": "open_day",
       "stage": "submitted",
       "outcome": "Rejected",
@@ -168,12 +171,12 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": false,
-      "firm": "Simpson Thacher & Bartlett",
-      "what": "Open Day (21 September)",
-      "id": "simpson-thacher-bartlett-open-day"
+      "is_new": false
     },
     {
+      "id": "paul-weiss-insight-afternoon",
+      "firm": "Paul, Weiss",
+      "what": "Insight Afternoon",
       "type": "open_day",
       "stage": "submitted",
       "outcome": "Rejected",
@@ -185,12 +188,12 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": true,
-      "firm": "Paul, Weiss",
-      "what": "Insight Afternoon",
-      "id": "paul-weiss-insight-afternoon"
+      "is_new": true
     },
     {
+      "id": "baker-mckenzie-women-s-open-day",
+      "firm": "Baker McKenzie",
+      "what": "Women's Open Day",
       "type": "open_day",
       "stage": "in_progress",
       "outcome": null,
@@ -202,12 +205,12 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": false,
-      "firm": "Baker McKenzie",
-      "what": "Women's Open Day",
-      "id": "baker-mckenzie-women-s-open-day"
+      "is_new": false
     },
     {
+      "id": "clifford-chance-london-insight-day",
+      "firm": "Clifford Chance",
+      "what": "London Insight Day",
       "type": "open_day",
       "stage": "in_progress",
       "outcome": null,
@@ -219,12 +222,12 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": false,
-      "firm": "Clifford Chance",
-      "what": "London Insight Day",
-      "id": "clifford-chance-london-insight-day"
+      "is_new": false
     },
     {
+      "id": "weil-gotshal-manges-insight-day",
+      "firm": "Weil, Gotshal & Manges",
+      "what": "Insight Day",
       "type": "open_day",
       "stage": "in_progress",
       "outcome": null,
@@ -236,12 +239,12 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": false,
-      "firm": "Weil, Gotshal & Manges",
-      "what": "Insight Day",
-      "id": "weil-gotshal-manges-insight-day"
+      "is_new": false
     },
     {
+      "id": "dla-piper-london-discovery-day",
+      "firm": "DLA Piper",
+      "what": "London Discovery Day",
       "type": "open_day",
       "stage": "in_progress",
       "outcome": null,
@@ -253,12 +256,12 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": false,
-      "firm": "DLA Piper",
-      "what": "London Discovery Day",
-      "id": "dla-piper-london-discovery-day"
+      "is_new": false
     },
     {
+      "id": "bird-bird-trainee-solicitor-open-day",
+      "firm": "Bird & Bird",
+      "what": "Trainee Solicitor Open Day",
       "type": "open_day",
       "stage": "planned",
       "outcome": null,
@@ -270,12 +273,12 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": false,
-      "firm": "Bird & Bird",
-      "what": "Trainee Solicitor Open Day",
-      "id": "bird-bird-trainee-solicitor-open-day"
+      "is_new": false
     },
     {
+      "id": "jones-day-london-open-evening-2",
+      "firm": "Jones Day",
+      "what": "London Open Evening 2",
       "type": "open_day",
       "stage": "planned",
       "outcome": null,
@@ -287,14 +290,14 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": false,
-      "firm": "Jones Day",
-      "what": "London Open Evening 2",
-      "id": "jones-day-london-open-evening-2"
+      "is_new": false
     },
     {
+      "id": "a-o-shearman-training-contract-open-evening",
+      "firm": "A&O Shearman",
+      "what": "Training Contract Open Evening",
       "type": "open_day",
-      "stage": "planned",
+      "stage": "submitted",
       "outcome": null,
       "event_date": null,
       "deadline": null,
@@ -304,12 +307,12 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": false,
-      "firm": "A&O Shearman",
-      "what": "Training Contract Open Evening",
-      "id": "a-o-shearman-training-contract-open-evening"
+      "is_new": false
     },
     {
+      "id": "k-l-gates-training-contract-2028",
+      "firm": "K&L Gates",
+      "what": "Training Contract 2028",
       "type": "training_contract",
       "stage": "submitted",
       "outcome": "Rejected",
@@ -321,12 +324,12 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": false,
-      "firm": "K&L Gates",
-      "what": "Training Contract 2028",
-      "id": "k-l-gates-training-contract-2028"
+      "is_new": false
     },
     {
+      "id": "royal-borough-of-windsor-and-maidenhead-support-services-assistant-par",
+      "firm": "Royal Borough of Windsor and Maidenhead",
+      "what": "Support Services Assistant, Parking and Enforcement",
       "type": "job",
       "stage": "submitted",
       "outcome": "Interview booked",
@@ -338,12 +341,12 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": false,
-      "firm": "Royal Borough of Windsor and Maidenhead",
-      "what": "Support Services Assistant, Parking and Enforcement",
-      "id": "royal-borough-of-windsor-and-maidenhead-support-services-assistant-par"
+      "is_new": false
     },
     {
+      "id": "emg-solicitors-paralegal-court-of-protection-property-and-affairs",
+      "firm": "EMG Solicitors",
+      "what": "Paralegal, Court of Protection (Property and Affairs)",
       "type": "job",
       "stage": "submitted",
       "outcome": "Under review",
@@ -355,12 +358,12 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": false,
-      "firm": "EMG Solicitors",
-      "what": "Paralegal, Court of Protection (Property and Affairs)",
-      "id": "emg-solicitors-paralegal-court-of-protection-property-and-affairs"
+      "is_new": false
     },
     {
+      "id": "chambers-and-partners-research-analyst-brazil-team",
+      "firm": "Chambers and Partners",
+      "what": "Research Analyst, Brazil team",
       "type": "job",
       "stage": "submitted",
       "outcome": "Interviewed",
@@ -372,12 +375,12 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": false,
-      "firm": "Chambers and Partners",
-      "what": "Research Analyst, Brazil team",
-      "id": "chambers-and-partners-research-analyst-brazil-team"
+      "is_new": false
     },
     {
+      "id": "withers-litigation-paralegal-12-month-ftc",
+      "firm": "Withers",
+      "what": "Litigation Paralegal (12 month FTC)",
       "type": "job",
       "stage": "submitted",
       "outcome": null,
@@ -389,12 +392,12 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": true,
-      "firm": "Withers",
-      "what": "Litigation Paralegal (12 month FTC)",
-      "id": "withers-litigation-paralegal-12-month-ftc"
+      "is_new": true
     },
     {
+      "id": "linklaters-international-arbitration-intern",
+      "firm": "Linklaters",
+      "what": "International Arbitration Intern",
       "type": "job",
       "stage": "submitted",
       "outcome": null,
@@ -406,12 +409,12 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": true,
-      "firm": "Linklaters",
-      "what": "International Arbitration Intern",
-      "id": "linklaters-international-arbitration-intern"
+      "is_new": true
     },
     {
+      "id": "a-o-shearman-knowledge-paralegal-global-financial-markets",
+      "firm": "A&O Shearman",
+      "what": "Knowledge Paralegal, Global Financial Markets",
       "type": "job",
       "stage": "submitted",
       "outcome": null,
@@ -423,12 +426,12 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": true,
-      "firm": "A&O Shearman",
-      "what": "Knowledge Paralegal, Global Financial Markets",
-      "id": "a-o-shearman-knowledge-paralegal-global-financial-markets"
+      "is_new": true
     },
     {
+      "id": "a-o-shearman-second-application-role-not-named-in-the-confirmation",
+      "firm": "A&O Shearman",
+      "what": "Second application (role not named in the confirmation)",
       "type": "job",
       "stage": "submitted",
       "outcome": null,
@@ -440,12 +443,12 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": true,
-      "firm": "A&O Shearman",
-      "what": "Second application (role not named in the confirmation)",
-      "id": "a-o-shearman-second-application-role-not-named-in-the-confirmation"
+      "is_new": true
     },
     {
+      "id": "gherson-solicitors-litigation-paralegal",
+      "firm": "Gherson Solicitors",
+      "what": "Litigation Paralegal",
       "type": "job",
       "stage": "submitted",
       "outcome": "Rejected",
@@ -457,12 +460,12 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": false,
-      "firm": "Gherson Solicitors",
-      "what": "Litigation Paralegal",
-      "id": "gherson-solicitors-litigation-paralegal"
+      "is_new": false
     },
     {
+      "id": "clifford-chance-stagiaire-internship-arbitration",
+      "firm": "Clifford Chance",
+      "what": "Stagiaire (Internship), Arbitration",
       "type": "job",
       "stage": "submitted",
       "outcome": "Rejected",
@@ -474,12 +477,12 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": true,
-      "firm": "Clifford Chance",
-      "what": "Stagiaire (Internship), Arbitration",
-      "id": "clifford-chance-stagiaire-internship-arbitration"
+      "is_new": true
     },
     {
+      "id": "genomics-england-paralegal",
+      "firm": "Genomics England",
+      "what": "Paralegal",
       "type": "job",
       "stage": "submitted",
       "outcome": "Under review",
@@ -491,12 +494,12 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": true,
-      "firm": "Genomics England",
-      "what": "Paralegal",
-      "id": "genomics-england-paralegal"
+      "is_new": true
     },
     {
+      "id": "kingsley-napley-application-via-their-candid-portal",
+      "firm": "Kingsley Napley",
+      "what": "Application via their Candid portal",
       "type": "job",
       "stage": "submitted",
       "outcome": null,
@@ -508,12 +511,12 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": true,
-      "firm": "Kingsley Napley",
-      "what": "Application via their Candid portal",
-      "id": "kingsley-napley-application-via-their-candid-portal"
+      "is_new": true
     },
     {
+      "id": "amazon-ai-data-associate-portuguese-agi-team",
+      "firm": "Amazon",
+      "what": "AI Data Associate (Portuguese), AGI team",
       "type": "job",
       "stage": "planned",
       "outcome": null,
@@ -525,10 +528,7 @@
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-22",
-      "is_new": false,
-      "firm": "Amazon",
-      "what": "AI Data Associate (Portuguese), AGI team",
-      "id": "amazon-ai-data-associate-portuguese-agi-team"
+      "is_new": false
     }
   ]
 }
