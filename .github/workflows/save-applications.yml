@@ -1,0 +1,53 @@
+# Saves an edit Maria makes to the application tracker on the dashboard.
+#
+# The tracker lives in docs/applications.json so it is the same on every device
+# and so Claude can read and write it. The dashboard is a public page and holds
+# only a GitHub token scoped to starting workflows, so an edit made there comes
+# back through here rather than being written directly.
+name: Save Applications
+
+on:
+  workflow_dispatch:
+    inputs:
+      payload:
+        description: 'The tracker as JSON: {"applications": [...]}'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+# One at a time. Two saves landing together would both rewrite the same file.
+concurrency:
+  group: save-applications
+  cancel-in-progress: false
+
+jobs:
+  save:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # Validated before it is written. A malformed payload would otherwise
+      # leave the tracker unreadable and take the tab down with it.
+      - name: Write the tracker
+        env:
+          PAYLOAD: ${{ inputs.payload }}
+        run: python scripts/save_applications.py
+
+      - name: Publish
+        run: |
+          git config user.name "job-search-bot"
+          git config user.email "actions@github.com"
+          git add docs/applications.json
+          if git diff --staged --quiet; then
+            echo "No change to publish"
+          else
+            git commit -m "Update the application tracker"
+            git pull --rebase --autostash origin main
+            git push
+          fi
