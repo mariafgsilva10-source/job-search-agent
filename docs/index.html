@@ -395,6 +395,122 @@
   .manual-kind-unreachable,
   .manual-kind-unknown { color: #4d4d4d; background: #f2f2f0; border-color: #e0e0dc; }
   .manual-checked-label { font-size: 0.78rem; color: var(--muted); align-self: center; }
+
+  .app-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .app-filters { display: flex; flex-wrap: wrap; gap: 6px; }
+  .app-filter-btn {
+    font-family: inherit;
+    font-size: 0.78rem;
+    color: var(--muted);
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 4px 11px;
+    cursor: pointer;
+  }
+  .app-filter-btn.is-on { color: #fff; background: var(--accent); border-color: var(--accent); }
+  .app-filter-count { opacity: 0.65; margin-left: 2px; }
+  .app-sync-note { font-size: 0.78rem; color: var(--muted); margin-left: auto; }
+  .app-sync-note.is-bad { color: #8a2a2a; }
+  .app-add { margin-bottom: 18px; }
+  .app-add .app-form { flex-wrap: wrap; }
+  .app-add select, .app-add input[type="date"] {
+    font-family: inherit;
+    font-size: 0.82rem;
+    padding: 6px 8px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: #fff;
+  }
+
+  .app-group { margin-bottom: 26px; }
+  .app-group-blurb { font-weight: 400; color: var(--muted); }
+  .app-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+  .app-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; min-width: 760px; }
+  .app-table th {
+    text-align: left;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    font-weight: 600;
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--line);
+    background: #fbfbfa;
+  }
+  .app-table td { padding: 10px 12px; border-bottom: 1px solid #f0efec; vertical-align: top; }
+  .app-table tr:last-child td { border-bottom: none; }
+  .app-table tr.is-new { background: #fbfaf4; }
+  .app-cell-firm { font-weight: 600; white-space: nowrap; }
+  .app-cell-what { min-width: 240px; }
+  .app-cell-date { white-space: nowrap; }
+  .app-cell-actions { text-align: right; }
+  .app-notes { font-size: 0.78rem; color: var(--muted); margin-top: 3px; line-height: 1.45; }
+  .app-ref { font-size: 0.72rem; color: var(--muted); margin-left: 6px; }
+  .app-dim { color: #b5b2ac; }
+  .app-new-dot {
+    display: inline-block;
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: #c08a2e;
+    margin-right: 5px;
+    vertical-align: 1px;
+  }
+  .app-clash {
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #8a2a2a;
+    background: #fdf0f0;
+    border: 1px solid #f0d3d3;
+    border-radius: 4px;
+    padding: 1px 5px;
+    margin-left: 6px;
+  }
+  .app-type {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 2px 7px;
+    white-space: nowrap;
+    border: 1px solid;
+  }
+  .app-type-open_day { color: #2f4f6f; background: #eaf1f7; border-color: #c6d8e6; }
+  .app-type-training_contract { color: #3c5c3c; background: #edf4ed; border-color: #cfe0cf; }
+  .app-type-job { color: #6b4a86; background: #f6f1fa; border-color: #e2d6ec; }
+  .app-date { font-variant-numeric: tabular-nums; }
+  .app-date-rel { display: block; font-size: 0.72rem; color: var(--muted); }
+  .app-date.is-urgent { color: #8a2a2a; font-weight: 600; }
+  .app-date.is-urgent .app-date-rel { color: #8a2a2a; }
+  .app-date.is-soon { color: #7a3d12; font-weight: 600; }
+  .app-date.is-past { color: #b5b2ac; }
+  .app-stage-select, .app-outcome-select {
+    font-family: inherit;
+    font-size: 0.8rem;
+    padding: 4px 6px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: #fff;
+    max-width: 150px;
+  }
+  .app-delete-btn {
+    font-family: inherit;
+    font-size: 0.75rem;
+    color: var(--muted);
+    background: none;
+    border: none;
+    padding: 0;
+    text-decoration: underline;
+    cursor: pointer;
+  }
   .add-event { margin-bottom: 20px; }
   .add-event > summary {
     cursor: pointer;
@@ -625,15 +741,33 @@
 
   <div class="tab-panel" id="panel-apps">
   <h1>My Applications</h1>
-  <div class="sub">Everything you've applied to, tracked in one place — saved only in this browser.</div>
-  <div class="oday-source-note">This list lives in this browser's storage, not on a server — it won't show up on another device or browser, and clearing your browser data will clear it too.</div>
-  <form class="app-form" id="appForm">
-    <input type="text" class="app-firm-input" id="appFirmInput" placeholder="Firm" required>
-    <input type="text" class="app-role-input" id="appRoleInput" placeholder="Role / scheme (e.g. Training Contract, Vacation Scheme)" required>
-    <input type="url" class="app-link-input" id="appLinkInput" placeholder="Link to application (optional)">
-    <button type="submit">Add application</button>
-  </form>
-  <div id="root-apps"><div class="empty">No applications tracked yet — add one above.</div></div>
+  <div class="sub">Open days, training contracts and jobs — submitted, in progress, and planned</div>
+  <div class="oday-source-note">This table lives in the repo, not in this browser, so it is the same on every device. It is refreshed each day from what you have told Claude about your applications, and you can edit any row here yourself. Rows marked <span class="app-new-dot" aria-hidden="true"></span> <strong>new</strong> were added by the daily gather and you have not seen them yet.</div>
+  <div class="app-toolbar">
+    <div class="app-filters" id="appFilters"></div>
+    <span class="app-sync-note" id="appSyncNote"></span>
+  </div>
+  <details class="add-event app-add">
+    <summary>+ Add a row yourself</summary>
+    <form class="app-form" id="appForm">
+      <input type="text" class="app-firm-input" id="appFirmInput" placeholder="Firm" required>
+      <input type="text" class="app-role-input" id="appRoleInput" placeholder="What it is (e.g. London Insight Day, Training Contract 2028, Paralegal)" required>
+      <select id="appTypeInput">
+        <option value="open_day">Open day / insight event</option>
+        <option value="training_contract">Training contract</option>
+        <option value="job">Job</option>
+      </select>
+      <select id="appStageInput">
+        <option value="planned">Planned</option>
+        <option value="in_progress">In progress</option>
+        <option value="submitted">Submitted</option>
+      </select>
+      <input type="date" id="appDeadlineInput" title="Deadline (optional)">
+      <input type="url" class="app-link-input" id="appLinkInput" placeholder="Link (optional)">
+      <button type="submit">Add</button>
+    </form>
+  </details>
+  <div id="root-apps"><div class="empty">Loading…</div></div>
   </div>
 
 <script>
@@ -831,76 +965,302 @@ document.addEventListener('click', (e) => {
   if (uncheck) { clearFirmChecked(uncheck.dataset.uncheckFirm); renderManual(); }
 });
 
-// --- "My Applications" tracker: entirely client-side (this browser's
-// storage only, no server involved) so Maria can log every firm/scheme
-// she's applied to and move it through stages herself. ---
-const APP_STATUSES = ['Applied', 'In Progress', 'Under Review', 'Written Stage', 'Interview', 'Assessment Centre', 'Offer', 'Rejected', 'Withdrawn'];
+// --- "My Applications": the tracker table ---
+//
+// This used to be a card list in localStorage, which meant it existed in one
+// browser and nowhere else - Maria had used the dashboard on another machine
+// and the tracker there was empty. It now lives in docs/applications.json, so
+// it is the same everywhere and, just as importantly, Claude can read and write
+// it. A daily gather reconciles it against what she has told Claude.
+//
+// Edits made here are held locally straight away so the table never feels slow,
+// and pushed to the repo through the same GitHub token the Generate button uses.
+const APP_TYPES = {
+  open_day: 'Open day',
+  training_contract: 'Training contract',
+  job: 'Job',
+};
+const APP_STAGES = {
+  submitted: 'Submitted',
+  in_progress: 'In progress',
+  planned: 'Planned',
+};
+// Where a submitted application has actually got to. Only meaningful once it
+// has gone in, so the column stays empty for the other two stages.
+const APP_OUTCOMES = ['', 'Under review', 'Interview booked', 'Interviewed', 'Assessment', 'Place confirmed', 'Offer', 'Rejected', 'Withdrawn'];
 
-function getApps() {
+const APP_FILTER_KEY = 'appTypeFilter';
+const APP_PENDING_KEY = 'appPendingEdits';
+
+let lastApps = null;          // what the repo currently holds
+let appSyncState = '';        // '', 'saving', 'saved', or an error to show
+
+function getAppFilter() {
+  try { return localStorage.getItem(APP_FILTER_KEY) || 'all'; } catch (e) { return 'all'; }
+}
+function setAppFilter(v) {
+  try { localStorage.setItem(APP_FILTER_KEY, v); } catch (e) {}
+}
+
+// Edits are kept here until a push succeeds, so nothing is lost if she is
+// offline, has no token set up on this device, or closes the tab mid-save.
+function getPendingEdits() {
+  try { return JSON.parse(localStorage.getItem(APP_PENDING_KEY) || 'null'); }
+  catch (e) { return null; }
+}
+function savePendingEdits(apps) {
+  try { localStorage.setItem(APP_PENDING_KEY, JSON.stringify(apps)); } catch (e) {}
+}
+function clearPendingEdits() {
+  try { localStorage.removeItem(APP_PENDING_KEY); } catch (e) {}
+}
+
+async function loadApps() {
+  const root = document.getElementById('root-apps');
   try {
-    return JSON.parse(localStorage.getItem('myApplications') || '[]');
+    const res = await fetch('applications.json?_=' + Date.now());
+    const payload = await res.json();
+    const fromRepo = (payload && payload.applications) || [];
+    const pending = getPendingEdits();
+    // Unsaved local edits win until they have actually been pushed.
+    lastApps = pending && pending.length ? pending : fromRepo;
+    if (pending && pending.length) appSyncState = 'unsaved';
+    renderApps();
   } catch (e) {
-    return [];
+    const pending = getPendingEdits();
+    if (pending) { lastApps = pending; renderApps(); return; }
+    root.innerHTML = '<div class="empty">Could not load the tracker.</div>';
   }
 }
 
-function saveApps(apps) {
-  try { localStorage.setItem('myApplications', JSON.stringify(apps)); } catch (e) {}
+function appDeadlineCell(app) {
+  const iso = app.deadline || app.event_date;
+  if (!iso) return '<span class="app-dim">—</span>';
+  const d = new Date(iso + 'T00:00:00');
+  if (isNaN(d)) return '<span class="app-dim">—</span>';
+  const days = Math.floor((d - new Date(new Date().toDateString())) / 86400000);
+  const label = d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+  const which = app.deadline ? 'Deadline' : 'Event';
+  let cls = 'app-date';
+  let extra = '';
+  if (days < 0) { cls += ' is-past'; extra = 'passed'; }
+  else if (days === 0) { cls += ' is-urgent'; extra = 'today'; }
+  else if (days <= 7) { cls += ' is-urgent'; extra = `in ${days} day${days === 1 ? '' : 's'}`; }
+  else if (days <= 21) { cls += ' is-soon'; extra = `in ${days} days`; }
+  else { extra = `in ${days} days`; }
+  return `<span class="${cls}" title="${which}">${escapeHtml(label)}<span class="app-date-rel">${escapeHtml(extra)}</span></span>`;
 }
 
-function addApp(firm, role, link) {
-  const apps = getApps();
-  apps.unshift({
-    id: 'app-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8),
-    firm, role, link: link || '',
-    status: 'Applied',
-    note: '',
-    addedAt: new Date().toISOString(),
+// Two things on the same day are easy to miss in a list and expensive to miss
+// in real life, so the table says so rather than leaving her to spot it.
+function appClashes(apps) {
+  const byDate = {};
+  apps.forEach(a => {
+    if (!a.event_date || a.stage === 'planned') return;
+    (byDate[a.event_date] = byDate[a.event_date] || []).push(a);
   });
-  saveApps(apps);
-  renderApps();
+  const clashing = new Set();
+  Object.values(byDate).forEach(group => {
+    if (group.length > 1) group.forEach(a => clashing.add(a.id));
+  });
+  return clashing;
 }
 
-function updateApp(id, changes) {
-  const apps = getApps();
-  const idx = apps.findIndex(a => a.id === id);
-  if (idx === -1) return;
-  apps[idx] = { ...apps[idx], ...changes };
-  saveApps(apps);
-}
-
-function deleteApp(id) {
-  saveApps(getApps().filter(a => a.id !== id));
-  renderApps();
-}
-
-function appCard(app) {
-  const added = new Date(app.addedAt);
-  const addedText = isNaN(added) ? '' : `Added ${added.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}`;
-  const statusOptions = APP_STATUSES.map(s => `<option value="${s}"${s === app.status ? ' selected' : ''}>${s}</option>`).join('');
+function appRow(app, clashing) {
+  const typeLabel = APP_TYPES[app.type] || 'Other';
+  const outcomeOptions = APP_OUTCOMES
+    .map(o => `<option value="${escapeHtml(o)}"${(app.outcome || '') === o ? ' selected' : ''}>${escapeHtml(o || '—')}</option>`)
+    .join('');
+  const stageOptions = Object.entries(APP_STAGES)
+    .map(([k, v]) => `<option value="${k}"${app.stage === k ? ' selected' : ''}>${escapeHtml(v)}</option>`)
+    .join('');
   return `
-    <div class="app-card" data-app-id="${escapeHtml(app.id)}" data-status="${escapeHtml(app.status)}">
-      <div class="app-card-main">
-        <div class="app-firm">${app.link ? `<a href="${escapeHtml(app.link)}" target="_blank">${escapeHtml(app.firm)}</a>` : escapeHtml(app.firm)}</div>
-        <div class="app-role">${escapeHtml(app.role)}</div>
-        <div class="app-meta">${escapeHtml(addedText)}</div>
-        <input type="text" class="app-note-input" placeholder="Notes (optional)" value="${escapeHtml(app.note || '')}">
-      </div>
-      <select class="app-status-select">${statusOptions}</select>
-      <button class="app-delete-btn" type="button">Remove</button>
-    </div>
+    <tr data-app-id="${escapeHtml(app.id)}"${app.is_new ? ' class="is-new"' : ''}>
+      <td class="app-cell-firm">
+        ${app.is_new ? '<span class="app-new-dot" title="Added by the daily gather"></span>' : ''}
+        ${app.link ? `<a href="${escapeHtml(app.link)}" target="_blank" rel="noopener">${escapeHtml(app.firm)}</a>` : escapeHtml(app.firm)}
+        ${clashing.has(app.id) ? '<span class="app-clash" title="Another entry falls on the same day">clash</span>' : ''}
+      </td>
+      <td class="app-cell-what">
+        ${escapeHtml(app.what)}
+        ${app.ref ? `<span class="app-ref">ref ${escapeHtml(app.ref)}</span>` : ''}
+        ${app.notes ? `<div class="app-notes">${escapeHtml(app.notes)}</div>` : ''}
+      </td>
+      <td><span class="app-type app-type-${escapeHtml(app.type)}">${escapeHtml(typeLabel)}</span></td>
+      <td class="app-cell-date">${appDeadlineCell(app)}</td>
+      <td><select class="app-stage-select" data-field="stage">${stageOptions}</select></td>
+      <td>${app.stage === 'submitted'
+            ? `<select class="app-outcome-select" data-field="outcome">${outcomeOptions}</select>`
+            : '<span class="app-dim">—</span>'}</td>
+      <td class="app-cell-actions"><button class="app-delete-btn" type="button" title="Remove this row">Remove</button></td>
+    </tr>
   `;
+}
+
+function renderAppFilters() {
+  const el = document.getElementById('appFilters');
+  if (!el) return;
+  const current = getAppFilter();
+  const counts = { all: (lastApps || []).length };
+  Object.keys(APP_TYPES).forEach(t => {
+    counts[t] = (lastApps || []).filter(a => a.type === t).length;
+  });
+  const opts = [['all', 'Everything'], ...Object.entries(APP_TYPES)];
+  el.innerHTML = opts.map(([k, label]) =>
+    `<button class="app-filter-btn${current === k ? ' is-on' : ''}" data-app-filter="${k}">${escapeHtml(label)} <span class="app-filter-count">${counts[k] || 0}</span></button>`
+  ).join('');
 }
 
 function renderApps() {
   const root = document.getElementById('root-apps');
-  const apps = getApps();
-  if (!apps.length) {
-    root.innerHTML = '<div class="empty">No applications tracked yet — add one above.</div>';
+  const note = document.getElementById('appSyncNote');
+  if (!lastApps) return;
+  renderAppFilters();
+
+  if (note) {
+    note.className = 'app-sync-note' + (appSyncState === 'unsaved' || (appSyncState && appSyncState !== 'saving' && appSyncState !== 'saved') ? ' is-bad' : '');
+    note.textContent =
+      appSyncState === 'saving' ? 'Saving…' :
+      appSyncState === 'saved' ? 'Saved' :
+      appSyncState === 'unsaved' ? 'Edited here but not saved to the repo yet' :
+      appSyncState || '';
+  }
+
+  const filter = getAppFilter();
+  const shown = filter === 'all' ? lastApps : lastApps.filter(a => a.type === filter);
+  if (!shown.length) {
+    root.innerHTML = '<div class="empty">Nothing here yet.</div>';
     return;
   }
-  root.innerHTML = apps.map(appCard).join('');
+  const clashing = appClashes(lastApps);
+
+  // Deadline order inside each group: what is due soonest is what matters.
+  const byStage = (stage) => shown
+    .filter(a => a.stage === stage)
+    .sort((a, b) => {
+      const da = a.deadline || a.event_date || '9999-12-31';
+      const db = b.deadline || b.event_date || '9999-12-31';
+      return da < db ? -1 : da > db ? 1 : (a.firm || '').localeCompare(b.firm || '');
+    });
+
+  root.innerHTML = ['in_progress', 'planned', 'submitted'].map(stage => {
+    const rows = byStage(stage);
+    if (!rows.length) return '';
+    const blurb = stage === 'in_progress' ? 'Started, still to send'
+                : stage === 'planned' ? 'Intending to apply'
+                : 'Already sent';
+    return `
+      <div class="app-group">
+        <div class="day-label">${escapeHtml(APP_STAGES[stage])} · ${rows.length} <span class="app-group-blurb">${escapeHtml(blurb)}</span></div>
+        <div class="app-table-wrap">
+          <table class="app-table">
+            <thead>
+              <tr>
+                <th>Firm</th><th>What</th><th>Type</th><th>Date</th><th>Stage</th><th>Status</th><th></th>
+              </tr>
+            </thead>
+            <tbody>${rows.map(a => appRow(a, clashing)).join('')}</tbody>
+          </table>
+        </div>
+      </div>`;
+  }).join('');
 }
+
+function mutateApps(fn) {
+  if (!lastApps) return;
+  fn(lastApps);
+  savePendingEdits(lastApps);
+  appSyncState = 'unsaved';
+  renderApps();
+  pushApps();
+}
+
+function addApp(fields) {
+  const id = (fields.firm + '-' + fields.what).toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 70) || ('row-' + Date.now());
+  const today = new Date().toISOString().slice(0, 10);
+  mutateApps(apps => apps.unshift({
+    id: apps.some(a => a.id === id) ? id + '-' + Date.now().toString(36) : id,
+    firm: fields.firm, what: fields.what, type: fields.type, stage: fields.stage,
+    outcome: null, event_date: null, deadline: fields.deadline || null,
+    link: fields.link || null, ref: null, notes: '',
+    source: 'you', added_on: today, updated_on: today, is_new: false,
+  }));
+}
+
+function updateApp(id, changes) {
+  mutateApps(apps => {
+    const i = apps.findIndex(a => a.id === id);
+    if (i === -1) return;
+    apps[i] = { ...apps[i], ...changes, is_new: false, updated_on: new Date().toISOString().slice(0, 10) };
+  });
+}
+
+function deleteApp(id) {
+  mutateApps(apps => {
+    const i = apps.findIndex(a => a.id === id);
+    if (i !== -1) apps.splice(i, 1);
+  });
+}
+
+// Writing goes through a workflow rather than the contents API so the token she
+// already set up for the Generate button is enough, with no extra permission.
+async function pushApps() {
+  if (!isGithubConnected()) {
+    appSyncState = 'Saved on this device. Set up document writing above to save it for every device.';
+    renderApps();
+    return;
+  }
+  appSyncState = 'saving';
+  renderApps();
+  const body = JSON.stringify({ applications: lastApps }, null, 2);
+  if (body.length > 60000) {
+    appSyncState = 'The tracker has grown too large to save this way. Tell Claude and it will tidy it up.';
+    renderApps();
+    return;
+  }
+  try {
+    const res = await fetch(
+      `https://api.github.com/repos/${GH_REPO}/actions/workflows/save-applications.yml/dispatches`,
+      {
+        method: 'POST',
+        headers: { ...ghHeaders(), 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ref: 'main', inputs: { payload: body } }),
+      }
+    );
+    if (res.status !== 204) {
+      let b = null; try { b = await res.json(); } catch (e) {}
+      throw new Error(ghProblem(res.status, b));
+    }
+    clearPendingEdits();
+    appSyncState = 'saved';
+    renderApps();
+    setTimeout(() => { if (appSyncState === 'saved') { appSyncState = ''; renderApps(); } }, 4000);
+  } catch (err) {
+    appSyncState = (err && err.message) || String(err);
+    renderApps();
+  }
+}
+
+document.addEventListener('click', (e) => {
+  const f = e.target.closest('[data-app-filter]');
+  if (f) { setAppFilter(f.dataset.appFilter); renderApps(); return; }
+  const del = e.target.closest('.app-delete-btn');
+  if (del) {
+    const row = del.closest('[data-app-id]');
+    if (row) deleteApp(row.dataset.appId);
+  }
+});
+
+document.addEventListener('change', (e) => {
+  const sel = e.target.closest('.app-stage-select, .app-outcome-select');
+  if (!sel) return;
+  const row = sel.closest('[data-app-id]');
+  if (!row) return;
+  const field = sel.dataset.field;
+  const value = field === 'outcome' ? (sel.value || null) : sel.value;
+  updateApp(row.dataset.appId, { [field]: value });
+});
 
 // --- Dropbox saving: entirely client-side (no server involved), triggered
 // only when Maria clicks "Save to Dropbox" on a job. Uses Dropbox's OAuth
@@ -2024,16 +2384,23 @@ document.addEventListener('click', async (e) => {
 document.getElementById('appForm').addEventListener('submit', (e) => {
   e.preventDefault();
   const firmEl = document.getElementById('appFirmInput');
-  const roleEl = document.getElementById('appRoleInput');
+  const whatEl = document.getElementById('appRoleInput');
   const linkEl = document.getElementById('appLinkInput');
+  const deadlineEl = document.getElementById('appDeadlineInput');
   const firm = firmEl.value.trim();
-  const role = roleEl.value.trim();
-  const link = linkEl.value.trim();
-  if (!firm || !role) return;
-  addApp(firm, role, link);
+  const what = whatEl.value.trim();
+  if (!firm || !what) return;
+  addApp({
+    firm, what,
+    type: document.getElementById('appTypeInput').value,
+    stage: document.getElementById('appStageInput').value,
+    deadline: deadlineEl.value || null,
+    link: linkEl.value.trim(),
+  });
   firmEl.value = '';
-  roleEl.value = '';
+  whatEl.value = '';
   linkEl.value = '';
+  deadlineEl.value = '';
   firmEl.focus();
 });
 
@@ -2047,7 +2414,7 @@ document.getElementById('appForm').addEventListener('submit', (e) => {
   await loadLeads();
   await loadTc();
   await loadManual();
-  renderApps();
+  await loadApps();
   startDocsPolling();   // a job asked for before the page was closed is still coming
 })();
 </script>
