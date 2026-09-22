@@ -886,6 +886,36 @@ MANUAL_EVENTS = [
         "location": "London",
         "found_on": "2026-09-21",
     },
+    # Not on Legal Cheek's calendar at all. Found via lawcareers.net's
+    # "Law firm open days and insight schemes 2026/27" roundup (15 Sept
+    # 2026) and confirmed directly on DLA Piper's own early-careers site
+    # 2026-09-22: careers.dlapiper.com/early-careers/europe/uk/discovery-
+    # days.html lists five UK Discovery Days this cycle (London, Manchester,
+    # Leeds, Birmingham, Edinburgh), each with its own date/deadline/apply
+    # link - only the London one is in scope here. Eligibility per the
+    # firm's own page: second-/third-/final-year law students, final-year
+    # non-law students, and graduates/career changers are all explicitly
+    # welcome, so no eligibility_note is needed.
+    {
+        "firm": "DLA Piper",
+        "event_name": "London Discovery Day",
+        "summary": (
+            "An in-person event for students, graduates and career changers to "
+            "learn about DLA Piper's practice areas, meet trainees and staff, "
+            "and get guidance on the application process. One of five UK "
+            "Discovery Days run this cycle (also in Manchester, Leeds, "
+            "Birmingham and Edinburgh); event held 12 October 2026."
+        ),
+        "opens_date": None,
+        "opens_confirmed": False,
+        "deadline_label": "05/10/2026",
+        "deadline_date": "2026-10-05",
+        "apply_link": "https://forms.rmp-connect.com/form/aeWYJ0eHRCrBtsQj9ap0sZVcPa/6dx8y5qzSBEqnn8Fa5Pg",
+        "link_is_specific": True,
+        "eligibility_note": None,
+        "location": "London",
+        "found_on": "2026-09-22",
+    },
 ]
 
 
