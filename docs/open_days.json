@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-23T07:05:26Z",
+  "generated_at": "2026-09-23T11:31:21Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -176,6 +176,38 @@
       "found_on": "2026-09-22"
     },
     {
+      "id": "mayer-brown|london-insight-day-1|05-10-2026",
+      "firm": "Mayer Brown",
+      "event_name": "London Insight Day 1",
+      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm. Event held 21 October 2026.",
+      "location": "London",
+      "opens_date": "2026-09-01",
+      "opens_confirmed": true,
+      "deadline_label": "05/10/2026",
+      "deadline_date": "2026-10-05",
+      "apply_link": "https://mayerbrown.grad.allhires.com/app/",
+      "link_is_specific": false,
+      "eligibility_note": null,
+      "source": "direct",
+      "found_on": "2026-09-23"
+    },
+    {
+      "id": "mayer-brown|london-insight-day-2|05-10-2026",
+      "firm": "Mayer Brown",
+      "event_name": "London Insight Day 2",
+      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm. Event held 17 November 2026.",
+      "location": "London",
+      "opens_date": "2026-09-01",
+      "opens_confirmed": true,
+      "deadline_label": "05/10/2026",
+      "deadline_date": "2026-10-05",
+      "apply_link": "https://mayerbrown.grad.allhires.com/app/",
+      "link_is_specific": false,
+      "eligibility_note": null,
+      "source": "direct",
+      "found_on": "2026-09-23"
+    },
+    {
       "id": "goodwin|insight-into-the-trainee-experience:-meet-our-trainees-and-q&a|09-10-2026",
       "firm": "Goodwin",
       "event_name": "Insight into the Trainee Experience: Meet Our Trainees and Q&A",
@@ -286,6 +318,22 @@
       "eligibility_note": null,
       "source": "legal_cheek",
       "found_on": null
+    },
+    {
+      "id": "cooley|meet-cooley---in-person|13-10-2026",
+      "firm": "Cooley",
+      "event_name": "Meet Cooley - In Person",
+      "summary": "An in-person flagship student event bringing together partners, associates, trainees and the graduate recruitment team for a day of insight, conversation and networking. Limited capacity - registrations may close before the stated deadline.",
+      "location": "London",
+      "opens_date": null,
+      "opens_confirmed": false,
+      "deadline_label": "13/10/2026",
+      "deadline_date": "2026-10-13",
+      "apply_link": "https://apply.candidats.io/54a424cb-40e9-4f21-9985-ec2d172c8ba5",
+      "link_is_specific": true,
+      "eligibility_note": null,
+      "source": "direct",
+      "found_on": "2026-09-23"
     },
     {
       "id": "rpc|london-insight-day|15-10-2026",
@@ -480,6 +528,22 @@
       "found_on": null
     },
     {
+      "id": "dechert|open-event|30-10-2026",
+      "firm": "Dechert",
+      "event_name": "Open Event",
+      "summary": "An in-person event featuring talks, Q&A, and networking with trainees and associates, plus an application skills session, giving a flavour of life and work at the firm before applying to the vacation scheme. Event held 16 November 2026.",
+      "location": "London",
+      "opens_date": null,
+      "opens_confirmed": false,
+      "deadline_label": "30/10/2026",
+      "deadline_date": "2026-10-30",
+      "apply_link": "https://apply.candidats.io/09d37113-dd30-41e8-a464-be001b3cbdfb",
+      "link_is_specific": true,
+      "eligibility_note": null,
+      "source": "direct",
+      "found_on": "2026-09-23"
+    },
+    {
       "id": "davis-polk-&-wardwell|penultimate-year-&-postgraduate-insight-day|31-10-2026",
       "firm": "Davis Polk & Wardwell",
       "event_name": "Penultimate Year & Postgraduate Insight Day",
@@ -510,6 +574,22 @@
       "eligibility_note": null,
       "source": "legal_cheek",
       "found_on": null
+    },
+    {
+      "id": "cooley|meet-cooley---virtual|03-11-2026",
+      "firm": "Cooley",
+      "event_name": "Meet Cooley - Virtual",
+      "summary": "A virtual flagship student event bringing together partners, associates, trainees and the graduate recruitment team for an afternoon of insight, conversation and networking. Limited capacity - registrations may close before the stated deadline.",
+      "location": "Virtual",
+      "opens_date": null,
+      "opens_confirmed": false,
+      "deadline_label": "03/11/2026",
+      "deadline_date": "2026-11-03",
+      "apply_link": "https://apply.candidats.io/f0e4d84d-acc4-42e7-b6c4-7799dda6e237",
+      "link_is_specific": true,
+      "eligibility_note": null,
+      "source": "direct",
+      "found_on": "2026-09-23"
     },
     {
       "id": "withers|open-day|06-11-2026",
