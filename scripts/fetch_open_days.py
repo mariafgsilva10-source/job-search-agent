@@ -154,6 +154,12 @@ LONDON_RELEVANT = {"London", "Virtual", "Multiple UK offices (incl. London)"}
 EVENT_LOCATIONS = {
     ("Ashfords", "Bristol First Year Insight Day"): "Bristol",
     ("Ashfords", "Exeter First Year Insight Day"): "Exeter",
+    ("Baker McKenzie", "General Open Day"): "London",
+    ("Baker McKenzie", "Women’s Open Day"): "London",
+    ("Baker McKenzie", "Opportunity Open Day"): "London",
+    ("Baker McKenzie", "BakerEthnicity Open Day"): "London",
+    ("Baker McKenzie", "Pride at Baker McKenzie Open Day"): "London",
+    ("Baker McKenzie", "EmployAbility Open Day"): "London",
     ("BCLP", "Open Day"): "London",
     ("Bird & Bird", "Trainee Solicitor Open Day"): "London",
     ("Bristows — solicitor apprenticeship", "Solicitor Apprenticeship Open Evening"): "London",
@@ -670,6 +676,47 @@ OPEN_DAY_OVERRIDES = {
         "apply_link": "https://forsters.grad.allhires.com/app/",
         "link_is_specific": False, "eligibility_note": None,
     },
+    # --- Researched 2026-09-23 directly on uk-graduates.bakermckenzie.com/
+    # events/ and confirmed on each event's own careers.bakermckenzie.com/
+    # en_US/events/EventDetail page. All six are explicitly open to
+    # "second year, penultimate year, final year students, or graduates in
+    # any degree discipline" (firm's own wording) with a 2:1 or expected
+    # 2:1, so a graduate is in scope for every one. Each is a diversity/
+    # access-focused open day open to Maria as a graduate; recorded here as
+    # eligibility_note per Maria's brief.
+    ("Baker McKenzie", "General Open Day", "07/10/2026"): {
+        "opens_date": "2026-09-07", "opens_confirmed": True,
+        "apply_link": "https://careers.bakermckenzie.com/en_US/events/EventDetail?eventId=3607",
+        "link_is_specific": True, "eligibility_note": None,
+    },
+    ("Baker McKenzie", "Opportunity Open Day", "12/10/2026"): {
+        "opens_date": "2026-09-07", "opens_confirmed": True,
+        "apply_link": "https://careers.bakermckenzie.com/en_US/events/EventDetail?eventId=3638",
+        "link_is_specific": True,
+        "eligibility_note": "For candidates from lower socio-economic backgrounds (firm's own wording).",
+    },
+    ("Baker McKenzie", "Women’s Open Day", "12/10/2026"): {
+        "opens_date": "2026-09-07", "opens_confirmed": True,
+        "apply_link": "https://careers.bakermckenzie.com/en_US/events/EventDetail?eventId=3634",
+        "link_is_specific": True, "eligibility_note": "For female applicants (firm's own wording).",
+    },
+    ("Baker McKenzie", "BakerEthnicity Open Day", "26/10/2026"): {
+        "opens_date": "2026-09-07", "opens_confirmed": True,
+        "apply_link": "https://careers.bakermckenzie.com/en_US/events/EventDetail?eventId=3639",
+        "link_is_specific": True,
+        "eligibility_note": "For candidates from ethnic minority backgrounds (firm's own wording).",
+    },
+    ("Baker McKenzie", "Pride at Baker McKenzie Open Day", "10/11/2026"): {
+        "opens_date": "2026-09-07", "opens_confirmed": True,
+        "apply_link": "https://careers.bakermckenzie.com/en_US/events/EventDetail?eventId=3640",
+        "link_is_specific": True, "eligibility_note": "For LGBTQ+ applicants (firm's own wording).",
+    },
+    ("Baker McKenzie", "EmployAbility Open Day", "16/11/2026"): {
+        "opens_date": "2026-09-07", "opens_confirmed": True,
+        "apply_link": "https://careers.bakermckenzie.com/en_US/events/EventDetail?eventId=3641",
+        "link_is_specific": True,
+        "eligibility_note": "For candidates with disabilities, run with My Plus Consulting (firm's own wording).",
+    },
     # --- Researched 2026-09-04 but left OUT deliberately: each firm's own
     # site either didn't show a live/current listing for this event (stale
     # prior-cycle content, a 404, or "not yet published"), the event
@@ -915,6 +962,128 @@ MANUAL_EVENTS = [
         "eligibility_note": None,
         "location": "London",
         "found_on": "2026-09-22",
+    },
+    # Not on Legal Cheek's calendar. Found via a TCLA forum roundup (last
+    # edited 21 Sept 2026), then confirmed directly on Mayer Brown's own
+    # site (mayerbrown.com/en/careers/students-and-graduates/europe)
+    # 2026-09-23: two London Insight Day sessions this cycle, both open to
+    # "all undergraduates and graduates, regardless of degree discipline"
+    # (firm's own wording - no eligibility_note needed), applications open
+    # 1 Sept, both share the same 5 Oct closing date. Apply link is the
+    # firm's general AllHires portal (also used for Mayer Brown's existing
+    # First Year Virtual Insight Session override) - no per-session link is
+    # published.
+    {
+        "firm": "Mayer Brown",
+        "event_name": "London Insight Day 1",
+        "summary": (
+            "An in-person event featuring talks, Q&A, and networking with "
+            "trainees, giving a flavour of life and work at the firm. Event "
+            "held 21 October 2026."
+        ),
+        "opens_date": "2026-09-01",
+        "opens_confirmed": True,
+        "deadline_label": "05/10/2026",
+        "deadline_date": "2026-10-05",
+        "apply_link": "https://mayerbrown.grad.allhires.com/app/",
+        "link_is_specific": False,
+        "eligibility_note": None,
+        "location": "London",
+        "found_on": "2026-09-23",
+    },
+    {
+        "firm": "Mayer Brown",
+        "event_name": "London Insight Day 2",
+        "summary": (
+            "An in-person event featuring talks, Q&A, and networking with "
+            "trainees, giving a flavour of life and work at the firm. Event "
+            "held 17 November 2026."
+        ),
+        "opens_date": "2026-09-01",
+        "opens_confirmed": True,
+        "deadline_label": "05/10/2026",
+        "deadline_date": "2026-10-05",
+        "apply_link": "https://mayerbrown.grad.allhires.com/app/",
+        "link_is_specific": False,
+        "eligibility_note": None,
+        "location": "London",
+        "found_on": "2026-09-23",
+    },
+    # Not on Legal Cheek's calendar. Found via the same TCLA roundup,
+    # confirmed directly on Dechert's own application portal
+    # (dechert.app.candidats.io -> "Open Event - 16 November 2026")
+    # 2026-09-23. The event page states explicitly: "for those who are
+    # currently eligible to apply for a vacation scheme, which is
+    # penultimate year law undergraduates, all final year undergraduates
+    # (both law and non-law), all graduates, post-graduates and career
+    # changers" - so a graduate is in scope, no eligibility_note needed.
+    {
+        "firm": "Dechert",
+        "event_name": "Open Event",
+        "summary": (
+            "An in-person event featuring talks, Q&A, and networking with "
+            "trainees and associates, plus an application skills session, "
+            "giving a flavour of life and work at the firm before applying "
+            "to the vacation scheme. Event held 16 November 2026."
+        ),
+        "opens_date": None,
+        "opens_confirmed": False,
+        "deadline_label": "30/10/2026",
+        "deadline_date": "2026-10-30",
+        "apply_link": "https://apply.candidats.io/09d37113-dd30-41e8-a464-be001b3cbdfb",
+        "link_is_specific": True,
+        "eligibility_note": None,
+        "location": "London",
+        "found_on": "2026-09-23",
+    },
+    # Not on Legal Cheek's calendar. Found via the same TCLA roundup ("Meet
+    # Cooley"), confirmed directly on Cooley's own application portal
+    # (cooley.app.candidats.io -> "Meet Cooley - In Person" /
+    # "Meet Cooley - Virtual") 2026-09-23. Neither event page publishes a
+    # specific session date (only a closing date for registrations, which
+    # may close early due to limited capacity) or an explicit eligibility
+    # statement - Cooley UK's general early-careers materials describe this
+    # event series as prioritising penultimate-year law / final-year
+    # non-law / graduates / career changers, consistent with a graduate
+    # being in scope, but that wording wasn't repeated on this cycle's
+    # event page itself.
+    {
+        "firm": "Cooley",
+        "event_name": "Meet Cooley - In Person",
+        "summary": (
+            "An in-person flagship student event bringing together partners, "
+            "associates, trainees and the graduate recruitment team for a day "
+            "of insight, conversation and networking. Limited capacity - "
+            "registrations may close before the stated deadline."
+        ),
+        "opens_date": None,
+        "opens_confirmed": False,
+        "deadline_label": "13/10/2026",
+        "deadline_date": "2026-10-13",
+        "apply_link": "https://apply.candidats.io/54a424cb-40e9-4f21-9985-ec2d172c8ba5",
+        "link_is_specific": True,
+        "eligibility_note": None,
+        "location": "London",
+        "found_on": "2026-09-23",
+    },
+    {
+        "firm": "Cooley",
+        "event_name": "Meet Cooley - Virtual",
+        "summary": (
+            "A virtual flagship student event bringing together partners, "
+            "associates, trainees and the graduate recruitment team for an "
+            "afternoon of insight, conversation and networking. Limited "
+            "capacity - registrations may close before the stated deadline."
+        ),
+        "opens_date": None,
+        "opens_confirmed": False,
+        "deadline_label": "03/11/2026",
+        "deadline_date": "2026-11-03",
+        "apply_link": "https://apply.candidats.io/f0e4d84d-acc4-42e7-b6c4-7799dda6e237",
+        "link_is_specific": True,
+        "eligibility_note": None,
+        "location": "Virtual",
+        "found_on": "2026-09-23",
     },
 ]
 
