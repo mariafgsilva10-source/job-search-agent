@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-22T07:06:50Z",
+  "generated_at": "2026-09-23T07:06:59Z",
   "note": "Only includes Training Contract listings manually verified as open to graduates applying directly, without needing to have done that firm's own vacation scheme first. New listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "events": [
     {
@@ -669,8 +669,8 @@
       "event_name": "Bristol Direct Training Contract",
       "opens_date": "2026-10-01",
       "opens_confirmed": false,
-      "closes_date": "2027-06-22",
-      "closes_label": "22/06/2027",
+      "closes_date": "2027-06-21",
+      "closes_label": "21/06/2027",
       "apply_link": "https://www.burges-salmon.com/jobs/",
       "eligibility_note": "Firm's own listing explicitly welcomes \"applicants that have graduated or are changing careers\" - a direct (non-vacation-scheme) route by design."
     },
