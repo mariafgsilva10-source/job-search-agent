@@ -4,6 +4,23 @@
   "note": "Maria's application tracker. Statuses are corrected against confirmation emails, which are the authoritative record of what actually went in. Refreshed by a daily gather; last reconciled 24 Sept 2026.",
   "applications": [
     {
+      "id": "mayer-brown-london-insight-day-21-october-2026-ref-265881",
+      "firm": "Mayer Brown",
+      "what": "London Insight Day",
+      "type": "open_day",
+      "stage": "submitted",
+      "outcome": null,
+      "event_date": "2026-10-21",
+      "deadline": "2026-10-05",
+      "link": "https://mayerbrown.grad.allhires.com/app/",
+      "ref": "265881",
+      "notes": "21 October 2026 sitting, submitted 24 September 2026 via AllHires.",
+      "source": "you",
+      "added_on": "2026-09-24",
+      "updated_on": "2026-09-24",
+      "is_new": false
+    },
+    {
       "id": "hogan-lovells-pride+-event",
       "firm": "Hogan Lovells",
       "what": "Pride+ event",
@@ -17,7 +34,7 @@
       "notes": "Place offered 18 Sept and attendance confirmed by reply the same day. Travel reimbursed. Organiser Anna Smart at AllAboutLaw.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-22",
+      "updated_on": "2026-09-24",
       "is_new": false
     },
     {
@@ -34,7 +51,7 @@
       "notes": "Registration confirmed 15 Sept. 3 Stonecutter Street, EC4A 4AW, 18:00 to 21:00.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-22",
+      "updated_on": "2026-09-24",
       "is_new": true
     },
     {
@@ -51,7 +68,7 @@
       "notes": "Confirmed received 7 Sept. Considering the Spring 2027 vacation scheme afterwards.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-22",
+      "updated_on": "2026-09-24",
       "is_new": false
     },
     {
@@ -68,7 +85,7 @@
       "notes": "Confirmed received 18 Sept. Only one open day per cycle, so the 30 Nov one is not available.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-22",
+      "updated_on": "2026-09-24",
       "is_new": false
     },
     {
@@ -85,7 +102,7 @@
       "notes": "Confirmed received 18 Sept. Reference on the confirmation is 14754.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-22",
+      "updated_on": "2026-09-24",
       "is_new": false
     },
     {
@@ -102,7 +119,7 @@
       "notes": "Confirmed received 7 Sept. Clashes with the Clifford Chance London Insight Day.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-22",
+      "updated_on": "2026-09-24",
       "is_new": false
     },
     {
@@ -119,7 +136,7 @@
       "notes": "Confirmed submitted 22 Sept. 20 Ropemaker St, 16:00 to 22:00.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-22",
+      "updated_on": "2026-09-24",
       "is_new": false
     },
     {
@@ -136,7 +153,7 @@
       "notes": "Confirmed 18 Sept via the Candid portal. The confirmation does not name which event, so worth checking in the portal.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-22",
+      "updated_on": "2026-09-24",
       "is_new": true
     },
     {
@@ -153,7 +170,7 @@
       "notes": "Two applications confirmed submitted via Candid, on 5 and 7 Sept. Worth checking the portal for which events they were.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-22",
+      "updated_on": "2026-09-24",
       "is_new": true
     },
     {
@@ -170,7 +187,7 @@
       "notes": "Not offered a place, 11 Sept. The firm said other open day applications remain under separate consideration.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-22",
+      "updated_on": "2026-09-24",
       "is_new": false
     },
     {
@@ -187,7 +204,7 @@
       "notes": "Not offered a place, 10 Sept. An earlier application to the firm was confirmed on 30 Aug and may be separate.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-22",
+      "updated_on": "2026-09-24",
       "is_new": true
     },
     {
@@ -204,7 +221,7 @@
       "notes": "280 Bishopsgate, 10am to 2pm. Event ID 3634. No confirmation email found, so this may still be unsent. Their form bars generative AI, so the free-text answers are yours.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-22",
+      "updated_on": "2026-09-24",
       "is_new": false
     },
     {
@@ -213,12 +230,12 @@
       "what": "London Insight Day",
       "type": "open_day",
       "stage": "submitted",
-      "outcome": "Assessment",
+      "outcome": null,
       "event_date": "2026-11-10",
       "deadline": null,
       "link": "https://jobs.cliffordchance.com",
       "ref": "REF3378M",
-      "notes": "Application submitted; Clifford Chance confirmed receipt 22 Sept and said next steps would follow w/c 21 Sept, including the Immersive Online Assessment. Assessment invite arrived 23 Sept with a four-day window, so it is due by 27 Sept; the Watson Glaser test follows within four days of completing it. The assessment email does not name which Clifford Chance application it relates to, but it is the only one still live. Event on 10 Nov clashes with the Goodwin Open Afternoon.",
+      "notes": "No confirmation email found, so this may still be unsent. Also needs the Immersive Online Assessment and Watson Glaser. Clashes with Goodwin.",
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-24",
@@ -229,16 +246,16 @@
       "firm": "Weil, Gotshal & Manges",
       "what": "Insight Day",
       "type": "open_day",
-      "stage": "in_progress",
+      "stage": "submitted",
       "outcome": null,
       "event_date": "2026-10-14",
       "deadline": "2026-09-30",
       "link": null,
       "ref": null,
-      "notes": "110 Fetter Lane. No confirmation email found, so this may still be unsent. A careers alert on 20 Sept gave the closing date as 30 Sept.",
+      "notes": "110 Fetter Lane. Submitted 24 Sept 2026 via the Candid portal. Clashes with the Davis Polk Insight Day on 14 Oct.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-22",
+      "updated_on": "2026-09-24",
       "is_new": false
     },
     {
@@ -246,13 +263,13 @@
       "firm": "DLA Piper",
       "what": "London Discovery Day",
       "type": "open_day",
-      "stage": "submitted",
+      "stage": "in_progress",
       "outcome": null,
       "event_date": null,
       "deadline": null,
       "link": null,
       "ref": null,
-      "notes": "Application confirmed received 22 Sept; Early Careers team reviewing applications and will be in touch.",
+      "notes": "No confirmation email found, so this may still be unsent.",
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-24",
@@ -272,7 +289,7 @@
       "notes": "Applications go through their Candid portal.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-22",
+      "updated_on": "2026-09-24",
       "is_new": false
     },
     {
@@ -289,7 +306,7 @@
       "notes": "18:00 to 20:30. Registration opens 28 October, so nothing to do until then.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-22",
+      "updated_on": "2026-09-24",
       "is_new": false
     },
     {
@@ -306,7 +323,7 @@
       "notes": "Attended their London Open Day on 12 Aug and wants to build on it rather than repeat it.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-22",
+      "updated_on": "2026-09-24",
       "is_new": false
     },
     {
@@ -323,7 +340,7 @@
       "notes": "Not progressed to the next stage, 17 Sept.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-22",
+      "updated_on": "2026-09-24",
       "is_new": false
     },
     {
@@ -340,7 +357,7 @@
       "notes": "Submitted 25 Aug. Teams interview confirmed for 24 Sept at 13:00 with Damian Niklas, opening with a 20-minute written assessment on a fictional parking appeal.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-22",
+      "updated_on": "2026-09-24",
       "is_new": false
     },
     {
@@ -357,7 +374,7 @@
       "notes": "Submitted 6 Sept, Reading office. Rebecca Simmons in Talent Acquisition arranged an informal call for Friday 11 Sept at 11am.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-22",
+      "updated_on": "2026-09-24",
       "is_new": false
     },
     {
@@ -371,7 +388,7 @@
       "deadline": null,
       "link": null,
       "ref": null,
-      "notes": "Interviewed 10 Sept by Henry Smith and Mateus Monteiro. Pete Davies replied 22 Sept that both were happy with how she presented her experience and that further interviews were being held later that week, with a decision to follow.",
+      "notes": "London, hybrid, 30,000 pounds. Teams interview held 10 Sept with Henry Smith and Mateus Monteiro, in Portuguese and English.",
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-24",
@@ -391,7 +408,7 @@
       "notes": "Confirmed received 20 Sept. Role ID 324292. Managed through their candidate portal.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-22",
+      "updated_on": "2026-09-24",
       "is_new": true
     },
     {
@@ -408,7 +425,7 @@
       "notes": "Confirmed received 20 Sept, under review.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-22",
+      "updated_on": "2026-09-24",
       "is_new": true
     },
     {
@@ -425,7 +442,7 @@
       "notes": "Confirmed received 19 Sept. This is the role the dashboard generated documents for.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-22",
+      "updated_on": "2026-09-24",
       "is_new": true
     },
     {
@@ -442,7 +459,7 @@
       "notes": "A second A&O Shearman confirmation arrived on 19 Sept under reference 11222BR. The email does not name the role, so worth checking which one this was.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-22",
+      "updated_on": "2026-09-24",
       "is_new": true
     },
     {
@@ -459,7 +476,7 @@
       "notes": "Submitted 20 Sept, not progressed 22 Sept. Reply came from Nadia Bryan, Head of Talent and Recruitment.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-22",
+      "updated_on": "2026-09-24",
       "is_new": false
     },
     {
@@ -476,7 +493,7 @@
       "notes": "Not progressed, 29 July. Paris arbitration internship for July to December 2026.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-22",
+      "updated_on": "2026-09-24",
       "is_new": true
     },
     {
@@ -493,7 +510,7 @@
       "notes": "Confirmed 27 July. Offices in Cambridge, Leeds and London.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-22",
+      "updated_on": "2026-09-24",
       "is_new": true
     },
     {
@@ -510,7 +527,7 @@
       "notes": "Confirmed received 13 July. The email does not name the role.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-22",
+      "updated_on": "2026-09-24",
       "is_new": true
     },
     {
@@ -518,170 +535,17 @@
       "firm": "Amazon",
       "what": "AI Data Associate (Portuguese), AGI team",
       "type": "job",
-      "stage": "submitted",
-      "outcome": "Under review",
+      "stage": "planned",
+      "outcome": null,
       "event_date": null,
       "deadline": null,
       "link": null,
       "ref": "10493842",
-      "notes": "Application confirmed received 22 Sept (ID 10493842). Approached on LinkedIn by an Amazon AGI recruiter; London, onsite five days a week.",
+      "notes": "Approached on LinkedIn by recruiter Clarisse Buenconsejo. A tracking email arrived 22 Sept but does not confirm the application was completed, so this stays planned until you say otherwise.",
       "source": "claude",
       "added_on": "2026-09-22",
       "updated_on": "2026-09-24",
       "is_new": false
-    },
-    {
-      "id": "goodwin-insight-into-applications-demystifying-the-application-proces",
-      "firm": "Goodwin",
-      "what": "Insight into Applications: Demystifying the Application Process",
-      "type": "open_day",
-      "stage": "submitted",
-      "outcome": "Place confirmed",
-      "event_date": "2026-09-25",
-      "deadline": null,
-      "link": null,
-      "ref": null,
-      "notes": "Sign-up confirmed. Virtual session on Zoom (meeting ID 916 2210 0061, passcode Sancroft). The session details email of 24 Sept gives 12:00 to 13:00; the reminder the same day says 11:00, so the start time is worth checking before joining.",
-      "source": "email",
-      "added_on": "2026-09-24",
-      "updated_on": "2026-09-24",
-      "is_new": true
-    },
-    {
-      "id": "linklaters-pov-life-as-a-linklaters-trainee-an-immersive-workshop",
-      "firm": "Linklaters",
-      "what": "POV: Life as a Linklaters Trainee - An Immersive Workshop",
-      "type": "open_day",
-      "stage": "submitted",
-      "outcome": "Place confirmed",
-      "event_date": "2026-10-20",
-      "deadline": null,
-      "link": null,
-      "ref": null,
-      "notes": "Sign-up confirmed 15 Sept. Linklaters office, 20 Ropemaker Street, London EC2Y 9AR, 16:00 to 19:00. Same day as the KCL Churro & Chat event.",
-      "source": "email",
-      "added_on": "2026-09-24",
-      "updated_on": "2026-09-24",
-      "is_new": true
-    },
-    {
-      "id": "linklaters-kcl-churro-chat",
-      "firm": "Linklaters",
-      "what": "KCL Churro & Chat",
-      "type": "open_day",
-      "stage": "submitted",
-      "outcome": "Place confirmed",
-      "event_date": "2026-10-20",
-      "deadline": null,
-      "link": null,
-      "ref": null,
-      "notes": "Sign-up confirmed 15 Sept. The Courtyard at Bush House, 10:00 to 15:00, drop-in. Show the confirmation email on the day. Same day as the POV trainee workshop.",
-      "source": "email",
-      "added_on": "2026-09-24",
-      "updated_on": "2026-09-24",
-      "is_new": true
-    },
-    {
-      "id": "hodge-jones-allen-dispute-resolution-paralegal-property-litigation",
-      "firm": "Hodge Jones & Allen",
-      "what": "Dispute Resolution Paralegal, Property Litigation",
-      "type": "job",
-      "stage": "submitted",
-      "outcome": "Under review",
-      "event_date": null,
-      "deadline": null,
-      "link": null,
-      "ref": null,
-      "notes": "Application submitted successfully 22 Sept. The firm says it cannot respond to every candidate, so silence will not mean much either way.",
-      "source": "email",
-      "added_on": "2026-09-24",
-      "updated_on": "2026-09-24",
-      "is_new": true
-    },
-    {
-      "id": "king-spalding-paralegal",
-      "firm": "King & Spalding",
-      "what": "Paralegal",
-      "type": "job",
-      "stage": "submitted",
-      "outcome": "Under review",
-      "event_date": null,
-      "deadline": null,
-      "link": null,
-      "ref": null,
-      "notes": "Application confirmed received 22 Sept via Workday.",
-      "source": "email",
-      "added_on": "2026-09-24",
-      "updated_on": "2026-09-24",
-      "is_new": true
-    },
-    {
-      "id": "marks-and-spencer-employment-litigation-paralegal",
-      "firm": "Marks and Spencer",
-      "what": "Employment Litigation Paralegal",
-      "type": "job",
-      "stage": "submitted",
-      "outcome": "Under review",
-      "event_date": null,
-      "deadline": null,
-      "link": null,
-      "ref": "124945",
-      "notes": "Application confirmed received 22 Sept. An identity confirmation email with a one-time pass was sent just before the acknowledgement.",
-      "source": "email",
-      "added_on": "2026-09-24",
-      "updated_on": "2026-09-24",
-      "is_new": true
-    },
-    {
-      "id": "clyde-co-first-application-role-not-named-in-the-confirmation",
-      "firm": "Clyde & Co",
-      "what": "First application (role not named in the confirmation)",
-      "type": "training_contract",
-      "stage": "submitted",
-      "outcome": "Under review",
-      "event_date": null,
-      "deadline": null,
-      "link": null,
-      "ref": null,
-      "notes": "Confirmed received 22 Sept at 15:23 via the Candid/Vantage portal. The confirmation does not name the role or programme, so the type here is not confirmed; Clyde & Co's early careers team announced its 2027 programmes on 18 Sept. Details are on the My Applications page of her Vantage account.",
-      "source": "email",
-      "added_on": "2026-09-24",
-      "updated_on": "2026-09-24",
-      "is_new": true
-    },
-    {
-      "id": "clyde-co-second-application-role-not-named-in-the-confirmation",
-      "firm": "Clyde & Co",
-      "what": "Second application (role not named in the confirmation)",
-      "type": "training_contract",
-      "stage": "submitted",
-      "outcome": "Under review",
-      "event_date": null,
-      "deadline": null,
-      "link": null,
-      "ref": null,
-      "notes": "A second, separate confirmation arrived ten minutes after the first, at 15:33 on 22 Sept. It also does not name the role, so the type here is not confirmed. Both applications are visible on the My Applications page of her Vantage account.",
-      "source": "email",
-      "added_on": "2026-09-24",
-      "updated_on": "2026-09-24",
-      "is_new": true
-    },
-    {
-      "id": "latham-watkins-application-programme-not-named-in-the-confirmation",
-      "firm": "Latham & Watkins",
-      "what": "Application (programme not named in the confirmation)",
-      "type": "training_contract",
-      "stage": "submitted",
-      "outcome": "Assessment",
-      "event_date": null,
-      "deadline": null,
-      "link": null,
-      "ref": null,
-      "notes": "Online assessment completed and a personalised feedback report sent 10 Sept by Capp. The email does not name which Latham programme the application is for, so the type here is not confirmed. Not previously on the tracker.",
-      "source": "email",
-      "added_on": "2026-09-24",
-      "updated_on": "2026-09-24",
-      "is_new": true
     }
   ]
 }
