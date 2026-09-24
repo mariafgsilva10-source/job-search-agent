@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-23T11:31:21Z",
+  "generated_at": "2026-09-24T07:05:26Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -8,29 +8,13 @@
     "exclude_apprenticeships": true,
     "graduates_only": true,
     "filtered_out_counts": {
-      "chambers": 13,
+      "chambers": 15,
       "outside_london": 16,
       "apprenticeships": 22,
       "not_graduate_eligible": 19
     }
   },
   "events": [
-    {
-      "id": "bclp|open-day|25-09-2026",
-      "firm": "BCLP",
-      "event_name": "Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "location": "London",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "25/09/2026",
-      "deadline_date": "2026-09-25",
-      "apply_link": "https://apply.candidats.io/4043257c-7a63-449b-ac60-50b45db8edd5",
-      "link_is_specific": true,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
     {
       "id": "davis-polk-&-wardwell|penultimate-year-&-postgraduate-insight-day|30-09-2026",
       "firm": "Davis Polk & Wardwell",
@@ -208,6 +192,22 @@
       "found_on": "2026-09-23"
     },
     {
+      "id": "baker-mckenzie|general-open-day|07-10-2026",
+      "firm": "Baker McKenzie",
+      "event_name": "General Open Day",
+      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "location": "London",
+      "opens_date": "2026-09-07",
+      "opens_confirmed": true,
+      "deadline_label": "07/10/2026",
+      "deadline_date": "2026-10-07",
+      "apply_link": "https://careers.bakermckenzie.com/en_US/events/EventDetail?eventId=3607",
+      "link_is_specific": true,
+      "eligibility_note": null,
+      "source": "legal_cheek",
+      "found_on": null
+    },
+    {
       "id": "goodwin|insight-into-the-trainee-experience:-meet-our-trainees-and-q&a|09-10-2026",
       "firm": "Goodwin",
       "event_name": "Insight into the Trainee Experience: Meet Our Trainees and Q&A",
@@ -236,6 +236,38 @@
       "apply_link": "https://uk-earlyassociatecareers-lw.icims.com/jobs/10939/open-day---graduate-recruitment---28-october-2026---london/job",
       "link_is_specific": true,
       "eligibility_note": null,
+      "source": "legal_cheek",
+      "found_on": null
+    },
+    {
+      "id": "baker-mckenzie|opportunity-open-day|12-10-2026",
+      "firm": "Baker McKenzie",
+      "event_name": "Opportunity Open Day",
+      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "location": "London",
+      "opens_date": "2026-09-07",
+      "opens_confirmed": true,
+      "deadline_label": "12/10/2026",
+      "deadline_date": "2026-10-12",
+      "apply_link": "https://careers.bakermckenzie.com/en_US/events/EventDetail?eventId=3638",
+      "link_is_specific": true,
+      "eligibility_note": "For candidates from lower socio-economic backgrounds (firm's own wording).",
+      "source": "legal_cheek",
+      "found_on": null
+    },
+    {
+      "id": "baker-mckenzie|women’s-open-day|12-10-2026",
+      "firm": "Baker McKenzie",
+      "event_name": "Women’s Open Day",
+      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "location": "London",
+      "opens_date": "2026-09-07",
+      "opens_confirmed": true,
+      "deadline_label": "12/10/2026",
+      "deadline_date": "2026-10-12",
+      "apply_link": "https://careers.bakermckenzie.com/en_US/events/EventDetail?eventId=3634",
+      "link_is_specific": true,
+      "eligibility_note": "For female applicants (firm's own wording).",
       "source": "legal_cheek",
       "found_on": null
     },
@@ -464,6 +496,22 @@
       "found_on": null
     },
     {
+      "id": "baker-mckenzie|bakerethnicity-open-day|26-10-2026",
+      "firm": "Baker McKenzie",
+      "event_name": "BakerEthnicity Open Day",
+      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "location": "London",
+      "opens_date": "2026-09-07",
+      "opens_confirmed": true,
+      "deadline_label": "26/10/2026",
+      "deadline_date": "2026-10-26",
+      "apply_link": "https://careers.bakermckenzie.com/en_US/events/EventDetail?eventId=3639",
+      "link_is_specific": true,
+      "eligibility_note": "For candidates from ethnic minority backgrounds (firm's own wording).",
+      "source": "legal_cheek",
+      "found_on": null
+    },
+    {
       "id": "paul,-weiss|november-insight-afternoon|26-10-2026",
       "firm": "Paul, Weiss",
       "event_name": "November Insight Afternoon",
@@ -624,6 +672,22 @@
       "found_on": null
     },
     {
+      "id": "baker-mckenzie|pride-at-baker-mckenzie-open-day|10-11-2026",
+      "firm": "Baker McKenzie",
+      "event_name": "Pride at Baker McKenzie Open Day",
+      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "location": "London",
+      "opens_date": "2026-09-07",
+      "opens_confirmed": true,
+      "deadline_label": "10/11/2026",
+      "deadline_date": "2026-11-10",
+      "apply_link": "https://careers.bakermckenzie.com/en_US/events/EventDetail?eventId=3640",
+      "link_is_specific": true,
+      "eligibility_note": "For LGBTQ+ applicants (firm's own wording).",
+      "source": "legal_cheek",
+      "found_on": null
+    },
+    {
       "id": "jones-day|open-evening-3|11-11-2026",
       "firm": "Jones Day",
       "event_name": "Open Evening 3",
@@ -668,6 +732,22 @@
       "apply_link": "https://goodwinlaw.app.candidats.io/event/a6272983-248e-4d31-a7fd-b099838d027f",
       "link_is_specific": true,
       "eligibility_note": null,
+      "source": "legal_cheek",
+      "found_on": null
+    },
+    {
+      "id": "baker-mckenzie|employability-open-day|16-11-2026",
+      "firm": "Baker McKenzie",
+      "event_name": "EmployAbility Open Day",
+      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "location": "London",
+      "opens_date": "2026-09-07",
+      "opens_confirmed": true,
+      "deadline_label": "16/11/2026",
+      "deadline_date": "2026-11-16",
+      "apply_link": "https://careers.bakermckenzie.com/en_US/events/EventDetail?eventId=3641",
+      "link_is_specific": true,
+      "eligibility_note": "For candidates with disabilities, run with My Plus Consulting (firm's own wording).",
       "source": "legal_cheek",
       "found_on": null
     },
@@ -850,39 +930,39 @@
   ],
   "needs_review": [
     {
-      "firm": "Mishcon de Reya",
-      "event_name": "Race Equity Open Day (Virtual)",
-      "deadline_label": "Today"
+      "firm": "BCLP",
+      "event_name": "Open Day",
+      "deadline_label": "Tomorrow"
     },
     {
       "firm": "Winston Taylor",
       "event_name": "Application Success: Insights & Tips (Online)",
-      "deadline_label": "25/09/2026"
+      "deadline_label": "Tomorrow"
     },
     {
       "firm": "Winston Taylor",
       "event_name": "In-Person Open Day",
-      "deadline_label": "25/09/2026"
+      "deadline_label": "Tomorrow"
     },
     {
       "firm": "Winston Taylor",
       "event_name": "In-Person Open Day (under-represented groups)",
-      "deadline_label": "25/09/2026"
+      "deadline_label": "Tomorrow"
     },
     {
       "firm": "Winston Taylor",
       "event_name": "In-Person STEM Open Day",
-      "deadline_label": "25/09/2026"
+      "deadline_label": "Tomorrow"
     },
     {
       "firm": "Winston Taylor",
       "event_name": "SQE Explained: Future Trainee Insights (Online)",
-      "deadline_label": "25/09/2026"
+      "deadline_label": "Tomorrow"
     },
     {
       "firm": "Winston Taylor",
       "event_name": "Virtual Open Day",
-      "deadline_label": "25/09/2026"
+      "deadline_label": "Tomorrow"
     },
     {
       "firm": "Bird & Bird",
@@ -893,11 +973,6 @@
       "firm": "Akin",
       "event_name": "Ask Akin Open Day",
       "deadline_label": "04/10/2026"
-    },
-    {
-      "firm": "Baker McKenzie",
-      "event_name": "General Open Day",
-      "deadline_label": "07/10/2026"
     },
     {
       "firm": "Mishcon de Reya",
@@ -913,16 +988,6 @@
       "firm": "DWF",
       "event_name": "Insight Days",
       "deadline_label": "11/10/2026"
-    },
-    {
-      "firm": "Baker McKenzie",
-      "event_name": "Opportunity Open Day",
-      "deadline_label": "12/10/2026"
-    },
-    {
-      "firm": "Baker McKenzie",
-      "event_name": "Women’s Open Day",
-      "deadline_label": "12/10/2026"
     },
     {
       "firm": "Squire Patton Boggs",
@@ -965,11 +1030,6 @@
       "deadline_label": "21/10/2026"
     },
     {
-      "firm": "Baker McKenzie",
-      "event_name": "BakerEthnicity Open Day",
-      "deadline_label": "26/10/2026"
-    },
-    {
       "firm": "Mishcon de Reya",
       "event_name": "STEM Open Day (In Person)",
       "deadline_label": "30/10/2026"
@@ -1005,8 +1065,8 @@
       "deadline_label": "09/11/2026"
     },
     {
-      "firm": "Baker McKenzie",
-      "event_name": "Pride at Baker McKenzie Open Day",
+      "firm": "3VB",
+      "event_name": "Student Open Evening",
       "deadline_label": "10/11/2026"
     },
     {
@@ -1023,11 +1083,6 @@
       "firm": "Hill Dickinson",
       "event_name": "Training Contract Open Evening",
       "deadline_label": "15/11/2026"
-    },
-    {
-      "firm": "Baker McKenzie",
-      "event_name": "EmployAbility Open Day",
-      "deadline_label": "16/11/2026"
     },
     {
       "firm": "Norton Rose Fulbright",
