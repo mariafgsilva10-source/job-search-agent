@@ -1085,6 +1085,80 @@ MANUAL_EVENTS = [
         "location": "Virtual",
         "found_on": "2026-09-23",
     },
+    # Squire Patton Boggs is already in needs_review via Legal Cheek ("Open
+    # Day (London)" and "Open Day (Online)", both deadline 12/10/2026) but
+    # was previously left unresearched - the 2026-09-04 notes record the
+    # referenced URL 404ing and the vacancy portal showing no UK Open Day
+    # listings. That has since changed: confirmed directly on the firm's own
+    # cvmailuk application portal 2026-09-24, both events live with matching
+    # deadlines. event_name is kept identical to the Legal Cheek listing so
+    # build_entries() treats this as the same event once Legal Cheek's own
+    # row is verified (it's already skipped as a manual duplicate whenever
+    # (firm, event_name) is in legal_cheek_keys, which it is here).
+    {
+        "firm": "Squire Patton Boggs",
+        "event_name": "Open Day (London)",
+        "summary": (
+            "An in-person event to help with Training Contract/Vacation "
+            "Scheme applications, with talks and networking at the firm's "
+            "London office. Event held 26 November 2026."
+        ),
+        "opens_date": None,
+        "opens_confirmed": False,
+        "deadline_label": "12/10/2026",
+        "deadline_date": "2026-10-12",
+        "apply_link": "https://fsr.cvmailuk.com/spb/main.cfm?page=jobSpecific&jobId=78947",
+        "link_is_specific": True,
+        "eligibility_note": None,
+        "location": "London",
+        "found_on": "2026-09-24",
+    },
+    {
+        "firm": "Squire Patton Boggs",
+        "event_name": "Open Day (Online)",
+        "summary": (
+            "A virtual event to help with Training Contract/Vacation Scheme "
+            "applications, with talks and networking. Event held 24 "
+            "November 2026."
+        ),
+        "opens_date": None,
+        "opens_confirmed": False,
+        "deadline_label": "12/10/2026",
+        "deadline_date": "2026-10-12",
+        "apply_link": "https://fsr.cvmailuk.com/spb/main.cfm?page=jobSpecific&jobId=78948",
+        "link_is_specific": True,
+        "eligibility_note": None,
+        "location": "Virtual",
+        "found_on": "2026-09-24",
+    },
+    # Not on Legal Cheek's calendar at all - found via a general web search,
+    # confirmed directly on Norton Rose Fulbright's own Workday job posting
+    # 2026-09-24: applications explicitly stated as open 7 September - 18
+    # October 2026 (today, 24 Sept, falls inside that window). Distinct from
+    # NRF's other events already in needs_review (Aspiring Black Lawyers/
+    # Law/Non-law/STEM Open Day) - this is a separate "Commercial Law Open
+    # Day" listing not otherwise seen. Eligibility per the posting:
+    # "undergraduate students and recent graduates from a law academic
+    # discipline" - explicitly includes recent graduates, no note needed.
+    {
+        "firm": "Norton Rose Fulbright",
+        "event_name": "Commercial Law Open Day",
+        "summary": (
+            "An in-person event introducing NRF's commercial law practice "
+            "areas, with talks, Q&A and networking, for undergraduates and "
+            "recent graduates from a law discipline. Event held 10 November "
+            "2026."
+        ),
+        "opens_date": "2026-09-07",
+        "opens_confirmed": True,
+        "deadline_label": "18/10/2026",
+        "deadline_date": "2026-10-18",
+        "apply_link": "https://nrf.wd3.myworkdayjobs.com/Graduates/job/London-United-Kingdom/Commercial-Law-Open-Day_R-4343",
+        "link_is_specific": True,
+        "eligibility_note": None,
+        "location": "London",
+        "found_on": "2026-09-24",
+    },
 ]
 
 
