@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-24T07:05:26Z",
+  "generated_at": "2026-09-24T11:55:00Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -336,6 +336,38 @@
       "found_on": null
     },
     {
+      "id": "squire-patton-boggs|open-day-(london)|12-10-2026",
+      "firm": "Squire Patton Boggs",
+      "event_name": "Open Day (London)",
+      "summary": "An in-person event to help with Training Contract/Vacation Scheme applications, with talks and networking at the firm's London office. Event held 26 November 2026.",
+      "location": "London",
+      "opens_date": null,
+      "opens_confirmed": false,
+      "deadline_label": "12/10/2026",
+      "deadline_date": "2026-10-12",
+      "apply_link": "https://fsr.cvmailuk.com/spb/main.cfm?page=jobSpecific&jobId=78947",
+      "link_is_specific": true,
+      "eligibility_note": null,
+      "source": "direct",
+      "found_on": "2026-09-24"
+    },
+    {
+      "id": "squire-patton-boggs|open-day-(online)|12-10-2026",
+      "firm": "Squire Patton Boggs",
+      "event_name": "Open Day (Online)",
+      "summary": "A virtual event to help with Training Contract/Vacation Scheme applications, with talks and networking. Event held 24 November 2026.",
+      "location": "Virtual",
+      "opens_date": null,
+      "opens_confirmed": false,
+      "deadline_label": "12/10/2026",
+      "deadline_date": "2026-10-12",
+      "apply_link": "https://fsr.cvmailuk.com/spb/main.cfm?page=jobSpecific&jobId=78948",
+      "link_is_specific": true,
+      "eligibility_note": null,
+      "source": "direct",
+      "found_on": "2026-09-24"
+    },
+    {
       "id": "weil-gotshal-&-manges|insight-day-2|13-10-2026",
       "firm": "Weil Gotshal & Manges",
       "event_name": "Insight Day 2",
@@ -462,6 +494,22 @@
       "eligibility_note": null,
       "source": "legal_cheek",
       "found_on": null
+    },
+    {
+      "id": "norton-rose-fulbright|commercial-law-open-day|18-10-2026",
+      "firm": "Norton Rose Fulbright",
+      "event_name": "Commercial Law Open Day",
+      "summary": "An in-person event introducing NRF's commercial law practice areas, with talks, Q&A and networking, for undergraduates and recent graduates from a law discipline. Event held 10 November 2026.",
+      "location": "London",
+      "opens_date": "2026-09-07",
+      "opens_confirmed": true,
+      "deadline_label": "18/10/2026",
+      "deadline_date": "2026-10-18",
+      "apply_link": "https://nrf.wd3.myworkdayjobs.com/Graduates/job/London-United-Kingdom/Commercial-Law-Open-Day_R-4343",
+      "link_is_specific": true,
+      "eligibility_note": null,
+      "source": "direct",
+      "found_on": "2026-09-24"
     },
     {
       "id": "jones-day|open-evening-2|22-10-2026",
