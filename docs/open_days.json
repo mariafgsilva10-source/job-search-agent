@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-25T07:05:19Z",
+  "generated_at": "2026-09-25T16:48:41Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -670,6 +670,54 @@
       "eligibility_note": null,
       "source": "legal_cheek",
       "found_on": null
+    },
+    {
+      "id": "stephenson-harwood|training-contract-open-day|06-11-2026",
+      "firm": "Stephenson Harwood",
+      "event_name": "Training Contract Open Day",
+      "summary": "An in-person event introducing the firm, its training contract and its application process, with talks and networking. Event held 1 December 2026.",
+      "location": "London",
+      "opens_date": "2026-10-05",
+      "opens_confirmed": true,
+      "deadline_label": "06/11/2026",
+      "deadline_date": "2026-11-06",
+      "apply_link": "https://www.stephensonharwood.com/careers/early-careers/early-careers-london/open-days/",
+      "link_is_specific": false,
+      "eligibility_note": null,
+      "source": "direct",
+      "found_on": "2026-09-25"
+    },
+    {
+      "id": "stephenson-harwood|virtual-training-contract-insight-day|06-11-2026",
+      "firm": "Stephenson Harwood",
+      "event_name": "Virtual Training Contract Insight Day",
+      "summary": "A virtual/online event introducing the firm, its training contract and its application process, with talks and networking. Event held 9 December 2026.",
+      "location": "Virtual",
+      "opens_date": "2026-10-05",
+      "opens_confirmed": true,
+      "deadline_label": "06/11/2026",
+      "deadline_date": "2026-11-06",
+      "apply_link": "https://www.stephensonharwood.com/careers/early-careers/early-careers-london/open-days/",
+      "link_is_specific": false,
+      "eligibility_note": null,
+      "source": "direct",
+      "found_on": "2026-09-25"
+    },
+    {
+      "id": "stephenson-harwood|disability-open-day|06-11-2026",
+      "firm": "Stephenson Harwood",
+      "event_name": "Disability Open Day",
+      "summary": "An in-person event introducing the firm, its training contract and its application process, focused on supporting candidates with a disability, neurodivergence or long-term health condition. Event held 14 December 2026.",
+      "location": "London",
+      "opens_date": "2026-10-05",
+      "opens_confirmed": true,
+      "deadline_label": "06/11/2026",
+      "deadline_date": "2026-11-06",
+      "apply_link": "https://www.stephensonharwood.com/careers/early-careers/early-careers-london/open-days/",
+      "link_is_specific": false,
+      "eligibility_note": "For candidates with a disability, neurodivergence, or long-term health condition, first year of university and beyond (firm's own wording).",
+      "source": "direct",
+      "found_on": "2026-09-25"
     },
     {
       "id": "trowers-&-hamlins|london-office-graduate-insight-day|09-11-2026",
