@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-24T11:55:00Z",
+  "generated_at": "2026-09-25T07:05:19Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -334,38 +334,6 @@
       "eligibility_note": null,
       "source": "legal_cheek",
       "found_on": null
-    },
-    {
-      "id": "squire-patton-boggs|open-day-(london)|12-10-2026",
-      "firm": "Squire Patton Boggs",
-      "event_name": "Open Day (London)",
-      "summary": "An in-person event to help with Training Contract/Vacation Scheme applications, with talks and networking at the firm's London office. Event held 26 November 2026.",
-      "location": "London",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "12/10/2026",
-      "deadline_date": "2026-10-12",
-      "apply_link": "https://fsr.cvmailuk.com/spb/main.cfm?page=jobSpecific&jobId=78947",
-      "link_is_specific": true,
-      "eligibility_note": null,
-      "source": "direct",
-      "found_on": "2026-09-24"
-    },
-    {
-      "id": "squire-patton-boggs|open-day-(online)|12-10-2026",
-      "firm": "Squire Patton Boggs",
-      "event_name": "Open Day (Online)",
-      "summary": "A virtual event to help with Training Contract/Vacation Scheme applications, with talks and networking. Event held 24 November 2026.",
-      "location": "Virtual",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "12/10/2026",
-      "deadline_date": "2026-10-12",
-      "apply_link": "https://fsr.cvmailuk.com/spb/main.cfm?page=jobSpecific&jobId=78948",
-      "link_is_specific": true,
-      "eligibility_note": null,
-      "source": "direct",
-      "found_on": "2026-09-24"
     },
     {
       "id": "weil-gotshal-&-manges|insight-day-2|13-10-2026",
@@ -980,37 +948,37 @@
     {
       "firm": "BCLP",
       "event_name": "Open Day",
-      "deadline_label": "Tomorrow"
+      "deadline_label": "Today"
     },
     {
       "firm": "Winston Taylor",
       "event_name": "Application Success: Insights & Tips (Online)",
-      "deadline_label": "Tomorrow"
+      "deadline_label": "Today"
     },
     {
       "firm": "Winston Taylor",
       "event_name": "In-Person Open Day",
-      "deadline_label": "Tomorrow"
+      "deadline_label": "Today"
     },
     {
       "firm": "Winston Taylor",
       "event_name": "In-Person Open Day (under-represented groups)",
-      "deadline_label": "Tomorrow"
+      "deadline_label": "Today"
     },
     {
       "firm": "Winston Taylor",
       "event_name": "In-Person STEM Open Day",
-      "deadline_label": "Tomorrow"
+      "deadline_label": "Today"
     },
     {
       "firm": "Winston Taylor",
       "event_name": "SQE Explained: Future Trainee Insights (Online)",
-      "deadline_label": "Tomorrow"
+      "deadline_label": "Today"
     },
     {
       "firm": "Winston Taylor",
       "event_name": "Virtual Open Day",
-      "deadline_label": "Tomorrow"
+      "deadline_label": "Today"
     },
     {
       "firm": "Bird & Bird",
