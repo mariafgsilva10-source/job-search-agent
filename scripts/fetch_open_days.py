@@ -222,6 +222,8 @@ EVENT_LOCATIONS = {
     ("Trowers & Hamlins", "London Office Graduate Insight Day"): "London",
     ("Trowers & Hamlins", "Manchester Office Graduate Insight Day"): "Manchester",
     ("Wedlake Bell", "Open Day"): "London",
+    ("White & Case", "Open Days 2026"): "London",
+    ("White & Case", "STEM Open Day 2026"): "London",
     ("Weightmans — solicitor apprenticeship", "Birmingham Open Evening"): "Birmingham",
     ("Weightmans — solicitor apprenticeship", "Leeds Open Evening"): "Leeds",
     ("Weightmans — solicitor apprenticeship", "Liverpool Open Evening"): "Liverpool",
@@ -717,6 +719,30 @@ OPEN_DAY_OVERRIDES = {
         "link_is_specific": True,
         "eligibility_note": "For candidates with disabilities, run with My Plus Consulting (firm's own wording).",
     },
+    # Researched 2026-09-25: White & Case's "Open Days 2026" and "STEM Open
+    # Day 2026" have been sitting in needs_review as stale/blocked (see the
+    # 2026-09-04 rejection note below - the sweep gets a 403 from this
+    # firm's site). Confirmed directly on whitecase.com/careers/locations/
+    # uk/early-careers/our-offer/open-days 2026-09-25: General Open Days run
+    # 18-19 Nov 2026 (matches Legal Cheek's 18/10/2026 deadline), STEM Open
+    # Day runs 26 Nov 2026 (matches Legal Cheek's 01/11/2026 deadline).
+    # Applications for both opened 24 Sept 2026 (already open as of today)
+    # through the same apply4law.com/whitecase portal - no per-event link is
+    # published. General Open Days eligibility per the firm's own wording:
+    # "Penultimate-year and final-year law students, final-year non-law
+    # students, and graduates from any discipline" - explicitly includes
+    # graduates, no note needed.
+    ("White & Case", "Open Days 2026", "18/10/2026"): {
+        "opens_date": "2026-09-24", "opens_confirmed": True,
+        "apply_link": "https://www.apply4law.com/whitecase",
+        "link_is_specific": False, "eligibility_note": None,
+    },
+    ("White & Case", "STEM Open Day 2026", "01/11/2026"): {
+        "opens_date": "2026-09-24", "opens_confirmed": True,
+        "apply_link": "https://www.apply4law.com/whitecase",
+        "link_is_specific": False,
+        "eligibility_note": "For candidates from STEM degree disciplines (firm's own wording).",
+    },
     # --- Researched 2026-09-04 but left OUT deliberately: each firm's own
     # site either didn't show a live/current listing for this event (stale
     # prior-cycle content, a 404, or "not yet published"), the event
@@ -1158,6 +1184,80 @@ MANUAL_EVENTS = [
         "eligibility_note": None,
         "location": "London",
         "found_on": "2026-09-24",
+    },
+    # Not on Legal Cheek's calendar at all - Stephenson Harwood has no
+    # existing entry anywhere in this repo. Found via a general web search
+    # (Bright Network/lawcareers.net listings pointed at the firm), then
+    # confirmed directly on the firm's own page
+    # (stephensonharwood.com/careers/early-careers/early-careers-london/
+    # open-days/) 2026-09-25: "For all open days, applications open from
+    # 10am Monday 5 October 2026 and will close at 10am Friday 6 November
+    # 2026" - one shared application window covering three in-scope London
+    # events (a fourth and fifth, both explicitly "Solicitor Apprenticeship"
+    # sessions, are excluded by EXCLUDE_APPRENTICESHIPS). No per-event apply
+    # form is published - the page states enquiries go to
+    # future.talent@stephensonharwood.com and gives no URL beyond itself, so
+    # the open-days page is used as the (non-specific) apply_link rather
+    # than guessing at a portal link. Eligibility for the Training Contract
+    # Open Day and its virtual counterpart is not restricted by year of
+    # study on the firm's page. The Disability Open Day's own wording is
+    # "first year of university and beyond with a disability,
+    # neurodiversity, or long-term health condition" - kept as a note since
+    # it doesn't explicitly say "graduate" but doesn't exclude one either.
+    {
+        "firm": "Stephenson Harwood",
+        "event_name": "Training Contract Open Day",
+        "summary": (
+            "An in-person event introducing the firm, its training contract "
+            "and its application process, with talks and networking. Event "
+            "held 1 December 2026."
+        ),
+        "opens_date": "2026-10-05",
+        "opens_confirmed": True,
+        "deadline_label": "06/11/2026",
+        "deadline_date": "2026-11-06",
+        "apply_link": "https://www.stephensonharwood.com/careers/early-careers/early-careers-london/open-days/",
+        "link_is_specific": False,
+        "eligibility_note": None,
+        "location": "London",
+        "found_on": "2026-09-25",
+    },
+    {
+        "firm": "Stephenson Harwood",
+        "event_name": "Virtual Training Contract Insight Day",
+        "summary": (
+            "A virtual/online event introducing the firm, its training "
+            "contract and its application process, with talks and "
+            "networking. Event held 9 December 2026."
+        ),
+        "opens_date": "2026-10-05",
+        "opens_confirmed": True,
+        "deadline_label": "06/11/2026",
+        "deadline_date": "2026-11-06",
+        "apply_link": "https://www.stephensonharwood.com/careers/early-careers/early-careers-london/open-days/",
+        "link_is_specific": False,
+        "eligibility_note": None,
+        "location": "Virtual",
+        "found_on": "2026-09-25",
+    },
+    {
+        "firm": "Stephenson Harwood",
+        "event_name": "Disability Open Day",
+        "summary": (
+            "An in-person event introducing the firm, its training contract "
+            "and its application process, focused on supporting candidates "
+            "with a disability, neurodivergence or long-term health "
+            "condition. Event held 14 December 2026."
+        ),
+        "opens_date": "2026-10-05",
+        "opens_confirmed": True,
+        "deadline_label": "06/11/2026",
+        "deadline_date": "2026-11-06",
+        "apply_link": "https://www.stephensonharwood.com/careers/early-careers/early-careers-london/open-days/",
+        "link_is_specific": False,
+        "eligibility_note": "For candidates with a disability, neurodivergence, or long-term health condition, first year of university and beyond (firm's own wording).",
+        "location": "London",
+        "found_on": "2026-09-25",
     },
 ]
 
