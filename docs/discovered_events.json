@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T07:06:48Z",
+  "generated_at": "2026-09-26T07:06:08Z",
   "note": "Unverified leads from a daily sweep of London law firms' own application portals and events pages - the places firms announce open days before (or instead of) Legal Cheek listing them. Nothing here has been checked yet: a lead only reaches the Open Days tab once its dates, eligibility and apply link have been confirmed on the firm's own site.",
   "first_run": false,
   "counts": {
@@ -7,32 +7,11 @@
     "sources_failed": 16,
     "leads_total": 30,
     "duplicates_merged": 5,
-    "new_today": 1,
+    "new_today": 0,
     "new_last_7_days": 2
   },
-  "new_today": [
-    {
-      "id": "158914c8a6dbc04f",
-      "firm": "RPC",
-      "title": "Uptree Work Experience Insight Day",
-      "url": "https://uptree.co/events/rpc/2138398560/",
-      "source_page": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
-      "first_seen": "2026-09-25",
-      "is_new": true,
-      "status": "unverified"
-    }
-  ],
+  "new_today": [],
   "leads": [
-    {
-      "id": "158914c8a6dbc04f",
-      "firm": "RPC",
-      "title": "Uptree Work Experience Insight Day",
-      "url": "https://uptree.co/events/rpc/2138398560/",
-      "source_page": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
-      "first_seen": "2026-09-25",
-      "is_new": true,
-      "status": "unverified"
-    },
     {
       "id": "6e42338b2c3d9e60",
       "firm": "Addleshaw Goddard",
@@ -320,6 +299,16 @@
       "url": "https://www.eventbrite.co.uk/e/pinsent-masons-london-insight-event-tickets-1997553597583?aff=oddtdtcreator",
       "source_page": "https://www.pinsentmasons.com/careers/early-talent/events",
       "first_seen": "2026-09-23",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "158914c8a6dbc04f",
+      "firm": "RPC",
+      "title": "Uptree Work Experience Insight Day",
+      "url": "https://uptree.co/events/rpc/2138398560/",
+      "source_page": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
+      "first_seen": "2026-09-25",
       "is_new": false,
       "status": "unverified"
     }
