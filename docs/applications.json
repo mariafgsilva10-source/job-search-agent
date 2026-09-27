@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-25",
-  "last_gathered": "2026-09-25",
-  "note": "Maria's application tracker. Statuses are corrected against confirmation emails, which are the authoritative record of what actually went in. Refreshed by a daily gather; last reconciled 25 Sept 2026.",
+  "generated_at": "2026-09-27",
+  "last_gathered": "2026-09-27",
+  "note": "Maria's application tracker. Statuses are corrected against confirmation emails, which are the authoritative record of what actually went in. Refreshed by a daily gather; last reconciled 27 Sept 2026.",
   "applications": [
     {
       "id": "mayer-brown-london-insight-day-21-october-2026-ref-265881",
@@ -235,10 +235,10 @@
       "deadline": null,
       "link": "https://jobs.cliffordchance.com",
       "ref": "REF3378M",
-      "notes": "Submitted 22 Sept 2026, ref REF3378M, on-screen confirmation from SmartRecruiters. Immersive Online Assessment invite arrived 23 Sept with four days to complete it, so it is due about 27 Sept; the Watson Glaser test follows and must be done within four days of being sent. Clashes with Goodwin.",
+      "notes": "Submitted 22 Sept 2026, ref REF3378M, on-screen confirmation from SmartRecruiters. Immersive Online Assessment now completed: the feedback report arrived 26 Sept and the firm says the application outcome follows separately. The Watson Glaser critical reasoning test is still to come and must be done within four days of being sent. Clashes with Goodwin.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-25",
+      "updated_on": "2026-09-27",
       "is_new": false
     },
     {
@@ -558,10 +558,10 @@
       "deadline": "2026-09-27",
       "link": "https://uk-earlyassociatecareers-lw.icims.com/jobs",
       "ref": null,
-      "notes": "Passed stage one, the Situational Judgement Assessment, and was invited on 24 Sept to stage two, the Critical Reasoning Assessment plus two short video interviews, about 50 minutes. Due 11:59pm three days from 24 Sept, so 27 Sept. Handled by London Graduate Recruitment. None of the emails name which programme this application is for, so that is worth confirming in the portal.",
+      "notes": "Passed stage one, the Situational Judgement Assessment, and was invited on 24 Sept to stage two, the Critical Reasoning Assessment plus two short video interviews, about 50 minutes, due 27 Sept. You said on 27 Sept that you completed and submitted the critical reasoning test; no confirmation email has arrived for it, so it is worth checking the portal that it registered, and whether the two video interviews are still outstanding. None of the emails name which programme this application is for.",
       "source": "claude",
       "added_on": "2026-09-25",
-      "updated_on": "2026-09-25",
+      "updated_on": "2026-09-27",
       "is_new": true
     },
     {
@@ -698,6 +698,23 @@
       "source": "claude",
       "added_on": "2026-09-25",
       "updated_on": "2026-09-25",
+      "is_new": true
+    },
+    {
+      "id": "gunnercooke-work-experience-placement",
+      "firm": "gunnercooke",
+      "what": "Work experience placement with Luiz Costa (Partner)",
+      "type": "job",
+      "stage": "submitted",
+      "outcome": "Place confirmed",
+      "event_date": "2026-10-05",
+      "deadline": null,
+      "link": null,
+      "ref": null,
+      "notes": "Unpaid work experience offered by Luiz Costa by email on 3 Sept and accepted the same day, running 5 Oct to 31 Dec 2026. NDA signed 4 Sept. IT confirmed your profile on 25 Sept and asked you to book an access call for the week before you start. The emails give no start time and do not say where you are expected, so both are worth confirming with Luiz. First day clashes with the Hogan Lovells Pride+ event on 5 Oct.",
+      "source": "claude",
+      "added_on": "2026-09-27",
+      "updated_on": "2026-09-27",
       "is_new": true
     }
   ]
