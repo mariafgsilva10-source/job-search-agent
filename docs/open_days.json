@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-28T07:07:35Z",
+  "generated_at": "2026-09-29T07:07:31Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -8,45 +8,13 @@
     "exclude_apprenticeships": true,
     "graduates_only": true,
     "filtered_out_counts": {
-      "chambers": 15,
+      "chambers": 14,
       "outside_london": 15,
-      "apprenticeships": 22,
+      "apprenticeships": 21,
       "not_graduate_eligible": 19
     }
   },
   "events": [
-    {
-      "id": "davis-polk-&-wardwell|penultimate-year-&-postgraduate-insight-day|30-09-2026",
-      "firm": "Davis Polk & Wardwell",
-      "event_name": "Penultimate Year & Postgraduate Insight Day",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm, aimed at penultimate-year students.",
-      "location": "London",
-      "opens_date": "2026-09-10",
-      "opens_confirmed": true,
-      "deadline_label": "30/09/2026",
-      "deadline_date": "2026-09-30",
-      "apply_link": "https://www.davispolk.com/careers/law-students-trainees/london",
-      "link_is_specific": false,
-      "eligibility_note": "Open to penultimate-year students and postgraduates - the firm's own wording. Worth confirming you qualify as a postgraduate for their purposes.",
-      "source": "legal_cheek",
-      "found_on": null
-    },
-    {
-      "id": "weil-gotshal-&-manges|insight-day-1|30-09-2026",
-      "firm": "Weil Gotshal & Manges",
-      "event_name": "Insight Day 1",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "location": "London",
-      "opens_date": "2026-09-01",
-      "opens_confirmed": true,
-      "deadline_label": "30/09/2026",
-      "deadline_date": "2026-09-30",
-      "apply_link": "https://weil.app.candidats.io/roles",
-      "link_is_specific": false,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
     {
       "id": "herbert-smith-freehills-kramer|ip-open-day|01-10-2026",
       "firm": "Herbert Smith Freehills Kramer",
@@ -1025,6 +993,16 @@
     }
   ],
   "needs_review": [
+    {
+      "firm": "Davis Polk & Wardwell",
+      "event_name": "Penultimate Year & Postgraduate Insight Day",
+      "deadline_label": "Tomorrow"
+    },
+    {
+      "firm": "Weil Gotshal & Manges",
+      "event_name": "Insight Day 1",
+      "deadline_label": "Tomorrow"
+    },
     {
       "firm": "Bird & Bird",
       "event_name": "Trainee Solicitor Open Day",
