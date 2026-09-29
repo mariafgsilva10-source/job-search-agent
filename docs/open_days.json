@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-29T07:07:31Z",
+  "generated_at": "2026-09-29T13:34:11Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -304,6 +304,38 @@
       "found_on": null
     },
     {
+      "id": "squire-patton-boggs|open-day-(london)|12-10-2026",
+      "firm": "Squire Patton Boggs",
+      "event_name": "Open Day (London)",
+      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "location": "London",
+      "opens_date": null,
+      "opens_confirmed": false,
+      "deadline_label": "12/10/2026",
+      "deadline_date": "2026-10-12",
+      "apply_link": "https://fsr.cvmailuk.com/spb/main.cfm?page=jobSpecific&jobId=78947",
+      "link_is_specific": true,
+      "eligibility_note": null,
+      "source": "legal_cheek",
+      "found_on": null
+    },
+    {
+      "id": "squire-patton-boggs|open-day-(online)|12-10-2026",
+      "firm": "Squire Patton Boggs",
+      "event_name": "Open Day (Online)",
+      "summary": "A virtual/online session featuring a virtual tour and talks introducing the firm and its application process.",
+      "location": "Virtual",
+      "opens_date": null,
+      "opens_confirmed": false,
+      "deadline_label": "12/10/2026",
+      "deadline_date": "2026-10-12",
+      "apply_link": "https://fsr.cvmailuk.com/spb/main.cfm?page=jobSpecific&jobId=78948",
+      "link_is_specific": true,
+      "eligibility_note": null,
+      "source": "legal_cheek",
+      "found_on": null
+    },
+    {
       "id": "weil-gotshal-&-manges|insight-day-2|13-10-2026",
       "firm": "Weil Gotshal & Manges",
       "event_name": "Insight Day 2",
@@ -462,6 +494,22 @@
       "eligibility_note": null,
       "source": "direct",
       "found_on": "2026-09-24"
+    },
+    {
+      "id": "clifford-chance|london-insight-day|19-10-2026",
+      "firm": "Clifford Chance",
+      "event_name": "London Insight Day",
+      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "location": "London",
+      "opens_date": null,
+      "opens_confirmed": false,
+      "deadline_label": "19/10/2026",
+      "deadline_date": "2026-10-19",
+      "apply_link": "https://jobs.cliffordchance.com/job/london-insight-day-in-london-jid-3551",
+      "link_is_specific": true,
+      "eligibility_note": null,
+      "source": "legal_cheek",
+      "found_on": null
     },
     {
       "id": "jones-day|open-evening-2|22-10-2026",
@@ -976,6 +1024,38 @@
       "found_on": null
     },
     {
+      "id": "king-&-spalding|in-person-insight-afternoon---spotlight-on-fund-finance|26-02-2027",
+      "firm": "King & Spalding",
+      "event_name": "In-Person Insight Afternoon - Spotlight on Fund Finance",
+      "summary": "An in-person event at the firm's London office featuring a spotlight session on the Fund Finance practice, with networking with trainees, associates and partners and insight into the application and interview process. Event held 12 November 2026, 1:45pm-7:30pm.",
+      "location": "London",
+      "opens_date": "2026-10-01",
+      "opens_confirmed": true,
+      "deadline_label": "26/02/2027",
+      "deadline_date": "2027-02-26",
+      "apply_link": "https://kslaw.grad.allhires.com/app/",
+      "link_is_specific": false,
+      "eligibility_note": null,
+      "source": "direct",
+      "found_on": "2026-09-27"
+    },
+    {
+      "id": "king-&-spalding|virtual-insight-afternoon---spotlight-on-corporate|26-02-2027",
+      "firm": "King & Spalding",
+      "event_name": "Virtual Insight Afternoon - Spotlight on Corporate",
+      "summary": "A virtual event featuring a spotlight session on the Corporate practice, with networking with trainees, associates and partners and insight into the application and interview process. Event held 21 January 2027, 1:15pm-5:00pm.",
+      "location": "Virtual",
+      "opens_date": "2026-10-01",
+      "opens_confirmed": true,
+      "deadline_label": "26/02/2027",
+      "deadline_date": "2027-02-26",
+      "apply_link": "https://kslaw.grad.allhires.com/app/",
+      "link_is_specific": false,
+      "eligibility_note": null,
+      "source": "direct",
+      "found_on": "2026-09-27"
+    },
+    {
       "id": "osborne-clarke|insight-scheme|28-02-2027",
       "firm": "Osborne Clarke",
       "event_name": "Insight Scheme",
@@ -1029,16 +1109,6 @@
       "deadline_label": "11/10/2026"
     },
     {
-      "firm": "Squire Patton Boggs",
-      "event_name": "Open Day (London)",
-      "deadline_label": "12/10/2026"
-    },
-    {
-      "firm": "Squire Patton Boggs",
-      "event_name": "Open Day (Online)",
-      "deadline_label": "12/10/2026"
-    },
-    {
       "firm": "Mishcon de Reya",
       "event_name": "Undergraduate Open Day (Virtual)",
       "deadline_label": "14/10/2026"
@@ -1052,11 +1122,6 @@
       "firm": "Akin",
       "event_name": "Ask Akin Open Day (Virtual)",
       "deadline_label": "18/10/2026"
-    },
-    {
-      "firm": "Clifford Chance",
-      "event_name": "London Insight Day",
-      "deadline_label": "19/10/2026"
     },
     {
       "firm": "Mishcon de Reya",
