@@ -163,6 +163,7 @@ EVENT_LOCATIONS = {
     ("BCLP", "Open Day"): "London",
     ("Bird & Bird", "Trainee Solicitor Open Day"): "London",
     ("Bristows — solicitor apprenticeship", "Solicitor Apprenticeship Open Evening"): "London",
+    ("Clifford Chance", "London Insight Day"): "London",
     ("Davis Polk & Wardwell", "First Year Insight Day"): "London",
     ("Davis Polk & Wardwell", "Penultimate Year & Postgraduate Insight Day"): "London",
     ("Debevoise & Plimpton", "Open Day"): "London",
@@ -211,6 +212,8 @@ EVENT_LOCATIONS = {
     ("Payne Hicks Beach", "Open Day 2"): "London",
     ("RPC", "Bristol Insight Day"): "Bristol",
     ("RPC", "London Insight Day"): "London",
+    ("Squire Patton Boggs", "Open Day (London)"): "London",
+    ("Squire Patton Boggs", "Open Day (Online)"): "Virtual",
     ("RPC — solicitor apprenticeship", "Solicitor Apprenticeship Virtual Insight Evening"): "Virtual",
     ("Simpson Thacher & Bartlett", "October Open Day"): "London",
     ("Slaughter and May", "Spring Open Day 1"): "London",
@@ -743,6 +746,54 @@ OPEN_DAY_OVERRIDES = {
         "link_is_specific": False,
         "eligibility_note": "For candidates from STEM degree disciplines (firm's own wording).",
     },
+    # Researched 2026-09-29: Clifford Chance's "London Insight Day" has been
+    # sitting in needs_review (Legal Cheek gives it a 19/10/2026 deadline,
+    # matching exactly). Confirmed directly on jobs.cliffordchance.com/
+    # meet-us-london (Insight Events accordion) and on the event's own job
+    # posting (jobs.cliffordchance.com/job/london-insight-day-in-london-
+    # jid-3551, ref REF3378M) - live, not expired, active Apply button
+    # (note: fetching that same URL headlessly showed "This vacancy has
+    # expired", a stale/cached response contradicted by the live rendered
+    # page - the browser pane's JS-rendered read was trusted over it, per
+    # the established rule for this kind of mismatch). Event held 10
+    # November 2026, at the firm's Canary Wharf office. The event serves two
+    # eligibility tracks (firm's own wording): SPARK (first/second-year law,
+    # or penultimate-year non-law) and the Training Contract route
+    # ("penultimate year of a law degree, final year of any degree, or
+    # graduated") - a graduate is explicitly in scope via the TC route, no
+    # eligibility_note needed. Distinct from Clifford Chance's "Middle East
+    # Insight Day" (12 Nov, same accordion), which is out of scope (non-
+    # London office) and not added.
+    ("Clifford Chance", "London Insight Day", "19/10/2026"): {
+        "opens_date": None, "opens_confirmed": False,
+        "apply_link": "https://jobs.cliffordchance.com/job/london-insight-day-in-london-jid-3551",
+        "link_is_specific": True, "eligibility_note": None,
+    },
+    # Bug fix 2026-09-29: Squire Patton Boggs was confirmed directly on the
+    # firm's own cvmailuk portal 2026-09-24 (see the MANUAL_EVENTS comment
+    # near "Squire Patton Boggs") and a MANUAL_EVENTS entry was added that
+    # day, but no matching OPEN_DAY_OVERRIDES entry was ever added - and
+    # since Legal Cheek already lists this firm/event under the identical
+    # (firm, event_name), the MANUAL_EVENTS copy has been silently skipped
+    # as a duplicate every day since (build_entries() always treats a
+    # (firm, event_name) match against legal_cheek_keys as reason to defer
+    # to the OPEN_DAY_OVERRIDES/Legal Cheek path instead of the manual one -
+    # see the comment there). Both events have therefore never actually
+    # appeared on the dashboard despite being confirmed 5 days ago, and the
+    # closing date is now only 13 days away. Adding the missing override
+    # here (found on 2026-09-24, re-confirmed live via the browser pane
+    # 2026-09-29 that the cvmailuk listings are still up) fixes this once
+    # tomorrow's scrape runs.
+    ("Squire Patton Boggs", "Open Day (London)", "12/10/2026"): {
+        "opens_date": None, "opens_confirmed": False,
+        "apply_link": "https://fsr.cvmailuk.com/spb/main.cfm?page=jobSpecific&jobId=78947",
+        "link_is_specific": True, "eligibility_note": None,
+    },
+    ("Squire Patton Boggs", "Open Day (Online)", "12/10/2026"): {
+        "opens_date": None, "opens_confirmed": False,
+        "apply_link": "https://fsr.cvmailuk.com/spb/main.cfm?page=jobSpecific&jobId=78948",
+        "link_is_specific": True, "eligibility_note": None,
+    },
     # --- Researched 2026-09-04 but left OUT deliberately: each firm's own
     # site either didn't show a live/current listing for this event (stale
     # prior-cycle content, a 404, or "not yet published"), the event
@@ -1258,6 +1309,61 @@ MANUAL_EVENTS = [
         "eligibility_note": "For candidates with a disability, neurodivergence, or long-term health condition, first year of university and beyond (firm's own wording).",
         "location": "London",
         "found_on": "2026-09-25",
+    },
+    # Confirmed 2026-09-27 directly on kslaw.com (the "Meet Our Team" /
+    # Upcoming Events section of the UK Training Contracts page), but that
+    # day's push to GitHub failed (egress proxy 403 + device bridge offline)
+    # and the change was never applied - see the pending note written that
+    # day. Re-verified live on the same page 2026-09-29: both events and the
+    # application window are unchanged. King & Spalding's own page states no
+    # event-specific deadline for either - only the firm's general training
+    # contract application window (1 Oct 2026 - 26 Feb 2027), used here as
+    # deadline_date since nothing more specific is published. Apply link is
+    # the firm's general AllHires portal (no per-event link exists).
+    # Eligibility per the firm's standard wording ("penultimate year of a law
+    # degree, final year of a non-law degree or have already graduated") -
+    # graduates explicitly included, no note needed. Distinct from the
+    # unrelated "Fund Finance Insight Day" already sitting in needs_review
+    # (Legal Cheek's own scrape gives that one a 26/10/2027 deadline, a full
+    # year off from anything on the firm's live site - left alone).
+    {
+        "firm": "King & Spalding",
+        "event_name": "In-Person Insight Afternoon - Spotlight on Fund Finance",
+        "summary": (
+            "An in-person event at the firm's London office featuring a "
+            "spotlight session on the Fund Finance practice, with networking "
+            "with trainees, associates and partners and insight into the "
+            "application and interview process. Event held 12 November 2026, "
+            "1:45pm-7:30pm."
+        ),
+        "opens_date": "2026-10-01",
+        "opens_confirmed": True,
+        "deadline_label": "26/02/2027",
+        "deadline_date": "2027-02-26",
+        "apply_link": "https://kslaw.grad.allhires.com/app/",
+        "link_is_specific": False,
+        "eligibility_note": None,
+        "location": "London",
+        "found_on": "2026-09-27",
+    },
+    {
+        "firm": "King & Spalding",
+        "event_name": "Virtual Insight Afternoon - Spotlight on Corporate",
+        "summary": (
+            "A virtual event featuring a spotlight session on the Corporate "
+            "practice, with networking with trainees, associates and partners "
+            "and insight into the application and interview process. Event "
+            "held 21 January 2027, 1:15pm-5:00pm."
+        ),
+        "opens_date": "2026-10-01",
+        "opens_confirmed": True,
+        "deadline_label": "26/02/2027",
+        "deadline_date": "2027-02-26",
+        "apply_link": "https://kslaw.grad.allhires.com/app/",
+        "link_is_specific": False,
+        "eligibility_note": None,
+        "location": "Virtual",
+        "found_on": "2026-09-27",
     },
 ]
 
