@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-28",
-  "last_gathered": "2026-09-28",
-  "note": "Maria's application tracker. Statuses are corrected against confirmation emails, which are the authoritative record of what actually went in. Refreshed by a daily gather; last reconciled 28 Sept 2026.",
+  "generated_at": "2026-09-29",
+  "last_gathered": "2026-09-29",
+  "note": "Maria's application tracker. Statuses are corrected against confirmation emails, which are the authoritative record of what actually went in. Refreshed by a daily gather; last reconciled 29 Sept 2026.",
   "applications": [
     {
       "id": "mayer-brown-london-insight-day-21-october-2026-ref-265881",
@@ -638,15 +638,15 @@
       "what": "Employment Litigation Paralegal",
       "type": "job",
       "stage": "submitted",
-      "outcome": null,
+      "outcome": "Rejected",
       "event_date": null,
       "deadline": null,
       "link": null,
       "ref": "124945",
-      "notes": "Confirmed received 22 Sept. An identity-confirmation email with a one-time pass arrived just before it.",
+      "notes": "Confirmed received 22 Sept. An identity-confirmation email with a one-time pass arrived just before it. Not progressed, 29 Sept, from the M&S recruitment team, who said they could not give individual feedback.",
       "source": "claude",
       "added_on": "2026-09-25",
-      "updated_on": "2026-09-25",
+      "updated_on": "2026-09-29",
       "is_new": true
     },
     {
