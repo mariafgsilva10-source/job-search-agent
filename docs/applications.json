@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-29",
-  "last_gathered": "2026-09-29",
-  "note": "Maria's application tracker. Statuses are corrected against confirmation emails, which are the authoritative record of what actually went in. Refreshed by a daily gather; last reconciled 29 Sept 2026.",
+  "generated_at": "2026-09-30",
+  "last_gathered": "2026-09-30",
+  "note": "Maria's application tracker. Statuses are corrected against confirmation emails, which are the authoritative record of what actually went in. Refreshed by a daily gather; last reconciled 30 Sept 2026.",
   "applications": [
     {
       "id": "mayer-brown-london-insight-day-21-october-2026-ref-265881",
@@ -232,13 +232,13 @@
       "stage": "submitted",
       "outcome": "Assessment",
       "event_date": "2026-11-10",
-      "deadline": null,
+      "deadline": "2026-10-02",
       "link": "https://jobs.cliffordchance.com",
       "ref": "REF3378M",
       "notes": "Submitted 22 Sept 2026, ref REF3378M, on-screen confirmation from SmartRecruiters. Immersive Online Assessment completed and the feedback report arrived 26 Sept. The Watson Glaser critical reasoning test invitation arrived 28 Sept with a link, and must be completed within four days, so by 2 October, or the application is withdrawn. The firm says you will hear within three working days of the test whether you have progressed to application review. Clashes with Goodwin.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-28",
+      "updated_on": "2026-09-30",
       "is_new": false
     },
     {
@@ -349,15 +349,15 @@
       "what": "Support Services Assistant, Parking and Enforcement",
       "type": "job",
       "stage": "submitted",
-      "outcome": "Interview booked",
+      "outcome": "Offer",
       "event_date": "2026-09-24",
       "deadline": null,
       "link": null,
       "ref": "REQ02656",
-      "notes": "Submitted 25 Aug. Teams interview confirmed for 24 Sept at 13:00 with Damian Niklas, opening with a 20-minute written assessment on a fictional parking appeal.",
+      "notes": "Submitted 25 Aug. Teams interview held 24 Sept at 13:00 with Damian Niklas, opening with a 20-minute written assessment on a fictional parking appeal. You have recorded that an offer followed, but no offer email was found in Gmail, so the date and terms are unconfirmed here.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-24",
+      "updated_on": "2026-09-30",
       "is_new": false
     },
     {
@@ -383,15 +383,15 @@
       "what": "Research Analyst, Brazil team",
       "type": "job",
       "stage": "submitted",
-      "outcome": "Interviewed",
+      "outcome": "Offer",
       "event_date": null,
       "deadline": null,
       "link": null,
       "ref": null,
-      "notes": "London, hybrid, 30,000 pounds. Teams interview held 10 Sept with Henry Smith and Mateus Monteiro, in Portuguese and English. Pete Davies passed on positive feedback on 22 Sept and said further interviews were being held that week, so no decision yet.",
+      "notes": "London, hybrid, 30,000 pounds. Teams interview held 10 Sept with Henry Smith and Mateus Monteiro, in Portuguese and English. Pete Davies called on 30 Sept with the decision and the written offer arrived the same morning from recruitment@chambers.com, with the terms in an attached offer letter. The emails do not give a start date, so that is worth confirming. You have said this is the role you are taking.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-25",
+      "updated_on": "2026-09-30",
       "is_new": false
     },
     {
@@ -672,15 +672,15 @@
       "what": "Legal Team Administrator",
       "type": "job",
       "stage": "submitted",
-      "outcome": null,
+      "outcome": "Rejected",
       "event_date": null,
       "deadline": null,
       "link": null,
       "ref": null,
-      "notes": "Confirmed received 24 Sept. Their team said they would be in touch about next steps.",
+      "notes": "Confirmed received 24 Sept. Not progressed, 30 Sept, from the recruitment team via Recruitee, who said they are moving forward with candidates whose experience more closely matches the role and cannot give individual feedback.",
       "source": "claude",
       "added_on": "2026-09-25",
-      "updated_on": "2026-09-25",
+      "updated_on": "2026-09-30",
       "is_new": true
     },
     {
