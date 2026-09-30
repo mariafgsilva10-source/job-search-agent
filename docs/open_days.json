@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-29T13:34:11Z",
+  "generated_at": "2026-09-30T07:07:26Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -15,70 +15,6 @@
     }
   },
   "events": [
-    {
-      "id": "herbert-smith-freehills-kramer|ip-open-day|01-10-2026",
-      "firm": "Herbert Smith Freehills Kramer",
-      "event_name": "IP Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "location": "London",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "01/10/2026",
-      "deadline_date": "2026-10-01",
-      "apply_link": "https://careers.hsfkramer.com/global/en/uk/early-careers/open-days",
-      "link_is_specific": false,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
-    {
-      "id": "herbert-smith-freehills-kramer|social-mobility-open-day|01-10-2026",
-      "firm": "Herbert Smith Freehills Kramer",
-      "event_name": "Social Mobility Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, focused on supporting candidates from underrepresented or minority groups into the legal profession.",
-      "location": "London",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "01/10/2026",
-      "deadline_date": "2026-10-01",
-      "apply_link": "https://careers.hsfkramer.com/global/en/uk/early-careers/open-days",
-      "link_is_specific": false,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
-    {
-      "id": "milbank|open-day|01-10-2026",
-      "firm": "Milbank",
-      "event_name": "Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "location": "London",
-      "opens_date": "2026-09-03",
-      "opens_confirmed": true,
-      "deadline_label": "01/10/2026",
-      "deadline_date": "2026-10-01",
-      "apply_link": "https://www.apply4law.com/milbank/",
-      "link_is_specific": false,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
-    {
-      "id": "milbank|open-day-(leveraged-finance-track)|01-10-2026",
-      "firm": "Milbank",
-      "event_name": "Open Day (Leveraged Finance track)",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "location": "London",
-      "opens_date": "2026-09-03",
-      "opens_confirmed": true,
-      "deadline_label": "01/10/2026",
-      "deadline_date": "2026-10-01",
-      "apply_link": "https://www.apply4law.com/milbank/",
-      "link_is_specific": false,
-      "eligibility_note": "For students on a Finance LLM.",
-      "source": "legal_cheek",
-      "found_on": null
-    },
     {
       "id": "forsters|open-day-1|02-10-2026",
       "firm": "Forsters",
@@ -1076,11 +1012,31 @@
     {
       "firm": "Davis Polk & Wardwell",
       "event_name": "Penultimate Year & Postgraduate Insight Day",
-      "deadline_label": "Tomorrow"
+      "deadline_label": "Today"
     },
     {
       "firm": "Weil Gotshal & Manges",
       "event_name": "Insight Day 1",
+      "deadline_label": "Today"
+    },
+    {
+      "firm": "Herbert Smith Freehills Kramer",
+      "event_name": "IP Open Day",
+      "deadline_label": "Tomorrow"
+    },
+    {
+      "firm": "Herbert Smith Freehills Kramer",
+      "event_name": "Social Mobility Open Day",
+      "deadline_label": "Tomorrow"
+    },
+    {
+      "firm": "Milbank",
+      "event_name": "Open Day",
+      "deadline_label": "Tomorrow"
+    },
+    {
+      "firm": "Milbank",
+      "event_name": "Open Day (Leveraged Finance track)",
       "deadline_label": "Tomorrow"
     },
     {
@@ -1242,6 +1198,11 @@
       "firm": "Simmons & Simmons",
       "event_name": "Spring Insight Scheme",
       "deadline_label": "31/01/2027"
+    },
+    {
+      "firm": "Freeths",
+      "event_name": "Direct Entry Insight Day",
+      "deadline_label": "04/02/2027"
     },
     {
       "firm": "Dentons",
