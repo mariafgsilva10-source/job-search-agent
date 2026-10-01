@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-30T07:08:56Z",
+  "generated_at": "2026-10-01T14:03:50Z",
   "note": "Only includes Training Contract listings manually verified as open to graduates applying directly, without needing to have done that firm's own vacation scheme first. New listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "events": [
     {
@@ -10,7 +10,7 @@
       "opens_date": "2026-09-01",
       "opens_confirmed": false,
       "closes_date": "2026-10-02",
-      "closes_label": "02/10/2026",
+      "closes_label": "Tomorrow",
       "apply_link": "https://www.taylorwessing.com/en/careers/ireland",
       "eligibility_note": "Open to those who've completed (or are completing) the FE1 exams - no vacation scheme or final-year-only restriction stated."
     },
@@ -477,6 +477,17 @@
       "eligibility_note": "Firm's own site explicitly lists \"have already graduated\" as an eligible route - no vacation scheme required."
     },
     {
+      "id": "stephenson-harwood|london-training-contract",
+      "firm": "Stephenson Harwood",
+      "event_name": "London Training Contract",
+      "opens_date": "2026-10-05",
+      "opens_confirmed": true,
+      "closes_date": "2027-02-26",
+      "closes_label": "26/02/2027",
+      "apply_link": "https://shlegal.app.candidats.io/roles",
+      "eligibility_note": "Firm's site explicitly states \"you may also have already graduated\" - no vacation scheme required."
+    },
+    {
       "id": "winckworth-sherwood|training-contract",
       "firm": "Winckworth Sherwood",
       "event_name": "Training Contract",
@@ -508,17 +519,6 @@
       "closes_label": "05/03/2027",
       "apply_link": "https://farrer.grad.allhires.com/app/",
       "eligibility_note": "Firm welcomes \"graduates from any academic discipline\" and runs the vacation scheme and training contract as separate application processes."
-    },
-    {
-      "id": "stephenson-harwood|london-training-contract",
-      "firm": "Stephenson Harwood",
-      "event_name": "London Training Contract",
-      "opens_date": "2026-10-05",
-      "opens_confirmed": true,
-      "closes_date": "2027-03-06",
-      "closes_label": "06/03/2027",
-      "apply_link": "https://shlegal.app.candidats.io/roles",
-      "eligibility_note": "Firm's site explicitly states \"you may also have already graduated\" - no vacation scheme required."
     },
     {
       "id": "bevan-brittan|training-contract",
@@ -709,11 +709,6 @@
     }
   ],
   "needs_review": [
-    {
-      "firm": "Simmons & Simmons",
-      "event_name": "Journey to a Training Contract",
-      "deadline_label": "Today"
-    },
     {
       "firm": "White & Case",
       "event_name": "Training Contract",

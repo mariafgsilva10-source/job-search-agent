@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-09-30T07:07:26Z",
+  "generated_at": "2026-10-01T14:02:28Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -10,43 +10,11 @@
     "filtered_out_counts": {
       "chambers": 14,
       "outside_london": 15,
-      "apprenticeships": 21,
+      "apprenticeships": 20,
       "not_graduate_eligible": 19
     }
   },
   "events": [
-    {
-      "id": "forsters|open-day-1|02-10-2026",
-      "firm": "Forsters",
-      "event_name": "Open Day 1",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "location": "London",
-      "opens_date": "2026-09-03",
-      "opens_confirmed": true,
-      "deadline_label": "02/10/2026",
-      "deadline_date": "2026-10-02",
-      "apply_link": "https://forsters.grad.allhires.com/app/",
-      "link_is_specific": false,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
-    {
-      "id": "goodwin|insight-into-applications-–-demystifying-the-application-process|02-10-2026",
-      "firm": "Goodwin",
-      "event_name": "Insight into Applications – Demystifying the Application Process",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "location": "London",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "02/10/2026",
-      "deadline_date": "2026-10-02",
-      "apply_link": "https://goodwinlaw.app.candidats.io/event/7daf0946-4519-4c67-9dfe-d6b69f87c123",
-      "link_is_specific": true,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
     {
       "id": "dla-piper|london-discovery-day|05-10-2026",
       "firm": "DLA Piper",
@@ -990,64 +958,48 @@
       "eligibility_note": null,
       "source": "direct",
       "found_on": "2026-09-27"
-    },
-    {
-      "id": "osborne-clarke|insight-scheme|28-02-2027",
-      "firm": "Osborne Clarke",
-      "event_name": "Insight Scheme",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "location": "Multiple UK offices (incl. London)",
-      "opens_date": "2026-10-01",
-      "opens_confirmed": true,
-      "deadline_label": "28/02/2027",
-      "deadline_date": "2027-02-28",
-      "apply_link": "https://join.osborneclarke.com/insight-scheme",
-      "link_is_specific": true,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
     }
   ],
   "needs_review": [
     {
-      "firm": "Davis Polk & Wardwell",
-      "event_name": "Penultimate Year & Postgraduate Insight Day",
-      "deadline_label": "Today"
-    },
-    {
-      "firm": "Weil Gotshal & Manges",
-      "event_name": "Insight Day 1",
-      "deadline_label": "Today"
-    },
-    {
       "firm": "Herbert Smith Freehills Kramer",
       "event_name": "IP Open Day",
-      "deadline_label": "Tomorrow"
+      "deadline_label": "Today"
     },
     {
       "firm": "Herbert Smith Freehills Kramer",
       "event_name": "Social Mobility Open Day",
-      "deadline_label": "Tomorrow"
+      "deadline_label": "Today"
     },
     {
       "firm": "Milbank",
       "event_name": "Open Day",
-      "deadline_label": "Tomorrow"
-    },
-    {
-      "firm": "Milbank",
-      "event_name": "Open Day (Leveraged Finance track)",
-      "deadline_label": "Tomorrow"
+      "deadline_label": "Today"
     },
     {
       "firm": "Bird & Bird",
       "event_name": "Trainee Solicitor Open Day",
-      "deadline_label": "02/10/2026"
+      "deadline_label": "Tomorrow"
+    },
+    {
+      "firm": "Forsters",
+      "event_name": "Open Day 1",
+      "deadline_label": "Tomorrow"
+    },
+    {
+      "firm": "Goodwin",
+      "event_name": "Insight into Applications – Demystifying the Application Process",
+      "deadline_label": "Tomorrow"
     },
     {
       "firm": "Akin",
       "event_name": "Ask Akin Open Day",
       "deadline_label": "04/10/2026"
+    },
+    {
+      "firm": "Milbank",
+      "event_name": "Open Day (Leveraged Finance track)",
+      "deadline_label": "08/10/2026"
     },
     {
       "firm": "Mishcon de Reya",
@@ -1165,11 +1117,6 @@
       "deadline_label": "03/01/2027"
     },
     {
-      "firm": "Burges Salmon",
-      "event_name": "Trainee Insight Day for non-law students",
-      "deadline_label": "05/01/2027"
-    },
-    {
       "firm": "Morgan Lewis",
       "event_name": "Open Day",
       "deadline_label": "08/01/2027"
@@ -1178,6 +1125,11 @@
       "firm": "Hill Dickinson",
       "event_name": "Summer Insight Day and Training Contract",
       "deadline_label": "10/01/2027"
+    },
+    {
+      "firm": "Osborne Clarke",
+      "event_name": "Insight Scheme",
+      "deadline_label": "15/01/2027"
     },
     {
       "firm": "Addleshaw Goddard",
