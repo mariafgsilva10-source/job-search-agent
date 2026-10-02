@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-10-01T14:03:50Z",
+  "generated_at": "2026-10-02T13:24:43Z",
   "note": "Only includes Training Contract listings manually verified as open to graduates applying directly, without needing to have done that firm's own vacation scheme first. New listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "events": [
     {
@@ -10,7 +10,7 @@
       "opens_date": "2026-09-01",
       "opens_confirmed": false,
       "closes_date": "2026-10-02",
-      "closes_label": "Tomorrow",
+      "closes_label": "Today",
       "apply_link": "https://www.taylorwessing.com/en/careers/ireland",
       "eligibility_note": "Open to those who've completed (or are completing) the FE1 exams - no vacation scheme or final-year-only restriction stated."
     },
@@ -713,6 +713,11 @@
       "firm": "White & Case",
       "event_name": "Training Contract",
       "deadline_label": "18/10/2026"
+    },
+    {
+      "firm": "Norton Rose Fulbright",
+      "event_name": "Direct Training Contract",
+      "deadline_label": "30/10/2026"
     },
     {
       "firm": "Hill Dickinson",
