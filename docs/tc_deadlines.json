@@ -1,19 +1,8 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-10-02T13:24:43Z",
+  "generated_at": "2026-10-03T12:10:57Z",
   "note": "Only includes Training Contract listings manually verified as open to graduates applying directly, without needing to have done that firm's own vacation scheme first. New listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "events": [
-    {
-      "id": "winston-taylor|dublin-training-contract",
-      "firm": "Winston Taylor",
-      "event_name": "Dublin Training Contract",
-      "opens_date": "2026-09-01",
-      "opens_confirmed": false,
-      "closes_date": "2026-10-02",
-      "closes_label": "Today",
-      "apply_link": "https://www.taylorwessing.com/en/careers/ireland",
-      "eligibility_note": "Open to those who've completed (or are completing) the FE1 exams - no vacation scheme or final-year-only restriction stated."
-    },
     {
       "id": "a&o-shearman|direct-training-contract",
       "firm": "A&O Shearman",
