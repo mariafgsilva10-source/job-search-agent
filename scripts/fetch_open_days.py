@@ -1365,6 +1365,100 @@ MANUAL_EVENTS = [
         "location": "Virtual",
         "found_on": "2026-09-27",
     },
+    # Researched 2026-10-01, re-verified 2026-10-02 and 2026-10-03 (no push
+    # access on any of those days - see claude/london-open-day-search-
+    # pending-2026-10-0{1,2}.md). Legal Cheek already lists "Bird & Bird" /
+    # "Trainee Solicitor Open Day" (it drifts between needs_review rows with
+    # different stale deadlines day to day - "02/10/2026", then "Today", and
+    # today (3 Oct) it has dropped out of both events and needs_review
+    # entirely), but the firm's own careers page (twobirds.com/en/careers/
+    # united-kingdom/early-careers/open-days-and-drop-ins) gives a different,
+    # stable deadline - 09 October 2026 - for the same event, confirmed via
+    # the browser pane on 1 Oct directly on the event's own candidats.io
+    # application page (apply.candidats.io/cac35db5-ec6d-4bcf-acd1-
+    # f18834aaad15): the page's static body text says "Deadline: Midday on 2
+    # October 2026" (stale leftover copy - the same kind of WebFetch-vs-
+    # rendered-page mismatch as the Clifford Chance case on 29 Sept), but the
+    # page's own dynamically-rendered "Application deadline" field says "9
+    # October 2026". Independently corroborated 3 Oct by The Corporate Law
+    # Academy's open-day deadlines thread (edited that same day), which lists
+    # "Bird & Bird / Trainee Solicitor Open Day" opening 14 Sep 2026 and
+    # closing 9 Oct 2026 - matching exactly. Event is virtual, 21 October
+    # 2026. Eligibility per the firm's own wording: "in your final year of a
+    # non-law degree; or in your penultimate or final year of a law degree;
+    # or studying or have completed the PgDL; or studying or have completed
+    # SQE1 and/or SQE2" - a law graduate is explicitly in scope via the
+    # PgDL/SQE routes, no eligibility_note needed. Entered here as
+    # MANUAL_EVENTS rather than OPEN_DAY_OVERRIDES, and named "Trainee
+    # Solicitor Open Day (Virtual)" (matching the firm's own site, which
+    # distinguishes it from the Solicitor Apprentice Open Day) rather than
+    # Legal Cheek's bare "Trainee Solicitor Open Day", specifically so it is
+    # NOT skipped as a legal_cheek_keys duplicate the way Squire Patton Boggs
+    # was on 24-29 Sept - this event's real deadline (9 Oct) differs from
+    # every deadline Legal Cheek's scrape has shown for it so far.
+    {
+        "firm": "Bird & Bird",
+        "event_name": "Trainee Solicitor Open Day (Virtual)",
+        "summary": (
+            "A virtual/online session featuring a virtual tour and talks "
+            "introducing the firm and its application process, with insight "
+            "talks, panel discussions, Q&As and skill sessions. Event held "
+            "21 October 2026."
+        ),
+        "opens_date": "2026-09-14",
+        "opens_confirmed": True,
+        "deadline_label": "09/10/2026",
+        "deadline_date": "2026-10-09",
+        "apply_link": "https://apply.candidats.io/cac35db5-ec6d-4bcf-acd1-f18834aaad15",
+        "link_is_specific": True,
+        "eligibility_note": None,
+        "location": "Virtual",
+        "found_on": "2026-10-01",
+    },
+    # Researched 2026-10-03. Not on Legal Cheek's calendar at all under this
+    # name, and not previously tracked anywhere in this repo. Confirmed
+    # directly on the firm's own registration page (slaughterandmay.com/
+    # careers/early-careers/october-virtual-insight-afternoon/ - read live via
+    # the browser pane since this is a noindex/nofollow page that WebFetch
+    # could only partially read): "Please register your place below for our
+    # October Virtual Insight Afternoon on Wednesday 28 October", with an
+    # inline registration form on that same page (no separate apply URL - the
+    # event page itself IS the specific apply link). The firm's general
+    # virtual-insight-afternoons hub page (slaughterandmay.com/careers/
+    # trainee-solicitors/work-experience-opportunities/virtual-insight-
+    # afternoons) gives the deadline: "the October session... registrations
+    # are open and will close on Wednesday 21 October 2026" (an earlier 29
+    # Sept session is already full/closed). Eligibility per the firm's own
+    # registration page: "this event is for finalists and graduates only" -
+    # a graduate is explicitly in scope, no eligibility_note needed.
+    # Independently corroborated by The Corporate Law Academy's open-day
+    # deadlines thread (edited 3 Oct 2026), which lists a Slaughter and May
+    # "Virtual Insight Afternoon" opening 21 Sep 2026 and closing 21 Oct
+    # 2026 - matching the firm's own deadline exactly (opens_date taken from
+    # TCLA only, so opens_confirmed is False; the deadline itself is firm-
+    # confirmed). Distinct from this firm's existing "Spring Open Day
+    # 1/2/3" (6 Jan 2027 deadline) and "Commercial Law"/"Explore Law Virtual
+    # Insight Programme" (1 Sep 2027 deadline) entries already in this repo.
+    {
+        "firm": "Slaughter and May",
+        "event_name": "October Virtual Insight Afternoon",
+        "summary": (
+            "A virtual session giving finalists and graduates an insight "
+            "into a career as a lawyer at the firm - hearing from partners "
+            "and trainees, learning about a recent deal, and finding out "
+            "what the firm looks for in training contract applicants. "
+            "Event held 28 October 2026."
+        ),
+        "opens_date": "2026-09-21",
+        "opens_confirmed": False,
+        "deadline_label": "21/10/2026",
+        "deadline_date": "2026-10-21",
+        "apply_link": "https://www.slaughterandmay.com/careers/early-careers/october-virtual-insight-afternoon/",
+        "link_is_specific": True,
+        "eligibility_note": None,
+        "location": "Virtual",
+        "found_on": "2026-10-03",
+    },
 ]
 
 
