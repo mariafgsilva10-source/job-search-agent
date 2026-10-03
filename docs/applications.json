@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-30",
-  "last_gathered": "2026-09-30",
-  "note": "Maria's application tracker. Statuses are corrected against confirmation emails, which are the authoritative record of what actually went in. Refreshed by a daily gather; last reconciled 30 Sept 2026.",
+  "generated_at": "2026-10-03",
+  "last_gathered": "2026-10-03",
+  "note": "Maria's application tracker. Statuses are corrected against confirmation emails, which are the authoritative record of what actually went in. Refreshed by a daily gather; last reconciled 3 Oct 2026.",
   "applications": [
     {
       "id": "mayer-brown-london-insight-day-21-october-2026-ref-265881",
@@ -247,15 +247,15 @@
       "what": "Insight Day",
       "type": "open_day",
       "stage": "submitted",
-      "outcome": null,
+      "outcome": "Rejected",
       "event_date": "2026-10-14",
       "deadline": "2026-09-30",
       "link": null,
       "ref": null,
-      "notes": "110 Fetter Lane. Submitted 24 Sept 2026 via the Candid portal. Clashes with the Davis Polk Insight Day on 14 Oct.",
+      "notes": "Applied 24 September 2026 via Candid (candidats.io). Unsuccessful: rejection email from the Weil Early Careers team on 1 October 2026, citing limited places.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-24",
+      "updated_on": "2026-10-03",
       "is_new": false
     },
     {
@@ -349,15 +349,15 @@
       "what": "Support Services Assistant, Parking and Enforcement",
       "type": "job",
       "stage": "submitted",
-      "outcome": "Offer",
+      "outcome": "Withdrawn",
       "event_date": "2026-09-24",
       "deadline": null,
       "link": null,
       "ref": "REQ02656",
-      "notes": "Submitted 25 Aug. Teams interview held 24 Sept at 13:00 with Damian Niklas, opening with a 20-minute written assessment on a fictional parking appeal. You have recorded that an offer followed, but no offer email was found in Gmail, so the date and terms are unconfirmed here.",
+      "notes": "Offer made after the 24 September 2026 interview. Maria declined by email to Damian Niklas on 1 October 2026, having accepted the Chambers and Partners role instead.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-30",
+      "updated_on": "2026-10-03",
       "is_new": false
     },
     {
@@ -388,10 +388,10 @@
       "deadline": null,
       "link": null,
       "ref": null,
-      "notes": "London, hybrid, 30,000 pounds. Teams interview held 10 Sept with Henry Smith and Mateus Monteiro, in Portuguese and English. Pete Davies called on 30 Sept with the decision and the written offer arrived the same morning from recruitment@chambers.com, with the terms in an attached offer letter. The emails do not give a start date, so that is worth confirming. You have said this is the role you are taking.",
+      "notes": "Offer made 30 September 2026 and accepted. Contract of employment signed by all parties via DocuSign on 30 September 2026. Pre-employment screening underway: referee information form due 7 October 2026 and evidence of highest qualification requested.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-30",
+      "updated_on": "2026-10-03",
       "is_new": false
     },
     {
@@ -745,10 +745,10 @@
       "deadline": null,
       "link": "https://clydeco.app.candidats.io",
       "ref": null,
-      "notes": "Registration confirmed. Reminder and Teams joining link sent 28 Sept for a 10am start on Tuesday 29 September. The email gives no finish time. This may be one of the two Clyde & Co applications confirmed on 22 Sept, but no email links them, so both are kept.",
+      "notes": "Place confirmed and joining link sent 28 September for a 10am start on Tuesday 29 September; the email gave no finish time. Organiser email of 2 October 2026 records that she did not attend on the day. This may be one of the two Clyde & Co applications confirmed on 22 Sept, but no email links them, so both are kept.",
       "source": "claude",
       "added_on": "2026-09-28",
-      "updated_on": "2026-09-28",
+      "updated_on": "2026-10-03",
       "is_new": true
     },
     {
