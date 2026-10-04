@@ -163,6 +163,8 @@ EVENT_LOCATIONS = {
     ("BCLP", "Open Day"): "London",
     ("Bird & Bird", "Trainee Solicitor Open Day"): "London",
     ("Bristows — solicitor apprenticeship", "Solicitor Apprenticeship Open Evening"): "London",
+    ("Charles Russell Speechlys", "London Open Day"): "London",
+    ("Charles Russell Speechlys", "Virtual Open Day"): "Virtual",
     ("Clifford Chance", "London Insight Day"): "London",
     ("Davis Polk & Wardwell", "First Year Insight Day"): "London",
     ("Davis Polk & Wardwell", "Penultimate Year & Postgraduate Insight Day"): "London",
@@ -191,6 +193,7 @@ EVENT_LOCATIONS = {
     ("Herbert Smith Freehills Kramer", "IRIS Open Day"): "London",
     ("Herbert Smith Freehills Kramer", "MyPlus Open Day"): "London",
     ("Herbert Smith Freehills Kramer", "Social Mobility Open Day"): "London",
+    ("Hill Dickinson", "Training Contract Open Evening"): "London",
     ("Hogan Lovells Cadwalader", "First Year Insight Scheme"): "London",
     ("Jones Day", "Open Evening 2"): "London",
     ("Latham & Watkins", "London Black Lawyers Group Open Day 2026"): "London",
@@ -526,6 +529,32 @@ OPEN_DAY_OVERRIDES = {
         "apply_link": "https://www.apply4law.com/Trowers/",
         "link_is_specific": False, "eligibility_note": None,
     },
+    # Researched 2026-10-04: Charles Russell Speechlys' own open-days page
+    # (charlesrussellspeechlys.com/en/careers/early-talent/uk-graduate-
+    # opportunities/open-days/) has finally refreshed for the 2026/27 cycle -
+    # the 4 Sept rejection note ("text dated exactly one year earlier...
+    # appears stale") no longer applies. States plainly: "We offer open days
+    # in our London, Guildford and Cheltenham offices that any university
+    # student or graduate can apply to (including those currently working).
+    # We also offer a non-office specific virtual open day" - applications
+    # open 15 Sept 2026, close 12 Nov 2026, matching Legal Cheek's own
+    # needs_review deadline for both "London Open Day" and "Virtual Open
+    # Day" exactly. No per-event apply link exists - the page itself links
+    # to the firm's general candidats.io portal, so the open-days page is
+    # used as the (non-specific) apply_link, same pattern as Stephenson
+    # Harwood on 25 Sept. London event: Tuesday 8 Dec 2026. Virtual event:
+    # Friday 11 Dec 2026 (Guildford 1 Dec and Cheltenham 3 Dec excluded -
+    # non-London offices).
+    ("Charles Russell Speechlys", "London Open Day", "12/11/2026"): {
+        "opens_date": "2026-09-15", "opens_confirmed": True,
+        "apply_link": "https://www.charlesrussellspeechlys.com/en/careers/early-talent/uk-graduate-opportunities/open-days/",
+        "link_is_specific": False, "eligibility_note": None,
+    },
+    ("Charles Russell Speechlys", "Virtual Open Day", "12/11/2026"): {
+        "opens_date": "2026-09-15", "opens_confirmed": True,
+        "apply_link": "https://www.charlesrussellspeechlys.com/en/careers/early-talent/uk-graduate-opportunities/open-days/",
+        "link_is_specific": False, "eligibility_note": None,
+    },
     ("Mills & Reeve", "Virtual Insight Event", "12/11/2026"): {
         "opens_date": None, "opens_confirmed": False,
         "apply_link": "https://apply.candidats.io/a8f00b84-f1fb-4b6b-abde-ecf792f4d573",
@@ -535,6 +564,21 @@ OPEN_DAY_OVERRIDES = {
         "opens_date": None, "opens_confirmed": False,
         "apply_link": "https://goodwinlaw.app.candidats.io/event/a6272983-248e-4d31-a7fd-b099838d027f",
         "link_is_specific": True, "eligibility_note": None,
+    },
+    # Researched 2026-10-04: not previously tracked (new firm to this repo).
+    # Found via a lawcareers.net diary listing, confirmed directly on the
+    # firm's own careers.hilldickinson.com/early-careers/open-evenings page:
+    # "Tuesday, 1 December" at the London office, application window 1 Oct -
+    # 15 Nov 2026, explicitly "open to everyone, whether you're still in
+    # education, considering a career change or simply exploring your
+    # options" - a graduate is in scope, no eligibility_note needed. Matches
+    # Legal Cheek's own needs_review deadline (15/11/2026) for "Training
+    # Contract Open Evening" exactly. No per-event apply link - the firm's
+    # page gives only its general AllHires application portal.
+    ("Hill Dickinson", "Training Contract Open Evening", "15/11/2026"): {
+        "opens_date": "2026-10-01", "opens_confirmed": True,
+        "apply_link": "https://hilldickinson.grad.allhires.com/app/",
+        "link_is_specific": False, "eligibility_note": None,
     },
     ("Wedlake Bell", "Open Day", "16/11/2026"): {
         "opens_date": None, "opens_confirmed": False,
@@ -1458,6 +1502,67 @@ MANUAL_EVENTS = [
         "eligibility_note": None,
         "location": "Virtual",
         "found_on": "2026-10-03",
+    },
+    # Researched 2026-10-04. Not on Legal Cheek's calendar at all (no
+    # needs_review row exists for Skadden), and not previously tracked
+    # anywhere in this repo. Skadden's own UK careers page
+    # (skadden.com/careers/attorneys/law-students-and-graduates/
+    # united-kingdom) only mentions a first-year-only spring open day, but
+    # links to "our graduate recruitment events" - skadden.allhires.com -
+    # which is itself a JS-rendered empty shell to a plain fetch (same
+    # problem as the candidats.io group); read directly via the browser
+    # pane instead. Confirmed two in-scope events on the firm's own AllHires
+    # portal (PositionDetails?id=473 and id=479) out of four currently
+    # listed there - the other two ("Meet the Graduate Recruitment Team",
+    # 15 Oct and 2 Nov) are informal webinar Q&As, not an open day/evening,
+    # insight day/evening, insight scheme or first-year scheme, so excluded
+    # as out of scope (same call as Bird & Bird's "Office Drop-In" on
+    # 3 Oct). An AllAboutLaw listing separately mentioned an "Open Evening -
+    # 6 October 2026" that doesn't appear on the firm's own live portal at
+    # all - not added (fail closed; the portal is the source of truth).
+    {
+        "firm": "Skadden",
+        "event_name": "Open Evening",
+        "summary": (
+            "An in-person insight evening for aspiring lawyers interested in "
+            "a career in commercial law at the firm, with the chance to gain "
+            "insight into the firm, its graduate recruitment process, and "
+            "network with trainees and lawyers. Event held 28 October 2026 "
+            "at 22 Bishopsgate, London."
+        ),
+        "opens_date": None,
+        "opens_confirmed": False,
+        "deadline_label": "15/10/2026",
+        "deadline_date": "2026-10-15",
+        "apply_link": "https://skadden.allhires.com/app/PositionDetails?id=473",
+        "link_is_specific": True,
+        "eligibility_note": (
+            "Firm's own listing: \"undergraduate candidates need to have at "
+            "least reached the penultimate year of their law degree or the "
+            "final year of a non-law degree\" - graduates not named "
+            "explicitly but not excluded either."
+        ),
+        "location": "London",
+        "found_on": "2026-10-04",
+    },
+    {
+        "firm": "Skadden",
+        "event_name": "Online Open Day",
+        "summary": (
+            "A virtual open day for aspiring lawyers looking to secure a "
+            "vacation scheme and training contract at the firm, covering "
+            "the graduate recruitment process, the firm's work and its pro "
+            "bono practice. Event held 11 November 2026, 14:00-17:00."
+        ),
+        "opens_date": None,
+        "opens_confirmed": False,
+        "deadline_label": "09/11/2026",
+        "deadline_date": "2026-11-09",
+        "apply_link": "https://skadden.allhires.com/app/PositionDetails?id=479",
+        "link_is_specific": True,
+        "eligibility_note": None,
+        "location": "Virtual",
+        "found_on": "2026-10-04",
     },
 ]
 
