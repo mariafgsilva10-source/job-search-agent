@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-10-03T12:09:29Z",
+  "generated_at": "2026-10-04T12:57:42Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -94,6 +94,22 @@
       "eligibility_note": null,
       "source": "legal_cheek",
       "found_on": null
+    },
+    {
+      "id": "bird-&-bird|trainee-solicitor-open-day-(virtual)|09-10-2026",
+      "firm": "Bird & Bird",
+      "event_name": "Trainee Solicitor Open Day (Virtual)",
+      "summary": "A virtual/online session featuring a virtual tour and talks introducing the firm and its application process, with insight talks, panel discussions, Q&As and skill sessions. Event held 21 October 2026.",
+      "location": "Virtual",
+      "opens_date": "2026-09-14",
+      "opens_confirmed": true,
+      "deadline_label": "09/10/2026",
+      "deadline_date": "2026-10-09",
+      "apply_link": "https://apply.candidats.io/cac35db5-ec6d-4bcf-acd1-f18834aaad15",
+      "link_is_specific": true,
+      "eligibility_note": null,
+      "source": "direct",
+      "found_on": "2026-10-01"
     },
     {
       "id": "latham-&-watkins|london-open-day-2026-(october)|11-10-2026",
@@ -414,6 +430,22 @@
       "eligibility_note": null,
       "source": "legal_cheek",
       "found_on": null
+    },
+    {
+      "id": "slaughter-and-may|october-virtual-insight-afternoon|21-10-2026",
+      "firm": "Slaughter and May",
+      "event_name": "October Virtual Insight Afternoon",
+      "summary": "A virtual session giving finalists and graduates an insight into a career as a lawyer at the firm - hearing from partners and trainees, learning about a recent deal, and finding out what the firm looks for in training contract applicants. Event held 28 October 2026.",
+      "location": "Virtual",
+      "opens_date": "2026-09-21",
+      "opens_confirmed": false,
+      "deadline_label": "21/10/2026",
+      "deadline_date": "2026-10-21",
+      "apply_link": "https://www.slaughterandmay.com/careers/early-careers/october-virtual-insight-afternoon/",
+      "link_is_specific": true,
+      "eligibility_note": null,
+      "source": "direct",
+      "found_on": "2026-10-03"
     },
     {
       "id": "jones-day|open-evening-2|22-10-2026",
@@ -964,7 +996,7 @@
     {
       "firm": "Akin",
       "event_name": "Ask Akin Open Day",
-      "deadline_label": "Tomorrow"
+      "deadline_label": "Today"
     },
     {
       "firm": "Milbank",
