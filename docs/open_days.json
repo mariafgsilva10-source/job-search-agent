@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-10-04T12:57:42Z",
+  "generated_at": "2026-10-04T13:36:12Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -302,6 +302,22 @@
       "eligibility_note": null,
       "source": "legal_cheek",
       "found_on": null
+    },
+    {
+      "id": "skadden|open-evening|15-10-2026",
+      "firm": "Skadden",
+      "event_name": "Open Evening",
+      "summary": "An in-person insight evening for aspiring lawyers interested in a career in commercial law at the firm, with the chance to gain insight into the firm, its graduate recruitment process, and network with trainees and lawyers. Event held 28 October 2026 at 22 Bishopsgate, London.",
+      "location": "London",
+      "opens_date": null,
+      "opens_confirmed": false,
+      "deadline_label": "15/10/2026",
+      "deadline_date": "2026-10-15",
+      "apply_link": "https://skadden.allhires.com/app/PositionDetails?id=473",
+      "link_is_specific": true,
+      "eligibility_note": "Firm's own listing: \"undergraduate candidates need to have at least reached the penultimate year of their law degree or the final year of a non-law degree\" - graduates not named explicitly but not excluded either.",
+      "source": "direct",
+      "found_on": "2026-10-04"
     },
     {
       "id": "goodwin|insight-into-the-trainee-experience:-meet-our-trainees-and-q&a|16-10-2026",
@@ -720,6 +736,22 @@
       "found_on": null
     },
     {
+      "id": "skadden|online-open-day|09-11-2026",
+      "firm": "Skadden",
+      "event_name": "Online Open Day",
+      "summary": "A virtual open day for aspiring lawyers looking to secure a vacation scheme and training contract at the firm, covering the graduate recruitment process, the firm's work and its pro bono practice. Event held 11 November 2026, 14:00-17:00.",
+      "location": "Virtual",
+      "opens_date": null,
+      "opens_confirmed": false,
+      "deadline_label": "09/11/2026",
+      "deadline_date": "2026-11-09",
+      "apply_link": "https://skadden.allhires.com/app/PositionDetails?id=479",
+      "link_is_specific": true,
+      "eligibility_note": null,
+      "source": "direct",
+      "found_on": "2026-10-04"
+    },
+    {
       "id": "baker-mckenzie|pride-at-baker-mckenzie-open-day|10-11-2026",
       "firm": "Baker McKenzie",
       "event_name": "Pride at Baker McKenzie Open Day",
@@ -768,6 +800,38 @@
       "found_on": null
     },
     {
+      "id": "charles-russell-speechlys|london-open-day|12-11-2026",
+      "firm": "Charles Russell Speechlys",
+      "event_name": "London Open Day",
+      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "location": "London",
+      "opens_date": "2026-09-15",
+      "opens_confirmed": true,
+      "deadline_label": "12/11/2026",
+      "deadline_date": "2026-11-12",
+      "apply_link": "https://www.charlesrussellspeechlys.com/en/careers/early-talent/uk-graduate-opportunities/open-days/",
+      "link_is_specific": false,
+      "eligibility_note": null,
+      "source": "legal_cheek",
+      "found_on": null
+    },
+    {
+      "id": "charles-russell-speechlys|virtual-open-day|12-11-2026",
+      "firm": "Charles Russell Speechlys",
+      "event_name": "Virtual Open Day",
+      "summary": "A virtual/online session featuring a virtual tour and talks introducing the firm and its application process.",
+      "location": "Virtual",
+      "opens_date": "2026-09-15",
+      "opens_confirmed": true,
+      "deadline_label": "12/11/2026",
+      "deadline_date": "2026-11-12",
+      "apply_link": "https://www.charlesrussellspeechlys.com/en/careers/early-talent/uk-graduate-opportunities/open-days/",
+      "link_is_specific": false,
+      "eligibility_note": null,
+      "source": "legal_cheek",
+      "found_on": null
+    },
+    {
       "id": "goodwin|insight-into-applications-–-demystifying-the-application-process|13-11-2026",
       "firm": "Goodwin",
       "event_name": "Insight into Applications – Demystifying the Application Process",
@@ -779,6 +843,22 @@
       "deadline_date": "2026-11-13",
       "apply_link": "https://goodwinlaw.app.candidats.io/event/a6272983-248e-4d31-a7fd-b099838d027f",
       "link_is_specific": true,
+      "eligibility_note": null,
+      "source": "legal_cheek",
+      "found_on": null
+    },
+    {
+      "id": "hill-dickinson|training-contract-open-evening|15-11-2026",
+      "firm": "Hill Dickinson",
+      "event_name": "Training Contract Open Evening",
+      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "location": "London",
+      "opens_date": "2026-10-01",
+      "opens_confirmed": true,
+      "deadline_label": "15/11/2026",
+      "deadline_date": "2026-11-15",
+      "apply_link": "https://hilldickinson.grad.allhires.com/app/",
+      "link_is_specific": false,
       "eligibility_note": null,
       "source": "legal_cheek",
       "found_on": null
@@ -1077,21 +1157,6 @@
       "firm": "3VB",
       "event_name": "Student Open Evening",
       "deadline_label": "10/11/2026"
-    },
-    {
-      "firm": "Charles Russell Speechlys",
-      "event_name": "London Open Day",
-      "deadline_label": "12/11/2026"
-    },
-    {
-      "firm": "Charles Russell Speechlys",
-      "event_name": "Virtual Open Day",
-      "deadline_label": "12/11/2026"
-    },
-    {
-      "firm": "Hill Dickinson",
-      "event_name": "Training Contract Open Evening",
-      "deadline_label": "15/11/2026"
     },
     {
       "firm": "Kingsley Napley",
