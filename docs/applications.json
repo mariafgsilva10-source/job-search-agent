@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-04",
-  "last_gathered": "2026-10-04",
-  "note": "Maria's application tracker. Statuses are corrected against confirmation emails, which are the authoritative record of what actually went in. Refreshed by a daily gather; last reconciled 4 Oct 2026.",
+  "generated_at": "2026-10-05",
+  "last_gathered": "2026-10-05",
+  "note": "Maria's application tracker. Statuses are corrected against confirmation emails, which are the authoritative record of what actually went in. Refreshed by a daily gather; last reconciled 5 Oct 2026.",
   "applications": [
     {
       "id": "mayer-brown-london-insight-day-21-october-2026-ref-265881",
@@ -388,10 +388,10 @@
       "deadline": null,
       "link": null,
       "ref": null,
-      "notes": "Offer made 30 September 2026 and accepted. Contract of employment signed by all parties via DocuSign on 30 September 2026. Pre-employment screening underway: referee information form due 7 October 2026 and evidence of highest qualification requested.",
+      "notes": "Offer confirmed by call with Pete Davies on 30 September, formal offer letter from recruitment@chambers.com the same day, accepted by Maria the same day. DocuSign confirmed the Contract of Employment was signed by all parties on 30 September. Interview was 10 September with Henry Smith and Mateus Monteiro, in Portuguese and English.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-10-03",
+      "updated_on": "2026-10-05",
       "is_new": false
     },
     {
@@ -745,10 +745,10 @@
       "deadline": null,
       "link": "https://clydeco.app.candidats.io",
       "ref": null,
-      "notes": "Place confirmed and joining link sent 28 September for a 10am start on Tuesday 29 September; the email gave no finish time. Organiser email of 2 October 2026 records that she did not attend on the day. This may be one of the two Clyde & Co applications confirmed on 22 Sept, but no email links them, so both are kept.",
+      "notes": "Place confirmed and joining link sent 28 September. The organiser's follow-up of 2 October ('Sorry We Missed You') says she did not join the 29 September session.",
       "source": "claude",
       "added_on": "2026-09-28",
-      "updated_on": "2026-10-03",
+      "updated_on": "2026-10-05",
       "is_new": true
     },
     {
@@ -795,11 +795,45 @@
       "event_date": null,
       "deadline": null,
       "link": null,
-      "ref": null,
-      "notes": "A reminder from nhg.org.uk on 28 Sept says the application was started but not completed. No confirmation email found, so this may still be unsent.",
+      "ref": "nhg/TP/59392/2044",
+      "notes": "Notting Hill Genesis emailed on 28 September ('started but not yet completed') and again on 5 October as an incomplete-application notice, so this was never submitted. Vacancy reference nhg/TP/59392/2044.",
       "source": "claude",
       "added_on": "2026-09-28",
-      "updated_on": "2026-09-28",
+      "updated_on": "2026-10-05",
+      "is_new": true
+    },
+    {
+      "id": "a-o-shearman-training-contract-2028",
+      "firm": "A&O Shearman",
+      "what": "Training Contract (March and September 2028 intakes)",
+      "type": "training_contract",
+      "stage": "submitted",
+      "outcome": "Assessment",
+      "event_date": null,
+      "deadline": "2026-10-05",
+      "link": "https://careers.aoshearman.com/en/early-careers-london",
+      "ref": null,
+      "notes": "Invited on 4 October to the A&O Shearman Online Experience with Video Interview via the Amberjack platform, which opens 'congratulations on reaching the next stage of our process'. A reminder from the firm's recruitment system on 5 October says every element, including the situational judgement test and the virtual interview questions, must be finalised by 5pm today or the application will not be taken forward. That reminder does not itself name the firm; it is matched here because A&O Shearman's own email of 30 September gives the same Monday 5 October deadline.",
+      "source": "claude",
+      "added_on": "2026-10-05",
+      "updated_on": "2026-10-05",
+      "is_new": true
+    },
+    {
+      "id": "ashurst-perkins-coie-legal-cheek-event",
+      "firm": "Ashurst Perkins Coie",
+      "what": "Legal Cheek firm event",
+      "type": "open_day",
+      "stage": "submitted",
+      "outcome": "Place confirmed",
+      "event_date": null,
+      "deadline": null,
+      "link": "https://www.ashurstperkinscoie.com/en/careers/students-and-graduates/",
+      "ref": null,
+      "notes": "Kimberley Harvey (Early Careers) wrote on 29 September thanking her for attending the firm's exclusive Legal Cheek event 'last week'. The email does not give the event date, so event_date is left blank rather than guessed. The same email opens the firm's UK Summer Vacation Scheme, closing 12 noon on 11 December 2026, which she has not applied for.",
+      "source": "claude",
+      "added_on": "2026-10-05",
+      "updated_on": "2026-10-05",
       "is_new": true
     }
   ]
