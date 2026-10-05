@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-10-05T10:00:49Z",
+  "generated_at": "2026-10-05T15:25:36Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -8,7 +8,7 @@
     "exclude_apprenticeships": true,
     "graduates_only": true,
     "filtered_out_counts": {
-      "chambers": 14,
+      "chambers": 16,
       "outside_london": 15,
       "apprenticeships": 19,
       "not_graduate_eligible": 19
@@ -112,22 +112,6 @@
       "found_on": null
     },
     {
-      "id": "bird-&-bird|trainee-solicitor-open-day-(virtual)|09-10-2026",
-      "firm": "Bird & Bird",
-      "event_name": "Trainee Solicitor Open Day (Virtual)",
-      "summary": "A virtual/online session featuring a virtual tour and talks introducing the firm and its application process, with insight talks, panel discussions, Q&As and skill sessions. Event held 21 October 2026.",
-      "location": "Virtual",
-      "opens_date": "2026-09-14",
-      "opens_confirmed": true,
-      "deadline_label": "09/10/2026",
-      "deadline_date": "2026-10-09",
-      "apply_link": "https://apply.candidats.io/cac35db5-ec6d-4bcf-acd1-f18834aaad15",
-      "link_is_specific": true,
-      "eligibility_note": null,
-      "source": "direct",
-      "found_on": "2026-10-01"
-    },
-    {
       "id": "mishcon-de-reya|undergraduate-open-day-(in-person)|09-10-2026",
       "firm": "Mishcon de Reya",
       "event_name": "Undergraduate Open Day (In Person)",
@@ -142,6 +126,22 @@
       "eligibility_note": null,
       "source": "legal_cheek",
       "found_on": null
+    },
+    {
+      "id": "bird-&-bird|trainee-solicitor-open-day-(virtual)|09-10-2026",
+      "firm": "Bird & Bird",
+      "event_name": "Trainee Solicitor Open Day (Virtual)",
+      "summary": "A virtual/online session featuring a virtual tour and talks introducing the firm and its application process, with insight talks, panel discussions, Q&As and skill sessions. Event held 21 October 2026.",
+      "location": "Virtual",
+      "opens_date": "2026-09-14",
+      "opens_confirmed": true,
+      "deadline_label": "09/10/2026",
+      "deadline_date": "2026-10-09",
+      "apply_link": "https://apply.candidats.io/cac35db5-ec6d-4bcf-acd1-f18834aaad15",
+      "link_is_specific": true,
+      "eligibility_note": null,
+      "source": "direct",
+      "found_on": "2026-10-01"
     },
     {
       "id": "latham-&-watkins|london-open-day-2026-(october)|11-10-2026",
@@ -256,6 +256,22 @@
       "found_on": null
     },
     {
+      "id": "kingsley-napley|kingsley-napley-in-person-open-day|12-10-2026",
+      "firm": "Kingsley Napley",
+      "event_name": "Kingsley Napley In-person Open Day",
+      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "location": "London",
+      "opens_date": null,
+      "opens_confirmed": false,
+      "deadline_label": "12/10/2026",
+      "deadline_date": "2026-10-12",
+      "apply_link": "https://kingsleynapley.app.candidats.io/event/5300f520-ce8c-4a48-9322-1255b4c3e8cd",
+      "link_is_specific": true,
+      "eligibility_note": "Firm's own wording: aged 18+ and either a university student (second year or above), a recent graduate, or a career changer.",
+      "source": "legal_cheek",
+      "found_on": null
+    },
+    {
       "id": "squire-patton-boggs|open-day-(london)|12-10-2026",
       "firm": "Squire Patton Boggs",
       "event_name": "Open Day (London)",
@@ -284,22 +300,6 @@
       "apply_link": "https://fsr.cvmailuk.com/spb/main.cfm?page=jobSpecific&jobId=78948",
       "link_is_specific": true,
       "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
-    {
-      "id": "kingsley-napley|kingsley-napley-in-person-open-day|12-10-2026",
-      "firm": "Kingsley Napley",
-      "event_name": "Kingsley Napley In-person Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "location": "London",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "12/10/2026",
-      "deadline_date": "2026-10-12",
-      "apply_link": "https://kingsleynapley.app.candidats.io/event/5300f520-ce8c-4a48-9322-1255b4c3e8cd",
-      "link_is_specific": true,
-      "eligibility_note": "Firm's own wording: aged 18+ and either a university student (second year or above), a recent graduate, or a career changer.",
       "source": "legal_cheek",
       "found_on": null
     },
@@ -400,6 +400,22 @@
       "found_on": null
     },
     {
+      "id": "mishcon-de-reya|disability-open-day-(in-person)|16-10-2026",
+      "firm": "Mishcon de Reya",
+      "event_name": "Disability Open Day (In Person)",
+      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, focused on supporting candidates from underrepresented or minority groups into the legal profession.",
+      "location": "London",
+      "opens_date": null,
+      "opens_confirmed": false,
+      "deadline_label": "16/10/2026",
+      "deadline_date": "2026-10-16",
+      "apply_link": "https://fsr.cvmailuk.com/mishconearlycareersportal/main.cfm?page=jobSpecific&jobId=78899&rcd=8505512&queryString=&srxksl=1",
+      "link_is_specific": true,
+      "eligibility_note": "Run with the firm's Disability Equity Committee (firm's own wording) - open to penultimate year and onwards, including graduates; not restricted to applicants who are themselves disabled or neurodivergent.",
+      "source": "legal_cheek",
+      "found_on": null
+    },
+    {
       "id": "goodwin|in-person-open-afternoon|16-10-2026",
       "firm": "Goodwin",
       "event_name": "In-Person Open Afternoon",
@@ -448,18 +464,18 @@
       "found_on": "2026-09-21"
     },
     {
-      "id": "mishcon-de-reya|disability-open-day-(in-person)|16-10-2026",
-      "firm": "Mishcon de Reya",
-      "event_name": "Disability Open Day (In Person)",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, focused on supporting candidates from underrepresented or minority groups into the legal profession.",
-      "location": "London",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "16/10/2026",
-      "deadline_date": "2026-10-16",
-      "apply_link": "https://fsr.cvmailuk.com/mishconearlycareersportal/main.cfm?page=jobSpecific&jobId=78899&rcd=8505512&queryString=&srxksl=1",
-      "link_is_specific": true,
-      "eligibility_note": "Run with the firm's Disability Equity Committee (firm's own wording) - open to penultimate year and onwards, including graduates; not restricted to applicants who are themselves disabled or neurodivergent.",
+      "id": "akin|ask-akin-open-day-(virtual)|18-10-2026",
+      "firm": "Akin",
+      "event_name": "Ask Akin Open Day (Virtual)",
+      "summary": "A virtual/online session featuring a virtual tour and talks introducing the firm and its application process.",
+      "location": "Virtual",
+      "opens_date": "2026-09-17",
+      "opens_confirmed": true,
+      "deadline_label": "18/10/2026",
+      "deadline_date": "2026-10-18",
+      "apply_link": "https://www.akingump.com/en/careers/uk-students/meet-us-workshops-virtual-events-and-more",
+      "link_is_specific": false,
+      "eligibility_note": "No online application form - email a CV and a short (max 250-word) paragraph to graduaterecruitment@akingump.com with subject line 'Ask Akin Virtual Open Day Application' (firm's own instructions).",
       "source": "legal_cheek",
       "found_on": null
     },
@@ -512,22 +528,6 @@
       "found_on": "2026-09-24"
     },
     {
-      "id": "akin|ask-akin-open-day-(virtual)|18-10-2026",
-      "firm": "Akin",
-      "event_name": "Ask Akin Open Day (Virtual)",
-      "summary": "A virtual/online session featuring a virtual tour and talks introducing the firm and its application process.",
-      "location": "Virtual",
-      "opens_date": "2026-09-17",
-      "opens_confirmed": true,
-      "deadline_label": "18/10/2026",
-      "deadline_date": "2026-10-18",
-      "apply_link": "https://www.akingump.com/en/careers/uk-students/meet-us-workshops-virtual-events-and-more",
-      "link_is_specific": false,
-      "eligibility_note": "No online application form - email a CV and a short (max 250-word) paragraph to graduaterecruitment@akingump.com with subject line 'Ask Akin Virtual Open Day Application' (firm's own instructions).",
-      "source": "legal_cheek",
-      "found_on": null
-    },
-    {
       "id": "clifford-chance|london-insight-day|19-10-2026",
       "firm": "Clifford Chance",
       "event_name": "London Insight Day",
@@ -540,6 +540,22 @@
       "apply_link": "https://jobs.cliffordchance.com/job/london-insight-day-in-london-jid-3551",
       "link_is_specific": true,
       "eligibility_note": null,
+      "source": "legal_cheek",
+      "found_on": null
+    },
+    {
+      "id": "mishcon-de-reya|disability-open-day-(virtual)|21-10-2026",
+      "firm": "Mishcon de Reya",
+      "event_name": "Disability Open Day (Virtual)",
+      "summary": "A virtual/online session featuring a virtual tour and talks introducing the firm and its application process, focused on supporting candidates from underrepresented or minority groups into the legal profession.",
+      "location": "Virtual",
+      "opens_date": null,
+      "opens_confirmed": false,
+      "deadline_label": "21/10/2026",
+      "deadline_date": "2026-10-21",
+      "apply_link": "https://fsr.cvmailuk.com/mishconearlycareersportal/main.cfm?page=jobSpecific&jobId=78900&rcd=8505512&queryString=&srxksl=1",
+      "link_is_specific": true,
+      "eligibility_note": "Run with the firm's Disability Equity Committee (firm's own wording) - open to penultimate year and onwards, including graduates; not restricted to applicants who are themselves disabled or neurodivergent.",
       "source": "legal_cheek",
       "found_on": null
     },
@@ -558,22 +574,6 @@
       "eligibility_note": null,
       "source": "direct",
       "found_on": "2026-10-03"
-    },
-    {
-      "id": "mishcon-de-reya|disability-open-day-(virtual)|21-10-2026",
-      "firm": "Mishcon de Reya",
-      "event_name": "Disability Open Day (Virtual)",
-      "summary": "A virtual/online session featuring a virtual tour and talks introducing the firm and its application process, focused on supporting candidates from underrepresented or minority groups into the legal profession.",
-      "location": "Virtual",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "21/10/2026",
-      "deadline_date": "2026-10-21",
-      "apply_link": "https://fsr.cvmailuk.com/mishconearlycareersportal/main.cfm?page=jobSpecific&jobId=78900&rcd=8505512&queryString=&srxksl=1",
-      "link_is_specific": true,
-      "eligibility_note": "Run with the firm's Disability Equity Committee (firm's own wording) - open to penultimate year and onwards, including graduates; not restricted to applicants who are themselves disabled or neurodivergent.",
-      "source": "legal_cheek",
-      "found_on": null
     },
     {
       "id": "jones-day|open-evening-2|22-10-2026",
@@ -672,6 +672,22 @@
       "found_on": null
     },
     {
+      "id": "mishcon-de-reya|stem-open-day-(in-person)|30-10-2026",
+      "firm": "Mishcon de Reya",
+      "event_name": "STEM Open Day (In Person)",
+      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, aimed at STEM students exploring a career in law.",
+      "location": "London",
+      "opens_date": null,
+      "opens_confirmed": false,
+      "deadline_label": "30/10/2026",
+      "deadline_date": "2026-10-30",
+      "apply_link": "https://fsr.cvmailuk.com/mishconearlycareersportal/main.cfm?page=jobSpecific&jobId=78968&rcd=6604135&queryString=&srxksl=1",
+      "link_is_specific": true,
+      "eligibility_note": "For students and graduates from a STEM background (firm's own wording).",
+      "source": "legal_cheek",
+      "found_on": null
+    },
+    {
       "id": "tlt|virtual-open-evening|30-10-2026",
       "firm": "TLT",
       "event_name": "Virtual Open Evening",
@@ -702,22 +718,6 @@
       "eligibility_note": null,
       "source": "direct",
       "found_on": "2026-09-23"
-    },
-    {
-      "id": "mishcon-de-reya|stem-open-day-(in-person)|30-10-2026",
-      "firm": "Mishcon de Reya",
-      "event_name": "STEM Open Day (In Person)",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, aimed at STEM students exploring a career in law.",
-      "location": "London",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "30/10/2026",
-      "deadline_date": "2026-10-30",
-      "apply_link": "https://fsr.cvmailuk.com/mishconearlycareersportal/main.cfm?page=jobSpecific&jobId=78968&rcd=6604135&queryString=&srxksl=1",
-      "link_is_specific": true,
-      "eligibility_note": "For students and graduates from a STEM background (firm's own wording).",
-      "source": "legal_cheek",
-      "found_on": null
     },
     {
       "id": "davis-polk-&-wardwell|penultimate-year-&-postgraduate-insight-day|31-10-2026",
@@ -912,22 +912,6 @@
       "found_on": "2026-09-21"
     },
     {
-      "id": "mills-&-reeve|virtual-insight-event|12-11-2026",
-      "firm": "Mills & Reeve",
-      "event_name": "Virtual Insight Event",
-      "summary": "A virtual/online session featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "location": "Virtual",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "12/11/2026",
-      "deadline_date": "2026-11-12",
-      "apply_link": "https://apply.candidats.io/a8f00b84-f1fb-4b6b-abde-ecf792f4d573",
-      "link_is_specific": true,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
-    {
       "id": "charles-russell-speechlys|london-open-day|12-11-2026",
       "firm": "Charles Russell Speechlys",
       "event_name": "London Open Day",
@@ -955,6 +939,22 @@
       "deadline_date": "2026-11-12",
       "apply_link": "https://www.charlesrussellspeechlys.com/en/careers/early-talent/uk-graduate-opportunities/open-days/",
       "link_is_specific": false,
+      "eligibility_note": null,
+      "source": "legal_cheek",
+      "found_on": null
+    },
+    {
+      "id": "mills-&-reeve|virtual-insight-event|12-11-2026",
+      "firm": "Mills & Reeve",
+      "event_name": "Virtual Insight Event",
+      "summary": "A virtual/online session featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "location": "Virtual",
+      "opens_date": null,
+      "opens_confirmed": false,
+      "deadline_label": "12/11/2026",
+      "deadline_date": "2026-11-12",
+      "apply_link": "https://apply.candidats.io/a8f00b84-f1fb-4b6b-abde-ecf792f4d573",
+      "link_is_specific": true,
       "eligibility_note": null,
       "source": "legal_cheek",
       "found_on": null
@@ -1024,22 +1024,6 @@
       "found_on": null
     },
     {
-      "id": "goodwin|virtual-open-afternoon|18-11-2026",
-      "firm": "Goodwin",
-      "event_name": "Virtual Open Afternoon",
-      "summary": "A virtual/online event giving a comprehensive overview of the firm, its practice areas and its opportunities, with application guidance for vacation schemes and trainee solicitor roles and networking with current staff. Event held 25 November 2026.",
-      "location": "Virtual",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "18/11/2026",
-      "deadline_date": "2026-11-18",
-      "apply_link": "https://apply.candidats.io/88f35414-cb0e-4033-98bf-780d6a6a3473",
-      "link_is_specific": true,
-      "eligibility_note": null,
-      "source": "direct",
-      "found_on": "2026-09-21"
-    },
-    {
       "id": "kingsley-napley|kingsley-napley-virtual-open-day|18-11-2026",
       "firm": "Kingsley Napley",
       "event_name": "Kingsley Napley Virtual Open Day",
@@ -1054,6 +1038,22 @@
       "eligibility_note": null,
       "source": "legal_cheek",
       "found_on": null
+    },
+    {
+      "id": "goodwin|virtual-open-afternoon|18-11-2026",
+      "firm": "Goodwin",
+      "event_name": "Virtual Open Afternoon",
+      "summary": "A virtual/online event giving a comprehensive overview of the firm, its practice areas and its opportunities, with application guidance for vacation schemes and trainee solicitor roles and networking with current staff. Event held 25 November 2026.",
+      "location": "Virtual",
+      "opens_date": null,
+      "opens_confirmed": false,
+      "deadline_label": "18/11/2026",
+      "deadline_date": "2026-11-18",
+      "apply_link": "https://apply.candidats.io/88f35414-cb0e-4033-98bf-780d6a6a3473",
+      "link_is_specific": true,
+      "eligibility_note": null,
+      "source": "direct",
+      "found_on": "2026-09-21"
     },
     {
       "id": "forsters|open-day-2|20-11-2026",
@@ -1217,11 +1217,6 @@
     }
   ],
   "needs_review": [
-    {
-      "firm": "Akin",
-      "event_name": "Ask Akin Open Day",
-      "deadline_label": "Today"
-    },
     {
       "firm": "Milbank",
       "event_name": "Open Day (Leveraged Finance track)",
