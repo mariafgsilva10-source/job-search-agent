@@ -124,6 +124,13 @@ KNOWN_CHAMBERS = {
     "Tanfield Chambers",
     "Monckton Chambers",
     "Express Chambers",
+    # Added 2026-10-05: both are barristers' chambers whose names don't
+    # contain a giveaway word, so the regex missed them and they were
+    # surfacing in needs_review (4 Stone Buildings - Chancery/commercial
+    # chambers; 3VB = 3 Verulam Buildings - commercial/competition
+    # chambers). Pupillage, not a training contract - wrong career route.
+    "4 Stone Buildings",
+    "3VB",
 }
 CHAMBERS_RE = re.compile(r"\bchambers\b|\bpupillage\b|\bbarrister", re.IGNORECASE)
 
@@ -241,6 +248,16 @@ EVENT_LOCATIONS = {
     ("Weil Gotshal & Manges", "Insight Day 3"): "London",
     ("Willkie Farr & Gallagher", "First Year Spring Insight Day"): "London",
     ("Withers", "Open Day"): "London",
+    # Added 2026-10-05, confirmed directly on each firm's own site - see the
+    # matching OPEN_DAY_OVERRIDES comment below for the research.
+    ("Mishcon de Reya", "Undergraduate Open Day (In Person)"): "London",
+    ("Mishcon de Reya", "Undergraduate Open Day (Virtual)"): "Virtual",
+    ("Mishcon de Reya", "Disability Open Day (In Person)"): "London",
+    ("Mishcon de Reya", "Disability Open Day (Virtual)"): "Virtual",
+    ("Mishcon de Reya", "STEM Open Day (In Person)"): "London",
+    ("Akin", "Ask Akin Open Day (Virtual)"): "Virtual",
+    ("Kingsley Napley", "Kingsley Napley In-person Open Day"): "London",
+    ("Kingsley Napley", "Kingsley Napley Virtual Open Day"): "Virtual",
 }
 
 
@@ -930,6 +947,131 @@ OPEN_DAY_OVERRIDES = {
     #     states 2026/2027 events "will update... from September 2026" -
     #     not yet published, and the event wasn't found anywhere else on
     #     the site
+
+    # Researched 2026-10-05: Mishcon de Reya's five needs_review rows
+    # (Undergraduate x2, Disability x2, STEM) have sat unconfirmed since
+    # this repo began - the old /graduates/open-day page is a dead 2020
+    # page (checked and confirmed stale again today), but the firm's main
+    # /graduates page itself now lists a full, dated 2026/27 Open Days
+    # section with its own "Registrations close" date for each event,
+    # which matches every one of Legal Cheek's five scraped deadlines
+    # exactly. Each event's own cvmailuk job posting was opened individually
+    # to confirm eligibility. Undergraduate Open Day (both formats):
+    # explicitly "including graduates" in the firm's own wording - no note
+    # needed. Disability Open Day (both formats): open to "penultimate year
+    # ... and onwards (including graduates)", run with the firm's Disability
+    # Equity Committee but not restricted to applicants who are themselves
+    # disabled - kept as a note since the framing is EDI-focused. STEM Open
+    # Day: explicitly "for students and graduates from a STEM background" -
+    # kept as a note since it's discipline-restricted. Two further Mishcon
+    # open days on the same live page (Pride Open Day, Black Heritage
+    # Graduate Breakfast) have deadlines that have already passed (25 Sept
+    # and 2 Oct) - not added. Social Mobility and Race Equity Open Days'
+    # deadlines had also already passed - not added either.
+    ("Mishcon de Reya", "Undergraduate Open Day (In Person)", "09/10/2026"): {
+        "opens_date": None, "opens_confirmed": False,
+        "apply_link": "https://fsr.cvmailuk.com/mishconearlycareersportal/main.cfm?page=jobSpecific&jobId=78895&rcd=8505512&queryString=&srxksl=1",
+        "link_is_specific": True, "eligibility_note": None,
+    },
+    ("Mishcon de Reya", "Undergraduate Open Day (Virtual)", "14/10/2026"): {
+        "opens_date": None, "opens_confirmed": False,
+        "apply_link": "https://fsr.cvmailuk.com/mishconearlycareersportal/main.cfm?page=jobSpecific&jobId=78896&rcd=8505512&queryString=",
+        "link_is_specific": True, "eligibility_note": None,
+    },
+    ("Mishcon de Reya", "Disability Open Day (In Person)", "16/10/2026"): {
+        "opens_date": None, "opens_confirmed": False,
+        "apply_link": "https://fsr.cvmailuk.com/mishconearlycareersportal/main.cfm?page=jobSpecific&jobId=78899&rcd=8505512&queryString=&srxksl=1",
+        "link_is_specific": True,
+        "eligibility_note": (
+            "Run with the firm's Disability Equity Committee (firm's own "
+            "wording) - open to penultimate year and onwards, including "
+            "graduates; not restricted to applicants who are themselves "
+            "disabled or neurodivergent."
+        ),
+    },
+    ("Mishcon de Reya", "Disability Open Day (Virtual)", "21/10/2026"): {
+        "opens_date": None, "opens_confirmed": False,
+        "apply_link": "https://fsr.cvmailuk.com/mishconearlycareersportal/main.cfm?page=jobSpecific&jobId=78900&rcd=8505512&queryString=&srxksl=1",
+        "link_is_specific": True,
+        "eligibility_note": (
+            "Run with the firm's Disability Equity Committee (firm's own "
+            "wording) - open to penultimate year and onwards, including "
+            "graduates; not restricted to applicants who are themselves "
+            "disabled or neurodivergent."
+        ),
+    },
+    ("Mishcon de Reya", "STEM Open Day (In Person)", "30/10/2026"): {
+        "opens_date": None, "opens_confirmed": False,
+        "apply_link": "https://fsr.cvmailuk.com/mishconearlycareersportal/main.cfm?page=jobSpecific&jobId=78968&rcd=6604135&queryString=&srxksl=1",
+        "link_is_specific": True,
+        "eligibility_note": "For students and graduates from a STEM background (firm's own wording).",
+    },
+
+    # Researched 2026-10-05: Akin's "Ask Akin Open Day" has sat in
+    # needs_review under a drifting deadline (previously unconfirmable per
+    # the 2026-09-04 note - "could not confirm either event still exists on
+    # Akin's current site"). The firm's own events page
+    # (akingump.com/en/careers/uk-students/meet-us-workshops-virtual-events-
+    # and-more) now lists both the in-person and virtual sessions clearly.
+    # The in-person "Ask Akin Open Day" (20 Oct 2026) closed for
+    # applications Sunday 4 October 2026 - already passed as of today, not
+    # added (Legal Cheek's own needs_review deadline for it, "Today"/5 Oct,
+    # disagrees by a day - same kind of scrape-vs-firm-page drift seen
+    # elsewhere in this repo; the firm's own page is trusted). The virtual
+    # "Ask Akin Open Day" (29 Oct 2026, 11am-3pm) closes 18 October 2026 -
+    # matches Legal Cheek's needs_review deadline for the virtual row
+    # exactly. Eligibility per the firm's own wording: "penultimate-year law
+    # students, final-year law and non-law students, and graduates from all
+    # degree disciplines" - graduate explicitly included, no note needed.
+    # There is no web apply form - the firm asks for a CV plus a short
+    # paragraph emailed to graduaterecruitment@akingump.com - so the apply
+    # link given is the event listing page itself (which has the full
+    # instructions), not a submission form.
+    ("Akin", "Ask Akin Open Day (Virtual)", "18/10/2026"): {
+        "opens_date": "2026-09-17", "opens_confirmed": True,
+        "apply_link": "https://www.akingump.com/en/careers/uk-students/meet-us-workshops-virtual-events-and-more",
+        "link_is_specific": False,
+        "eligibility_note": (
+            "No online application form - email a CV and a short (max "
+            "250-word) paragraph to graduaterecruitment@akingump.com with "
+            "subject line 'Ask Akin Virtual Open Day Application' (firm's "
+            "own instructions)."
+        ),
+    },
+
+    # Researched 2026-10-05: Kingsley Napley's two needs_review rows have
+    # sat unconfirmed. The firm's own open-days page
+    # (kingsleynapley.co.uk/careers/early-careers/open-days/) uses different
+    # naming ("Kingsley Napley Insight Day" / "Kingsley Napley Virtual
+    # Insight Day") from Legal Cheek's "...Open Day" titles, but both events'
+    # deadlines match Legal Cheek's scraped deadline_label exactly (12 Oct
+    # and 18 Nov), strong evidence they're the same two events under the
+    # firm's own rebranded name - kept Legal Cheek's event_name here (rather
+    # than switching to MANUAL_EVENTS) since the deadlines agree exactly,
+    # unlike the Bird & Bird case where they didn't. In-person Insight Day
+    # (6 Nov 2026): eligibility per the firm's own wording "Aged 18+ and
+    # either a university student (second year or above), a recent
+    # graduate, or a career changer" - graduate explicitly included, no note
+    # needed. Virtual Insight Day (18 Nov 2026): firm's own wording is "no
+    # eligibility requirements or selection process... open to all
+    # prospective applicants" - no note needed either. A third event on the
+    # same page, "Black Professionals in Law Insight Day - Kingsley Napley x
+    # Bridging Barriers" (23 Oct 2026, deadline 5 Oct 2026 - today), has no
+    # Legal Cheek row at all - entered in MANUAL_EVENTS instead, see below.
+    ("Kingsley Napley", "Kingsley Napley In-person Open Day", "12/10/2026"): {
+        "opens_date": None, "opens_confirmed": False,
+        "apply_link": "https://kingsleynapley.app.candidats.io/event/5300f520-ce8c-4a48-9322-1255b4c3e8cd",
+        "link_is_specific": True,
+        "eligibility_note": (
+            "Firm's own wording: aged 18+ and either a university student "
+            "(second year or above), a recent graduate, or a career changer."
+        ),
+    },
+    ("Kingsley Napley", "Kingsley Napley Virtual Open Day", "18/11/2026"): {
+        "opens_date": None, "opens_confirmed": False,
+        "apply_link": "https://kingsleynapley.app.candidats.io/event/a8f0bdaa-926b-4004-a19f-a2a131e8e53b",
+        "link_is_specific": True, "eligibility_note": None,
+    },
 }
 
 # Events verified directly on a firm's own site/registration page that
@@ -1563,6 +1705,37 @@ MANUAL_EVENTS = [
         "eligibility_note": None,
         "location": "Virtual",
         "found_on": "2026-10-04",
+    },
+    # Found 2026-10-05 via a general web search, confirmed directly on
+    # Kingsley Napley's own open-days page
+    # (kingsleynapley.co.uk/careers/early-careers/open-days/). Not on Legal
+    # Cheek's calendar at all - no needs_review row exists for it, unlike
+    # this firm's other two events (see the OPEN_DAY_OVERRIDES entries
+    # above). TIME-CRITICAL: applications close today, 5 October 2026 -
+    # the deadline may already have passed by the time this is read.
+    {
+        "firm": "Kingsley Napley",
+        "event_name": "Black Professionals in Law Insight Day - Kingsley Napley x Bridging Barriers",
+        "summary": (
+            "An in-person Insight Day run with Bridging Barriers for "
+            "candidates of Black or mixed Black heritage interested in "
+            "exploring a career in law, with talks from lawyers across the "
+            "firm and insight into pathways into the profession. Event held "
+            "23 October 2026, 10:00am-4:30pm."
+        ),
+        "opens_date": None,
+        "opens_confirmed": False,
+        "deadline_label": "05/10/2026",
+        "deadline_date": "2026-10-05",
+        "apply_link": "https://kingsleynapley.app.candidats.io/event/f83c578b-46f7-47d9-ad7f-d510ba9c1701",
+        "link_is_specific": True,
+        "eligibility_note": (
+            "Firm's own wording: for candidates of Black or mixed Black "
+            "heritage, aged 18+, and either a university student (second "
+            "year or above), a recent graduate, or a career changer."
+        ),
+        "location": "London",
+        "found_on": "2026-10-05",
     },
 ]
 
