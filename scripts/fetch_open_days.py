@@ -225,6 +225,7 @@ EVENT_LOCATIONS = {
     ("Squire Patton Boggs", "Open Day (London)"): "London",
     ("Squire Patton Boggs", "Open Day (Online)"): "Virtual",
     ("RPC — solicitor apprenticeship", "Solicitor Apprenticeship Virtual Insight Evening"): "Virtual",
+    ("Simmons & Simmons", "Spring Insight Scheme"): "London",
     ("Simpson Thacher & Bartlett", "October Open Day"): "London",
     ("Slaughter and May", "Spring Open Day 1"): "London",
     ("Slaughter and May", "Spring Open Day 2"): "London",
@@ -755,6 +756,28 @@ OPEN_DAY_OVERRIDES = {
         "apply_link": "https://careers.bakermckenzie.com/en_US/events/EventDetail?eventId=3607",
         "link_is_specific": True, "eligibility_note": None,
     },
+    # Bug found 2026-10-07: the "07/10/2026" key above never fires on the one
+    # day it matters. Legal Cheek's scraper replaces the literal date with
+    # the word "Today" once the deadline lands on the current day (and
+    # "Tomorrow" the day before - see Milbank's Leveraged Finance row in
+    # needs_review today, deadline 08/10/2026 shown as "Tomorrow"), and
+    # OPEN_DAY_OVERRIDES keys on the literal deadline_label string Legal
+    # Cheek shows, not the parsed date - so this event sat invisible in
+    # needs_review again this morning despite being "confirmed" two weeks
+    # ago, the same silent-miss failure mode as the Squire Patton Boggs bug
+    # (29 Sept). Re-verified directly on the event's own EventDetail page
+    # today (still live, deadline literally today, 7 Oct) and added this
+    # second key so the override fires under the label Legal Cheek is
+    # actually showing. Same eligibility as the other five Baker McKenzie
+    # open days - "second year, penultimate year, final year students, or
+    # graduates in any degree discipline" - no note needed. General lesson:
+    # any override whose deadline is today or tomorrow needs checking for
+    # this exact mismatch, not just Baker McKenzie's.
+    ("Baker McKenzie", "General Open Day", "Today"): {
+        "opens_date": "2026-09-07", "opens_confirmed": True,
+        "apply_link": "https://careers.bakermckenzie.com/en_US/events/EventDetail?eventId=3607",
+        "link_is_specific": True, "eligibility_note": None,
+    },
     ("Baker McKenzie", "Opportunity Open Day", "12/10/2026"): {
         "opens_date": "2026-09-07", "opens_confirmed": True,
         "apply_link": "https://careers.bakermckenzie.com/en_US/events/EventDetail?eventId=3638",
@@ -1071,6 +1094,25 @@ OPEN_DAY_OVERRIDES = {
         "opens_date": None, "opens_confirmed": False,
         "apply_link": "https://kingsleynapley.app.candidats.io/event/a8f0bdaa-926b-4004-a19f-a2a131e8e53b",
         "link_is_specific": True, "eligibility_note": None,
+    },
+    # Researched 2026-10-07: Simmons & Simmons' "Spring Insight Scheme" has
+    # sat in needs_review unconfirmed since the original 4 Sept pass ("could
+    # not find this event's details on the firm's own site"). The firm's own
+    # /en/graduates page now has a live "Find the scheme for you" section
+    # describing it directly: a two-day scheme (20-21 April 2027) in the
+    # London office, paid GBP150 for the two days, with shadowing and
+    # interactive sessions. "Applications for our spring insight scheme open
+    # from 10 December 2026 - 31 January 2027" - matches Legal Cheek's own
+    # needs_review deadline (31/01/2027) exactly. No per-scheme application
+    # form exists yet (applications aren't open until 10 Dec) - the
+    # graduates page itself, which has the "Register your interest" link, is
+    # used as the apply_link rather than guessing at a future portal URL.
+    # The page doesn't restrict this scheme by year of study or exclude
+    # graduates, so no eligibility_note.
+    ("Simmons & Simmons", "Spring Insight Scheme", "31/01/2027"): {
+        "opens_date": "2026-12-10", "opens_confirmed": True,
+        "apply_link": "https://www.simmons-simmons.com/en/graduates",
+        "link_is_specific": False, "eligibility_note": None,
     },
 }
 
@@ -1736,6 +1778,58 @@ MANUAL_EVENTS = [
         ),
         "location": "London",
         "found_on": "2026-10-05",
+    },
+    # Found 2026-10-07 via a general web search, confirmed directly on
+    # Travers Smith's own recruitment portal (traverssmithhires.app
+    # .candidats.io/events - one of the candidats.io group that normally
+    # arrives as an empty shell to a plain fetch; read via the browser pane
+    # instead, which showed a live events list). Travers Smith has no
+    # existing entry anywhere in this repo and wasn't previously confirmable
+    # - the portal was genuinely empty on 4 Oct, the last time it was
+    # checked. The same events page also lists several "Presentation"
+    # sessions (Durham/Bristol/Cambridge/Warwick/Edinburgh/Oxford/London
+    # Morning/London Evening/London Virtual) - these are standard campus-
+    # style recruitment talks, not an open day/evening, insight day/evening,
+    # insight scheme or first-year scheme format per Maria's brief (same
+    # call as Bird & Bird's "Office Drop-In" and Skadden's "Meet the
+    # Graduate Recruitment Team" webinar, both excluded as out of format
+    # scope), so none of those were added. "Black Heritage Insight Evening
+    # 2026" is different - the firm's own name for it is "Insight Evening",
+    # it runs 4:00-7:30pm at the firm's London office with a panel of Black
+    # heritage lawyers and networking, and the registration page states "for
+    # any student exploring their options in law" - EDI-focused but not
+    # restricted to applicants who are themselves of Black heritage, and a
+    # graduate isn't excluded either (kept as a note since it isn't
+    # explicitly named). The registration page (checked, including the
+    # registration form itself) publishes no separate application deadline
+    # at all - it's a simple RSVP (name/email/dietary/accessibility only, no
+    # CV or eligibility screening), so deadline = event date, same
+    # convention used for Jones Day's Open Evenings where the firm
+    # publishes no closing date of its own.
+    {
+        "firm": "Travers Smith",
+        "event_name": "Black Heritage Insight Evening",
+        "summary": (
+            "An in-person event featuring a panel of Black heritage lawyers "
+            "at the firm sharing insight into life at a City law firm, plus "
+            "networking. Event held 5 November 2026, 4:00pm-7:30pm."
+        ),
+        "opens_date": None,
+        "opens_confirmed": False,
+        "deadline_label": "05/11/2026",
+        "deadline_date": "2026-11-05",
+        "apply_link": "https://traverssmithhires.app.candidats.io/event/8dad8cec-56df-4a88-a245-a77850a0d5fd",
+        "link_is_specific": True,
+        "eligibility_note": (
+            "Firm's own wording: \"for any student exploring their options "
+            "in law\" - EDI-focused (a panel of Black heritage lawyers) but "
+            "not restricted to applicants of Black heritage, and graduates "
+            "aren't excluded either. No application deadline is published - "
+            "it's a capacity-limited RSVP (name/email only, no CV or "
+            "screening), so register as early as possible."
+        ),
+        "location": "London",
+        "found_on": "2026-10-07",
     },
 ]
 
