@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-10-07T14:04:57Z",
+  "generated_at": "2026-10-07T14:55:00Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -15,6 +15,22 @@
     }
   },
   "events": [
+    {
+      "id": "baker-mckenzie|general-open-day|today",
+      "firm": "Baker McKenzie",
+      "event_name": "General Open Day",
+      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
+      "location": "London",
+      "opens_date": "2026-09-07",
+      "opens_confirmed": true,
+      "deadline_label": "Today",
+      "deadline_date": "2026-10-07",
+      "apply_link": "https://careers.bakermckenzie.com/en_US/events/EventDetail?eventId=3607",
+      "link_is_specific": true,
+      "eligibility_note": null,
+      "source": "legal_cheek",
+      "found_on": null
+    },
     {
       "id": "goodwin|insight-into-the-trainee-experience:-meet-our-trainees-and-q&a|09-10-2026",
       "firm": "Goodwin",
@@ -704,6 +720,22 @@
       "found_on": "2026-09-23"
     },
     {
+      "id": "travers-smith|black-heritage-insight-evening|05-11-2026",
+      "firm": "Travers Smith",
+      "event_name": "Black Heritage Insight Evening",
+      "summary": "An in-person event featuring a panel of Black heritage lawyers at the firm sharing insight into life at a City law firm, plus networking. Event held 5 November 2026, 4:00pm-7:30pm.",
+      "location": "London",
+      "opens_date": null,
+      "opens_confirmed": false,
+      "deadline_label": "05/11/2026",
+      "deadline_date": "2026-11-05",
+      "apply_link": "https://traverssmithhires.app.candidats.io/event/8dad8cec-56df-4a88-a245-a77850a0d5fd",
+      "link_is_specific": true,
+      "eligibility_note": "Firm's own wording: \"for any student exploring their options in law\" - EDI-focused (a panel of Black heritage lawyers) but not restricted to applicants of Black heritage, and graduates aren't excluded either. No application deadline is published - it's a capacity-limited RSVP (name/email only, no CV or screening), so register as early as possible.",
+      "source": "direct",
+      "found_on": "2026-10-07"
+    },
+    {
       "id": "withers|open-day|06-11-2026",
       "firm": "Withers",
       "event_name": "Open Day",
@@ -1104,6 +1136,22 @@
       "found_on": null
     },
     {
+      "id": "simmons-&-simmons|spring-insight-scheme|31-01-2027",
+      "firm": "Simmons & Simmons",
+      "event_name": "Spring Insight Scheme",
+      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
+      "location": "London",
+      "opens_date": "2026-12-10",
+      "opens_confirmed": true,
+      "deadline_label": "31/01/2027",
+      "deadline_date": "2027-01-31",
+      "apply_link": "https://www.simmons-simmons.com/en/graduates",
+      "link_is_specific": false,
+      "eligibility_note": null,
+      "source": "legal_cheek",
+      "found_on": null
+    },
+    {
       "id": "king-&-spalding|in-person-insight-afternoon---spotlight-on-fund-finance|26-02-2027",
       "firm": "King & Spalding",
       "event_name": "In-Person Insight Afternoon - Spotlight on Fund Finance",
@@ -1137,11 +1185,6 @@
     }
   ],
   "needs_review": [
-    {
-      "firm": "Baker McKenzie",
-      "event_name": "General Open Day",
-      "deadline_label": "Today"
-    },
     {
       "firm": "Milbank",
       "event_name": "Open Day (Leveraged Finance track)",
@@ -1236,11 +1279,6 @@
       "firm": "Addleshaw Goddard",
       "event_name": "Virtual Insight Day",
       "deadline_label": "29/01/2027"
-    },
-    {
-      "firm": "Simmons & Simmons",
-      "event_name": "Spring Insight Scheme",
-      "deadline_label": "31/01/2027"
     },
     {
       "firm": "Freeths",
