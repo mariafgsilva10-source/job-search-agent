@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-07",
-  "last_gathered": "2026-10-07",
-  "note": "Maria's application tracker. Statuses are corrected against confirmation emails, which are the authoritative record of what actually went in. Refreshed by a daily gather; last reconciled 7 Oct 2026.",
+  "generated_at": "2026-10-08",
+  "last_gathered": "2026-10-08",
+  "note": "Maria's application tracker. Statuses are corrected against confirmation emails, which are the authoritative record of what actually went in. Refreshed by a daily gather; last reconciled 8 Oct 2026.",
   "applications": [
     {
       "id": "mayer-brown-london-insight-day-21-october-2026-ref-265881",
@@ -77,15 +77,15 @@
       "what": "Graduate Trainee Open Day 1",
       "type": "open_day",
       "stage": "submitted",
-      "outcome": null,
+      "outcome": "Rejected",
       "event_date": "2026-10-13",
       "deadline": "2026-10-02",
       "link": "https://forsters.grad.allhires.com",
       "ref": "71877",
-      "notes": "Confirmed received 18 Sept. Only one open day per cycle, so the 30 Nov one is not available.",
+      "notes": "Confirmed received 18 Sept. Unsuccessful: Emma Cooper of the Forsters Early Careers team confirmed by email on 8 October 2026 that the application for the October open day was not successful because the event was oversubscribed, with around 300 more applications than places. The same email says applications for the November open day are now open, which revises the earlier understanding that only one open day per cycle was available, and that any vacation scheme or training contract application to Forsters has not yet been reviewed.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-24",
+      "updated_on": "2026-10-08",
       "is_new": false
     },
     {
