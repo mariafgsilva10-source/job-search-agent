@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-10-07T14:06:26Z",
+  "generated_at": "2026-10-08T14:16:24Z",
   "note": "Only includes Training Contract listings manually verified as open to graduates applying directly, without needing to have done that firm's own vacation scheme first. New listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "events": [
     {
@@ -776,6 +776,11 @@
       "firm": "Hogan Lovells Cadwalader",
       "event_name": "London Training Contract",
       "deadline_label": "17/07/2027"
+    },
+    {
+      "firm": "Maples Teesdale",
+      "event_name": "Training Contract",
+      "deadline_label": "31/12/2027"
     }
   ]
 }

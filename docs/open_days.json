@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-10-07T14:55:00Z",
+  "generated_at": "2026-10-08T14:14:22Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -10,59 +10,11 @@
     "filtered_out_counts": {
       "chambers": 16,
       "outside_london": 14,
-      "apprenticeships": 19,
+      "apprenticeships": 18,
       "not_graduate_eligible": 19
     }
   },
   "events": [
-    {
-      "id": "baker-mckenzie|general-open-day|today",
-      "firm": "Baker McKenzie",
-      "event_name": "General Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "location": "London",
-      "opens_date": "2026-09-07",
-      "opens_confirmed": true,
-      "deadline_label": "Today",
-      "deadline_date": "2026-10-07",
-      "apply_link": "https://careers.bakermckenzie.com/en_US/events/EventDetail?eventId=3607",
-      "link_is_specific": true,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
-    {
-      "id": "goodwin|insight-into-the-trainee-experience:-meet-our-trainees-and-q&a|09-10-2026",
-      "firm": "Goodwin",
-      "event_name": "Insight into the Trainee Experience: Meet Our Trainees and Q&A",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "location": "London",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "09/10/2026",
-      "deadline_date": "2026-10-09",
-      "apply_link": "https://goodwinlaw.app.candidats.io/event/ed2ce890-e0fe-41a5-a966-da86dc7ecb26",
-      "link_is_specific": true,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
-    {
-      "id": "mishcon-de-reya|undergraduate-open-day-(in-person)|09-10-2026",
-      "firm": "Mishcon de Reya",
-      "event_name": "Undergraduate Open Day (In Person)",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "location": "London",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "09/10/2026",
-      "deadline_date": "2026-10-09",
-      "apply_link": "https://fsr.cvmailuk.com/mishconearlycareersportal/main.cfm?page=jobSpecific&jobId=78895&rcd=8505512&queryString=&srxksl=1",
-      "link_is_specific": true,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
     {
       "id": "bird-&-bird|trainee-solicitor-open-day-(virtual)|09-10-2026",
       "firm": "Bird & Bird",
@@ -1188,6 +1140,16 @@
     {
       "firm": "Milbank",
       "event_name": "Open Day (Leveraged Finance track)",
+      "deadline_label": "Today"
+    },
+    {
+      "firm": "Goodwin",
+      "event_name": "Insight into the Trainee Experience: Meet Our Trainees and Q&A",
+      "deadline_label": "Tomorrow"
+    },
+    {
+      "firm": "Mishcon de Reya",
+      "event_name": "Undergraduate Open Day (In Person)",
       "deadline_label": "Tomorrow"
     },
     {
