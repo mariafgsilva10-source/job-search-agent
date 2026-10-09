@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-10-08T14:16:22Z",
+  "generated_at": "2026-10-09T14:02:20Z",
   "note": "Unverified leads from a daily sweep of London law firms' own application portals and events pages - the places firms announce open days before (or instead of) Legal Cheek listing them. Nothing here has been checked yet: a lead only reaches the Open Days tab once its dates, eligibility and apply link have been confirmed on the firm's own site.",
   "first_run": false,
   "counts": {
     "sources_checked": 52,
-    "sources_failed": 17,
-    "leads_total": 30,
-    "duplicates_merged": 4,
+    "sources_failed": 16,
+    "leads_total": 31,
+    "duplicates_merged": 5,
     "new_today": 0,
-    "new_last_7_days": 1
+    "new_last_7_days": 0
   },
   "new_today": [],
   "leads": [
@@ -293,6 +293,16 @@
       "status": "unverified"
     },
     {
+      "id": "47803a7981f4d6df",
+      "firm": "Pinsent Masons",
+      "title": "London Insight Event - 30th September 2026 - SOLD OUT",
+      "url": "https://www.eventbrite.co.uk/e/pinsent-masons-london-insight-event-tickets-1997553597583?aff=oddtdtcreator",
+      "source_page": "https://www.pinsentmasons.com/careers/early-talent/events",
+      "first_seen": "2026-09-23",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
       "id": "158914c8a6dbc04f",
       "firm": "RPC",
       "title": "Uptree Work Experience Insight Day",
@@ -397,13 +407,6 @@
       "kind": "blocked",
       "reason": "This firm's site turns away automated visits, so the daily sweep cannot read it. It has to be checked by hand.",
       "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.whitecase.com/careers/locations/united-kingdom/london"
-    },
-    {
-      "firm": "Pinsent Masons",
-      "url": "https://www.pinsentmasons.com/careers/early-talent/events",
-      "kind": "unreachable",
-      "reason": "The sweep could not connect to this site, so it may be a certificate or network problem at the firm's end.",
-      "error": "ReadTimeout: HTTPSConnectionPool(host='www.pinsentmasons.com', port=443): Read timed out. (read timeout=25)"
     },
     {
       "firm": "Charles Russell Speechlys",
