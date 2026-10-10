@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-08",
-  "last_gathered": "2026-10-08",
-  "note": "Maria's application tracker. Statuses are corrected against confirmation emails, which are the authoritative record of what actually went in. Refreshed by a daily gather; last reconciled 8 Oct 2026.",
+  "generated_at": "2026-10-10",
+  "last_gathered": "2026-10-10",
+  "note": "Maria's application tracker. Statuses are corrected against confirmation emails, which are the authoritative record of what actually went in. Refreshed by a daily gather; last reconciled 10 Oct 2026.",
   "applications": [
     {
       "id": "mayer-brown-london-insight-day-21-october-2026-ref-265881",
@@ -162,15 +162,15 @@
       "what": "IP, Cyber and Technology Open Day",
       "type": "open_day",
       "stage": "submitted",
-      "outcome": null,
+      "outcome": "Rejected",
       "event_date": null,
       "deadline": null,
       "link": null,
       "ref": null,
-      "notes": "Two applications confirmed submitted via Candid, on 5 and 7 Sept. Worth checking the portal for which events they were.",
+      "notes": "Two applications confirmed submitted via Candid, on 5 and 7 Sept. Outcome email of 9 October 2026 from the HSF Kramer early careers team declined the application for the 2026 London Intellectual Property (IP), Cyber and Technology Open Day; the firm does not give individual feedback. The second Candid application is not named in any email, so it is not clear whether that one is also covered by this outcome.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-24",
+      "updated_on": "2026-10-10",
       "is_new": false
     },
     {
@@ -235,10 +235,10 @@
       "deadline": "2026-10-02",
       "link": "https://jobs.cliffordchance.com",
       "ref": "REF3378M",
-      "notes": "Submitted 22 Sept 2026, ref REF3378M, on-screen confirmation from SmartRecruiters. Immersive Online Assessment completed and the feedback report arrived 26 Sept. The Watson Glaser critical reasoning test invitation arrived 28 Sept with a link, and must be completed within four days, so by 2 October, or the application is withdrawn. The firm says you will hear within three working days of the test whether you have progressed to application review. Clashes with Goodwin.",
+      "notes": "Submitted 22 Sept 2026, ref REF3378M, on-screen confirmation from SmartRecruiters. Immersive Online Assessment completed and the feedback report arrived 26 Sept. The Watson Glaser critical reasoning test invitation arrived 28 Sept with a link, and must be completed within four days, so by 2 October, or the application is withdrawn. The firm says you will hear within three working days of the test whether you have progressed to application review. Clashes with Goodwin. Follow-up email of 9 October 2026 says the Watson Glaser test has not been completed and the application will be withdrawn at 8am on Monday 12 October 2026 unless the test is completed before then. That email does not name which Clifford Chance application it refers to, so it may relate to another one; this is the only Clifford Chance row awaiting an assessment. Outcome left at Assessment because nothing has been withdrawn yet.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-09-30",
+      "updated_on": "2026-10-10",
       "is_new": false
     },
     {
@@ -264,15 +264,15 @@
       "what": "London Discovery Day",
       "type": "open_day",
       "stage": "submitted",
-      "outcome": null,
+      "outcome": "Place confirmed",
       "event_date": "2026-10-12",
       "deadline": "2026-10-06",
       "link": null,
       "ref": null,
-      "notes": "Application successful: DLA Piper early careers confirmed by email on 5 October 2026 that a place has been offered for the London Discovery Day on Monday 12 October 2026, 11:00-16:30 (registration from 10:45) at DLA Piper London, 160 Aldersgate Street, London EC1A 4HT, business dress, lunch provided, travel reimbursed up to GBP 75. Attendance had to be accepted or declined via their RSVP form by 5pm on Tuesday 6 October 2026 and no RSVP record was found in email, so as of 7 October that deadline has passed; the firm said it would assume non-attendance if no RSVP arrived, so the place is treated as offered but not confirmed. This date clashes with her first day at Chambers and Partners on 12 October 2026.",
+      "notes": "Place confirmed. DLA Piper early careers confirmed on 5 October 2026 that the application was successful, and on 8 October 2026 acknowledged her RSVP accepting the place and issued her dedicated arrival time. London Discovery Day is Monday 12 October 2026, event 11:00-16:30, staggered arrival at 10:50 at ground floor reception, DLA Piper London, 160 Aldersgate Street, London EC1A 4HT, business wear, lunch provided, notepads provided, travel reimbursed up to GBP 75 (TfL-only travel claimed back after the event). Late arrivals to contact Sana Butt on 07747 448 711. This clashes directly with her first day at Chambers and Partners on 12 October 2026, which starts at 9.20am and runs to 17:30, so the two cannot both be attended.",
       "source": "claude",
       "added_on": "2026-09-22",
-      "updated_on": "2026-10-07",
+      "updated_on": "2026-10-10",
       "is_new": false
     },
     {
