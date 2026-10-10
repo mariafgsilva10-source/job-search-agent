@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-10-09T14:00:45Z",
+  "generated_at": "2026-10-10T13:10:10Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -9,44 +9,12 @@
     "graduates_only": true,
     "filtered_out_counts": {
       "chambers": 16,
-      "outside_london": 14,
+      "outside_london": 16,
       "apprenticeships": 17,
       "not_graduate_eligible": 19
     }
   },
   "events": [
-    {
-      "id": "bird-&-bird|trainee-solicitor-open-day-(virtual)|09-10-2026",
-      "firm": "Bird & Bird",
-      "event_name": "Trainee Solicitor Open Day (Virtual)",
-      "summary": "A virtual/online session featuring a virtual tour and talks introducing the firm and its application process, with insight talks, panel discussions, Q&As and skill sessions. Event held 21 October 2026.",
-      "location": "Virtual",
-      "opens_date": "2026-09-14",
-      "opens_confirmed": true,
-      "deadline_label": "09/10/2026",
-      "deadline_date": "2026-10-09",
-      "apply_link": "https://apply.candidats.io/cac35db5-ec6d-4bcf-acd1-f18834aaad15",
-      "link_is_specific": true,
-      "eligibility_note": null,
-      "source": "direct",
-      "found_on": "2026-10-01"
-    },
-    {
-      "id": "latham-&-watkins|london-open-day-2026-(october)|11-10-2026",
-      "firm": "Latham & Watkins",
-      "event_name": "London Open Day 2026 (October)",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "location": "London",
-      "opens_date": "2026-09-01",
-      "opens_confirmed": false,
-      "deadline_label": "11/10/2026",
-      "deadline_date": "2026-10-11",
-      "apply_link": "https://uk-earlyassociatecareers-lw.icims.com/jobs/10939/open-day---graduate-recruitment---28-october-2026---london/job",
-      "link_is_specific": true,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
     {
       "id": "baker-mckenzie|opportunity-open-day|12-10-2026",
       "firm": "Baker McKenzie",
@@ -1138,19 +1106,19 @@
   ],
   "needs_review": [
     {
-      "firm": "Goodwin",
-      "event_name": "Insight into the Trainee Experience: Meet Our Trainees and Q&A",
-      "deadline_label": "Today"
-    },
-    {
-      "firm": "Mishcon de Reya",
-      "event_name": "Undergraduate Open Day (In Person)",
-      "deadline_label": "Today"
-    },
-    {
       "firm": "DWF",
       "event_name": "Insight Days",
-      "deadline_label": "11/10/2026"
+      "deadline_label": "Tomorrow"
+    },
+    {
+      "firm": "Latham & Watkins",
+      "event_name": "London Open Day 2026 (October)",
+      "deadline_label": "Tomorrow"
+    },
+    {
+      "firm": "Lewis Silkin",
+      "event_name": "London open evening",
+      "deadline_label": "24/10/2026"
     },
     {
       "firm": "Kirkland & Ellis",
