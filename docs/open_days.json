@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-10-10T13:10:10Z",
+  "generated_at": "2026-10-11T13:39:29Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -15,150 +15,6 @@
     }
   },
   "events": [
-    {
-      "id": "baker-mckenzie|opportunity-open-day|12-10-2026",
-      "firm": "Baker McKenzie",
-      "event_name": "Opportunity Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "location": "London",
-      "opens_date": "2026-09-07",
-      "opens_confirmed": true,
-      "deadline_label": "12/10/2026",
-      "deadline_date": "2026-10-12",
-      "apply_link": "https://careers.bakermckenzie.com/en_US/events/EventDetail?eventId=3638",
-      "link_is_specific": true,
-      "eligibility_note": "For candidates from lower socio-economic backgrounds (firm's own wording).",
-      "source": "legal_cheek",
-      "found_on": null
-    },
-    {
-      "id": "baker-mckenzie|women’s-open-day|12-10-2026",
-      "firm": "Baker McKenzie",
-      "event_name": "Women’s Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "location": "London",
-      "opens_date": "2026-09-07",
-      "opens_confirmed": true,
-      "deadline_label": "12/10/2026",
-      "deadline_date": "2026-10-12",
-      "apply_link": "https://careers.bakermckenzie.com/en_US/events/EventDetail?eventId=3634",
-      "link_is_specific": true,
-      "eligibility_note": "For female applicants (firm's own wording).",
-      "source": "legal_cheek",
-      "found_on": null
-    },
-    {
-      "id": "herbert-smith-freehills-kramer|black-talent-open-day|12-10-2026",
-      "firm": "Herbert Smith Freehills Kramer",
-      "event_name": "Black Talent Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, focused on supporting candidates from underrepresented or minority groups into the legal profession.",
-      "location": "London",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "12/10/2026",
-      "deadline_date": "2026-10-12",
-      "apply_link": "https://careers.hsfkramer.com/global/en/uk/early-careers/open-days",
-      "link_is_specific": false,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
-    {
-      "id": "herbert-smith-freehills-kramer|disputes-open-day|12-10-2026",
-      "firm": "Herbert Smith Freehills Kramer",
-      "event_name": "Disputes Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "location": "London",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "12/10/2026",
-      "deadline_date": "2026-10-12",
-      "apply_link": "https://careers.hsfkramer.com/global/en/uk/early-careers/open-days",
-      "link_is_specific": false,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
-    {
-      "id": "herbert-smith-freehills-kramer|iris-open-day|12-10-2026",
-      "firm": "Herbert Smith Freehills Kramer",
-      "event_name": "IRIS Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "location": "London",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "12/10/2026",
-      "deadline_date": "2026-10-12",
-      "apply_link": "https://careers.hsfkramer.com/global/en/uk/early-careers/open-days",
-      "link_is_specific": false,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
-    {
-      "id": "herbert-smith-freehills-kramer|myplus-open-day|12-10-2026",
-      "firm": "Herbert Smith Freehills Kramer",
-      "event_name": "MyPlus Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, focused on supporting candidates from underrepresented or minority groups into the legal profession.",
-      "location": "London",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "12/10/2026",
-      "deadline_date": "2026-10-12",
-      "apply_link": "https://careers.hsfkramer.com/global/en/uk/early-careers/open-days",
-      "link_is_specific": false,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
-    {
-      "id": "kingsley-napley|kingsley-napley-in-person-open-day|12-10-2026",
-      "firm": "Kingsley Napley",
-      "event_name": "Kingsley Napley In-person Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "location": "London",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "12/10/2026",
-      "deadline_date": "2026-10-12",
-      "apply_link": "https://kingsleynapley.app.candidats.io/event/5300f520-ce8c-4a48-9322-1255b4c3e8cd",
-      "link_is_specific": true,
-      "eligibility_note": "Firm's own wording: aged 18+ and either a university student (second year or above), a recent graduate, or a career changer.",
-      "source": "legal_cheek",
-      "found_on": null
-    },
-    {
-      "id": "squire-patton-boggs|open-day-(london)|12-10-2026",
-      "firm": "Squire Patton Boggs",
-      "event_name": "Open Day (London)",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "location": "London",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "12/10/2026",
-      "deadline_date": "2026-10-12",
-      "apply_link": "https://fsr.cvmailuk.com/spb/main.cfm?page=jobSpecific&jobId=78947",
-      "link_is_specific": true,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
-    {
-      "id": "squire-patton-boggs|open-day-(online)|12-10-2026",
-      "firm": "Squire Patton Boggs",
-      "event_name": "Open Day (Online)",
-      "summary": "A virtual/online session featuring a virtual tour and talks introducing the firm and its application process.",
-      "location": "Virtual",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "12/10/2026",
-      "deadline_date": "2026-10-12",
-      "apply_link": "https://fsr.cvmailuk.com/spb/main.cfm?page=jobSpecific&jobId=78948",
-      "link_is_specific": true,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
     {
       "id": "weil-gotshal-&-manges|insight-day-2|13-10-2026",
       "firm": "Weil Gotshal & Manges",
@@ -1108,11 +964,56 @@
     {
       "firm": "DWF",
       "event_name": "Insight Days",
-      "deadline_label": "Tomorrow"
+      "deadline_label": "Today"
     },
     {
       "firm": "Latham & Watkins",
       "event_name": "London Open Day 2026 (October)",
+      "deadline_label": "Today"
+    },
+    {
+      "firm": "Baker McKenzie",
+      "event_name": "Opportunity Open Day",
+      "deadline_label": "Tomorrow"
+    },
+    {
+      "firm": "Baker McKenzie",
+      "event_name": "Women’s Open Day",
+      "deadline_label": "Tomorrow"
+    },
+    {
+      "firm": "Herbert Smith Freehills Kramer",
+      "event_name": "Black Talent Open Day",
+      "deadline_label": "Tomorrow"
+    },
+    {
+      "firm": "Herbert Smith Freehills Kramer",
+      "event_name": "Disputes Open Day",
+      "deadline_label": "Tomorrow"
+    },
+    {
+      "firm": "Herbert Smith Freehills Kramer",
+      "event_name": "IRIS Open Day",
+      "deadline_label": "Tomorrow"
+    },
+    {
+      "firm": "Herbert Smith Freehills Kramer",
+      "event_name": "MyPlus Open Day",
+      "deadline_label": "Tomorrow"
+    },
+    {
+      "firm": "Kingsley Napley",
+      "event_name": "Kingsley Napley In-person Open Day",
+      "deadline_label": "Tomorrow"
+    },
+    {
+      "firm": "Squire Patton Boggs",
+      "event_name": "Open Day (London)",
+      "deadline_label": "Tomorrow"
+    },
+    {
+      "firm": "Squire Patton Boggs",
+      "event_name": "Open Day (Online)",
       "deadline_label": "Tomorrow"
     },
     {
