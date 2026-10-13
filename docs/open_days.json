@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-10-12T16:20:49Z",
+  "generated_at": "2026-10-13T14:42:17Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -9,8 +9,8 @@
     "graduates_only": true,
     "filtered_out_counts": {
       "chambers": 15,
-      "outside_london": 16,
-      "apprenticeships": 16,
+      "outside_london": 13,
+      "apprenticeships": 15,
       "not_graduate_eligible": 19
     }
   },
@@ -30,22 +30,6 @@
       "eligibility_note": null,
       "source": "direct",
       "found_on": "2026-09-23"
-    },
-    {
-      "id": "mishcon-de-reya|undergraduate-open-day-(virtual)|14-10-2026",
-      "firm": "Mishcon de Reya",
-      "event_name": "Undergraduate Open Day (Virtual)",
-      "summary": "A virtual/online session featuring a virtual tour and talks introducing the firm and its application process.",
-      "location": "Virtual",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "14/10/2026",
-      "deadline_date": "2026-10-14",
-      "apply_link": "https://fsr.cvmailuk.com/mishconearlycareersportal/main.cfm?page=jobSpecific&jobId=78896&rcd=8505512&queryString=",
-      "link_is_specific": true,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
     },
     {
       "id": "rpc|london-insight-day|15-10-2026",
@@ -946,53 +930,13 @@
   ],
   "needs_review": [
     {
-      "firm": "Baker McKenzie",
-      "event_name": "Opportunity Open Day",
-      "deadline_label": "Today"
-    },
-    {
-      "firm": "Baker McKenzie",
-      "event_name": "Women’s Open Day",
-      "deadline_label": "Today"
-    },
-    {
-      "firm": "Herbert Smith Freehills Kramer",
-      "event_name": "Black Talent Open Day",
-      "deadline_label": "Today"
-    },
-    {
-      "firm": "Herbert Smith Freehills Kramer",
-      "event_name": "Disputes Open Day",
-      "deadline_label": "Today"
-    },
-    {
-      "firm": "Herbert Smith Freehills Kramer",
-      "event_name": "IRIS Open Day",
-      "deadline_label": "Today"
-    },
-    {
-      "firm": "Herbert Smith Freehills Kramer",
-      "event_name": "MyPlus Open Day",
-      "deadline_label": "Today"
-    },
-    {
-      "firm": "Kingsley Napley",
-      "event_name": "Kingsley Napley In-person Open Day",
-      "deadline_label": "Today"
-    },
-    {
-      "firm": "Squire Patton Boggs",
-      "event_name": "Open Day (London)",
-      "deadline_label": "Today"
-    },
-    {
-      "firm": "Squire Patton Boggs",
-      "event_name": "Open Day (Online)",
-      "deadline_label": "Today"
-    },
-    {
       "firm": "Weil Gotshal & Manges",
       "event_name": "Insight Day 2",
+      "deadline_label": "Today"
+    },
+    {
+      "firm": "Mishcon de Reya",
+      "event_name": "Undergraduate Open Day (Virtual)",
       "deadline_label": "Tomorrow"
     },
     {
