@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-10-13T14:42:17Z",
+  "generated_at": "2026-10-14T12:34:36Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -15,38 +15,6 @@
     }
   },
   "events": [
-    {
-      "id": "cooley|meet-cooley---in-person|13-10-2026",
-      "firm": "Cooley",
-      "event_name": "Meet Cooley - In Person",
-      "summary": "An in-person flagship student event bringing together partners, associates, trainees and the graduate recruitment team for a day of insight, conversation and networking. Limited capacity - registrations may close before the stated deadline.",
-      "location": "London",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "13/10/2026",
-      "deadline_date": "2026-10-13",
-      "apply_link": "https://apply.candidats.io/54a424cb-40e9-4f21-9985-ec2d172c8ba5",
-      "link_is_specific": true,
-      "eligibility_note": null,
-      "source": "direct",
-      "found_on": "2026-09-23"
-    },
-    {
-      "id": "rpc|london-insight-day|15-10-2026",
-      "firm": "RPC",
-      "event_name": "London Insight Day",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "location": "London",
-      "opens_date": "2026-09-01",
-      "opens_confirmed": true,
-      "deadline_label": "15/10/2026",
-      "deadline_date": "2026-10-15",
-      "apply_link": "https://fsr.cvmailuk.com/rpc/main.cfm?page=jobSpecific&jobId=76370&rcd=86628&queryString=groupType%5F4%3D5614%26groupType%5F73%3D%26x%2Dtoken%3Dca1nfctbox2mrfuqfudsbjnh146e5p6uccl853sb",
-      "link_is_specific": true,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
     {
       "id": "skadden|open-evening|15-10-2026",
       "firm": "Skadden",
@@ -930,13 +898,13 @@
   ],
   "needs_review": [
     {
-      "firm": "Weil Gotshal & Manges",
-      "event_name": "Insight Day 2",
+      "firm": "Mishcon de Reya",
+      "event_name": "Undergraduate Open Day (Virtual)",
       "deadline_label": "Today"
     },
     {
-      "firm": "Mishcon de Reya",
-      "event_name": "Undergraduate Open Day (Virtual)",
+      "firm": "RPC",
+      "event_name": "London Insight Day",
       "deadline_label": "Tomorrow"
     },
     {
