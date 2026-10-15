@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-14T12:36:04Z",
+  "generated_at": "2026-10-15T12:20:57Z",
   "note": "Unverified leads from a daily sweep of London law firms' own application portals and events pages - the places firms announce open days before (or instead of) Legal Cheek listing them. Nothing here has been checked yet: a lead only reaches the Open Days tab once its dates, eligibility and apply link have been confirmed on the firm's own site.",
   "first_run": false,
   "counts": {
     "sources_checked": 52,
-    "sources_failed": 17,
+    "sources_failed": 16,
     "leads_total": 31,
     "duplicates_merged": 5,
     "new_today": 0,
@@ -393,13 +393,6 @@
       "kind": "blocked",
       "reason": "This firm's site turns away automated visits, so the daily sweep cannot read it. It has to be checked by hand.",
       "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.fieldfisher.com/en/careers/earlycareers/future-lawyer-programmes"
-    },
-    {
-      "firm": "Ashurst Perkins Coie",
-      "url": "https://www.ashurstperkinscoie.com/en/careers/students-and-graduates/uk-london-training-contract/",
-      "kind": "moved",
-      "reason": "This page has moved or been taken down. Worth finding the firm's current events page so the sweep can pick it up again.",
-      "error": "HTTPError: 404 Client Error: Not Found for url: https://www.ashurstperkinscoie.com/en/careers/students-and-graduates/uk-london-training-contract/"
     },
     {
       "firm": "Travers Smith",

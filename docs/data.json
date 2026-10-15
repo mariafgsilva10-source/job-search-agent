@@ -1,5 +1,80 @@
 [
   {
+    "date": "2026-10-15",
+    "jobs": [
+      {
+        "source": "adzuna",
+        "id": "adzuna_5928026650",
+        "title": "Construction Paralegal",
+        "employer": "Blake Morgan LLP",
+        "location": "Reading, Berkshire",
+        "salary": "\u00a326-26",
+        "url": "https://www.adzuna.co.uk/jobs/details/5928026650?utm_medium=api&utm_source=d98dd21f",
+        "description": "We have a new opportunity for a highly organised and proactive Paralegal to join our Construction team. Working under lawyer supervision, you will be a core part of our cross-office practice, and will receive the support, training and resources needed to develop in the position. Blake Morgan supports Smart Working practices according to business and client needs, with a typical week involving 3 days in the office once established in the role. About the Role As a Paralegal in the team your dutie\u2026"
+      },
+      {
+        "source": "adzuna",
+        "id": "adzuna_5927708135",
+        "title": "Paralegal",
+        "employer": "Civic Recruitment Limited",
+        "location": "Farringdon, Central London",
+        "salary": "\u00a338217-38217",
+        "url": "https://www.adzuna.co.uk/jobs/details/5927708135?utm_medium=api&utm_source=d98dd21f",
+        "description": "3 Months Contract with a Local Authority Umbrella Rate: \u00a3160.79 per hour umbrella Summary We are seeking a Litigation Paralegal to provide legal support and advice on housing management, landlord, and tenant litigation matters. You will assist solicitors in conducting litigation, draft legal documents, manage pre-action casework, and support training across the organisation. Responsibilities Assist with legal advice on housing management and landlord/tenant disputes, including possession claims\u2026"
+      },
+      {
+        "source": "adzuna",
+        "id": "adzuna_5928966503",
+        "title": "Sr. Paralegal - Aristocrat Interactive - Aristocrat",
+        "employer": "Aristocrat",
+        "location": "London, UK",
+        "salary": "\u00a347914-47914",
+        "url": "https://www.adzuna.co.uk/jobs/land/ad/5928966503?se=KpNopJLI8RGyqM2diQyHRA&utm_medium=api&utm_source=d98dd21f&v=DE2140F0951009A78E0373C68E8548994E924B1D",
+        "description": "Joining Aristocrat as a Senior Paralegal - Aristocrat Interactive means becoming part of a company that thrives on innovation and creativity. At Aristocrat, we are committed to pushing the boundaries of technology and entertainment to deliver world-class gaming content. Our mission to Bring Happiness to Life Through the Power of Play drives us to develop outstanding experiences for our customers and employees alike. As an important part of the Aristocrat Interactive Legal team, the Senior Paral\u2026"
+      },
+      {
+        "source": "adzuna",
+        "id": "adzuna_5928341348",
+        "title": "Conveyancer",
+        "employer": "Puro Associates",
+        "location": "Waterloo, South East London",
+        "salary": "\u00a360000-60000",
+        "url": "https://www.adzuna.co.uk/jobs/details/5928341348?utm_medium=api&utm_source=d98dd21f",
+        "description": "Conveyancing Solicitor \u2013 London Salary - Up to \u00a360,000 Job Overview A well-established and growing law firm is looking for a qualified solicitor with experience and thorough knowledge of residential and/or commercial conveyancing matters. The ideal candidate will have experience handling freehold and leasehold purchases and sales, new builds, Help to Buy and shared ownership matters. They should be able to demonstrate experience managing transactions from initial enquiry through to post-complet\u2026"
+      },
+      {
+        "source": "adzuna",
+        "id": "adzuna_5927547293",
+        "title": "Legal Professional",
+        "employer": "Knights Solicitors",
+        "location": "South East London, London",
+        "salary": "\u00a333304-33304",
+        "url": "https://www.adzuna.co.uk/jobs/land/ad/5927547293?se=-qdQpZLI8RGav6iydSOnjw&utm_medium=api&utm_source=d98dd21f&v=2019E9DD7475EBDA9CF8023B64A763457F9A7C3F",
+        "description": "Knights Solicitors is an established and highly regarded law firm based in Tunbridge Wells, with a strong heritage in litigation dating back to 1994. Over the years, we have continued to build on our specialist expertise, expanding the range of legal matters in which we act for clients to cover both contentious and non-contentious work. We pride ourselves on combining in-depth legal knowledge with a personal, approachable service. We take the time to understand our clients' needs, providing cle\u2026"
+      },
+      {
+        "source": "adzuna",
+        "id": "adzuna_5927708132",
+        "title": "Solicitor - Litigation",
+        "employer": "Civic Recruitment Limited",
+        "location": "Farringdon, Central London",
+        "salary": "\u00a364326-64326",
+        "url": "https://www.adzuna.co.uk/jobs/details/5927708132?utm_medium=api&utm_source=d98dd21f",
+        "description": "3 Month Contract With A Local Authority Job Purpose To provide expert legal advice and litigation services on housing management and landlord and tenant matters, supporting Southern Housing and its group partners in the effective management of legal risk and dispute resolution. The postholder will manage a varied caseload of housing litigation matters, providing practical, commercially focused legal advice and representation. The role will involve conducting legal proceedings, drafting legal do\u2026"
+      },
+      {
+        "source": "adzuna",
+        "id": "adzuna_5927959616",
+        "title": "Solicitor \u2013 Litigation",
+        "employer": "Belmont Recruitment",
+        "location": "Farringdon, Central London",
+        "salary": "\u00a391000-91000",
+        "url": "https://www.adzuna.co.uk/jobs/land/ad/5927959616?se=-qdQpZLI8RGav6iydSOnjw&utm_medium=api&utm_source=d98dd21f&v=8BED39DCA4C0BD709ABAC000A2DD5FC1EE699184",
+        "description": "Good Afternoon, I am currently representing Southern Housing who are offering an initial temporary contract for a period of 3-6 months with a view to be extended or offered a permanent position for the right candidate at a rate which is negotiable dependent upon experience We are looking for a Solicitor \u2013 Litigation this role will be based at: EC1M 5LA, 4 days per week in the office for 4 weeks, then 3 days until week 12, then 2 days The right candidate will: The role involves providing legal a\u2026"
+      }
+    ]
+  },
+  {
     "date": "2026-10-14",
     "jobs": [
       {
@@ -2250,81 +2325,6 @@
         "salary": "\u00a330573-30573",
         "url": "https://www.adzuna.co.uk/jobs/land/ad/5885073056?se=xhM3Ap2x8RG80dqbAPfRRQ&utm_medium=api&utm_source=d98dd21f&v=46CD6ACE167F10555DED2750B2F8037B6F633446",
         "description": "A well-established and highly respected law firm in Henley-on-Thames is seeking an experienced Conveyancing Paralegal to join its successful Residential Property team. This is an excellent opportunity to develop your career within a reputable practice known for its high-quality private client and property work. Key Responsibilities \u2022 Supporting solicitors across the full residential conveyancing process \u2022 Managing your own caseload of straightforward matters under supervision \u2022 Preparing contra\u2026"
-      }
-    ]
-  },
-  {
-    "date": "2026-09-15",
-    "jobs": [
-      {
-        "source": "adzuna",
-        "id": "adzuna_5877108914",
-        "title": "Conveyancing Solicitor",
-        "employer": "G2 Legal Limited",
-        "location": "Caversham, Reading",
-        "salary": "\u00a350000-65000",
-        "url": "https://www.adzuna.co.uk/jobs/details/5877108914?utm_medium=api&utm_source=d98dd21f",
-        "description": "Residential Property Conveyancer / Solicitor / Licensed Conveyancer Reading| Legal 500 Firm | Hybrid / Flexible Working | \u00a350,000 \u2013 \u00a365,000 DOE  Benefits A highly regarded Legal 500 and Chambers-listed law firm with a strong presence across the Thames Valley is seeking an experienced Residential Property Conveyancer, Solicitor, Legal Executive (CILEX/FILEX), or Licensed Conveyancer to join its growing and supportive property team in Reading. This is an excellent opportunity for an ambitious con\u2026"
-      },
-      {
-        "source": "adzuna",
-        "id": "adzuna_5866857598",
-        "title": "Employment Solicitor",
-        "employer": "CKB Recruitment Ltd",
-        "location": "Englefield, Reading",
-        "salary": "\u00a370000-85000",
-        "url": "https://www.adzuna.co.uk/jobs/land/ad/5866857598?se=RAWeGNSw8RGTQqzE1MT0Kg&utm_medium=api&utm_source=d98dd21f&v=74E68A4DF3FC292148088FA68B23724111F6929B",
-        "description": "Employment Solicitor | Fully Remote | Quality Work | \u00a370,000 | Generous Bonus Are you an experienced Employment Solicitor looking for a fully remote position that offers exceptional work-life balance, flexibility, and truly rewarding earning potential? This is an exciting opportunity to join an established employment law firm as part of a skilled and supportive team. You will handle a varied caseload of high-quality contentious employment matters for a diverse client base, all from the comfort \u2026"
-      },
-      {
-        "source": "adzuna",
-        "id": "adzuna_5883861950",
-        "title": "Paralegal",
-        "employer": "The Hyde Group",
-        "location": "London, UK",
-        "salary": "\u00a330227-30227",
-        "url": "https://www.adzuna.co.uk/jobs/land/ad/5883861950?se=aETRGNSw8RGjmuFeDdDi-g&utm_medium=api&utm_source=d98dd21f&v=0924933C39710B8FF3FF0DA14BD1E377357BF724",
-        "description": "Paralegal ( Property Services ) Location : London bridge Salary : \u00a333,500 Hyde is looking for a Paralegal to join our collaborative and values-driven team. This is a fantastic opportunity to grow your career in a supportive environment that champions employee wellbeing, continuous learning, and long-term development. As a Paralegal at Hyde, you will support experienced lawyers within the legal team to manage a varied caseload of housing management and wider legal matters. You will help deliver \u2026"
-      },
-      {
-        "source": "adzuna",
-        "id": "adzuna_5883864374",
-        "title": "Paralegal",
-        "employer": "The Hyde Group",
-        "location": "Lea Bridge, East London",
-        "salary": "\u00a333500-33500",
-        "url": "https://www.adzuna.co.uk/jobs/land/ad/5883864374?se=aETRGNSw8RGjmuFeDdDi-g&utm_medium=api&utm_source=d98dd21f&v=B132C66993FEAFE61C7BC0788C7F6709E5D4FEDF",
-        "description": "Paralegal (Property Services) Location : London bridge Salary : \u00a333,500 Hyde is looking for a Paralegal to join our collaborative and values-driven team. This is a fantastic opportunity to grow your career in a supportive environment that champions employee wellbeing, continuous learning, and long-term development. As a Paralegal at Hyde, you will support experienced lawyers within the legal team to manage a varied caseload of housing management and wider legal matters. You will help deliver hi\u2026"
-      },
-      {
-        "source": "adzuna",
-        "id": "adzuna_5884332708",
-        "title": "Paralegal",
-        "employer": "The Hyde Group",
-        "location": "South East London, London",
-        "salary": "\u00a330000-30000",
-        "url": "https://www.adzuna.co.uk/jobs/details/5884332708?utm_medium=api&utm_source=d98dd21f",
-        "description": "Paralegal ( Property Services ) Location : London bridge Salary : \u00a333,500 Hyde is looking for a Paralegal to join our collaborative and values-driven team. This is a fantastic opportunity to grow your career in a supportive environment that champions employee wellbeing, continuous learning, and long-term development. As a Paralegal at Hyde, you will support experienced lawyers within the legal team to manage a varied caseload of housing management and wider legal matters. You will help deliver \u2026"
-      },
-      {
-        "source": "adzuna",
-        "id": "adzuna_5883606034",
-        "title": "Paralegal Court of Protection",
-        "employer": "Brandon James",
-        "location": "London, UK",
-        "salary": "\u00a325000-30000",
-        "url": "https://www.adzuna.co.uk/jobs/land/ad/5883606034?se=TrekGdSw8RGUZ4dUMDgSxw&utm_medium=api&utm_source=d98dd21f&v=33BFB86050828A7A42B10EF41ECF5005C4A90B1C",
-        "description": "A respected law firm is seeking a compassionate and organised Court of Protection Paralegal to join its London team. This is an excellent opportunity for a Court of Protection Paralegal looking to develop their legal career within a specialist team supporting clients and their families. The successful Court of Protection Paralegal will work alongside experienced Partners and fee earners, gaining exposure to a broad range of Court of Protection matters while developing strong technical and clien\u2026"
-      },
-      {
-        "source": "adzuna",
-        "id": "adzuna_5883606026",
-        "title": "Real Estate Paralegal",
-        "employer": "Brandon James",
-        "location": "London, UK",
-        "salary": "\u00a325000-30000",
-        "url": "https://www.adzuna.co.uk/jobs/land/ad/5883606026?se=TrekGdSw8RGUZ4dUMDgSxw&utm_medium=api&utm_source=d98dd21f&v=97047AEDB2B0BAEBC1BCB299F49051B9A2194C13",
-        "description": "A leading international law firm is seeking a Real Estate Paralegal to join its growing Real Estate team. This Real Estate Paralegal role offers the opportunity to support solicitors on a broad range of commercial real estate matters, including acquisitions, disposals, leasing, real estate finance and development work. The successful Real Estate Paralegal will gain exposure to complex transactions while developing their technical legal skills within a professional and collaborative environment.\u2026"
       }
     ]
   }

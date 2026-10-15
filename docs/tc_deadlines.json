@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-10-14T12:36:06Z",
+  "generated_at": "2026-10-15T12:20:59Z",
   "note": "Only includes Training Contract listings manually verified as open to graduates applying directly, without needing to have done that firm's own vacation scheme first. New listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "events": [
     {
@@ -10,7 +10,7 @@
       "opens_date": "2026-09-18",
       "opens_confirmed": true,
       "closes_date": "2026-10-16",
-      "closes_label": "16/10/2026",
+      "closes_label": "Tomorrow",
       "apply_link": "https://traverssmithhires.app.candidats.io/roles",
       "eligibility_note": "Firm states direct applicants (via Recruitment Days) have the same chances as Vacation Scheme applicants - no vacation scheme required."
     },
