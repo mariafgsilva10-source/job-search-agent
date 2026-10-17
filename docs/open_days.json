@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-10-16T12:01:30Z",
+  "generated_at": "2026-10-17T11:16:54Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -10,107 +10,11 @@
     "filtered_out_counts": {
       "chambers": 16,
       "outside_london": 11,
-      "apprenticeships": 13,
-      "not_graduate_eligible": 19
+      "apprenticeships": 10,
+      "not_graduate_eligible": 20
     }
   },
   "events": [
-    {
-      "id": "goodwin|in-person-open-afternoon|16-10-2026",
-      "firm": "Goodwin",
-      "event_name": "In-Person Open Afternoon",
-      "summary": "An in-person event giving a comprehensive overview of the firm, its practice areas and its opportunities, with application guidance for vacation schemes and trainee solicitor roles and networking with current staff. Event held 10 November 2026.",
-      "location": "London",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "16/10/2026",
-      "deadline_date": "2026-10-16",
-      "apply_link": "https://apply.candidats.io/b075c749-882c-4b93-9d74-40170c143384",
-      "link_is_specific": true,
-      "eligibility_note": null,
-      "source": "direct",
-      "found_on": "2026-09-05"
-    },
-    {
-      "id": "goodwin|in-person-open-afternoon-(3-november)|16-10-2026",
-      "firm": "Goodwin",
-      "event_name": "In-Person Open Afternoon (3 November)",
-      "summary": "An in-person event giving a comprehensive overview of the firm, its practice areas and its opportunities, with application guidance for vacation schemes and trainee solicitor roles and networking with current staff. Event held 3 November 2026.",
-      "location": "London",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "16/10/2026",
-      "deadline_date": "2026-10-16",
-      "apply_link": "https://apply.candidats.io/c31a84b0-74d0-40ea-a581-0aaecb281b51",
-      "link_is_specific": true,
-      "eligibility_note": null,
-      "source": "direct",
-      "found_on": "2026-09-21"
-    },
-    {
-      "id": "goodwin|in-person-open-afternoon-(12-november)|16-10-2026",
-      "firm": "Goodwin",
-      "event_name": "In-Person Open Afternoon (12 November)",
-      "summary": "An in-person event giving a comprehensive overview of the firm, its practice areas and its opportunities, with application guidance for vacation schemes and trainee solicitor roles and networking with current staff. Event held 12 November 2026.",
-      "location": "London",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "16/10/2026",
-      "deadline_date": "2026-10-16",
-      "apply_link": "https://apply.candidats.io/602cfc51-ea22-45a8-b993-a5841ffc476f",
-      "link_is_specific": true,
-      "eligibility_note": null,
-      "source": "direct",
-      "found_on": "2026-09-21"
-    },
-    {
-      "id": "akin|ask-akin-open-day-(virtual)|18-10-2026",
-      "firm": "Akin",
-      "event_name": "Ask Akin Open Day (Virtual)",
-      "summary": "A virtual/online session featuring a virtual tour and talks introducing the firm and its application process.",
-      "location": "Virtual",
-      "opens_date": "2026-09-17",
-      "opens_confirmed": true,
-      "deadline_label": "18/10/2026",
-      "deadline_date": "2026-10-18",
-      "apply_link": "https://www.akingump.com/en/careers/uk-students/meet-us-workshops-virtual-events-and-more",
-      "link_is_specific": false,
-      "eligibility_note": "No online application form - email a CV and a short (max 250-word) paragraph to graduaterecruitment@akingump.com with subject line 'Ask Akin Virtual Open Day Application' (firm's own instructions).",
-      "source": "legal_cheek",
-      "found_on": null
-    },
-    {
-      "id": "latham-&-watkins|london-open-day-2026-(november)|18-10-2026",
-      "firm": "Latham & Watkins",
-      "event_name": "London Open Day 2026 (November)",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "location": "London",
-      "opens_date": "2026-09-01",
-      "opens_confirmed": false,
-      "deadline_label": "18/10/2026",
-      "deadline_date": "2026-10-18",
-      "apply_link": "https://uk-earlyassociatecareers-lw.icims.com/jobs/10940/job",
-      "link_is_specific": true,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
-    {
-      "id": "white-&-case|open-days-2026|18-10-2026",
-      "firm": "White & Case",
-      "event_name": "Open Days 2026",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "location": "London",
-      "opens_date": "2026-09-24",
-      "opens_confirmed": true,
-      "deadline_label": "18/10/2026",
-      "deadline_date": "2026-10-18",
-      "apply_link": "https://www.apply4law.com/whitecase",
-      "link_is_specific": false,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
     {
       "id": "norton-rose-fulbright|commercial-law-open-day|18-10-2026",
       "firm": "Norton Rose Fulbright",
@@ -850,14 +754,19 @@
   ],
   "needs_review": [
     {
-      "firm": "Goodwin",
-      "event_name": "Insight into the Trainee Experience: Meet Our Trainees and Q&A",
-      "deadline_label": "Today"
+      "firm": "Akin",
+      "event_name": "Ask Akin Open Day (Virtual)",
+      "deadline_label": "Tomorrow"
     },
     {
-      "firm": "Mishcon de Reya",
-      "event_name": "Disability Open Day (In Person)",
-      "deadline_label": "Today"
+      "firm": "Latham & Watkins",
+      "event_name": "London Open Day 2026 (November)",
+      "deadline_label": "Tomorrow"
+    },
+    {
+      "firm": "White & Case",
+      "event_name": "Open Days 2026",
+      "deadline_label": "Tomorrow"
     },
     {
       "firm": "Lewis Silkin",
