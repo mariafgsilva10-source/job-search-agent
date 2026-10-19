@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-10-18T11:55:03Z",
+  "generated_at": "2026-10-19T14:13:13Z",
   "note": "Only includes Training Contract listings manually verified as open to graduates applying directly, without needing to have done that firm's own vacation scheme first. New listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "events": [
     {
@@ -367,17 +367,6 @@
       "eligibility_note": "Firm's own \"Apply\" page lists a \"Graduate or Career Changer\" direct Training Contract route for those who can't do the summer Vacation Scheme."
     },
     {
-      "id": "travers-smith|direct-training-contract-2",
-      "firm": "Travers Smith",
-      "event_name": "Direct Training Contract 2",
-      "opens_date": "2026-10-16",
-      "opens_confirmed": true,
-      "closes_date": "2027-01-15",
-      "closes_label": "15/01/2027",
-      "apply_link": "https://traverssmithhires.app.candidats.io/roles",
-      "eligibility_note": "Second direct-application window at the same firm, same policy - no vacation scheme required."
-    },
-    {
       "id": "cripps|training-contract",
       "firm": "Cripps",
       "event_name": "Training Contract",
@@ -677,11 +666,6 @@
   ],
   "needs_review": [
     {
-      "firm": "White & Case",
-      "event_name": "Training Contract",
-      "deadline_label": "Today"
-    },
-    {
       "firm": "Norton Rose Fulbright",
       "event_name": "Direct Training Contract",
       "deadline_label": "30/10/2026"
@@ -715,6 +699,11 @@
       "firm": "Hill Dickinson",
       "event_name": "Summer Insight Day and Training Contract",
       "deadline_label": "10/01/2027"
+    },
+    {
+      "firm": "Travers Smith",
+      "event_name": "Direct Training Contract",
+      "deadline_label": "15/01/2027"
     },
     {
       "firm": "Womble Bond Dickinson",

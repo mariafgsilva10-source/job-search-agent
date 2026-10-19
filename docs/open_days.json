@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-10-18T11:53:25Z",
+  "generated_at": "2026-10-19T14:11:39Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -15,22 +15,6 @@
     }
   },
   "events": [
-    {
-      "id": "norton-rose-fulbright|commercial-law-open-day|18-10-2026",
-      "firm": "Norton Rose Fulbright",
-      "event_name": "Commercial Law Open Day",
-      "summary": "An in-person event introducing NRF's commercial law practice areas, with talks, Q&A and networking, for undergraduates and recent graduates from a law discipline. Event held 10 November 2026.",
-      "location": "London",
-      "opens_date": "2026-09-07",
-      "opens_confirmed": true,
-      "deadline_label": "18/10/2026",
-      "deadline_date": "2026-10-18",
-      "apply_link": "https://nrf.wd3.myworkdayjobs.com/Graduates/job/London-United-Kingdom/Commercial-Law-Open-Day_R-4343",
-      "link_is_specific": true,
-      "eligibility_note": null,
-      "source": "direct",
-      "found_on": "2026-09-24"
-    },
     {
       "id": "mishcon-de-reya|disability-open-day-(virtual)|21-10-2026",
       "firm": "Mishcon de Reya",
@@ -738,24 +722,9 @@
   ],
   "needs_review": [
     {
-      "firm": "Akin",
-      "event_name": "Ask Akin Open Day (Virtual)",
-      "deadline_label": "Today"
-    },
-    {
-      "firm": "Latham & Watkins",
-      "event_name": "London Open Day 2026 (November)",
-      "deadline_label": "Today"
-    },
-    {
-      "firm": "White & Case",
-      "event_name": "Open Days 2026",
-      "deadline_label": "Today"
-    },
-    {
       "firm": "Clifford Chance",
       "event_name": "London Insight Day",
-      "deadline_label": "Tomorrow"
+      "deadline_label": "Today"
     },
     {
       "firm": "Lewis Silkin",
@@ -773,29 +742,9 @@
       "deadline_label": "01/11/2026"
     },
     {
-      "firm": "Norton Rose Fulbright",
-      "event_name": "Aspiring Black Lawyers Insights Day",
-      "deadline_label": "02/11/2026"
-    },
-    {
       "firm": "HFW",
       "event_name": "Open Day",
       "deadline_label": "05/11/2026"
-    },
-    {
-      "firm": "Norton Rose Fulbright",
-      "event_name": "Law Open Day",
-      "deadline_label": "09/11/2026"
-    },
-    {
-      "firm": "Norton Rose Fulbright",
-      "event_name": "Non-law Open Day",
-      "deadline_label": "18/11/2026"
-    },
-    {
-      "firm": "Norton Rose Fulbright",
-      "event_name": "STEM Open Day",
-      "deadline_label": "24/11/2026"
     },
     {
       "firm": "Paul Hastings",
