@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-10-20T12:27:24Z",
+  "generated_at": "2026-10-21T12:37:43Z",
   "note": "Only includes Training Contract listings manually verified as open to graduates applying directly, without needing to have done that firm's own vacation scheme first. New listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "events": [
     {
@@ -543,6 +543,17 @@
       "eligibility_note": "Firm's FAQ explicitly confirms it \"consider[s] all direct training contract applications\" - no vacation scheme required."
     },
     {
+      "id": "fried-frank|training-contract",
+      "firm": "Fried Frank",
+      "event_name": "Training Contract",
+      "opens_date": "2026-09-01",
+      "opens_confirmed": false,
+      "closes_date": "2027-04-09",
+      "closes_label": "09/04/2027",
+      "apply_link": "https://www.friedfrank.com/careers/attorneyjobopportunities?gh_jid=5680560004",
+      "eligibility_note": "Firm's own page states it \"welcome[s] graduates and those changing careers\" - no vacation scheme required."
+    },
+    {
       "id": "wedlake-bell|training-contract",
       "firm": "Wedlake Bell",
       "event_name": "Training Contract",
@@ -552,17 +563,6 @@
       "closes_label": "03/05/2027",
       "apply_link": "https://wedlakebell.app.candidats.io/roles",
       "eligibility_note": "Firm's own criteria explicitly list \"already graduated with a law/non-law degree\" as qualifying routes - no vacation scheme required."
-    },
-    {
-      "id": "fried-frank|training-contract",
-      "firm": "Fried Frank",
-      "event_name": "Training Contract",
-      "opens_date": "2026-09-01",
-      "opens_confirmed": false,
-      "closes_date": "2027-05-21",
-      "closes_label": "21/05/2027",
-      "apply_link": "https://www.friedfrank.com/careers/attorneyjobopportunities?gh_jid=5680560004",
-      "eligibility_note": "Firm's own page states it \"welcome[s] graduates and those changing careers\" - no vacation scheme required."
     },
     {
       "id": "bclp|training-contract-2028/29",

@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-20T12:27:23Z",
+  "generated_at": "2026-10-21T12:37:41Z",
   "note": "Unverified leads from a daily sweep of London law firms' own application portals and events pages - the places firms announce open days before (or instead of) Legal Cheek listing them. Nothing here has been checked yet: a lead only reaches the Open Days tab once its dates, eligibility and apply link have been confirmed on the firm's own site.",
   "first_run": false,
   "counts": {
     "sources_checked": 52,
-    "sources_failed": 17,
-    "leads_total": 26,
+    "sources_failed": 16,
+    "leads_total": 31,
     "duplicates_merged": 5,
     "new_today": 0,
     "new_last_7_days": 0
@@ -58,6 +58,56 @@
       "title": "Meet the team",
       "url": "https://trainee.bclplaw.com/meet-us",
       "source_page": "https://trainee.bclplaw.com/meet-us",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "9a127341679e5c3e",
+      "firm": "Baker McKenzie",
+      "title": "Baker Ethnicity Open Day",
+      "url": "https://uk-graduates.bakermckenzie.com/events/",
+      "source_page": "https://uk-graduates.bakermckenzie.com/events/",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "af4002df893c05ee",
+      "firm": "Baker McKenzie",
+      "title": "Employability Open Day",
+      "url": "https://uk-graduates.bakermckenzie.com/events/",
+      "source_page": "https://uk-graduates.bakermckenzie.com/events/",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "0e75bffd5bb933ea",
+      "firm": "Baker McKenzie",
+      "title": "Opportunity Open Day",
+      "url": "https://uk-graduates.bakermckenzie.com/events/",
+      "source_page": "https://uk-graduates.bakermckenzie.com/events/",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "69d1297f060cba77",
+      "firm": "Baker McKenzie",
+      "title": "General Open Day",
+      "url": "https://uk-graduates.bakermckenzie.com/events/",
+      "source_page": "https://uk-graduates.bakermckenzie.com/events/",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "cb85a2405e4be436",
+      "firm": "Baker McKenzie",
+      "title": "Women’s Open Day",
+      "url": "https://uk-graduates.bakermckenzie.com/events/",
+      "source_page": "https://uk-graduates.bakermckenzie.com/events/",
       "first_seen": "2026-09-06",
       "is_new": false,
       "status": "unverified"
@@ -357,13 +407,6 @@
       "kind": "blocked",
       "reason": "This firm's site turns away automated visits, so the daily sweep cannot read it. It has to be checked by hand.",
       "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.whitecase.com/careers/locations/united-kingdom/london"
-    },
-    {
-      "firm": "Baker McKenzie",
-      "url": "https://uk-graduates.bakermckenzie.com/events/",
-      "kind": "unreachable",
-      "reason": "The sweep could not connect to this site, so it may be a certificate or network problem at the firm's end.",
-      "error": "ConnectTimeout: HTTPSConnectionPool(host='uk-graduates.bakermckenzie.com', port=443): Max retries exceeded with url: /events/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='uk-graduates.bakermc"
     },
     {
       "firm": "Charles Russell Speechlys",

@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-10-20T12:25:29Z",
+  "generated_at": "2026-10-21T12:36:10Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -30,22 +30,6 @@
       "eligibility_note": null,
       "source": "direct",
       "found_on": "2026-10-03"
-    },
-    {
-      "id": "jones-day|open-evening-2|22-10-2026",
-      "firm": "Jones Day",
-      "event_name": "Open Evening 2",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "location": "London",
-      "opens_date": "2026-10-08",
-      "opens_confirmed": true,
-      "deadline_label": "22/10/2026",
-      "deadline_date": "2026-10-22",
-      "apply_link": "https://www.jonesday.com/en/careers/locations/united-kingdom?tab=events",
-      "link_is_specific": false,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
     },
     {
       "id": "latham-&-watkins|london-lgbtq+-lawyers-group-open-day-2026|25-10-2026",
@@ -708,6 +692,11 @@
     {
       "firm": "Mishcon de Reya",
       "event_name": "Disability Open Day (Virtual)",
+      "deadline_label": "Today"
+    },
+    {
+      "firm": "Jones Day",
+      "event_name": "Open Evening 2",
       "deadline_label": "Tomorrow"
     },
     {
