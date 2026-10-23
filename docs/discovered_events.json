@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-22T12:40:44Z",
+  "generated_at": "2026-10-23T12:19:33Z",
   "note": "Unverified leads from a daily sweep of London law firms' own application portals and events pages - the places firms announce open days before (or instead of) Legal Cheek listing them. Nothing here has been checked yet: a lead only reaches the Open Days tab once its dates, eligibility and apply link have been confirmed on the firm's own site.",
   "first_run": false,
   "counts": {
     "sources_checked": 52,
-    "sources_failed": 17,
-    "leads_total": 30,
+    "sources_failed": 16,
+    "leads_total": 29,
     "duplicates_merged": 5,
     "new_today": 0,
     "new_last_7_days": 0
@@ -93,21 +93,11 @@
       "status": "unverified"
     },
     {
-      "id": "69d1297f060cba77",
-      "firm": "Baker McKenzie",
-      "title": "General Open Day",
-      "url": "https://uk-graduates.bakermckenzie.com/events/",
-      "source_page": "https://uk-graduates.bakermckenzie.com/events/",
-      "first_seen": "2026-09-06",
-      "is_new": false,
-      "status": "unverified"
-    },
-    {
-      "id": "cb85a2405e4be436",
-      "firm": "Baker McKenzie",
-      "title": "Women’s Open Day",
-      "url": "https://uk-graduates.bakermckenzie.com/events/",
-      "source_page": "https://uk-graduates.bakermckenzie.com/events/",
+      "id": "fe132090ab076f2c",
+      "firm": "Bristows",
+      "title": "Workshop IP Workshop (Online) This IP workshop provides insight into the firm and the work we do.",
+      "url": "https://www.bristows.com/events/ip-workshop-online-2026/",
+      "source_page": "https://www.bristows.com/careers/trainees/what-we-offer/workshops/",
       "first_seen": "2026-09-06",
       "is_new": false,
       "status": "unverified"
@@ -383,13 +373,6 @@
       "kind": "blocked",
       "reason": "This firm's site turns away automated visits, so the daily sweep cannot read it. It has to be checked by hand.",
       "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.fieldfisher.com/en/careers/earlycareers/future-lawyer-programmes"
-    },
-    {
-      "firm": "Bristows",
-      "url": "https://www.bristows.com/careers/trainees/what-we-offer/workshops/",
-      "kind": "blocked",
-      "reason": "This firm's site turns away automated visits, so the daily sweep cannot read it. It has to be checked by hand.",
-      "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.bristows.com/careers/trainees/what-we-offer/workshops/"
     },
     {
       "firm": "Travers Smith",

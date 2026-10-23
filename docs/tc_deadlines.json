@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-10-22T12:40:46Z",
+  "generated_at": "2026-10-23T12:19:35Z",
   "note": "Only includes Training Contract listings manually verified as open to graduates applying directly, without needing to have done that firm's own vacation scheme first. New listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "events": [
     {
@@ -10,7 +10,7 @@
       "opens_date": "2026-09-15",
       "opens_confirmed": false,
       "closes_date": "2026-10-23",
-      "closes_label": "Tomorrow",
+      "closes_label": "Today",
       "apply_link": "https://www.footanstey.com/careers/early-careers/training-contracts/",
       "eligibility_note": "Open to final-year students or those who've already graduated - no vacation scheme required."
     },
@@ -21,7 +21,7 @@
       "opens_date": "2026-09-01",
       "opens_confirmed": true,
       "closes_date": "2026-10-23",
-      "closes_label": "Tomorrow",
+      "closes_label": "Today",
       "apply_link": "https://apply.tlt.com/vacancies/4932/apply/",
       "eligibility_note": "Open to law graduates from England, Wales and Northern Ireland - no vacation scheme required."
     },
