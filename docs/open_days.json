@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-10-23T12:18:14Z",
+  "generated_at": "2026-10-24T11:43:48Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -10,27 +10,11 @@
     "filtered_out_counts": {
       "chambers": 16,
       "outside_london": 13,
-      "apprenticeships": 10,
+      "apprenticeships": 12,
       "not_graduate_eligible": 20
     }
   },
   "events": [
-    {
-      "id": "latham-&-watkins|london-lgbtq+-lawyers-group-open-day-2026|25-10-2026",
-      "firm": "Latham & Watkins",
-      "event_name": "London LGBTQ+ Lawyers Group Open Day 2026",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process, focused on supporting candidates from underrepresented or minority groups into the legal profession.",
-      "location": "London",
-      "opens_date": "2026-09-01",
-      "opens_confirmed": false,
-      "deadline_label": "25/10/2026",
-      "deadline_date": "2026-10-25",
-      "apply_link": "https://uk-earlyassociatecareers-lw.icims.com/jobs/10941/job",
-      "link_is_specific": true,
-      "eligibility_note": "Themed for the LGBTQ+ Lawyers Group but open to all interested students.",
-      "source": "legal_cheek",
-      "found_on": null
-    },
     {
       "id": "baker-mckenzie|bakerethnicity-open-day|26-10-2026",
       "firm": "Baker McKenzie",
@@ -676,6 +660,11 @@
     {
       "firm": "Lewis Silkin",
       "event_name": "London open evening",
+      "deadline_label": "Today"
+    },
+    {
+      "firm": "Latham & Watkins",
+      "event_name": "London LGBTQ+ Lawyers Group Open Day 2026",
       "deadline_label": "Tomorrow"
     },
     {
