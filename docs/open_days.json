@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-10-25T12:13:30Z",
+  "generated_at": "2026-10-26T13:45:22Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -626,19 +626,14 @@
   ],
   "needs_review": [
     {
-      "firm": "Latham & Watkins",
-      "event_name": "London LGBTQ+ Lawyers Group Open Day 2026",
-      "deadline_label": "Today"
-    },
-    {
       "firm": "Baker McKenzie",
       "event_name": "BakerEthnicity Open Day",
-      "deadline_label": "Tomorrow"
+      "deadline_label": "Today"
     },
     {
       "firm": "Paul, Weiss",
       "event_name": "November Insight Afternoon",
-      "deadline_label": "Tomorrow"
+      "deadline_label": "Today"
     },
     {
       "firm": "Penningtons Manches Cooper",
