@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-10-29T13:53:03Z",
+  "generated_at": "2026-10-30T13:45:36Z",
   "note": "Only includes Training Contract listings manually verified as open to graduates applying directly, without needing to have done that firm's own vacation scheme first. New listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "events": [
     {
@@ -646,7 +646,7 @@
     {
       "firm": "Norton Rose Fulbright",
       "event_name": "Direct Training Contract",
-      "deadline_label": "Tomorrow"
+      "deadline_label": "Today"
     },
     {
       "firm": "Hill Dickinson",
