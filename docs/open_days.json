@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-11-01T13:56:02Z",
+  "generated_at": "2026-11-02T16:42:28Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -498,26 +498,6 @@
   ],
   "needs_review": [
     {
-      "firm": "Kirkland & Ellis",
-      "event_name": "Open Day",
-      "deadline_label": "Today"
-    },
-    {
-      "firm": "Latham & Watkins",
-      "event_name": "London Black Lawyers Group Open Day 2026",
-      "deadline_label": "Today"
-    },
-    {
-      "firm": "Pinsent Masons",
-      "event_name": "Pinsent Mason Insight Days",
-      "deadline_label": "Today"
-    },
-    {
-      "firm": "White & Case",
-      "event_name": "STEM Open Day 2026",
-      "deadline_label": "Today"
-    },
-    {
       "firm": "HFW",
       "event_name": "Open Day",
       "deadline_label": "05/11/2026"
@@ -556,6 +536,11 @@
       "firm": "Hill Dickinson",
       "event_name": "Summer Insight Day and Training Contract",
       "deadline_label": "10/01/2027"
+    },
+    {
+      "firm": "2TG",
+      "event_name": "Student Open Day",
+      "deadline_label": "11/01/2027"
     },
     {
       "firm": "Osborne Clarke",

@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-11-01T13:57:25Z",
+  "generated_at": "2026-11-02T16:43:52Z",
   "note": "Only includes Training Contract listings manually verified as open to graduates applying directly, without needing to have done that firm's own vacation scheme first. New listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "events": [
     {
@@ -717,6 +717,11 @@
       "firm": "Baker McKenzie",
       "event_name": "Direct Training Contract",
       "deadline_label": "02/04/2027"
+    },
+    {
+      "firm": "Ward Hadaway",
+      "event_name": "Training Contract 2029",
+      "deadline_label": "30/04/2027"
     },
     {
       "firm": "Watson Farley & Williams",
