@@ -1,17 +1,58 @@
 {
-  "generated_at": "2026-11-04T15:00:22Z",
+  "generated_at": "2026-11-05T15:05:43Z",
   "note": "Unverified leads from a daily sweep of London law firms' own application portals and events pages - the places firms announce open days before (or instead of) Legal Cheek listing them. Nothing here has been checked yet: a lead only reaches the Open Days tab once its dates, eligibility and apply link have been confirmed on the firm's own site.",
   "first_run": false,
   "counts": {
     "sources_checked": 52,
-    "sources_failed": 17,
-    "leads_total": 26,
+    "sources_failed": 16,
+    "leads_total": 29,
     "duplicates_merged": 5,
-    "new_today": 0,
-    "new_last_7_days": 0
+    "new_today": 2,
+    "new_last_7_days": 2
   },
-  "new_today": [],
+  "new_today": [
+    {
+      "id": "f464f0f1cc1d06f3",
+      "firm": "Ashurst Perkins Coie",
+      "title": "Behind the Scenes with Ashurst Perkins Coie: Meet Our Trainees | 12 November 2026, 12pm – 1pm | How to register",
+      "url": "https://fsr.cvmailuk.com/ashurstperkinscoiecareers/main.cfm?page=jobSpecific&jobId=79333&rcd=522531&queryString=groupType%5F73%3D2529%26groupType%5F4%3D4867%26x%2Dtoken%3Dx51xpsr3g4ybdr1atmo6o4najly1yrwlv7gcv5fi",
+      "source_page": "https://www.ashurstperkinscoie.com/en/careers/students-and-graduates/uk-london-training-contract/",
+      "first_seen": "2026-11-05",
+      "is_new": true,
+      "status": "unverified"
+    },
+    {
+      "id": "4c7c6c6bcad649b0",
+      "firm": "Ashurst Perkins Coie",
+      "title": "Legal Cheek Virtual Law Fair | 17 November 2026, 2pm – 5pm | How to register",
+      "url": "https://www.legalcheek.com/fair/the-legal-cheek-uk-virtual-law-fair-series/",
+      "source_page": "https://www.ashurstperkinscoie.com/en/careers/students-and-graduates/uk-london-training-contract/",
+      "first_seen": "2026-11-05",
+      "is_new": true,
+      "status": "unverified"
+    }
+  ],
   "leads": [
+    {
+      "id": "f464f0f1cc1d06f3",
+      "firm": "Ashurst Perkins Coie",
+      "title": "Behind the Scenes with Ashurst Perkins Coie: Meet Our Trainees | 12 November 2026, 12pm – 1pm | How to register",
+      "url": "https://fsr.cvmailuk.com/ashurstperkinscoiecareers/main.cfm?page=jobSpecific&jobId=79333&rcd=522531&queryString=groupType%5F73%3D2529%26groupType%5F4%3D4867%26x%2Dtoken%3Dx51xpsr3g4ybdr1atmo6o4najly1yrwlv7gcv5fi",
+      "source_page": "https://www.ashurstperkinscoie.com/en/careers/students-and-graduates/uk-london-training-contract/",
+      "first_seen": "2026-11-05",
+      "is_new": true,
+      "status": "unverified"
+    },
+    {
+      "id": "4c7c6c6bcad649b0",
+      "firm": "Ashurst Perkins Coie",
+      "title": "Legal Cheek Virtual Law Fair | 17 November 2026, 2pm – 5pm | How to register",
+      "url": "https://www.legalcheek.com/fair/the-legal-cheek-uk-virtual-law-fair-series/",
+      "source_page": "https://www.ashurstperkinscoie.com/en/careers/students-and-graduates/uk-london-training-contract/",
+      "first_seen": "2026-11-05",
+      "is_new": true,
+      "status": "unverified"
+    },
     {
       "id": "6e42338b2c3d9e60",
       "firm": "Addleshaw Goddard",
@@ -108,6 +149,16 @@
       "title": "Open days",
       "url": "https://careers.hsfkramer.com/global/en/uk/early-careers/open-days",
       "source_page": "https://careers.hsfkramer.com/global/en/uk/early-careers/open-days",
+      "first_seen": "2026-09-06",
+      "is_new": false,
+      "status": "unverified"
+    },
+    {
+      "id": "e23a570370bd749e",
+      "firm": "Norton Rose Fulbright",
+      "title": "Aspiring Black Lawyers Insight Day",
+      "url": "https://www.nortonrosefulbright.com/en-gb/graduates/opportunities",
+      "source_page": "https://www.nortonrosefulbright.com/en-gb/graduates/opportunities",
       "first_seen": "2026-09-06",
       "is_new": false,
       "status": "unverified"
@@ -357,13 +408,6 @@
       "kind": "blocked",
       "reason": "This firm's site turns away automated visits, so the daily sweep cannot read it. It has to be checked by hand.",
       "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.whitecase.com/careers/locations/united-kingdom/london"
-    },
-    {
-      "firm": "Norton Rose Fulbright",
-      "url": "https://www.nortonrosefulbright.com/en-gb/graduates/opportunities",
-      "kind": "unreachable",
-      "reason": "The sweep could not connect to this site, so it may be a certificate or network problem at the firm's end.",
-      "error": "ReadTimeout: HTTPSConnectionPool(host='www.nortonrosefulbright.com', port=443): Read timed out. (read timeout=25)"
     },
     {
       "firm": "Charles Russell Speechlys",
