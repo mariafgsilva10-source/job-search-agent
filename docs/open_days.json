@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-11-05T15:04:05Z",
+  "generated_at": "2026-11-06T14:43:09Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -15,22 +15,6 @@
     }
   },
   "events": [
-    {
-      "id": "travers-smith|black-heritage-insight-evening|05-11-2026",
-      "firm": "Travers Smith",
-      "event_name": "Black Heritage Insight Evening",
-      "summary": "An in-person event featuring a panel of Black heritage lawyers at the firm sharing insight into life at a City law firm, plus networking. Event held 5 November 2026, 4:00pm-7:30pm.",
-      "location": "London",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "05/11/2026",
-      "deadline_date": "2026-11-05",
-      "apply_link": "https://traverssmithhires.app.candidats.io/event/8dad8cec-56df-4a88-a245-a77850a0d5fd",
-      "link_is_specific": true,
-      "eligibility_note": "Firm's own wording: \"for any student exploring their options in law\" - EDI-focused (a panel of Black heritage lawyers) but not restricted to applicants of Black heritage, and graduates aren't excluded either. No application deadline is published - it's a capacity-limited RSVP (name/email only, no CV or screening), so register as early as possible.",
-      "source": "direct",
-      "found_on": "2026-10-07"
-    },
     {
       "id": "stephenson-harwood|training-contract-open-day|06-11-2026",
       "firm": "Stephenson Harwood",
@@ -466,14 +450,9 @@
   ],
   "needs_review": [
     {
-      "firm": "HFW",
-      "event_name": "Open Day",
-      "deadline_label": "Today"
-    },
-    {
       "firm": "Withers",
       "event_name": "Open Day",
-      "deadline_label": "Tomorrow"
+      "deadline_label": "Today"
     },
     {
       "firm": "Penningtons Manches Cooper",
