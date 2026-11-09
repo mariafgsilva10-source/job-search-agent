@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-11-08T13:58:42Z",
+  "generated_at": "2026-11-09T17:00:00Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -30,22 +30,6 @@
       "eligibility_note": null,
       "source": "direct",
       "found_on": "2026-10-04"
-    },
-    {
-      "id": "baker-mckenzie|pride-at-baker-mckenzie-open-day|10-11-2026",
-      "firm": "Baker McKenzie",
-      "event_name": "Pride at Baker McKenzie Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "location": "London",
-      "opens_date": "2026-09-07",
-      "opens_confirmed": true,
-      "deadline_label": "10/11/2026",
-      "deadline_date": "2026-11-10",
-      "apply_link": "https://careers.bakermckenzie.com/en_US/events/EventDetail?eventId=3640",
-      "link_is_specific": true,
-      "eligibility_note": "For LGBTQ+ applicants (firm's own wording).",
-      "source": "legal_cheek",
-      "found_on": null
     },
     {
       "id": "jones-day|open-evening-3|11-11-2026",
@@ -388,17 +372,22 @@
     {
       "firm": "Penningtons Manches Cooper",
       "event_name": "Explore Your Future in Law: Disability Inclusion Open Day at Penningtons Manches Cooper",
-      "deadline_label": "Tomorrow"
+      "deadline_label": "Today"
     },
     {
       "firm": "Trowers & Hamlins",
       "event_name": "London Office Graduate Insight Day",
+      "deadline_label": "Today"
+    },
+    {
+      "firm": "Baker McKenzie",
+      "event_name": "Pride at Baker McKenzie Open Day",
       "deadline_label": "Tomorrow"
     },
     {
       "firm": "Michelmores",
       "event_name": "Virtual Insight Session: Application Tips for Training Contract & Vacation Scheme",
-      "deadline_label": "10/11/2026"
+      "deadline_label": "Tomorrow"
     },
     {
       "firm": "Paul Hastings",
