@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-11-11T14:50:16Z",
+  "generated_at": "2026-11-12T15:41:16Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -15,38 +15,6 @@
     }
   },
   "events": [
-    {
-      "id": "jones-day|open-evening-3|11-11-2026",
-      "firm": "Jones Day",
-      "event_name": "Open Evening 3",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "location": "London",
-      "opens_date": "2026-10-28",
-      "opens_confirmed": true,
-      "deadline_label": "11/11/2026",
-      "deadline_date": "2026-11-11",
-      "apply_link": "https://www.jonesday.com/en/careers/locations/united-kingdom?tab=events",
-      "link_is_specific": false,
-      "eligibility_note": null,
-      "source": "direct",
-      "found_on": "2026-09-21"
-    },
-    {
-      "id": "goodwin|insight-into-applications-–-demystifying-the-application-process|13-11-2026",
-      "firm": "Goodwin",
-      "event_name": "Insight into Applications – Demystifying the Application Process",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "location": "London",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "13/11/2026",
-      "deadline_date": "2026-11-13",
-      "apply_link": "https://goodwinlaw.app.candidats.io/event/a6272983-248e-4d31-a7fd-b099838d027f",
-      "link_is_specific": true,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
     {
       "id": "hill-dickinson|training-contract-open-evening|15-11-2026",
       "firm": "Hill Dickinson",
@@ -308,16 +276,21 @@
     {
       "firm": "Charles Russell Speechlys",
       "event_name": "London Open Day",
-      "deadline_label": "Tomorrow"
+      "deadline_label": "Today"
     },
     {
       "firm": "Charles Russell Speechlys",
       "event_name": "Virtual Open Day",
-      "deadline_label": "Tomorrow"
+      "deadline_label": "Today"
     },
     {
       "firm": "Mills & Reeve",
       "event_name": "Virtual Insight Event",
+      "deadline_label": "Today"
+    },
+    {
+      "firm": "Goodwin",
+      "event_name": "Insight into Applications – Demystifying the Application Process",
       "deadline_label": "Tomorrow"
     },
     {
