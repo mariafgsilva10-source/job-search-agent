@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-11-12T15:42:51Z",
+  "generated_at": "2026-11-13T15:01:36Z",
   "note": "Only includes Training Contract listings manually verified as open to graduates applying directly, without needing to have done that firm's own vacation scheme first. New listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "events": [
     {
@@ -10,7 +10,7 @@
       "opens_date": "2026-08-17",
       "opens_confirmed": true,
       "closes_date": "2026-11-13",
-      "closes_label": "Tomorrow",
+      "closes_label": "Today",
       "apply_link": "https://joinus.slaughterandmay.com/V2/Vacancy",
       "eligibility_note": "Open to finalists and graduates, law or non-law - firm states no legal work experience is required to apply."
     },
