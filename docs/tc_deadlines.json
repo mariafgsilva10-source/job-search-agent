@@ -1,19 +1,8 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-11-13T15:01:36Z",
+  "generated_at": "2026-11-14T13:54:15Z",
   "note": "Only includes Training Contract listings manually verified as open to graduates applying directly, without needing to have done that firm's own vacation scheme first. New listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "events": [
-    {
-      "id": "slaughter-and-may|training-contract-2029/2030",
-      "firm": "Slaughter and May",
-      "event_name": "Training Contract 2029/2030",
-      "opens_date": "2026-08-17",
-      "opens_confirmed": true,
-      "closes_date": "2026-11-13",
-      "closes_label": "Today",
-      "apply_link": "https://joinus.slaughterandmay.com/V2/Vacancy",
-      "eligibility_note": "Open to finalists and graduates, law or non-law - firm states no legal work experience is required to apply."
-    },
     {
       "id": "clifford-chance|london-training-contract",
       "firm": "Clifford Chance",
@@ -646,7 +635,7 @@
     {
       "firm": "Hill Dickinson",
       "event_name": "Training Contract Open Evening",
-      "deadline_label": "15/11/2026"
+      "deadline_label": "Tomorrow"
     },
     {
       "firm": "Clyde & Co",
