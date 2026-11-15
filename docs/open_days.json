@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-11-14T13:52:44Z",
+  "generated_at": "2026-11-15T14:26:07Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -15,38 +15,6 @@
     }
   },
   "events": [
-    {
-      "id": "baker-mckenzie|employability-open-day|16-11-2026",
-      "firm": "Baker McKenzie",
-      "event_name": "EmployAbility Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "location": "London",
-      "opens_date": "2026-09-07",
-      "opens_confirmed": true,
-      "deadline_label": "16/11/2026",
-      "deadline_date": "2026-11-16",
-      "apply_link": "https://careers.bakermckenzie.com/en_US/events/EventDetail?eventId=3641",
-      "link_is_specific": true,
-      "eligibility_note": "For candidates with disabilities, run with My Plus Consulting (firm's own wording).",
-      "source": "legal_cheek",
-      "found_on": null
-    },
-    {
-      "id": "wedlake-bell|open-day|16-11-2026",
-      "firm": "Wedlake Bell",
-      "event_name": "Open Day",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "location": "London",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "16/11/2026",
-      "deadline_date": "2026-11-16",
-      "apply_link": "https://wedlakebell.app.candidats.io/roles",
-      "link_is_specific": false,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
     {
       "id": "kingsley-napley|kingsley-napley-virtual-open-day|18-11-2026",
       "firm": "Kingsley Napley",
@@ -260,6 +228,16 @@
     {
       "firm": "Hill Dickinson",
       "event_name": "Training Contract Open Evening",
+      "deadline_label": "Today"
+    },
+    {
+      "firm": "Baker McKenzie",
+      "event_name": "EmployAbility Open Day",
+      "deadline_label": "Tomorrow"
+    },
+    {
+      "firm": "Wedlake Bell",
+      "event_name": "Open Day",
       "deadline_label": "Tomorrow"
     },
     {
