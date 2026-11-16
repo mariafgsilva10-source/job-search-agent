@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-15T14:27:35Z",
+  "generated_at": "2026-11-16T16:39:50Z",
   "note": "Unverified leads from a daily sweep of London law firms' own application portals and events pages - the places firms announce open days before (or instead of) Legal Cheek listing them. Nothing here has been checked yet: a lead only reaches the Open Days tab once its dates, eligibility and apply link have been confirmed on the firm's own site.",
   "first_run": false,
   "counts": {
     "sources_checked": 52,
-    "sources_failed": 16,
-    "leads_total": 28,
+    "sources_failed": 18,
+    "leads_total": 23,
     "duplicates_merged": 4,
     "new_today": 0,
     "new_last_7_days": 1
@@ -73,16 +73,6 @@
       "status": "unverified"
     },
     {
-      "id": "fe132090ab076f2c",
-      "firm": "Bristows",
-      "title": "Workshop IP Workshop (Online) This IP workshop provides insight into the firm and the work we do.",
-      "url": "https://www.bristows.com/events/ip-workshop-online-2026/",
-      "source_page": "https://www.bristows.com/careers/trainees/what-we-offer/workshops/",
-      "first_seen": "2026-09-06",
-      "is_new": false,
-      "status": "unverified"
-    },
-    {
       "id": "182a3dbb5e9f4a82",
       "firm": "Burges Salmon",
       "title": "Meet our team",
@@ -128,36 +118,6 @@
       "title": "Insight scheme",
       "url": "https://join.osborneclarke.com/insight-scheme",
       "source_page": "https://join.osborneclarke.com/insight-scheme",
-      "first_seen": "2026-09-06",
-      "is_new": false,
-      "status": "unverified"
-    },
-    {
-      "id": "a37eddfd9ca8a32d",
-      "firm": "RPC",
-      "title": "All About Law Virtual Law Fair",
-      "url": "https://www.allaboutlaw.co.uk/events/virtual-law-fair",
-      "source_page": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
-      "first_seen": "2026-09-06",
-      "is_new": false,
-      "status": "unverified"
-    },
-    {
-      "id": "a3fc1c06d15808a2",
-      "firm": "RPC",
-      "title": "Legal Cheek Virtual Law Fair",
-      "url": "https://www.legalcheek.com/fair/the-legal-cheek-uk-virtual-law-fair-series/",
-      "source_page": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
-      "first_seen": "2026-09-06",
-      "is_new": false,
-      "status": "unverified"
-    },
-    {
-      "id": "6e4ae6eda902d63f",
-      "firm": "RPC",
-      "title": "London Insight Event",
-      "url": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
-      "source_page": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
       "first_seen": "2026-09-06",
       "is_new": false,
       "status": "unverified"
@@ -249,16 +209,6 @@
       "url": "https://www.eventbrite.co.uk/e/pinsent-masons-london-insight-event-tickets-1997553597583?aff=oddtdtcreator",
       "source_page": "https://www.pinsentmasons.com/careers/early-talent/events",
       "first_seen": "2026-09-23",
-      "is_new": false,
-      "status": "unverified"
-    },
-    {
-      "id": "158914c8a6dbc04f",
-      "firm": "RPC",
-      "title": "Uptree Work Experience Insight Day",
-      "url": "https://uptree.co/events/rpc/2138398560/",
-      "source_page": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
-      "first_seen": "2026-09-25",
       "is_new": false,
       "status": "unverified"
     },
@@ -363,6 +313,20 @@
       "kind": "blocked",
       "reason": "This firm's site turns away automated visits, so the daily sweep cannot read it. It has to be checked by hand.",
       "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.fieldfisher.com/en/careers/earlycareers/future-lawyer-programmes"
+    },
+    {
+      "firm": "Bristows",
+      "url": "https://www.bristows.com/careers/trainees/what-we-offer/workshops/",
+      "kind": "blocked",
+      "reason": "This firm's site turns away automated visits, so the daily sweep cannot read it. It has to be checked by hand.",
+      "error": "HTTPError: 403 Client Error: Forbidden for url: https://www.bristows.com/careers/trainees/what-we-offer/workshops/"
+    },
+    {
+      "firm": "RPC",
+      "url": "https://www.rpclegal.com/careers/early-talent/uk/meet-us-uk/",
+      "kind": "javascript",
+      "reason": "This firm builds its event list with JavaScript, so the page arrives empty and the sweep sees nothing on it. It has to be checked by hand.",
+      "error": "empty page - nothing in the HTML to read"
     },
     {
       "firm": "Travers Smith",
