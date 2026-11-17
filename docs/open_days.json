@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-11-16T16:38:33Z",
+  "generated_at": "2026-11-17T16:35:43Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -8,29 +8,13 @@
     "exclude_apprenticeships": true,
     "graduates_only": true,
     "filtered_out_counts": {
-      "chambers": 13,
+      "chambers": 12,
       "outside_london": 9,
       "apprenticeships": 7,
       "not_graduate_eligible": 17
     }
   },
   "events": [
-    {
-      "id": "kingsley-napley|kingsley-napley-virtual-open-day|18-11-2026",
-      "firm": "Kingsley Napley",
-      "event_name": "Kingsley Napley Virtual Open Day",
-      "summary": "A virtual/online session featuring a virtual tour and talks introducing the firm and its application process.",
-      "location": "Virtual",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "18/11/2026",
-      "deadline_date": "2026-11-18",
-      "apply_link": "https://kingsleynapley.app.candidats.io/event/a8f0bdaa-926b-4004-a19f-a2a131e8e53b",
-      "link_is_specific": true,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
     {
       "id": "goodwin|virtual-open-afternoon|18-11-2026",
       "firm": "Goodwin",
@@ -226,14 +210,9 @@
   ],
   "needs_review": [
     {
-      "firm": "Baker McKenzie",
-      "event_name": "EmployAbility Open Day",
-      "deadline_label": "Today"
-    },
-    {
-      "firm": "Wedlake Bell",
-      "event_name": "Open Day",
-      "deadline_label": "Today"
+      "firm": "Kingsley Napley",
+      "event_name": "Kingsley Napley Virtual Open Day",
+      "deadline_label": "Tomorrow"
     },
     {
       "firm": "Paul Hastings",
