@@ -1,63 +1,8 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-11-18T16:05:34Z",
+  "generated_at": "2026-11-19T16:13:14Z",
   "note": "Only includes Training Contract listings manually verified as open to graduates applying directly, without needing to have done that firm's own vacation scheme first. New listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "events": [
-    {
-      "id": "clifford-chance|london-training-contract",
-      "firm": "Clifford Chance",
-      "event_name": "London Training Contract",
-      "opens_date": "2026-09-15",
-      "opens_confirmed": false,
-      "closes_date": "2026-11-18",
-      "closes_label": "Today",
-      "apply_link": "https://jobs.cliffordchance.com/training-contract-london",
-      "eligibility_note": "Open to penultimate/final-year students and graduates applying directly - no vacation scheme required."
-    },
-    {
-      "id": "gowling-wlg|birmingham-direct-training-contract",
-      "firm": "Gowling WLG",
-      "event_name": "Birmingham Direct Training Contract",
-      "opens_date": "2026-10-01",
-      "opens_confirmed": false,
-      "closes_date": "2026-11-18",
-      "closes_label": "Today",
-      "apply_link": "https://ehjc.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_17/requisitions",
-      "eligibility_note": "Open to graduates of any degree applying directly - no vacation scheme required."
-    },
-    {
-      "id": "gowling-wlg|birmingham-real-estate-training-contract",
-      "firm": "Gowling WLG",
-      "event_name": "Birmingham Real Estate Training Contract",
-      "opens_date": "2026-10-01",
-      "opens_confirmed": false,
-      "closes_date": "2026-11-18",
-      "closes_label": "Today",
-      "apply_link": "https://ehjc.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_17/requisitions",
-      "eligibility_note": "Open to graduates of any degree applying directly - no vacation scheme required."
-    },
-    {
-      "id": "gowling-wlg|london-direct-training-contract",
-      "firm": "Gowling WLG",
-      "event_name": "London Direct Training Contract",
-      "opens_date": "2026-10-01",
-      "opens_confirmed": false,
-      "closes_date": "2026-11-18",
-      "closes_label": "Today",
-      "apply_link": "https://ehjc.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_17/requisitions",
-      "eligibility_note": "Open to graduates of any degree applying directly - no vacation scheme required."
-    },
-    {
-      "id": "gowling-wlg|london-real-estate-training-contract",
-      "firm": "Gowling WLG",
-      "event_name": "London Real Estate Training Contract",
-      "opens_date": "2026-10-01",
-      "opens_confirmed": false,
-      "closes_date": "2026-11-18",
-      "closes_label": "Today",
-      "apply_link": "https://ehjc.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_17/requisitions",
-      "eligibility_note": "Open to graduates of any degree applying directly - no vacation scheme required."
-    },
     {
       "id": "cms|england-training-contract",
       "firm": "CMS",
@@ -635,7 +580,7 @@
     {
       "firm": "Clyde & Co",
       "event_name": "Bristol Energy & Construction Training Contract",
-      "deadline_label": "Tomorrow"
+      "deadline_label": "Today"
     },
     {
       "firm": "Lawrence Stephens",

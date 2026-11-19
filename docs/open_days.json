@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-11-18T16:03:59Z",
+  "generated_at": "2026-11-19T16:11:51Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -8,45 +8,13 @@
     "exclude_apprenticeships": true,
     "graduates_only": true,
     "filtered_out_counts": {
-      "chambers": 11,
-      "outside_london": 8,
+      "chambers": 8,
+      "outside_london": 7,
       "apprenticeships": 6,
       "not_graduate_eligible": 17
     }
   },
   "events": [
-    {
-      "id": "goodwin|virtual-open-afternoon|18-11-2026",
-      "firm": "Goodwin",
-      "event_name": "Virtual Open Afternoon",
-      "summary": "A virtual/online event giving a comprehensive overview of the firm, its practice areas and its opportunities, with application guidance for vacation schemes and trainee solicitor roles and networking with current staff. Event held 25 November 2026.",
-      "location": "Virtual",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "18/11/2026",
-      "deadline_date": "2026-11-18",
-      "apply_link": "https://apply.candidats.io/88f35414-cb0e-4033-98bf-780d6a6a3473",
-      "link_is_specific": true,
-      "eligibility_note": null,
-      "source": "direct",
-      "found_on": "2026-09-21"
-    },
-    {
-      "id": "forsters|open-day-2|20-11-2026",
-      "firm": "Forsters",
-      "event_name": "Open Day 2",
-      "summary": "An in-person event featuring an office tour, talks from trainees and partners, and Q&A about the firm and its application process.",
-      "location": "London",
-      "opens_date": "2026-10-05",
-      "opens_confirmed": true,
-      "deadline_label": "20/11/2026",
-      "deadline_date": "2026-11-20",
-      "apply_link": "https://forsters.grad.allhires.com/app/",
-      "link_is_specific": false,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
     {
       "id": "goodwin|insight-into-the-trainee-experience:-meet-our-trainees-and-q&a|21-11-2026",
       "firm": "Goodwin",
@@ -210,9 +178,9 @@
   ],
   "needs_review": [
     {
-      "firm": "Kingsley Napley",
-      "event_name": "Kingsley Napley Virtual Open Day",
-      "deadline_label": "Today"
+      "firm": "Forsters",
+      "event_name": "Open Day 2",
+      "deadline_label": "Tomorrow"
     },
     {
       "firm": "Paul Hastings",
