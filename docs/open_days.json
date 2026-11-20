@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-11-19T16:11:51Z",
+  "generated_at": "2026-11-20T15:51:26Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -15,22 +15,6 @@
     }
   },
   "events": [
-    {
-      "id": "goodwin|insight-into-the-trainee-experience:-meet-our-trainees-and-q&a|21-11-2026",
-      "firm": "Goodwin",
-      "event_name": "Insight into the Trainee Experience: Meet Our Trainees and Q&A",
-      "summary": "An in-person event featuring talks, Q&A, and networking with trainees, giving a flavour of life and work at the firm.",
-      "location": "London",
-      "opens_date": null,
-      "opens_confirmed": false,
-      "deadline_label": "21/11/2026",
-      "deadline_date": "2026-11-21",
-      "apply_link": "https://goodwinlaw.app.candidats.io/event/338ddfd7-d308-47ed-8983-4dc6d35ff6c2",
-      "link_is_specific": true,
-      "eligibility_note": null,
-      "source": "legal_cheek",
-      "found_on": null
-    },
     {
       "id": "payne-hicks-beach|open-day-1|22-11-2026",
       "firm": "Payne Hicks Beach",
@@ -180,6 +164,11 @@
     {
       "firm": "Forsters",
       "event_name": "Open Day 2",
+      "deadline_label": "Today"
+    },
+    {
+      "firm": "Goodwin",
+      "event_name": "Insight into the Trainee Experience: Meet Our Trainees and Q&A",
       "deadline_label": "Tomorrow"
     },
     {

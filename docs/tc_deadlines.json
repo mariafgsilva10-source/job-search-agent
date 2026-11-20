@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-11-19T16:13:14Z",
+  "generated_at": "2026-11-20T15:52:47Z",
   "note": "Only includes Training Contract listings manually verified as open to graduates applying directly, without needing to have done that firm's own vacation scheme first. New listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "events": [
     {
@@ -577,11 +577,6 @@
     }
   ],
   "needs_review": [
-    {
-      "firm": "Clyde & Co",
-      "event_name": "Bristol Energy & Construction Training Contract",
-      "deadline_label": "Today"
-    },
     {
       "firm": "Lawrence Stephens",
       "event_name": "Training Contract",
