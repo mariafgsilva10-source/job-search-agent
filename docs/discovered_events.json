@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-11-20T15:52:45Z",
+  "generated_at": "2026-11-21T15:02:00Z",
   "note": "Unverified leads from a daily sweep of London law firms' own application portals and events pages - the places firms announce open days before (or instead of) Legal Cheek listing them. Nothing here has been checked yet: a lead only reaches the Open Days tab once its dates, eligibility and apply link have been confirmed on the firm's own site.",
   "first_run": false,
   "counts": {
     "sources_checked": 52,
     "sources_failed": 16,
-    "leads_total": 28,
+    "leads_total": 27,
     "duplicates_merged": 4,
     "new_today": 0,
     "new_last_7_days": 0
@@ -108,16 +108,6 @@
       "title": "Open days",
       "url": "https://careers.hsfkramer.com/global/en/uk/early-careers/open-days",
       "source_page": "https://careers.hsfkramer.com/global/en/uk/early-careers/open-days",
-      "first_seen": "2026-09-06",
-      "is_new": false,
-      "status": "unverified"
-    },
-    {
-      "id": "e23a570370bd749e",
-      "firm": "Norton Rose Fulbright",
-      "title": "Aspiring Black Lawyers Insight Day",
-      "url": "https://www.nortonrosefulbright.com/en-gb/graduates/opportunities",
-      "source_page": "https://www.nortonrosefulbright.com/en-gb/graduates/opportunities",
       "first_seen": "2026-09-06",
       "is_new": false,
       "status": "unverified"
