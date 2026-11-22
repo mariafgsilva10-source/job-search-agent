@@ -1,6 +1,6 @@
 {
   "source": "https://www.legalcheek.com/key-deadlines-calendar/",
-  "generated_at": "2026-11-21T15:00:32Z",
+  "generated_at": "2026-11-22T14:58:33Z",
   "note": "London law firm Open Days / Insight Days that a graduate can apply to. Filtered out: barristers' chambers (pupillage is a different route), solicitor apprenticeships (a school-leaver route), first- and second-year insight schemes, and events tied to a firm's non-London office. Virtual sessions are kept. Every event shown has been manually verified against the firm's own site; new listings Legal Cheek starts showing are held back in needs_review until checked, not guessed at.",
   "filters": {
     "london_only": true,
@@ -130,19 +130,14 @@
   ],
   "needs_review": [
     {
-      "firm": "Goodwin",
-      "event_name": "Insight into the Trainee Experience: Meet Our Trainees and Q&A",
+      "firm": "Payne Hicks Beach",
+      "event_name": "Open Day 1",
       "deadline_label": "Today"
     },
     {
       "firm": "Payne Hicks Beach",
-      "event_name": "Open Day 1",
-      "deadline_label": "Tomorrow"
-    },
-    {
-      "firm": "Payne Hicks Beach",
       "event_name": "Open Day 2",
-      "deadline_label": "Tomorrow"
+      "deadline_label": "Today"
     },
     {
       "firm": "Paul Hastings",
